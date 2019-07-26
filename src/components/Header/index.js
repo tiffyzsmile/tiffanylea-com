@@ -1,20 +1,42 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
+import './styles.css';
 
 const Header = () => {
   return (
-    <header className="App-header">
-      <img src="/logo.svg" className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.js</code> and save to reload. This should be .
-      </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-      </a>
+    <header>
+      <div className="header">
+        <h1 className="noPadding">
+          <Link to="/" className="logo">
+            Tiffany Lea May
+          </Link>
+        </h1>
+      </div>
+
+      <nav>
+        <div className="topNav">
+          <ul className="nav setwidth">
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/resume">Resume</Link>
+            </li>
+            <li>
+              <Link to="/portfolio">Portfolio</Link>
+            </li>
+            <li>
+              <Link to="/skills">Skills</Link>
+            </li>
+            <li>
+              <Link to="/reviews">Reviews</Link>
+            </li>
+            <li>
+              <Link to="/contact">Contact</Link>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </header>
   );
 };

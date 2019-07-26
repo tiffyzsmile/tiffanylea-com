@@ -1,0 +1,11 @@
+footer {
+  padding-top: 40px;
+  clear: both;
+}
+.footer {
+  width: 100%;
+  clear: both;
+  border-top: 3px solid #b1d1dd;
+  background-color: #8da9b9;
+  padding: 0.5em 0;
+}
