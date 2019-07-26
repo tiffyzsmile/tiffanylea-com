@@ -21,7 +21,6 @@
     "eslint-config-react-app": "^4.0.1",
     "eslint-loader": "2.1.2",
     "eslint-plugin-flowtype": "2.50.1",
-    "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "^1.5.0",
@@ -79,8 +78,12 @@
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "babel-plugin-module-resolver": "^3.2.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-module-resolver": "^0.13.0",
     "eslint-plugin-prettier": "^3.1.0",
     "prettier": "1.18.2"
   },

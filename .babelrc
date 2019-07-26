@@ -1,5 +1,17 @@
 // .babelrc
 {
-  "plugins": ["react-hot-loader/babel"],
+  "plugins": [
+    "react-hot-loader/babel",
+    [
+      "module-resolver",
+      {
+        "root": ["./src/**"],
+        "alias": {
+          "components": "./components",
+          "containers": "./containers"
+        }
+      }
+    ]
+  ],
   "presets": ["react-app"]
 }
