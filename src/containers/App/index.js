@@ -1,8 +1,8 @@
 import React from 'react';
 import { hot } from 'react-hot-loader';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
-import Home from './Home';
-import Route404 from './Route404';
+import Home from 'containers/Home';
+import Route404 from 'containers/Route404';
 import './App.css';
 
 const App = () => {

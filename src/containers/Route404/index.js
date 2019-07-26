@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './App.css';
+import 'containers/App/App.css';
 
-function Route404() {
+const Route404 = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -12,6 +12,6 @@ function Route404() {
       </header>
     </div>
   );
-}
+};
 
 export default Route404;
