@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tiffyzsmile/tiffanylea-com.svg?branch=test)](https://travis-ci.org/tiffyzsmile/tiffanylea-com)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
