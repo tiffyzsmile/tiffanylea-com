@@ -5,6 +5,7 @@ import Home from 'containers/Home';
 import About from 'containers/About';
 import Resume from 'containers/Resume';
 import Portfolio from 'containers/Portfolio';
+import PortfolioItem from 'containers/PortfolioItem';
 import Skills from 'containers/Skills';
 import Reviews from 'containers/Reviews';
 import Contact from 'containers/Contact';
@@ -23,6 +24,7 @@ const App = () => {
           <Route exact path="/about" component={About} />
           <Route exact path="/resume" component={Resume} />
           <Route exact path="/portfolio" component={Portfolio} />
+          <Route path="/portfolio/:id" component={PortfolioItem} />
           <Route exact path="/skills" component={Skills} />
           <Route exact path="/reviews" component={Reviews} />
           <Route exact path="/contact" component={Contact} />
