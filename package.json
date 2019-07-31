@@ -62,7 +62,7 @@
     "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "webpack-dashboard -- node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -87,7 +87,8 @@
     "eslint-plugin-import": "^2.18.2",
     "eslint-plugin-module-resolver": "^0.13.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "webpack-dashboard": "^3.0.7"
   },
   "jest": {
     "collectCoverageFrom": [
