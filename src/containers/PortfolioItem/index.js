@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Page from 'components/Page';
 import { Link } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
 import portfolio from 'data/portfolio';
 
 const PortfolioItem = ({ match }) => {
@@ -29,12 +29,8 @@ const PortfolioItem = ({ match }) => {
     : [];
 
   return (
-    <div className="setwidth portfolioItem">
-      <Helmet>
-        <title>Tiffany Lea May | Portfolio</title>
-        <meta name="description" content="Portfolio" />
-      </Helmet>
-      <section className="fullWidth portfolio">
+    <Page title="Portfolio" description="Portfolio">
+      <section className="fullWidth portfolio portfolioItem">
         <section className="portfolioFilter">
           <nav>
             <ul id="portfolio-filter">
@@ -103,7 +99,7 @@ const PortfolioItem = ({ match }) => {
         </section>
         <section className="portfolioImages">{images}</section>
       </section>
-    </div>
+    </Page>
   );
 };
 
