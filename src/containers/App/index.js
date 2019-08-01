@@ -9,6 +9,7 @@ import PortfolioItem from 'containers/PortfolioItem';
 import Skills from 'containers/Skills';
 import Reviews from 'containers/Reviews';
 import Contact from 'containers/Contact';
+import Tools from 'containers/Tools';
 import Route404 from 'containers/Route404';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
@@ -28,6 +29,7 @@ const App = () => {
           <Route exact path="/skills" component={Skills} />
           <Route exact path="/reviews" component={Reviews} />
           <Route exact path="/contact" component={Contact} />
+          <Route exact path="/tools" component={Tools} />
           <Route component={Route404} />
         </Switch>
         <Footer />
