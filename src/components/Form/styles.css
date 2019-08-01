@@ -1,0 +1,61 @@
+/*forms*/
+form {
+  margin: 0 auto;
+}
+label.label {
+  display: block;
+  margin-top: 20px;
+  letter-spacing: 2px;
+  max-width: 460px;
+}
+label.label.error,
+p.error {
+  color: #b40606;
+}
+label.label.error input,
+label.label.error textarea {
+  border: 1px solid #b40606;
+}
+
+input,
+textarea {
+  width: 100%;
+  max-width: 439px;
+  background: #efefef;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border: 1px solid #dedede;
+  padding: 10px;
+  margin-top: 3px;
+  font-size: 0.9em;
+  color: #3a3a3a;
+  clear: both;
+  display: block;
+}
+
+textarea {
+  height: 213px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+input:focus,
+textarea:focus {
+  border: 1px solid #97d6eb;
+}
+
+.submit {
+  clear: both;
+  max-width: 150px;
+  display: block;
+  background-color: #8da9b9;
+  padding: 10px 5%;
+  cursor: pointer;
+  font-size: 1.2em;
+  color: #fff;
+  margin-top: 20px;
+  border-radius: 0;
+}
+.submit:hover {
+  opacity: 0.9;
+}

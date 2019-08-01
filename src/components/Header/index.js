@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <header>
       <div className="header">
-        <h1 className="noPadding">
+        <h1>
           <Link to="/" className="logo">
             Tiffany Lea May
           </Link>
@@ -15,7 +15,7 @@ const Header = () => {
 
       <nav>
         <div className="topNav">
-          <ul className="nav setwidth">
+          <ul className="nav">
             <li>
               <Link to="/about">About</Link>
             </li>

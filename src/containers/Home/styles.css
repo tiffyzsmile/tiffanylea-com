@@ -5,19 +5,28 @@
 
 .homepage h1 {
   line-height: 1em;
-  font-size: 2.8em;
+  font-size: 1.8em;
   font-family: 'Times New Roman', Times, serif;
 }
 
 .homepage p {
   text-align: left;
-  font-size: 1.8em;
-  line-height: 1.3em;
 }
 .homepage ul {
   text-align: left;
 }
 
+@media screen and (min-width: 300px) {
+  .homepage h1 {
+    line-height: 1em;
+    font-size: 2.8em;
+  }
+
+  .homepage p {
+    font-size: 1.8em;
+    line-height: 1.3em;
+  }
+}
 @media screen and (min-width: 600px) {
   .homepage {
     text-align: left;

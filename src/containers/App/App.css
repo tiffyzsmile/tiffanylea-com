@@ -467,9 +467,6 @@ ul#portfolio-list li p {
   float: right;
   padding: 25px 0 0 0;
 }
-.resume h1 {
-  font-size: 2.5em;
-}
 .adobe {
   float: right;
   max-width: 60px;
@@ -594,22 +591,6 @@ article img {
 }
 
 @media screen and (max-width: 655px) {
-  .topNav {
-    height: auto;
-  }
-  .nav li {
-    width: 16.5%;
-    background-color: #b1d1dd;
-    text-align: center;
-    -webkit-box-shadow: 0 0 3px 1px rgba(100, 100, 100, 0.5);
-    box-shadow: 0 0 3px 1px rgba(100, 100, 100, 0.5);
-    padding: 0;
-  }
-  .nav li a {
-  }
-  a.active {
-    background-color: #8da9b9;
-  }
   .portfolioImages,
   .portfolioDetails {
     width: 96%;
@@ -630,24 +611,12 @@ article img {
   ul#portfolio-filter li {
     width: 25%;
   }
-  .nav li {
-    width: 33.333333333333333333333333333333%;
-  }
   aside.rightCol img {
     width: auto;
     max-height: 50px;
   }
 }
 @media screen and (max-width: 400px) {
-  .header h1 a {
-    font-size: 2em;
-  }
-  .resume h1 {
-    font-size: 1.4375em;
-  }
-  .nav li a {
-    font-size: 0.8em;
-  }
   .aside {
     clear: both;
     width: 96%;
@@ -662,22 +631,9 @@ article img {
   article img {
     padding: 5px 1%;
   }
-
-  /*img {max-width: 100%;}
-    .page {}
-    .content {padding: 40px 0;}
-    .article {padding: 0 1%;}
-    .nav {padding: 0px;}
-    .nav li {float: left;padding: 0 1.0316666666666666666666666666667%;clear: none;width:14.593333333333333333333333333333%;}
-    .nav li a {text-align: center;}
-    .impact {background-image: url(../images/beach-repeat.jpg);background-repeat: repeat-x;background-position: center top;}
-    .impact img {}*/
 }
 
 @media screen and (max-width: 240px) {
-  .nav li a {
-    font-size: 0.6em;
-  }
   ul#portfolio-list li {
     width: 98%;
   }
