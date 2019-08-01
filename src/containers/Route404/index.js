@@ -1,21 +1,19 @@
 import React from 'react';
+import Page from 'components/Page';
 import { Link } from 'react-router-dom';
 import 'containers/App/App.css';
-import { Helmet } from 'react-helmet';
 
 const Route404 = () => {
   return (
-    <div className="App">
-      <Helmet>
-        <title>Tiffany Lea May | Page Not Found</title>
-        <meta name="description" content="Page Not Found" />
-      </Helmet>
-      <header className="App-header">
-        <img src="/logo.svg" className="App-logo" alt="logo" />
-        <p>Page Not Found</p>
-        <Link to="/">Home</Link>
-      </header>
-    </div>
+    <Page title="Page Not Found" description="Page Not Found">
+      <div className="content setwidth center">
+        <h1>Page Not Found</h1>
+        <img src="/images/oops.png" className="App-logo" alt="logo" />
+        <p>
+          Maybe go back to the <Link to="/">home page</Link> and start over?
+        </p>
+      </div>
+    </Page>
   );
 };
 

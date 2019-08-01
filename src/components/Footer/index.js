@@ -3,13 +3,11 @@ import './styles.css';
 
 const Footer = () => {
   return (
-    <footer>
-      <div className="footer">
-        <div className="setwidth noPadding">
-          <p className="copyright">
-            &copy; {new Date().getFullYear()} Tiffany Lea May
-          </p>
-        </div>
+    <footer className="footer">
+      <div className="setWidth">
+        <p className="copyright">
+          &copy; {new Date().getFullYear()} Tiffany Lea May
+        </p>
       </div>
     </footer>
   );

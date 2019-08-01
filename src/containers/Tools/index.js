@@ -1,13 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
 
 const Tools = () => {
   return (
-    <div className="content setwidth">
-      <Helmet>
-        <title>Tiffany Lea May | Tools</title>
-        <meta name="description" content="Tools" />
-      </Helmet>
+    <Page title="Tools" description="Tools">
       <h1>Tools</h1>
       <ul>
         <li>
@@ -18,7 +14,7 @@ const Tools = () => {
           , smallest footprint and no reinventing the wheel
         </li>
       </ul>
-    </div>
+    </Page>
   );
 };
 

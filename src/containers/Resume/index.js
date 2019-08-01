@@ -1,13 +1,9 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
 
 const Resume = () => {
   return (
-    <div>
-      <Helmet>
-        <title>Tiffany Lea May | Resume</title>
-        <meta name="description" content="Resume" />
-      </Helmet>
+    <Page title="Resume" description="Resume">
       <div className="content setwidth">
         <section className="resume">
           <a
@@ -215,7 +211,7 @@ const Resume = () => {
           </ul>
         </section>
       </div>
-    </div>
+    </Page>
   );
 };
 

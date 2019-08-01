@@ -11,29 +11,23 @@ import Reviews from 'containers/Reviews';
 import Contact from 'containers/Contact';
 import Tools from 'containers/Tools';
 import Route404 from 'containers/Route404';
-import Header from 'components/Header';
-import Footer from 'components/Footer';
 import './App.css';
 
 const App = () => {
   return (
     <Router>
-      <div className="page">
-        <Header />
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/resume" component={Resume} />
-          <Route exact path="/portfolio" component={Portfolio} />
-          <Route path="/portfolio/:id" component={PortfolioItem} />
-          <Route exact path="/skills" component={Skills} />
-          <Route exact path="/reviews" component={Reviews} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/tools" component={Tools} />
-          <Route component={Route404} />
-        </Switch>
-        <Footer />
-      </div>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/resume" component={Resume} />
+        <Route exact path="/portfolio" component={Portfolio} />
+        <Route path="/portfolio/:id" component={PortfolioItem} />
+        <Route exact path="/skills" component={Skills} />
+        <Route exact path="/reviews" component={Reviews} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/tools" component={Tools} />
+        <Route component={Route404} />
+      </Switch>
     </Router>
   );
 };

@@ -1,17 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
+import './styles.css';
 
 const Reviews = () => {
   return (
-    <div>
-      <Helmet>
-        <title>Tiffany Lea May | Reviews</title>
-        <meta
-          name="description"
-          content="Reviews & recommendations from peers"
-        />
-      </Helmet>
-      <section className="content setwidth quotes">
+    <Page title="Reviews" description="Reviews & recommendations from peers">
+      <section className="quotes">
         <h1>What others say about me</h1>
         <article>
           <img alt="Panayiotes (PK) Kakleas" src="/images/people/pk.jpeg" />
@@ -336,7 +330,7 @@ const Reviews = () => {
           </blockquote>
         </article>
       </section>
-    </div>
+    </Page>
   );
 };
 

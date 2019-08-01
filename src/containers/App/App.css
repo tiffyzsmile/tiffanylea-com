@@ -241,20 +241,8 @@ p {
 img {
   max-width: 100%;
 }
-.page {
-  width: 100%;
-  line-height: 1.3em;
-  font-size: 1em;
-}
-.setwidth {
-  width: 100%;
-  max-width: 980px;
-  margin: 0 auto; /* width: 97.916666666666666666666666666667%; 940px / 960px */
-}
-.content {
-  clear: both;
-  font-size: 0.9em;
-  padding: 10px 0;
+.center {
+  text-align: center;
 }
 .imgFullWidth {
   width: 100%;
@@ -265,11 +253,6 @@ img {
 a.active {
   background-color: #8da9b9;
 }
-.homepage {
-  padding: 1em 0;
-  width: 100%;
-  margin: 0 auto;
-}
 section.leftCol {
   width: 68%;
   float: left;
@@ -278,11 +261,6 @@ section.rightCol {
   padding: 1em 1%;
   width: 68%;
   float: right;
-}
-.fullWidth {
-  padding: 1em 0;
-  width: 100%;
-  clear: both;
 }
 .portfolioFilter {
   position: relative;
@@ -309,18 +287,7 @@ nav.leftCol {
   width: 27%;
   margin: 0 5% 1% 0;
 }
-/*homepage*/
-.homepage h1 {
-  line-height: 1em;
-  font-size: 3em;
-  font-family: 'Times New Roman', Times, serif;
-}
-.homepage p {
-  width: 80%;
-  font-size: 1.8em;
-  line-height: 1.3em;
-  font-family: verdana;
-}
+
 /*grey gradient*/
 .grid .gridBox,
 aside.leftCol,
@@ -402,10 +369,6 @@ a.beaconLogo {
   float: left;
   padding: 0 0.5em;
 }
-.copyright {
-  color: #ffffff;
-  font-size: 0.8em;
-}
 ul {
   list-style-type: disc;
 }
@@ -413,8 +376,6 @@ ul,
 ol {
   margin-left: 0;
   padding: 0 0 1em 2em;
-}
-.content li {
 }
 .gr_grid_container {
   /* customize grid container div here. eg: width: 800px; margin: 0 auto; */
@@ -526,69 +487,7 @@ ul#portfolio-list li p {
   float: right;
   padding: 0;
 }
-.quotes header h2 {
-  padding: 0;
-  font-size: 1.1em;
-}
-.quotes a,
-.quotes a:link,
-.quotes a:visited {
-  color: #666666;
-}
-.quotes article {
-  clear: both;
-  padding-bottom: 50px;
-}
-.quotes header p {
-  padding: 0;
-}
-.quotes article:nth-child(odd) img {
-  float: left;
-  margin-right: 3%;
-}
-.quotes article:nth-child(even) img {
-  float: right;
-  margin-left: 3%;
-}
 
-.quotes article img {
-  padding: 10px 1%;
-  max-width: 200px;
-}
-
-.quotes article:nth-child(odd) header,
-.quotes article:nth-child(odd) blockquote {
-  padding-left: 25%;
-  width: 75%;
-}
-.quotes article:nth-child(even) header,
-.quotes article:nth-child(even) blockquote {
-  padding-right: 25%;
-  width: 75%;
-}
-.quotes blockquote {
-  padding-top: 10px;
-}
-.quotes blockquote:before {
-  content: '\201C';
-  color: #8da9b9;
-  float: left;
-  font-size: 57px;
-  height: 1px;
-  margin-top: 11px;
-  padding-right: 5px;
-  font-family: Arial, sans-serif;
-}
-.recommendations:before {
-  content: '\201C';
-  color: #8da9b9;
-  float: left;
-  font-size: 57px;
-  height: 1px;
-  margin-top: 11px;
-  padding-right: 5px;
-  font-family: Arial, sans-serif;
-}
 article {
   clear: left;
 }
@@ -609,52 +508,6 @@ article img {
   float: left;
   padding: 10px 1%;
   max-width: 75px;
-}
-
-/*forms*/
-form {
-  margin: 0 auto;
-}
-label {
-  display: block;
-  margin-top: 20px;
-  letter-spacing: 2px;
-}
-input,
-textarea {
-  width: 100%;
-  max-width: 439px;
-  background: #efefef;
-  border-radius: 5px;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border: 1px solid #dedede;
-  padding: 10px;
-  margin-top: 3px;
-  font-size: 0.9em;
-  color: #3a3a3a;
-}
-input:focus,
-textarea:focus {
-  border: 1px solid #97d6eb;
-}
-textarea {
-  height: 213px;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.submit {
-  clear: both;
-  max-width: 150px;
-  display: block;
-  background-color: #b1d1dd;
-  padding: 10px 5%;
-  cursor: pointer;
-  font-size: 1.2em;
-  color: #fff;
-  margin-top: 20px;
-}
-.submit:hover {
-  opacity: 0.9;
 }
 
 /********GRID COLUMNS******/
@@ -740,20 +593,7 @@ textarea {
   }
 }
 
-@media screen and (max-width: 1005px) {
-  .setwidth {
-    padding-left: 2%;
-    padding-right: 2%;
-    width: 96%;
-  }
-  aside.rightCol {
-  }
-}
-
 @media screen and (max-width: 655px) {
-  .homepage {
-    padding: 0 1%;
-  }
   .topNav {
     height: auto;
   }
@@ -779,7 +619,6 @@ textarea {
   }
 }
 @media screen and (max-width: 550px) {
-  .homepage,
   aside.rightCol,
   section.leftCol {
     width: 94%;
@@ -800,13 +639,6 @@ textarea {
   }
 }
 @media screen and (max-width: 400px) {
-  .homepage {
-    padding: 0 1%;
-  }
-  .homepage p {
-    clear: both;
-    width: 98%;
-  }
   .header h1 a {
     font-size: 2em;
   }
@@ -826,30 +658,7 @@ textarea {
   ul#portfolio-filter li {
     width: 49%;
   }
-  .quotes article img,
-  .quotes article:nth-child(even) img,
-  .quotes article:nth-child(odd) img {
-    float: left;
-    max-width: 100px;
-    width: 35%;
-    padding: 5px 1%;
-    margin: 0;
-  }
-  .quotes article header,
-  .quotes article:nth-child(even) header,
-  .quotes article:nth-child(odd) header {
-    padding-right: 0;
-    padding-left: 0;
-    float: right;
-    width: 60%;
-  }
-  .quotes article blockquote,
-  .quotes article:nth-child(odd) blockquote,
-  .quotes article:nth-child(even) blockquote {
-    padding-left: 0;
-    clear: both;
-    width: 98%;
-  }
+
   article img {
     padding: 5px 1%;
   }
@@ -869,22 +678,11 @@ textarea {
   .nav li a {
     font-size: 0.6em;
   }
-  ul#portfolio-list li,
-  .quotes article header,
-  .quotes article:nth-child(even) header,
-  .quotes article:nth-child(odd) header,
-  .quotes article img,
-  .quotes article:nth-child(even) img,
-  .quotes article:nth-child(odd) img {
+  ul#portfolio-list li {
     width: 98%;
   }
   ul#portfolio-filter li {
     width: 94%;
     padding: 3px 3%;
-  }
-  .quotes article img,
-  .quotes article:nth-child(even) img,
-  .quotes article:nth-child(odd) img {
-    max-width: 200px;
   }
 }

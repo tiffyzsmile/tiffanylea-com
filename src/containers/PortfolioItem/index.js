@@ -29,7 +29,7 @@ const PortfolioItem = ({ match }) => {
     : [];
 
   return (
-    <div className="content setwidth portfolioItem">
+    <div className="setwidth portfolioItem">
       <Helmet>
         <title>Tiffany Lea May | Portfolio</title>
         <meta name="description" content="Portfolio" />

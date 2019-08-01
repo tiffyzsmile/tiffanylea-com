@@ -1,5 +1,5 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
 import portfolio from 'data/portfolio';
 import { Link } from 'react-router-dom';
 
@@ -19,16 +19,12 @@ const Portfolio = () => {
       );
     });
   return (
-    <div className="content setwidth">
-      <Helmet>
-        <title>Tiffany Lea May | Portfolio</title>
-        <meta name="description" content="Portfolio" />
-      </Helmet>
+    <Page title="Portfolio" description="Portfolio">
       <section className="fullWidth portfolio">
         <h1>Portfolio</h1>
         <ul id="portfolio-list">{portfolioItems}</ul>
       </section>
-    </div>
+    </Page>
   );
 };
 

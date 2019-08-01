@@ -1,19 +1,15 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
 import Sidebar from 'components/Sidebar';
 import './styles.css';
 
 const About = () => {
   return (
-    <div>
+    <Page title="About Me" description="All about Tiffany Lea May" fullWidth>
       <div className="beachImg">
-        <Helmet>
-          <title>Tiffany Lea May | About Me</title>
-          <meta name="description" content="All about Tiffany Lea May" />
-        </Helmet>
         <img alt="Beach" src="/images/beach-mid.jpg" />
       </div>
-      <div className="content setwidth">
+      <div className="setWidth">
         <section className="leftCol">
           <h1>About Me</h1>
           <p>
@@ -59,7 +55,7 @@ const About = () => {
         </section>
         <Sidebar />
       </div>
-    </div>
+    </Page>
   );
 };
 

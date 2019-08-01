@@ -1,20 +1,13 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
+import './styles.css';
 
 const Home = () => {
   return (
-    <div className="content setwidth">
-      <Helmet>
-        <title>Tiffany Lea May | Home</title>
-        <meta name="description" content="Home" />
-      </Helmet>
+    <Page title="Home" description="Home">
       <section className="homepage">
         <h1>Hi, my name is Tiffany May, I am a web developer.</h1>
-        <img
-          src="/images/cartoonImageHome.png"
-          alt="Tiffany as a Cartoon"
-          className="pullRight"
-        />
+        <img src="/images/cartoonImageHome.png" alt="Tiffany as a Cartoon" />
         <p>
           I have a passion for what I do and am looking for a challenging
           environment to continue learning and growing from.&nbsp;
@@ -41,7 +34,7 @@ const Home = () => {
           </li>
         </ul>
       </section>
-    </div>
+    </Page>
   );
 };
 

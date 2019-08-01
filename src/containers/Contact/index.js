@@ -1,15 +1,11 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
+import Page from 'components/Page';
 
 const Contact = () => {
   return (
-    <div>
-      <Helmet>
-        <title>Tiffany Lea May | Contact</title>
-        <meta name="description" content="Contact" />
-      </Helmet>
+    <Page title="Contact" description="Contact">
       <h1>Contact</h1>
-    </div>
+    </Page>
   );
 };
 
