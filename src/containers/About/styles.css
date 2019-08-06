@@ -1,0 +1,31 @@
+.beachImg {
+  background-image: url('/images/beach-repeat.jpg');
+  background-position: center top;
+  background-repeat: repeat-x;
+  border-bottom: 5px solid #b1d1dd;
+  height: 205px;
+  text-align: center;
+  position: relative;
+  z-index: 25;
+}
+.beachImg img {
+  border-left: 5px solid #b1d1dd;
+  border-right: 5px solid #b1d1dd;
+}
+
+@media screen and (max-width: 1005px) {
+  .beachImg {
+    height: auto;
+    background-image: none;
+    border: none;
+  }
+  .beachImg img {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 655px) {
+  .beachImg img {
+    display: none;
+  }
+}

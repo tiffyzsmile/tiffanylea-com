@@ -21,7 +21,6 @@
     "eslint-config-react-app": "^4.0.1",
     "eslint-loader": "2.1.2",
     "eslint-plugin-flowtype": "2.50.1",
-    "eslint-plugin-import": "2.16.0",
     "eslint-plugin-jsx-a11y": "6.2.1",
     "eslint-plugin-react": "7.12.4",
     "eslint-plugin-react-hooks": "^1.5.0",
@@ -42,10 +41,14 @@
     "postcss-normalize": "7.0.1",
     "postcss-preset-env": "6.6.0",
     "postcss-safe-parser": "4.0.1",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-app-polyfill": "^1.0.1",
     "react-dev-utils": "^9.0.1",
     "react-dom": "^16.8.6",
+    "react-helmet": "^5.2.1",
+    "react-hook-form": "^3.21.3",
+    "react-hot-loader": "^4.12.9",
     "react-router-dom": "^5.0.1",
     "resolve": "1.10.0",
     "sass-loader": "7.1.0",
@@ -57,11 +60,10 @@
     "webpack": "4.29.6",
     "webpack-dev-server": "3.2.1",
     "webpack-manifest-plugin": "2.0.4",
-    "workbox-webpack-plugin": "4.2.0",
-    "react-hot-loader": "^4.12.9"
+    "workbox-webpack-plugin": "4.2.0"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "webpack-dashboard -- node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js"
   },
@@ -79,10 +81,15 @@
   },
   "devDependencies": {
     "@hot-loader/react-dom": "^16.8.6",
+    "babel-plugin-module-resolver": "^3.2.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
+    "eslint-import-resolver-babel-module": "^5.1.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-module-resolver": "^0.13.0",
     "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "1.18.2"
+    "prettier": "1.18.2",
+    "webpack-dashboard": "^3.0.7"
   },
   "jest": {
     "collectCoverageFrom": [
