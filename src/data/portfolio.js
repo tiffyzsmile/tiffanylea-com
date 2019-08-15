@@ -285,7 +285,8 @@ const portfolio = [
     },
     date: '2012-01-01',
     description:
-      "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
+      'This is a script that will copy one site into a new site within Cascade Server CMS. ',
+    // "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
     technologies: ['HTML/CSS', 'PHP'],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services'],
@@ -323,8 +324,8 @@ const portfolio = [
     date: '2011-05-01',
     url: 'http://www.basinelectric.com/',
     technologies: ['PHP'],
-    description:
-      "<p>This was my first attempt at Web Services and it was a very big learning experience for me.  After successfully writing the script that imported the content it opened my eyes to the many ways Web Services can be used as what I like to call 'an easy button' for certain Cascade Server tasks.</p>",
+    // description:
+    //  "<p>This was my first attempt at Web Services and it was a very big learning experience for me.  After successfully writing the script that imported the content it opened my eyes to the many ways Web Services can be used as what I like to call 'an easy button' for certain Cascade Server tasks.</p>",
     responsibilities: [
       'Importing the existing site content for both Basin Electric Power Cooperative and Dakota Gasification Company into Cascade Server via a custom Web Services (PHP) script',
       'Assisted with general Cascade Server integration',
@@ -387,7 +388,7 @@ const portfolio = [
   },
   {
     name: 'Burton and Burton',
-    display: true,
+    display: false,
     slug: 'burton-and-burton-2010',
     employer: {
       name: 'Beacon Technologies',
@@ -641,8 +642,27 @@ const portfolio = [
     date: '2010-02-01',
     url: 'http://www.hartford.edu',
     technologies: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery'],
-    description:
-      '<ul><li>Campus Calendar<ul><li>Developed from scratch</li><li>Highly flexible calendaring application within Cascade Server CMS</li><li>Events are input once but pulled to many different types of displays(home page, Campus Calendar and Arts &amp; Events Calendar).</li><li>Client can create Calendars for specific groups (Library, Athletics, etc.) within Cascade Server</li></ul></li><li>Newsroom<ul><li>Listing page for press releases and other news</li><li>Integration of RSS feed display (U of H in the News)</li><li>Editable content areas for “Media Contacts” and “Key Contacts”</li><li>Press release detail page</li><li>Everything is controlled within Cascade Server CMS.</li></ul></li></ul>',
+    features: [
+      {
+        name: 'Campus Calendar',
+        details: [
+          'Developed from scratch',
+          'Highly flexible calendaring application within Cascade Server CMS',
+          'Events are input once but pulled to many different types of displays(home page, Campus Calendar and Arts &amp; Events Calendar).',
+          'Client can create Calendars for specific groups (Library, Athletics, etc.) within Cascade Server'
+        ]
+      },
+      {
+        name: 'Newsroom',
+        details: [
+          'Listing page for press releases and other news',
+          'Integration of RSS feed display (U of H in the News)',
+          'Editable content areas for “Media Contacts” and “Key Contacts”',
+          'Press release detail page',
+          'Everything is controlled within Cascade Server CMS.'
+        ]
+      }
+    ],
     responsibilities: [
       'Original front-end development (HTML/CSS)',
       'Back-end ASP development',
@@ -719,7 +739,7 @@ const portfolio = [
     date: '2009-08-01',
     url: 'http://www.guilfordcollegeumc.org',
     technologies: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
-    description: ['Custom Modules', 'Customized Calendar integration'],
+    description: 'Custom Modules & Calendar integration',
     cms: ['Drupal'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['guilford-college-united-methodist-church-1.png']
@@ -798,7 +818,7 @@ const portfolio = [
     url: 'http://www.machinesandwheels.com',
     technologies: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
     description:
-      '<p>Machines and Wheels came to Get You Found Online Marketing looking for a complete website overhaul.  They wanted the ability to easily edit and update the site themselves, a fresh look, the ability to request a quote throughout the site, and many other features such as testimonials and featured products on the home page.</p><p>Working together with Machines and Wheels and Get You Found we were able to accomplish this using Drupal content management system.</p>',
+      'Machines and Wheels came to Get You Found Online Marketing looking for a complete website overhaul.  They wanted the ability to easily edit and update the site themselves, a fresh look, the ability to request a quote throughout the site, and many other features such as testimonials and featured products on the home page.  Working together with Machines and Wheels and Get You Found we were able to accomplish this using Drupal content management system.',
     cms: ['Drupal'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['machines-and-wheels-1.png']
@@ -832,7 +852,8 @@ const portfolio = [
     url: 'http://www.modukraf.com',
     technologies: ['HTML/CSS', 'Javascript', 'PHP'],
     description:
-      '<p>Mod-U-Kraf came to Get You Found Online Marketing with a clear vision of how they wanted their site to function.  This site was rather complex given the many different areas within the site as well as the large amount of information about their products and services.</p><p>I enjoyed working with the chosen graphics, content and flow of the site.  The site turned out great and I was especially pleased with the final outcome.</p>',
+      'Mod-U-Kraf came to Get You Found Online Marketing with a clear vision of how they wanted their site to function.  This site was rather complex given the many different areas within the site as well as the large amount of information about their products and services.',
+    // I enjoyed working with the chosen graphics, content and flow of the site.  The site turned out great and I was especially pleased with the final outcome. --- OLD content
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['mod-u-kraf-1.png']
   },
@@ -849,7 +870,7 @@ const portfolio = [
     url: 'http://familyabuseservices.org',
     technologies: ['HTML/CSS', 'PHP'],
     description:
-      '<p>Family Abuse Services of Alamance County came to Carolinanet with the desire to completely revamp their existing website.  The main focus was on a new look and feel, providing content to their audience in a clear easy to navigate way as well as being able to edit the information themselves.</p>',
+      'Family Abuse Services of Alamance County came to Carolinanet with the desire to completely revamp their existing website.  The main focus was on a new look and feel, providing content to their audience in a clear easy to navigate way as well as being able to edit the information themselves.',
     responsibilities: [
       'Installing, configuring and theming Drupal',
       'Original front-end development',
@@ -883,7 +904,7 @@ const portfolio = [
     url: 'http://www.acleanerworld.com',
     technologies: ['ASP', 'HTML/CSS'],
     description:
-      '<p>While at Inter-Tech Communications I worked with Symetri Internet Marketing to provide A Cleaner World with their desired website overhaul.</p>',
+      'While at Inter-Tech Communications I worked with Symetri Internet Marketing to provide A Cleaner World with their desired website overhaul.',
     responsibilities: [
       'Sitewide graphics',
       'Front-end development into existing back-end code'
@@ -917,7 +938,9 @@ const portfolio = [
     url: 'http://www.itc123.com',
     technologies: ['HTML/CSS', 'Flash/Actionscript'],
     description:
-      '<p>At Inter-Tech Communications one of my main focuses was on completely rebuilding and maintaining the company website to provide clients and potential clients with accurate information about all the services offered.</p><p>Though the header and footer graphics where provided to me, I was responsible for continuing the look and feel throughout the site.&nbsp; This included creating numerous banners for different sections of the website.&nbsp; Since Carolinanet bought out the web portion of Inter-Tech Communications the banners no longer show on the website.&nbsp; I have attached a few below.</p><p>This website was also linked to Parallels Business Automation Solution.&nbsp; I was responsible for configuring to match the site exactly so that ordering services would seamlessly integrate.</p>',
+      'At Inter-Tech Communications one of my main focuses was on completely rebuilding and maintaining the company website to provide clients and potential clients with accurate information about all the services offered.',
+    // OLD CONTENT
+    // '<p>At Inter-Tech Communications one of my main focuses was on completely rebuilding and maintaining the company website to provide clients and potential clients with accurate information about all the services offered.</p><p>Though the header and footer graphics where provided to me, I was responsible for continuing the look and feel throughout the site.&nbsp; This included creating numerous banners for different sections of the website.&nbsp; Since Carolinanet bought out the web portion of Inter-Tech Communications the banners no longer show on the website.&nbsp; I have attached a few below.</p><p>This website was also linked to Parallels Business Automation Solution.&nbsp; I was responsible for configuring to match the site exactly so that ordering services would seamlessly integrate.</p>',
     cms: ['Joomla!'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: [
