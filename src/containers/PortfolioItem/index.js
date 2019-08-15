@@ -72,7 +72,7 @@ const PortfolioItem = ({ match }) => {
             </div>
           )}
 
-          {features && (
+          {portfolioItem.features && (
             <div>
               <h2>Description:</h2>
               {features}
