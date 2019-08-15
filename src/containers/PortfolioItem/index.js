@@ -43,7 +43,7 @@ const PortfolioItem = ({ match }) => {
         <section className="portfolioDetails">
           <h1>{portfolioItem.name}</h1>
           <p>
-            <strong>Year:</strong> {portfolioItem.date}
+            <strong>Year:</strong> {portfolioItem.date.substring(0, 4)}
           </p>
           {portfolioItem.responsibilities && (
             <div>

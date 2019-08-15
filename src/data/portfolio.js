@@ -511,11 +511,7 @@ const portfolio = [
         'http://blog.beacontechnologies.com/united-anesthesia-redesign-launch/'
     },
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: [
-      'united-anesthesia-1.png',
-      'united-anesthesia-2.png',
-      'united-anesthesia-3.png'
-    ]
+    images: ['united-anesthesia-1.png', 'united-anesthesia-2.png']
   },
   {
     name: 'Staub Leadership',
@@ -568,7 +564,12 @@ const portfolio = [
         'http://blog.beacontechnologies.com/montgomery-family-law-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'montgomery-family-law-1.png',
+      'montgomery-family-law-2.png',
+      'montgomery-family-law-3.png'
+    ]
   },
   {
     name: 'Firefly Store Solutions',
@@ -591,7 +592,8 @@ const portfolio = [
       url: 'http://blog.beacontechnologies.com/robert-ham-site-launch/'
     },
     cms: ['aspDotNetStorefront'],
-    other: ['Cross Browser Compatibility']
+    other: ['Cross Browser Compatibility'],
+    images: ['firefly-store-solutions-1.png']
   },
   {
     name: 'Volvo Bus SCR',
@@ -610,7 +612,13 @@ const portfolio = [
       text: 'Beacon Technologies Blog',
       url: 'http://blog.beacontechnologies.com/volvo-site-launch/'
     },
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'volvo-bus-scr-1.png',
+      'volvo-bus-scr-2.png',
+      'volvo-bus-scr-3.png',
+      'volvo-bus-scr-4.png'
+    ]
   },
   {
     name: 'University of Hartford',
@@ -637,7 +645,17 @@ const portfolio = [
         'http://blog.beacontechnologies.com/the-university-of-hartford-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'university-hartford-2010-1.png',
+      'university-hartford-2010-2.png',
+      'university-hartford-2010-3.png',
+      'university-hartford-2010-4.png',
+      'university-hartford-2010-5.png',
+      'university-hartford-2010-6.png',
+      'university-hartford-2010-7.png',
+      'university-hartford-2010-8.png'
+    ]
   },
   {
     name: 'Carolina Girl Furniture',
@@ -652,7 +670,12 @@ const portfolio = [
     url: 'http://www.carolinagirlfurniture.com',
     technologies: ['HTML/CSS', 'PHP'],
     cms: ['Magento'],
-    other: ['Cross Browser Compatibility']
+    other: ['Cross Browser Compatibility'],
+    images: [
+      'carolina-girl-furniture-1.png',
+      'carolina-girl-furniture-2.png',
+      'carolina-girl-furniture-3.png'
+    ]
   },
   {
     name: 'Envision',
@@ -672,7 +695,8 @@ const portfolio = [
       'Drupal customizations including Product Search, Products, Rooms, Collections, Store Locations and Blog'
     ],
     cms: ['Drupal'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['envision-1.png', 'envision-2.png', 'envision-3.png']
   },
   {
     name: 'GCUMC',
@@ -688,7 +712,8 @@ const portfolio = [
     technologies: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
     description: ['Custom Modules', 'Customized Calendar integration'],
     cms: ['Drupal'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['guilford-college-united-methodist-church-1.png']
   },
   {
     name: 'EQ3',
@@ -700,7 +725,8 @@ const portfolio = [
       url: 'http://www.getyoufound.com'
     },
     date: '2009-07-01',
-    url: 'http://www.eq3charlotte.com/'
+    url: 'http://www.eq3charlotte.com/',
+    images: ['eq3-1.png']
   },
   {
     name: 'NorthStar Management',
@@ -715,7 +741,8 @@ const portfolio = [
     url: 'http://northstarone.com',
     technologies: ['HTML/CSS', 'Javascript', 'PHP'],
     responsibilities: ['All original site development'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['northstar-management-1.png', 'northstar-management-2.png']
   },
   {
     name: 'Matlab',
@@ -733,7 +760,8 @@ const portfolio = [
       'Original front-end development',
       'Flash animations throughout the site'
     ],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['matlab-1.png', 'matlab-2.png', 'matlab-3.png']
   },
   {
     name: 'Twicon 2009',
@@ -745,7 +773,8 @@ const portfolio = [
       url: 'http://www.getyoufound.com'
     },
     date: '2009-06-01',
-    url: 'http://twiconstore.com'
+    url: 'http://twiconstore.com',
+    images: ['twicon-2009-1.png']
   },
   {
     name: 'Machines and Wheels',
@@ -762,7 +791,8 @@ const portfolio = [
     description:
       '<p>Machines and Wheels came to Get You Found Online Marketing looking for a complete website overhaul.  They wanted the ability to easily edit and update the site themselves, a fresh look, the ability to request a quote throughout the site, and many other features such as testimonials and featured products on the home page.</p><p>Working together with Machines and Wheels and Get You Found we were able to accomplish this using Drupal content management system.</p>',
     cms: ['Drupal'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['machines-and-wheels-1.png']
   },
   {
     name: 'Herron House',
@@ -777,7 +807,8 @@ const portfolio = [
     url: 'http://www.herronhouse.com',
     technologies: ['HTML/CSS', 'PHP'],
     cms: ['Drupal'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['herron-house-1.png']
   },
   {
     name: 'Mod-U-Kraf',
@@ -793,7 +824,8 @@ const portfolio = [
     technologies: ['HTML/CSS', 'Javascript', 'PHP'],
     description:
       '<p>Mod-U-Kraf came to Get You Found Online Marketing with a clear vision of how they wanted their site to function.  This site was rather complex given the many different areas within the site as well as the large amount of information about their products and services.</p><p>I enjoyed working with the chosen graphics, content and flow of the site.  The site turned out great and I was especially pleased with the final outcome.</p>',
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['mod-u-kraf-1.png']
   },
   {
     name: 'Family Abuse Services',
@@ -817,7 +849,8 @@ const portfolio = [
     notes:
       '<p>The Creative Director at Carolinanet did a great job on the graphics for this site.</p>',
     cms: ['Drupal'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['family-abuse-services-1.jpg']
   },
   {
     name: 'Triad Construction Services',
@@ -825,7 +858,8 @@ const portfolio = [
     slug: 'triad-construction-services-inc',
     employer: 'XMG',
     date: '2008-12-01',
-    url: 'http://www.triadconstructs.com'
+    url: 'http://www.triadconstructs.com',
+    images: ['triad-construction-services-inc-1.png']
   },
   {
     name: 'A Cleaner World',
@@ -845,7 +879,8 @@ const portfolio = [
       'Sitewide graphics',
       'Front-end development into existing back-end code'
     ],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['a-cleaner-world-1.png']
   },
   {
     name: 'Shoe Paradise',
@@ -857,7 +892,8 @@ const portfolio = [
       url: 'http://www.itc123.com'
     },
     date: '2007-11-01',
-    url: 'http://www.shoeparadise.net'
+    url: 'http://www.shoeparadise.net',
+    images: ['shoe-paradise-1.png']
   },
   {
     name: 'Inter-Tech Communications',
@@ -874,7 +910,13 @@ const portfolio = [
     description:
       '<p>At Inter-Tech Communications one of my main focuses was on completely rebuilding and maintaining the company website to provide clients and potential clients with accurate information about all the services offered.</p><p>Though the header and footer graphics where provided to me, I was responsible for continuing the look and feel throughout the site.&nbsp; This included creating numerous banners for different sections of the website.&nbsp; Since Carolinanet bought out the web portion of Inter-Tech Communications the banners no longer show on the website.&nbsp; I have attached a few below.</p><p>This website was also linked to Parallels Business Automation Solution.&nbsp; I was responsible for configuring to match the site exactly so that ordering services would seamlessly integrate.</p>',
     cms: ['Joomla!'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'inter-tech-communications-1.png',
+      'inter-tech-communications-2.jpg',
+      'inter-tech-communications-3.jpg',
+      'inter-tech-communications-4.jpg'
+    ]
   }
 ];
 
