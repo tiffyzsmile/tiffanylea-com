@@ -17,6 +17,20 @@ const PortfolioItem = ({ match }) => {
       })
     : [];
 
+  const features = portfolioItem.features
+    ? portfolioItem.features.map(feature => {
+        const details = feature.details.map(detail => {
+          return <li>{detail}</li>;
+        });
+        return (
+          <div>
+            <strong>{feature.name}</strong>
+            <ul>{details}</ul>
+          </div>
+        );
+      })
+    : [];
+
   const images = portfolioItem.images
     ? portfolioItem.images.map(image => {
         return {
@@ -55,6 +69,13 @@ const PortfolioItem = ({ match }) => {
             <div>
               <h2>Description:</h2>
               {portfolioItem.description}
+            </div>
+          )}
+
+          {features && (
+            <div>
+              <h2>Description:</h2>
+              {features}
             </div>
           )}
           <h2>Links</h2>

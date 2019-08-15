@@ -221,8 +221,17 @@ const portfolio = [
     date: '2012-03-01',
     url: 'http://www.hartford.edu/',
     technologies: ['HTML/CSS', 'Javascript', 'jQuery'],
-    description:
-      '<ul><li>Homepage My Story Feature<ul><li>Randomized thumbnail order on load after first visit</li><li>Each story links to a story page where it disaplays a YouTube video player</li><li>Current storys shown and sort order on first load are controlled within Cascade Server</li><li>All story text and images are controlled within Cascade Server</li></ul></li></ul>',
+    features: [
+      {
+        name: 'Homepage My Story Feature',
+        details: [
+          'Randomized thumbnail order on load after first visit',
+          'Each story links to a story page where it disaplays a YouTube video player',
+          'Current storys shown and sort order on first load are controlled within Cascade Server',
+          'All story text and images are controlled within Cascade Server'
+        ]
+      }
+    ],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
