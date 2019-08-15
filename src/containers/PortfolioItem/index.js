@@ -20,9 +20,9 @@ const PortfolioItem = ({ match }) => {
   const images = portfolioItem.images
     ? portfolioItem.images.map(image => {
         return {
-          original: `/images/portfolio/large/${image}`,
+          original: `/images/portfolio/${image}`,
           originalAlt: portfolioItem.name,
-          thumbnail: `/images/portfolio/thumb/${image}`
+          thumbnail: `/images/portfolio/${image}`
         };
       })
     : [];

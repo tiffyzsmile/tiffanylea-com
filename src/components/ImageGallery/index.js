@@ -7,7 +7,14 @@ const ImageGallery = ({ images }) => {
   if (images.length === 1) {
     return <img alt={images[0].originalAlt} src={images[0].original} />;
   }
-  return <ReactImageGallery items={images} thumbnailPosition="top" />;
+  return (
+    <ReactImageGallery
+      items={images}
+      thumbnailPosition="top"
+      showPlayButton={false}
+      showFullscreenButton={false}
+    />
+  );
 };
 
 ImageGallery.propTypes = {

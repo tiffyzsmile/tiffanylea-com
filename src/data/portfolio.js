@@ -63,7 +63,7 @@ const portfolio = [
     url: 'http://whitman.syr.edu',
     technologies: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
-      'Training and assisting as neeeded for Responsive techniques/development'
+      'Training and assisting as needed for Responsive techniques/development'
     ],
     more: {
       text: 'Beacon Technologies Blog',
@@ -71,7 +71,8 @@ const portfolio = [
         'http://blog.beacontechnologies.com/syracuse-university-whitman-school-of-management-cascade-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['whitman-school-of-management-r-1.png']
   },
   {
     name: 'Grossmont-Cuyamaca Community College District',
@@ -95,7 +96,8 @@ const portfolio = [
         'http://blog.beacontechnologies.com/cascade-responsive-design-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['gcccd-1.png']
   },
   {
     name: 'Syracuse University, Whitman School of Management',
@@ -119,7 +121,15 @@ const portfolio = [
         'http://blog.beacontechnologies.com/syracuse-university-whitman-school-of-management-cascade-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'whitman-school-of-management-1.png',
+      'whitman-school-of-management-2.png',
+      'whitman-school-of-management-3.png',
+      'whitman-school-of-management-4.png',
+      'whitman-school-of-management-5.png',
+      'whitman-school-of-management-6.png'
+    ]
   },
   {
     name: 'North Carolina Technology Association',
@@ -141,7 +151,8 @@ const portfolio = [
       url: 'http://blog.beacontechnologies.com/ncta-responsive-redesign-launch/'
     },
     cms: ['aspDotNetStorefront'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['ncta-1.png']
   },
   {
     name: 'Tufenkian Outlet',
@@ -164,7 +175,8 @@ const portfolio = [
       url: 'http://blog.beacontechnologies.com/tufenkian-outlet-redesign/'
     },
     cms: ['aspDotNetStorefront'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['tufenkian-outlet-1.png']
   },
   {
     name: 'Bassett Furniture Mobile Site',
@@ -221,7 +233,8 @@ const portfolio = [
         'http://blog.beacontechnologies.com/hartford-university-jquery-update/'
     },
     cms: ['Cascade Server'],
-    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['hartford-university-2012-1.png']
   },
   {
     name: 'Texwipe',
@@ -249,7 +262,8 @@ const portfolio = [
       url: 'http://blog.beacontechnologies.com/texwipe-site-launch/'
     },
     cms: ['aspDotNetStorefront', 'Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['texwipe-1.png']
   },
   {
     name: 'Basin Electric - Copy Site Script',
@@ -265,7 +279,8 @@ const portfolio = [
       "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
     technologies: ['HTML/CSS', 'PHP'],
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services']
+    other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services'],
+    images: ['basin-electric-copy-site-1.png']
   },
   {
     name: 'BMI Surplus',
@@ -313,7 +328,12 @@ const portfolio = [
         'http://blog.beacontechnologies.com/basin-electric-power-cooperative-cascade-server-and-pho-development/'
     },
     cms: ['Cascade Server'],
-    other: ['Web Services']
+    other: ['Web Services'],
+    images: [
+      'basin-electric-power-cooperative-1.png',
+      'basin-electric-power-cooperative-2.png',
+      'basin-electric-power-cooperative-3.png'
+    ]
   },
   {
     name: 'Winston-Salem State University',
@@ -344,11 +364,21 @@ const portfolio = [
       url: ''
     },
     cms: ['Cascade Server'],
-    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'winston-salem-state-university-1.png',
+      'winston-salem-state-university-2.png',
+      'winston-salem-state-university-3.png',
+      'winston-salem-state-university-4.png',
+      'winston-salem-state-university-5.png',
+      'winston-salem-state-university-6.png',
+      'winston-salem-state-university-7.png',
+      'winston-salem-state-university-8.png'
+    ]
   },
   {
     name: 'Burton and Burton',
-    display: false,
+    display: true,
     slug: 'burton-and-burton-2010',
     employer: {
       name: 'Beacon Technologies',
@@ -364,7 +394,14 @@ const portfolio = [
       url: ''
     },
     cms: [],
-    other: []
+    other: [],
+    images: [
+      'burton-and-burton-2010-1.png',
+      'burton-and-burton-2010-2.png',
+      'burton-and-burton-2010-3.png',
+      'burton-and-burton-2010-4.png',
+      'burton-and-burton-2010-5.png'
+    ]
   },
   {
     name: 'Greensboro Radiology',
@@ -388,7 +425,12 @@ const portfolio = [
         'http://blog.beacontechnologies.com/greensboro-radiology-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'greensboro-radiology-1.png',
+      'greensboro-radiology-2.png',
+      'greensboro-radiology-3.png'
+    ]
   },
   {
     name: 'Texas A&M Foundation',
@@ -414,7 +456,12 @@ const portfolio = [
         'http://blog.beacontechnologies.com/texas-am-foundation-redesign-launched/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'texas-am-foundation-1.png',
+      'texas-am-foundation-2.png',
+      'texas-am-foundation-3.png'
+    ]
   },
   {
     name: 'Framingham University',
@@ -439,7 +486,8 @@ const portfolio = [
         'http://blog.beacontechnologies.com/framingham-state-university-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['framingham-university-1.png', 'framingham-university-2.png']
   },
   {
     name: 'United Anesthesia',
@@ -462,7 +510,12 @@ const portfolio = [
       url:
         'http://blog.beacontechnologies.com/united-anesthesia-redesign-launch/'
     },
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'united-anesthesia-1.png',
+      'united-anesthesia-2.png',
+      'united-anesthesia-3.png'
+    ]
   },
   {
     name: 'Staub Leadership',
@@ -485,7 +538,13 @@ const portfolio = [
       url: 'http://blog.beacontechnologies.com/staub-leadership-site-launch/'
     },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant']
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: [
+      'staub-leadership-1.png',
+      'staub-leadership-2.png',
+      'staub-leadership-3.png',
+      'staub-leadership-4.png'
+    ]
   },
   {
     name: 'Montgomery Family Law',
