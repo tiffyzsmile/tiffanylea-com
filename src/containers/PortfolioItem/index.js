@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Page from 'components/Page';
+import ImageGallery from 'components/ImageGallery';
 import { Link } from 'react-router-dom';
 import portfolio from 'data/portfolio';
 
@@ -18,13 +19,11 @@ const PortfolioItem = ({ match }) => {
 
   const images = portfolioItem.images
     ? portfolioItem.images.map(image => {
-        return (
-          <img
-            alt={portfolioItem.employer.name}
-            src={`/images/portfolio/thumb/${image}`}
-            key={image}
-          />
-        );
+        return {
+          original: `/images/portfolio/large/${image}`,
+          originalAlt: portfolioItem.name,
+          thumbnail: `/images/portfolio/thumb/${image}`
+        };
       })
     : [];
 
@@ -97,7 +96,9 @@ const PortfolioItem = ({ match }) => {
             </a>
           </p>
         </section>
-        <section className="portfolioImages">{images}</section>
+        <section className="portfolioImages">
+          <ImageGallery images={images} />
+        </section>
       </section>
     </Page>
   );

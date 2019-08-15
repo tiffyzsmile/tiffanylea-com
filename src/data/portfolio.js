@@ -23,7 +23,7 @@ const portfolio = [
     },
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['beacon-main.png']
+    images: ['beacon-main-1.png']
   },
   {
     name: 'Beacon Technologies - Blog',
@@ -48,7 +48,7 @@ const portfolio = [
     },
     cms: ['WordPress'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['beacon-blog.png']
+    images: ['beacon-blog-1.png']
   },
   {
     name: 'Syracuse University, Whitman School of Management',

@@ -459,10 +459,6 @@ ul#portfolio-list li p {
   max-width: 650px;
   padding: 50px 0;
 }
-.portfolioImages img {
-  float: left;
-  max-width: 100%;
-}
 .portfolioDetails {
   width: 50%;
   float: right;

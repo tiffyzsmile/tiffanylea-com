@@ -411,7 +411,8 @@
 }
 .image-gallery-thumbnail img {
   vertical-align: middle;
-  width: 100%;
+  width: auto;
+  max-height: 100px;
 }
 .image-gallery-thumbnail.active {
   border: 4px solid #337ab7;

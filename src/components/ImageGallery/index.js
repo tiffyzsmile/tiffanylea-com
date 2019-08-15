@@ -1,23 +1,19 @@
 import React from 'react';
 import ReactImageGallery from 'react-image-gallery';
 import './styles.css';
+import PropTypes from 'prop-types';
 
-const ImageGallery = () => {
-  const images = [
-    {
-      original: '/images/portfolio/large/bassett-furniture-1.png',
-      thumbnail: '/images/portfolio/thumb/bassett-furniture-1.png'
-    },
-    {
-      original: '/images/portfolio/large/bassett-furniture-2.png',
-      thumbnail: '/images/portfolio/thumb/bassett-furniture-2.png'
-    },
-    {
-      original: '/images/portfolio/large/bassett-furniture-3.png',
-      thumbnail: '/images/portfolio/thumb/bassett-furniture-3.png'
-    }
-  ];
-
-  return <ReactImageGallery items={images} />;
+const ImageGallery = ({ images }) => {
+  if (images.length === 1) {
+    return <img alt={images[0].originalAlt} src={images[0].original} />;
+  }
+  return <ReactImageGallery items={images} thumbnailPosition="top" />;
 };
+
+ImageGallery.propTypes = {
+  images: PropTypes.arrayOf(
+    PropTypes.shape({ thumbnail: PropTypes.string, original: PropTypes.string })
+  ).isRequired
+};
+
 export default ImageGallery;
