@@ -11,7 +11,7 @@ const portfolio = [
     },
     date: '2013-08-01',
     url: 'http://www.beacontechnologies.com',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
       'All original front-end development',
       'Custom Cascade Server integration'
@@ -36,7 +36,7 @@ const portfolio = [
     },
     date: '2013-08-01',
     url: 'http://blog.beacontechnologies.com',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
       'All original front-end development',
       'All custom WordPress integration'
@@ -61,7 +61,7 @@ const portfolio = [
     },
     date: '2013-06-01',
     url: 'http://whitman.syr.edu',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
       'Training and assisting as needed for Responsive techniques/development'
     ],
@@ -85,7 +85,7 @@ const portfolio = [
     },
     date: '2013-01-01',
     url: 'http://www.gcccd.edu',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
@@ -110,7 +110,7 @@ const portfolio = [
     },
     date: '2012-10-01',
     url: 'http://whitman.syr.edu',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
@@ -142,7 +142,7 @@ const portfolio = [
     },
     date: '2013-04-01',
     url: 'http://www.nctechnology.org',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
       'Training and assisting as neeeded for Responsive techniques/development'
     ],
@@ -165,7 +165,7 @@ const portfolio = [
     },
     date: '2012-06-01',
     url: 'http://www.tufenkianoutlet.com/',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
     responsibilities: [
       'All original front-end development (HTML/CSS/JS)',
       'AspDotNetStorefront integration (E-Commerce)'
@@ -189,7 +189,7 @@ const portfolio = [
     },
     date: '2012-03-01',
     url: 'http://www.bassettfurniture.com/mobile/',
-    technologies: ['ASP', 'Javascript', 'Mobile'],
+    tags: ['ASP', 'Javascript', 'Mobile'],
     description: '',
     responsibilities: [
       'All original front-end development (HTML/CSS/JS)',
@@ -220,7 +220,7 @@ const portfolio = [
     },
     date: '2012-03-01',
     url: 'http://www.hartford.edu/',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
     features: [
       {
         name: 'Homepage My Story Feature',
@@ -256,7 +256,7 @@ const portfolio = [
     },
     date: '2012-01-01',
     url: 'http://www.texwipe.com',
-    technologies: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
     description:
       "This is one of my favorites because it is actually very complex and custom yet we were able to keep the back-end and front-end code relatively simple and clean. You've got to love a site that simplifies complexity...  :)",
     responsibilities: [
@@ -287,7 +287,7 @@ const portfolio = [
     description:
       'This is a script that will copy one site into a new site within Cascade Server CMS. ',
     // "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
-    technologies: ['HTML/CSS', 'PHP'],
+    tags: ['HTML/CSS', 'PHP'],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services'],
     images: ['basin-electric-copy-site-1.png']
@@ -303,7 +303,7 @@ const portfolio = [
     },
     date: '2011-05-01',
     url: 'http://www.bmius.com',
-    technologies: [],
+    tags: [],
     responsibilities: [],
     more: {
       text: '',
@@ -323,7 +323,7 @@ const portfolio = [
     },
     date: '2011-05-01',
     url: 'http://www.basinelectric.com/',
-    technologies: ['PHP'],
+    tags: ['PHP'],
     // description:
     //  "<p>This was my first attempt at Web Services and it was a very big learning experience for me.  After successfully writing the script that imported the content it opened my eyes to the many ways Web Services can be used as what I like to call 'an easy button' for certain Cascade Server tasks.</p>",
     responsibilities: [
@@ -356,13 +356,7 @@ const portfolio = [
     },
     date: '2011-01-01',
     url: 'http://wssu.edu',
-    technologies: [
-      'Flash/Actionscript',
-      'HTML/CSS',
-      'Javascript',
-      'jQuery',
-      'Mobile'
-    ],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'jQuery', 'Mobile'],
     responsibilities: [
       'Homepage Flash (configurable through Cascade Server)',
       'Advanced campus maps (2D, 3D and mobile versions) using Google maps API (configurable through Cascade Server)',
@@ -397,7 +391,7 @@ const portfolio = [
     },
     date: '2010-11-01',
     url: 'http://burtonandburton.com',
-    technologies: [],
+    tags: [],
     responsibilities: [],
     more: {
       text: '',
@@ -424,7 +418,7 @@ const portfolio = [
     },
     date: '2010-09-01',
     url: 'http://greensbororadiology.com',
-    technologies: ['ASP', 'HTML/CSS', 'Javascript'],
+    tags: ['ASP', 'HTML/CSS', 'Javascript'],
     responsibilities: [
       'Original front-end development',
       'Custom Cascade Server integration'
@@ -453,7 +447,7 @@ const portfolio = [
     },
     date: '2010-09-01',
     url: 'http://giving.tamu.edu',
-    technologies: ['Flash/Actionscript', 'HTML/CSS', 'jQuery'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'jQuery'],
     description: '',
     responsibilities: [
       'Homepage flash (configurable through Cascade Server)',
@@ -484,7 +478,7 @@ const portfolio = [
     },
     date: '2010-08-01',
     url: 'http://framingham.edu',
-    technologies: ['ASP', 'Flash/Actionscript', 'HTML/CSS'],
+    tags: ['ASP', 'Flash/Actionscript', 'HTML/CSS'],
     responsibilities: [
       'Homepage flash (configurable through Cascade Server)',
       'Assisting with general front-end development',
@@ -510,7 +504,7 @@ const portfolio = [
     },
     date: '2010-07-01',
     url: 'http://www.unitedanesthesia.com',
-    technologies: ['ASP', 'HTML/CSS', 'Javascript'],
+    tags: ['ASP', 'HTML/CSS', 'Javascript'],
     responsibilities: [
       'Original front-end development',
       'Merging existing back-end code into new front-end code'
@@ -520,6 +514,7 @@ const portfolio = [
       url:
         'http://blog.beacontechnologies.com/united-anesthesia-redesign-launch/'
     },
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['united-anesthesia-1.png', 'united-anesthesia-2.png']
   },
@@ -534,7 +529,7 @@ const portfolio = [
     },
     date: '2010-04-01',
     url: 'http://www.staubleadership.com',
-    technologies: ['ASP', 'HTML/CSS', 'Javascript'],
+    tags: ['ASP', 'HTML/CSS', 'Javascript'],
     responsibilities: [
       'Orignal front-end development',
       'Customized Cascade Server integration'
@@ -563,7 +558,7 @@ const portfolio = [
     },
     date: '2010-03-01',
     url: 'http://www.montylaw.com',
-    technologies: ['HTML/CSS', 'Javascript'],
+    tags: ['HTML/CSS', 'Javascript'],
     responsibilities: [
       'Original front-end development',
       'Custom Cascade Server integration'
@@ -592,7 +587,7 @@ const portfolio = [
     },
     date: '2010-03-01',
     url: 'http://www.fireflystoresolutions.com',
-    technologies: ['HTML/CSS', 'Javascript'],
+    tags: ['HTML/CSS', 'Javascript'],
     responsibilities: [
       'Original front-end development',
       'AspDotNetStorefront integration'
@@ -616,12 +611,13 @@ const portfolio = [
     },
     date: '2010-02-01',
     url: 'http://www.volvobusscr.com/',
-    technologies: ['ASP', 'HTML/CSS'],
+    tags: ['ASP', 'HTML/CSS'],
     responsibilities: ['Sitewide multi-language functionality'],
     more: {
       text: 'Beacon Technologies Blog',
       url: 'http://blog.beacontechnologies.com/volvo-site-launch/'
     },
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: [
       'volvo-bus-scr-1.png',
@@ -641,7 +637,7 @@ const portfolio = [
     },
     date: '2010-02-01',
     url: 'http://www.hartford.edu',
-    technologies: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery'],
     features: [
       {
         name: 'Campus Calendar',
@@ -697,7 +693,7 @@ const portfolio = [
     },
     date: '2009-11-01',
     url: 'http://www.carolinagirlfurniture.com',
-    technologies: ['HTML/CSS', 'PHP'],
+    tags: ['HTML/CSS', 'PHP'],
     cms: ['Magento'],
     other: ['Cross Browser Compatibility'],
     images: [
@@ -717,7 +713,7 @@ const portfolio = [
     },
     date: '2009-10-01',
     url: 'http://www.envisionfurniture.com',
-    technologies: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
     responsibilities: [
       'Homepage Flash',
       'Original front-end development',
@@ -738,7 +734,7 @@ const portfolio = [
     },
     date: '2009-08-01',
     url: 'http://www.guilfordcollegeumc.org',
-    technologies: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
     description: 'Custom Modules & Calendar integration',
     cms: ['Drupal'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
@@ -755,6 +751,8 @@ const portfolio = [
     },
     date: '2009-07-01',
     url: 'http://www.eq3charlotte.com/',
+    cms: [],
+    other: [],
     images: ['eq3-1.png']
   },
   {
@@ -768,8 +766,9 @@ const portfolio = [
     },
     date: '2009-07-01',
     url: 'http://northstarone.com',
-    technologies: ['HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['HTML/CSS', 'Javascript', 'PHP'],
     responsibilities: ['All original site development'],
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['northstar-management-1.png', 'northstar-management-2.png']
   },
@@ -784,11 +783,12 @@ const portfolio = [
     },
     date: '2009-06-01',
     url: 'http://www.matlabinc.com',
-    technologies: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
     responsibilities: [
       'Original front-end development',
       'Flash animations throughout the site'
     ],
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['matlab-1.png', 'matlab-2.png', 'matlab-3.png']
   },
@@ -803,6 +803,8 @@ const portfolio = [
     },
     date: '2009-06-01',
     url: 'http://twiconstore.com',
+    cms: [],
+    other: [],
     images: ['twicon-2009-1.png']
   },
   {
@@ -816,7 +818,7 @@ const portfolio = [
     },
     date: '2009-04',
     url: 'http://www.machinesandwheels.com',
-    technologies: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
     description:
       'Machines and Wheels came to Get You Found Online Marketing looking for a complete website overhaul.  They wanted the ability to easily edit and update the site themselves, a fresh look, the ability to request a quote throughout the site, and many other features such as testimonials and featured products on the home page.  Working together with Machines and Wheels and Get You Found we were able to accomplish this using Drupal content management system.',
     cms: ['Drupal'],
@@ -834,7 +836,7 @@ const portfolio = [
     },
     date: '2009-04',
     url: 'http://www.herronhouse.com',
-    technologies: ['HTML/CSS', 'PHP'],
+    tags: ['HTML/CSS', 'PHP'],
     cms: ['Drupal'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['herron-house-1.png']
@@ -850,10 +852,11 @@ const portfolio = [
     },
     date: '2009-02',
     url: 'http://www.modukraf.com',
-    technologies: ['HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['HTML/CSS', 'Javascript', 'PHP'],
     description:
       'Mod-U-Kraf came to Get You Found Online Marketing with a clear vision of how they wanted their site to function.  This site was rather complex given the many different areas within the site as well as the large amount of information about their products and services.',
     // I enjoyed working with the chosen graphics, content and flow of the site.  The site turned out great and I was especially pleased with the final outcome. --- OLD content
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['mod-u-kraf-1.png']
   },
@@ -868,7 +871,7 @@ const portfolio = [
     },
     date: '2009-01-01',
     url: 'http://familyabuseservices.org',
-    technologies: ['HTML/CSS', 'PHP'],
+    tags: ['HTML/CSS', 'PHP'],
     description:
       'Family Abuse Services of Alamance County came to Carolinanet with the desire to completely revamp their existing website.  The main focus was on a new look and feel, providing content to their audience in a clear easy to navigate way as well as being able to edit the information themselves.',
     responsibilities: [
@@ -902,13 +905,14 @@ const portfolio = [
     },
     date: '2008-01-01',
     url: 'http://www.acleanerworld.com',
-    technologies: ['ASP', 'HTML/CSS'],
+    tags: ['ASP', 'HTML/CSS'],
     description:
       'While at Inter-Tech Communications I worked with Symetri Internet Marketing to provide A Cleaner World with their desired website overhaul.',
     responsibilities: [
       'Sitewide graphics',
       'Front-end development into existing back-end code'
     ],
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['a-cleaner-world-1.png']
   },
@@ -923,6 +927,8 @@ const portfolio = [
     },
     date: '2007-11-01',
     url: 'http://www.shoeparadise.net',
+    cms: [],
+    other: [],
     images: ['shoe-paradise-1.png']
   },
   {
@@ -936,7 +942,7 @@ const portfolio = [
     },
     date: '2007-09-01',
     url: 'http://www.itc123.com',
-    technologies: ['HTML/CSS', 'Flash/Actionscript'],
+    tags: ['HTML/CSS', 'Flash/Actionscript'],
     description:
       'At Inter-Tech Communications one of my main focuses was on completely rebuilding and maintaining the company website to provide clients and potential clients with accurate information about all the services offered.',
     // OLD CONTENT

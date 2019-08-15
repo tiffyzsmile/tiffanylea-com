@@ -262,16 +262,7 @@ section.rightCol {
   width: 68%;
   float: right;
 }
-.portfolioFilter {
-  position: relative;
-  top: -10px;
-  padding: 1em 1%;
-  clear: left;
-  float: left;
-  width: 97%;
-  margin: 0;
-  max-width: 980px;
-}
+
 aside.rightCol {
   padding: 1em 1%;
   clear: right;
@@ -293,7 +284,7 @@ nav.leftCol {
 aside.leftCol,
 aside.rightCol,
 .leftNav,
-.portfolioFilter,
+.portfolio-filter,
 .quotes img,
 article img {
   border: 1px solid #eeeeee;
@@ -387,31 +378,6 @@ ol {
   padding: 0 0;
   overflow: hidden;
   text-align: center;
-}
-ul#portfolio-filter {
-  padding: 0;
-}
-ul#portfolio-filter li {
-  display: block;
-  float: left;
-  width: 20%;
-}
-ul#portfolio-filter a {
-  border-radius: 2px 2px 2px 2px;
-  color: #aaaaaa;
-  display: block;
-  float: left;
-  padding: 2px 5px;
-  text-decoration: none;
-  font-size: 0.7em;
-}
-ul#portfolio-filter a:hover,
-ul#portfolio-filter a.current {
-  background-color: #dddddd;
-  color: #888888;
-}
-ul#portfolio-filter a.current {
-  background-color: #dddddd;
 }
 ul#portfolio-list {
   min-height: 500px;

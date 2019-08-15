@@ -1,0 +1,35 @@
+.portfolio-filter {
+  position: relative;
+  top: -10px;
+  padding: 1em 1%;
+  clear: left;
+  float: left;
+  width: 97%;
+  margin: 0;
+  max-width: 980px;
+}
+.portfolio-filter ul {
+  padding: 0;
+}
+.portfolio-filter ul li {
+  display: block;
+  float: left;
+  width: 20%;
+}
+.portfolio-filter ul a {
+  border-radius: 2px 2px 2px 2px;
+  color: #aaaaaa;
+  display: block;
+  float: left;
+  padding: 2px 5px;
+  text-decoration: none;
+  font-size: 0.7em;
+}
+.portfolio-filter ul a:hover,
+.portfolio-filter ul a.current {
+  background-color: #dddddd;
+  color: #888888;
+}
+.portfolio-filter ul a.current {
+  background-color: #dddddd;
+}

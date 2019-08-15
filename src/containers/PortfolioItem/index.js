@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Page from 'components/Page';
+import Filter from 'components/Filter';
 import ImageGallery from 'components/ImageGallery';
-import { Link } from 'react-router-dom';
 import portfolio from 'data/portfolio';
+import { getAllTags } from 'helpers/portfolio';
 
 const PortfolioItem = ({ match }) => {
   const portfolioItem = portfolio.filter(item => {
@@ -44,16 +45,7 @@ const PortfolioItem = ({ match }) => {
   return (
     <Page title="Portfolio" description="Portfolio">
       <section className="fullWidth portfolio portfolioItem">
-        <section className="portfolioFilter">
-          <nav>
-            <ul id="portfolio-filter">
-              <li>
-                <Link to="/portfolio">All</Link>
-              </li>
-              {/* returnAllTags($portfolioItems,$basepath.'portfolio.php'); */}
-            </ul>
-          </nav>
-        </section>
+        <Filter tags={getAllTags()} />
         <section className="portfolioDetails">
           <h1>{portfolioItem.name}</h1>
           <p>
