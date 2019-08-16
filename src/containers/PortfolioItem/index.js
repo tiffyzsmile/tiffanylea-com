@@ -44,7 +44,7 @@ const PortfolioItem = ({ match }) => {
 
   return (
     <Page title="Portfolio" description="Portfolio">
-      <section className="fullWidth portfolio portfolioItem">
+      <section className="portfolio portfolioItem">
         <Filter tags={getAllTags()} />
         <section className="portfolioDetails">
           <h1>{portfolioItem.name}</h1>

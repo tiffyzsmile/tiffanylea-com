@@ -13,9 +13,9 @@ const Page = ({ children, title, description, fullWidth }) => {
         <meta name="description" content={description} />
       </Helmet>
       <Header />
-      <div className={`content ${fullWidth ? 'fullWidth' : 'setWidth'}`}>
+      <section className={`content ${fullWidth ? '' : 'setWidth'}`}>
         {children}
-      </div>
+      </section>
       <Footer />
     </div>
   );
