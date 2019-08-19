@@ -3,6 +3,7 @@ import { hot } from 'react-hot-loader';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from 'containers/Home';
 import About from 'containers/About';
+import BookShelf from 'containers/BookShelf';
 import Resume from 'containers/Resume';
 import Portfolio from 'containers/Portfolio';
 import PortfolioItem from 'containers/PortfolioItem';
@@ -19,6 +20,7 @@ const App = () => {
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/about" component={About} />
+        <Route exact path="/bookshelf" component={BookShelf} />
         <Route exact path="/resume" component={Resume} />
         <Route path="/portfolio/:filter?" component={Portfolio} />
         <Route path="/project/:id" component={PortfolioItem} />
