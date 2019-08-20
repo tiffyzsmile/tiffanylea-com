@@ -1,8 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Page from 'components/Page';
-import { Link } from 'react-router-dom';
+import Filter from 'components/Filter';
+import ImageGallery from 'components/ImageGallery';
 import portfolio from 'data/portfolio';
+import { getAllTags } from 'helpers/portfolio';
 
 const PortfolioItem = ({ match }) => {
   const portfolioItem = portfolio.filter(item => {
@@ -16,35 +18,38 @@ const PortfolioItem = ({ match }) => {
       })
     : [];
 
+  const features = portfolioItem.features
+    ? portfolioItem.features.map(feature => {
+        const details = feature.details.map(detail => {
+          return <li>{detail}</li>;
+        });
+        return (
+          <div>
+            <strong>{feature.name}</strong>
+            <ul>{details}</ul>
+          </div>
+        );
+      })
+    : [];
+
   const images = portfolioItem.images
     ? portfolioItem.images.map(image => {
-        return (
-          <img
-            alt={portfolioItem.employer.name}
-            src={`/images/portfolio/thumb/${image}`}
-            key={image}
-          />
-        );
+        return {
+          original: `/images/portfolio/${image}`,
+          originalAlt: portfolioItem.name,
+          thumbnail: `/images/portfolio/${image}`
+        };
       })
     : [];
 
   return (
     <Page title="Portfolio" description="Portfolio">
-      <section className="fullWidth portfolio portfolioItem">
-        <section className="portfolioFilter">
-          <nav>
-            <ul id="portfolio-filter">
-              <li>
-                <Link to="/portfolio">All</Link>
-              </li>
-              {/* returnAllTags($portfolioItems,$basepath.'portfolio.php'); */}
-            </ul>
-          </nav>
-        </section>
+      <section className="portfolio portfolioItem">
+        <Filter tags={getAllTags()} />
         <section className="portfolioDetails">
           <h1>{portfolioItem.name}</h1>
           <p>
-            <strong>Year:</strong> {portfolioItem.date}
+            <strong>Year:</strong> {portfolioItem.date.substring(0, 4)}
           </p>
           {portfolioItem.responsibilities && (
             <div>
@@ -56,6 +61,13 @@ const PortfolioItem = ({ match }) => {
             <div>
               <h2>Description:</h2>
               {portfolioItem.description}
+            </div>
+          )}
+
+          {portfolioItem.features && (
+            <div>
+              <h2>Description:</h2>
+              {features}
             </div>
           )}
           <h2>Links</h2>
@@ -97,7 +109,9 @@ const PortfolioItem = ({ match }) => {
             </a>
           </p>
         </section>
-        <section className="portfolioImages">{images}</section>
+        <section className="portfolioImages">
+          <ImageGallery images={images} />
+        </section>
       </section>
     </Page>
   );

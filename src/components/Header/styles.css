@@ -1,3 +1,6 @@
+header {
+  z-index: 100;
+}
 .header {
   background-color: #8da9b9;
   text-align: center;

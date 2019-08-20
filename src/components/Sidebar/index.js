@@ -8,39 +8,6 @@ const Sidebar = () => {
         <Link to="/reviews">What others say about me &raquo;</Link>
       </aside>
       <aside className="rightCol">
-        <h1>Code</h1>
-        <p className="imgGrid imgGrid4">
-          <a
-            href="https://www.codeschool.com/users/504021"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img alt="Code School" src="/images/icons/codeschool.png" />
-          </a>
-          <a
-            href="http://www.codecademy.com/tiffyzsmile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img alt="Code Academy" src="/images/icons/codeacademy.png" />
-          </a>
-          <a
-            href="https://github.com/tiffyzsmile"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img alt="GitHub" src="/images/icons/github.png" />
-          </a>
-          <a
-            href="http://codepen.io/tiffyzsmile/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <img alt="CodePen" src="/images/icons/codepen.png" />
-          </a>
-        </p>
-      </aside>
-      <aside className="rightCol">
         <h1>Follow</h1>
         <p className="imgGrid imgGrid4">
           <a
@@ -65,11 +32,11 @@ const Sidebar = () => {
             <img alt="Linked In" src="/images/icons/linkedIn.png" />
           </a>
           <a
-            href="https://plus.google.com/100065966193940166530/"
+            href="https://github.com/tiffyzsmile"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <img alt="Google Plus" src="/images/icons/googleplus.png" />
+            <img alt="GitHub" src="/images/icons/github.png" />
           </a>
         </p>
       </aside>

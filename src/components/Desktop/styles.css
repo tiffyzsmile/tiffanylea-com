@@ -1,0 +1,45 @@
+/* desktop */
+.desktop {
+  position: relative;
+}
+
+.desktop .device {
+  background: #222;
+  position: absolute;
+  top: 0;
+  width: 400px;
+  height: 270px;
+  border-radius: 15px;
+  z-index: 100;
+}
+
+.desktop .screen {
+  background: #fff;
+  position: absolute;
+  width: 350px;
+  height: 220px;
+  top: 25px;
+  left: 25px;
+  z-index: 101;
+  overflow: scroll;
+}
+
+.desktop .stand {
+  background: #b8b8b8;
+  position: absolute;
+  width: 100px;
+  height: 50px;
+  left: 150px;
+  top: 270px;
+  z-index: 98;
+}
+
+.desktop .foot {
+  background: #ccc;
+  position: absolute;
+  width: 120px;
+  height: 5px;
+  left: 140px;
+  top: 320px;
+  z-index: 99;
+}

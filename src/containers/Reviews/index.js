@@ -8,7 +8,7 @@ const Reviews = () => {
       <section className="quotes">
         <h1>What others say about me</h1>
         <article>
-          <img alt="Panayiotes (PK) Kakleas" src="/images/people/pk.jpeg" />
+          <img alt="Panayiotes (PK) Kakleas" src="/images/people/pk.jpg" />
           <header>
             <h2>
               <a
@@ -39,7 +39,7 @@ const Reviews = () => {
           </blockquote>
         </article>
         <article>
-          <img alt="Binh Nguyen" src="/images/people/binh_nguyen.jpeg" />
+          <img alt="Binh Nguyen" src="/images/people/binh_nguyen.jpg" />
           <header>
             <h2>
               <a
@@ -68,7 +68,7 @@ const Reviews = () => {
           </blockquote>
         </article>
         <article>
-          <img alt="Mark Beeson" src="/images/people/mark_beeson.jpeg" />
+          <img alt="Mark Beeson" src="/images/people/mark_beeson.jpg" />
           <header>
             <h2>
               <a
@@ -270,7 +270,7 @@ const Reviews = () => {
           </blockquote>
         </article>
         <article>
-          <img alt="Annette Fowler" src="/images/people/annette-2019.jpeg" />
+          <img alt="Annette Fowler" src="/images/people/annette-2019.jpg" />
           <header>
             <h2>
               <a
