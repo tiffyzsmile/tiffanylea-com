@@ -1,4 +1,5 @@
 @font-face {
+  font-display: swap;
   font-family: 'InspirationROB';
   src: url('/webfonts/201F7E_0_0.eot');
   src: url('/webfonts/201F7E_0_0.woff') format('woff'),

@@ -28,15 +28,29 @@
     -->
     <title>React App</title>
 
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-8541951-1"></script>
+    <!-- Google Analytics -->
     <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA-8541951-1',{'siteSpeedSampleRate': 100});
 
-      gtag('config', 'UA-8541951-1',{‘siteSpeedSampleRate’: 100});
+      // Replace the following lines with the plugins you want to use.
+      ga('require', 'cleanUrlTracker');
+      ga('require', 'eventTracker');
+      ga('require', 'impressionTracker');
+      ga('require', 'maxScrollTracker');
+      ga('require', 'mediaQueryTracker');
+      ga('require', 'outboundFormTracker');
+      ga('require', 'outboundLinkTracker');
+      ga('require', 'pageVisibilityTracker');
+      ga('require', 'socialWidgetTracker');
+      ga('require', 'urlChangeTracker');
+      // ...
+
+      ga('send', 'pageview');
     </script>
+    <script async src="https://www.google-analytics.com/analytics.js"></script>
+    <!-- End Google Analytics -->
+
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>

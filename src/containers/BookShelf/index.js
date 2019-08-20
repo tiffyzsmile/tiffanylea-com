@@ -1,24 +1,24 @@
 /* eslint-disable */
 import React from 'react';
 import Page from 'components/Page';
-import books from 'data/books';
+// import books from 'data/books';
 
 const BookShelf = () => {
-  const newBooks = books
-    .map(book => {
-      return {
-        title: book.title,
-        year: book.book_published,
-        isbn: book.isbn,
-        imageLarge: book.book_large_image_url,
-        imageMedium: book.book_medium_image_url,
-        imageSmall: book.book_small_image_url,
-        user_rating: book.user_rating
-      };
-    })
-    .sort((a, b) => (a.year < b.year ? 1 : -1));
+  // const newBooks = books
+  //   .map(book => {
+  //     return {
+  //       title: book.title,
+  //       year: book.book_published,
+  //       isbn: book.isbn,
+  //       imageLarge: book.book_large_image_url,
+  //       imageMedium: book.book_medium_image_url,
+  //       imageSmall: book.book_small_image_url,
+  //       user_rating: book.user_rating
+  //     };
+  //   })
+  //   .sort((a, b) => (a.year < b.year ? 1 : -1));
   // console.log(JSON.stringify(newBooks));
-  console.log(newBooks);
+  // console.log(newBooks);
   return (
     <Page title="Portfolio" description="Portfolio">
       <h1>Bookshelf</h1>
