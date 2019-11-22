@@ -9,7 +9,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_2015.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_2019.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF{' '}
           </a>
