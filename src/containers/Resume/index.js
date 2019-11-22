@@ -28,6 +28,17 @@ const Resume = () => {
             </li>
           </ul>
         </section>
+
+        <section className="summary">
+          <h2>Summary</h2>
+          <p>
+            Passionate engineer with 12+ years experience and exceptional
+            understanding of design and development. Ready to leverage decision
+            making abilities for all things front end and be heavily involved in
+            every stage of full project lifecycle from UX to
+            infrastructure/architecture.
+          </p>
+        </section>
         <section className="skills">
           <h2>Skills Profile</h2>
           <ul>
