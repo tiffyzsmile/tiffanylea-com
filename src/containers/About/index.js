@@ -36,13 +36,30 @@ const About = () => {
             full time position. After almost 3 years at Beacon Technologies I
             decided it was time to follow my dreams to California! I was happy
             to hear that Beacon was on board for my move and allowed me to work
-            from home out of CA for another 2 years. In May of 2014 I was laid
-            off from Beacon Technologies. <br />
+            from home out of CA for another 2 years.
             <br />
-            Being laid off forced me to venture out into the California job
-            market and I landed my first California job at SKECHERS USA Inc in
-            June of 2014. I am enjoying my time at Skechers and am excited about
-            what the future holds!
+            <br />
+            From there it was time to venture out into the California job
+            market. I landed my first California job at SKECHERS USA Inc in June
+            of 2014. Skechers allowed me to learn, grow and excel as an
+            engineer, team member and leader.
+            <br />
+            <br />
+            In March of 2018 I was offered an opportunity to help on a project
+            at BCGDV. The goal was to digitalize the home and title buying
+            process. I worked as a contractor for 6 months and then became a
+            Lead Engineer full time at Endpoint Closing. I enjoyed my time at
+            Endpoint but over time it became clear it was no longer a good fit
+            for me. I parted with Endpoint Closing in July 2019.
+            <br />
+            <br />
+            So far my time away has been such a blessing! I set out to recenter
+            myself and focus on my career goals and I have gained that and so
+            much more. I&#39;ve spent my time learning about all the new shiny
+            and fun things I haven&#39;t had time for over the last few years.
+            From AWS to Adobe I&#39;m deep diving into it all! I hope to
+            re-enter the job market in a few months with a renewed sense of self
+            and sharpened skill set to bring even more value to my next team.
             <br />
             <br />
             My skills range from design and development of medium to large scale
