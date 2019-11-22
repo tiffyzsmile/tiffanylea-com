@@ -429,6 +429,7 @@ ul#portfolio-list li p {
   padding: 15px 0;
 }
 .portfolioDetails {
+  font-family: 'Lato', sans-serif; /* remove after all typography components exist */
   width: 50%;
   float: right;
   padding: 25px 0 0 0;

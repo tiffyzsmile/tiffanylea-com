@@ -5,6 +5,7 @@ import Filter from 'components/Filter';
 import ImageGallery from 'components/ImageGallery';
 import portfolio from 'data/portfolio';
 import { getAllTags } from 'helpers/portfolio';
+import { H1, H2, H3 } from 'components/Typography';
 
 const PortfolioItem = ({ match }) => {
   const portfolioItem = portfolio.filter(item => {
@@ -25,7 +26,7 @@ const PortfolioItem = ({ match }) => {
         });
         return (
           <div>
-            <strong>{feature.name}</strong>
+            <H3>{feature.name}</H3>
             <ul>{details}</ul>
           </div>
         );
@@ -47,30 +48,29 @@ const PortfolioItem = ({ match }) => {
       <section className="portfolio portfolioItem">
         <Filter tags={getAllTags()} />
         <section className="portfolioDetails">
-          <h1>{portfolioItem.name}</h1>
-          <p>
-            <strong>Year:</strong> {portfolioItem.date.substring(0, 4)}
-          </p>
+          <H1>
+            {portfolioItem.name} ({portfolioItem.date.substring(0, 4)})
+          </H1>
           {portfolioItem.responsibilities && (
             <div>
-              <h2>Responsible for:</h2>
+              <H2>Responsible for:</H2>
               <ul>{responsibilities}</ul>
             </div>
           )}
           {portfolioItem.description && (
             <div>
-              <h2>Description:</h2>
+              <H2>Description:</H2>
               {portfolioItem.description}
             </div>
           )}
 
           {portfolioItem.features && (
             <div>
-              <h2>Description:</h2>
+              <H2>Description:</H2>
               {features}
             </div>
           )}
-          <h2>Links</h2>
+          <H2>Links</H2>
           <ul>
             {portfolioItem.url && (
               <li>
@@ -95,7 +95,7 @@ const PortfolioItem = ({ match }) => {
               </li>
             )}
           </ul>
-          <h2>While Working For:</h2>
+          <H2>While Working For:</H2>
           <p>
             <a
               href={portfolioItem.employer.url}

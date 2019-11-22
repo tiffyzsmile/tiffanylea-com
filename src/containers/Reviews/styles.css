@@ -26,6 +26,7 @@
 .quotes article img {
   padding: 10px 1%;
   max-width: 200px;
+  margin-top: 20px;
 }
 
 .quotes article:nth-child(odd) header,
@@ -50,6 +51,7 @@
   margin-top: 11px;
   padding-right: 5px;
   font-family: Arial, sans-serif;
+  line-height: 0.5;
 }
 .recommendations:before {
   content: '\201C';
@@ -62,7 +64,7 @@
   font-family: Arial, sans-serif;
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 600px) {
   .quotes article img,
   .quotes article:nth-child(even) img,
   .quotes article:nth-child(odd) img {
@@ -89,7 +91,7 @@
   }
 }
 
-@media screen and (max-width: 240px) {
+@media screen and (max-width: 300px) {
   .quotes article header,
   .quotes article:nth-child(even) header,
   .quotes article:nth-child(odd) header,

@@ -1,16 +1,18 @@
 import React from 'react';
 import Page from 'components/Page';
+import { H1, H2, H3, Quote } from 'components/Typography';
 import './styles.css';
 
 const Reviews = () => {
   return (
     <Page title="Reviews" description="Reviews & recommendations from peers">
       <section className="quotes">
-        <h1>What others say about me</h1>
+        <H1>What others say about me</H1>
         <article>
           <img alt="Panayiotes (PK) Kakleas" src="/images/people/pk.jpg" />
           <header>
-            <h2>
+            <H2>Senior Node.js Engineer at SKECHERS</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/panayiotes-pk-kakleas-b7152466"
                 target="_blank"
@@ -18,10 +20,9 @@ const Reviews = () => {
               >
                 Panayiotes (PK) Kakleas
               </a>
-            </h2>
-            <p>Senior Node.js Engineer at SKECHERS</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               {`Tiffany was my manager at Skechers when I first joined. She 
               really impressed me with her vast knowledge of the Skechers 
@@ -36,12 +37,13 @@ const Reviews = () => {
               development team. Her natural energy, curiosity, and passion for 
               coding can help push any project forward.`}
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Binh Nguyen" src="/images/people/binh_nguyen.jpg" />
           <header>
-            <h2>
+            <H2>Software Engineer at SKECHERS</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/binhxnguyen"
                 target="_blank"
@@ -49,10 +51,9 @@ const Reviews = () => {
               >
                 Binh Nguyen
               </a>
-            </h2>
-            <p>Software Engineer at SKECHERS</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               {`In my entire engineering career, Tiffany was the best person to
                work with, especially as a tech lead. She's one of those people 
@@ -65,12 +66,13 @@ const Reviews = () => {
                a good friend. She will definitely fit well with any team she's 
                brought on with.`}
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Mark Beeson" src="/images/people/mark_beeson.jpg" />
           <header>
-            <h2>
+            <H2>Director, Web Services at SKECHERS</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/mark242"
                 target="_blank"
@@ -78,10 +80,9 @@ const Reviews = () => {
               >
                 Mark Beeson
               </a>
-            </h2>
-            <p>Director, Web Services at SKECHERS</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               {`When Tiffany joined Skechers, she was already a really 
               accomplished client-side engineer. She has consistently shown 
@@ -101,12 +102,13 @@ const Reviews = () => {
               person. She is one of those rare people who makes everyone around
               her better, and I couldn't be happier that she joined the team.`}
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Kaela Nichols" src="/images/people/kaela_nichols.jpg" />
           <header>
-            <h2>
+            <H2>Web Developer at SKECHERS</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/kaelanichols"
                 target="_blank"
@@ -114,10 +116,9 @@ const Reviews = () => {
               >
                 Kaela Nichols
               </a>
-            </h2>
-            <p>Web Developer at SKECHERS</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               I worked with Tiffany at SKECHERS, and she is one of the most
               dedicated teammates I have had the opportunity to work with in my
@@ -128,12 +129,13 @@ const Reviews = () => {
               getting into a new podcast. Any company would be lucky to have her
               as a member of their team.
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="David Tang" src="/images/people/david_tang.jpg" />
           <header>
-            <h2>
+            <H2>Senior JavaScript Developer at SKECHERS</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/dtang85"
                 target="_blank"
@@ -141,10 +143,9 @@ const Reviews = () => {
               >
                 David Tang
               </a>
-            </h2>
-            <p>Senior JavaScript Developer at SKECHERS</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               {`It was a real pleasure working with Tiffany at Skechers. She 
               was a great teammate to have and worked well with everyone. I 
@@ -160,12 +161,13 @@ const Reviews = () => {
               just a great person to be around and work with, and I hope I get
               to work with her again in the future.`}
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Justin Klingman" src="/images/people/justin_klingman.jpg" />
           <header>
-            <h2>
+            <H2>Manager, Web Software Development at Beacon Technologies</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/jklingman"
                 target="_blank"
@@ -173,10 +175,9 @@ const Reviews = () => {
               >
                 Justin Klingman
               </a>
-            </h2>
-            <p>Manager, Web Software Development at Beacon Technologies</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               I have had the pleasure of working with, and learning from,
               Tiffany for almost five years. I have never worked with someone
@@ -202,12 +203,13 @@ const Reviews = () => {
               multiple developers can work on development tasks without
               interfering with each other.`}
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Austin Fadely" src="/images/people/austin.jpg" />
           <header>
-            <h2>
+            <H2>Project Manager at Beacon Technologies</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/austinfadely"
                 target="_blank"
@@ -215,10 +217,9 @@ const Reviews = () => {
               >
                 Austin Fadely
               </a>
-            </h2>
-            <p>Project Manager at Beacon Technologies</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               {`I rely heavily on Tiffany for large projects. As the lead web
               developer, she has continued to write elegant, well-executed code
@@ -233,12 +234,13 @@ const Reviews = () => {
               also frequently reviews code for quality assurance and provides
               invaluable feedback for the team.
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Wendy Honeycutt" src="/images/people/wendy.jpg" />
           <header>
-            <h2>
+            <H2>Graphic Design, Web Centered UX Design + Development </H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/wendyhoneycutt"
                 target="_blank"
@@ -246,10 +248,9 @@ const Reviews = () => {
               >
                 Wendy Honeycutt
               </a>
-            </h2>
-            <p>Graphic Design, Web Centered UX Design + Development </p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               I was fortunate to work with Tiffany for more than two years while
               at Beacon Technologies. She has an amazing ability as a web
@@ -267,12 +268,13 @@ const Reviews = () => {
               brings great ideas to the table; she is a wonderful asset to have
               on any team!
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Annette Fowler" src="/images/people/annette-2019.jpg" />
           <header>
-            <h2>
+            <H2>Senior Project Manager at Beacon Technologies</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/pub/annette-fowler/5/95a/952"
                 target="_blank"
@@ -280,10 +282,9 @@ const Reviews = () => {
               >
                 Annette Fowler
               </a>
-            </h2>
-            <p>Senior Project Manager at Beacon Technologies</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               {`I've had the great pleasure of working with Tiffany on many
               website projects. She is an outstanding web developer, but perhaps
@@ -297,12 +298,13 @@ const Reviews = () => {
               for years to come. I hope to have many more positive experiences
               working with this exceptional talent.
             </p>
-          </blockquote>
+          </Quote>
         </article>
         <article>
           <img alt="Jessamyn Bean" src="/images/people/jess.jpg" />
           <header>
-            <h2>
+            <H2>Vice President at Get You Found Online Marketing</H2>
+            <H3>
               <a
                 href="http://www.linkedin.com/in/jessamynbean"
                 target="_blank"
@@ -310,10 +312,9 @@ const Reviews = () => {
               >
                 Jessamyn Bean
               </a>
-            </h2>
-            <p>Vice President at Get You Found Online Marketing</p>
+            </H3>
           </header>
-          <blockquote>
+          <Quote>
             <p>
               I have worked with Tiffany at two different companies (Inter-tech
               &amp; Get You Found), and she was an asset at each establishment.
@@ -327,7 +328,7 @@ const Reviews = () => {
               for Facebook and other platforms just for fun. I definitely
               recommend Tiffany for any web development project.
             </p>
-          </blockquote>
+          </Quote>
         </article>
       </section>
     </Page>
