@@ -1,0 +1,78 @@
+.resume {
+  padding-top: 30px;
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+  section {
+    padding-top: 20px;
+  }
+  article {
+    padding-top: 30px;
+  }
+  h2 + article {
+    padding: 0;
+  }
+
+  h2 {
+    font-size: 1em;
+    padding: 20px 0 5px;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 0.2em;
+  }
+
+  h3 {
+    font-size: 1em;
+    padding: 0;
+    font-weight: 800;
+  }
+  ul {
+    padding-top: 10px;
+    li > ul {
+      padding-bottom: 0;
+      padding-top: 0;
+    }
+  }
+  .intro {
+    .adobe {
+      float: right;
+      max-width: 60px;
+      text-align: center;
+      font-size: 0.6em;
+      img {
+        margin-left: -7px;
+      }
+    }
+    ul {
+      @media screen and (min-width: 550px) {
+        padding-left: 0;
+      }
+      li {
+        display: block;
+        @media screen and (min-width: 550px) {
+          display: inline;
+          padding: 0 10px;
+          border-right: 1px solid #ccc;
+          &:first-of-type {
+            padding-left: 0;
+          }
+          &:last-of-type {
+            border-right: none;
+          }
+        }
+      }
+    }
+  }
+  .employment {
+    .location {
+      font-style: italic;
+      padding: 0;
+    }
+
+    @media screen and (min-width: 550px) {
+      .date {
+        float: right;
+        padding: 0;
+      }
+    }
+  }
+}
