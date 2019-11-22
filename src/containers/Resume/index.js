@@ -1,5 +1,6 @@
 import React from 'react';
 import Page from 'components/Page';
+import { H1, H2, H3 } from 'components/Typography';
 import './styles.scss';
 
 const Resume = () => {
@@ -12,9 +13,9 @@ const Resume = () => {
             className="adobe"
             href="/pdfs/TiffanyLeaMay_resume_2019.pdf"
           >
-            <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF{' '}
+            <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
-          <h1>Tiffany Lea May</h1>
+          <H1>Tiffany Lea May</H1>
           <ul>
             <li>
               <a href="https://www.linkedin.com/in/tiffanymay">
@@ -30,7 +31,7 @@ const Resume = () => {
         </section>
 
         <section className="summary">
-          <h2>Summary</h2>
+          <H2>Summary</H2>
           <p>
             Passionate engineer with 12+ years experience and exceptional
             understanding of design and development. Ready to leverage decision
@@ -40,7 +41,7 @@ const Resume = () => {
           </p>
         </section>
         <section className="skills">
-          <h2>Skills Profile</h2>
+          <H2>Skills Profile</H2>
           <ul>
             <li>
               Strong knowledge of design/development, user experience, best
@@ -61,10 +62,18 @@ const Resume = () => {
           </ul>
         </section>
         <section className="employment">
-          <h2>Employment History</h2>
+          <H2>Employment History</H2>
+          <article>
+            <p className="date">3/18 — Current</p>
+            <H3>Founder, Director of Front End Engineering, Tiffany Lea LLC</H3>
+            <p className="location">West Hollywood, CA</p>
+            <ul>
+              <li>Web development and consulting services</li>
+            </ul>
+          </article>
           <article>
             <p className="date">3/18 — 7/19 (1 year 6 months)</p>
-            <h3>Lead of Front End Engineering, Endpoint Closing</h3>
+            <H3>Lead of Front End Engineering, Endpoint Closing</H3>
             <p className="location">El Segundo, CA</p>
             <ul>
               <li>
@@ -104,7 +113,7 @@ const Resume = () => {
           </article>
           <article>
             <p className="date">6/14 — 3/18 (3 years 10 months)</p>
-            <h3>Manager of Front End Engineering, SKECHERS USA, Inc.</h3>
+            <H3>Manager of Front End Engineering, SKECHERS USA, Inc.</H3>
             <p className="location">Manhattan Beach, CA</p>
             <ul>
               <li>Reported directly to VP of Digital Department</li>
@@ -175,7 +184,7 @@ const Resume = () => {
           </article>
           <article>
             <p className="date">11/09 — 6/14 (4 years 8 months)</p>
-            <h3>Lead Web Developer, Beacon Technologies</h3>
+            <H3>Lead Web Developer, Beacon Technologies</H3>
             <p className="location">Greensboro, NC</p>
             <ul>
               <li>Develop medium and large scale web sites for clients </li>
@@ -205,13 +214,13 @@ const Resume = () => {
                   </li>
                   <li>
                     3+ Intranet solutions with mix of blogs, forums, and custom
-                    features{' '}
+                    features
                   </li>
                   <li>
                     2+ Web services to automate content migration that on
                     average required 3-5 temporary hires for 3 months
                   </li>
-                  <li>Built and maintained internal knowledgeable system</li>
+                  <li>Built and maintained internal knowledge base system</li>
                 </ul>
               </li>
               <li>
@@ -227,8 +236,8 @@ const Resume = () => {
             </ul>
           </article>
           <article>
-            <p className="date">12/08 — 12/09 (1 year 2 months)</p>
-            <h3>Web Developer, Get You Found Online Marketing</h3>
+            <p className="date">11/08 — 12/09 (1 year 2 months)</p>
+            <H3>Web Developer, Get You Found Online Marketing</H3>
             <p className="location">Greensboro, NC</p>
             <ul>
               <li>
@@ -247,9 +256,7 @@ const Resume = () => {
                     5+ Custom CMS integrations and site development for medium
                     to large sized sites
                   </li>
-                  <li>
-                    5+ Basic static sites for medium to large sized sites{' '}
-                  </li>
+                  <li>5+ Basic static sites for small to medium sized sites</li>
                 </ul>
               </li>
               <li>
@@ -261,7 +268,7 @@ const Resume = () => {
           </article>
           <article>
             <p className="date">9/07 — 2/09 (1 year 6 months)</p>
-            <h3>Web Developer, Inter-Tech Communications - CarolinaNet</h3>
+            <H3>Web Developer, Inter-Tech Communications - CarolinaNet</H3>
             <p className="location">Greensboro, NC</p>
             <ul>
               <li>
@@ -275,8 +282,7 @@ const Resume = () => {
                     35+ Microsite&#39;s which included domain, DNS, website and
                     email setup and configuration{' '}
                   </li>
-                  <li>10+ Small business sites</li>
-                  <li>5+ Medium business sites</li>
+                  <li>15+ Small to medium sized business sites</li>
                   <li>5+ Custom MySpace&#39;s</li>
                   <li>Blackberry server management</li>
                   <li>Migration to Plesk Business Automation</li>
@@ -295,17 +301,22 @@ const Resume = () => {
           </article>
         </section>
         <section className="education">
-          <h2>Education</h2>
-          <h3>
+          <H2>Education</H2>
+          <H3>
             AAS Web Technologies, Guilford Technical Community College, NC
             (2008)
-          </h3>
+          </H3>
           <ul>
             <li>
               Academic Achievement award for highest GPA in Web Technologies
               Department (2007, 2008)
             </li>
           </ul>
+          <H3>
+            An Event Apart, The web design conference for UX & front-end experts
+            (2012, 2015, 2017, 2019)
+          </H3>
+          <H3>Adobe MAX, The Creativity Conference (2019)</H3>
         </section>
       </div>
     </Page>
