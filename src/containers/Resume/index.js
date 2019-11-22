@@ -12,7 +12,7 @@ const Resume = () => {
             className="adobe"
             href="/pdfs/TiffanyLeaMay_resume_2019.pdf"
           >
-            <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF{' '}
+            <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
           <h1>Tiffany Lea May</h1>
           <ul>
@@ -62,6 +62,14 @@ const Resume = () => {
         </section>
         <section className="employment">
           <h2>Employment History</h2>
+          <article>
+            <p className="date">3/18 — Current</p>
+            <h3>Founder, Director of Front End Engineering, Tiffany Lea LLC</h3>
+            <p className="location">West Hollywood, CA</p>
+            <ul>
+              <li>Web development and consulting services</li>
+            </ul>
+          </article>
           <article>
             <p className="date">3/18 — 7/19 (1 year 6 months)</p>
             <h3>Lead of Front End Engineering, Endpoint Closing</h3>
@@ -205,13 +213,13 @@ const Resume = () => {
                   </li>
                   <li>
                     3+ Intranet solutions with mix of blogs, forums, and custom
-                    features{' '}
+                    features
                   </li>
                   <li>
                     2+ Web services to automate content migration that on
                     average required 3-5 temporary hires for 3 months
                   </li>
-                  <li>Built and maintained internal knowledgeable system</li>
+                  <li>Built and maintained internal knowledge base system</li>
                 </ul>
               </li>
               <li>
@@ -227,7 +235,7 @@ const Resume = () => {
             </ul>
           </article>
           <article>
-            <p className="date">12/08 — 12/09 (1 year 2 months)</p>
+            <p className="date">11/08 — 12/09 (1 year 2 months)</p>
             <h3>Web Developer, Get You Found Online Marketing</h3>
             <p className="location">Greensboro, NC</p>
             <ul>
@@ -247,9 +255,7 @@ const Resume = () => {
                     5+ Custom CMS integrations and site development for medium
                     to large sized sites
                   </li>
-                  <li>
-                    5+ Basic static sites for medium to large sized sites{' '}
-                  </li>
+                  <li>5+ Basic static sites for small to medium sized sites</li>
                 </ul>
               </li>
               <li>
@@ -275,8 +281,7 @@ const Resume = () => {
                     35+ Microsite&#39;s which included domain, DNS, website and
                     email setup and configuration{' '}
                   </li>
-                  <li>10+ Small business sites</li>
-                  <li>5+ Medium business sites</li>
+                  <li>15+ Small to medium sized business sites</li>
                   <li>5+ Custom MySpace&#39;s</li>
                   <li>Blackberry server management</li>
                   <li>Migration to Plesk Business Automation</li>
@@ -306,6 +311,11 @@ const Resume = () => {
               Department (2007, 2008)
             </li>
           </ul>
+          <h3>
+            An Event Apart, The web design conference for UX & front-end experts
+            (2012, 2015, 2017, 2019)
+          </h3>
+          <h3>Adobe MAX, The Creativity Conference (2019)</h3>
         </section>
       </div>
     </Page>
