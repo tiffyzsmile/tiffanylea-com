@@ -1,12 +1,13 @@
 import React from 'react';
 import Page from 'components/Page';
+import { H1 } from 'components/Typography';
 import './styles.css';
 
 const Skills = () => {
   return (
     <Page title="Skills" description="My tech Skills">
       <div className="content setwidth">
-        <h1>Skills</h1>
+        <H1>Skills</H1>
         <section className="gridWrap gridWrap2">
           <div className="gridBox">
             <div className="skill-group">

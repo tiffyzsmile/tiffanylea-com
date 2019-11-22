@@ -4,6 +4,7 @@ import Filter from 'components/Filter';
 import { getPortfolioItems, getAllTags } from 'helpers/portfolio';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { H1 } from 'components/Typography';
 
 const Portfolio = ({ match }) => {
   const portfolioItems = getPortfolioItems(match.params.filter).map(item => {
@@ -19,7 +20,7 @@ const Portfolio = ({ match }) => {
     <Page title="Portfolio" description="Portfolio">
       <Filter tags={getAllTags()} />
       <section className="fullWidth portfolio">
-        <h1>Portfolio</h1>
+        <H1>Portfolio</H1>
         <ul id="portfolio-list">{portfolioItems}</ul>
       </section>
     </Page>

@@ -58,8 +58,9 @@ const About = () => {
             much more. I&#39;ve spent my time learning about all the new shiny
             and fun things I haven&#39;t had time for over the last few years.
             From AWS to Adobe I&#39;m deep diving into it all! I hope to
-            re-enter the job market in a few months with a renewed sense of self
-            and sharpened skill set to bring even more value to my next team.
+            re-enter the job market in a few months with a renewed sense of
+            self, passion and sharpened skill set to bring even more value to my
+            next team.
             <br />
             <br />
             My skills range from design and development of medium to large scale

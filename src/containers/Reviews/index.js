@@ -7,7 +7,7 @@ const Reviews = () => {
   return (
     <Page title="Reviews" description="Reviews & recommendations from peers">
       <section className="quotes">
-        <H1>What others say about me</H1>
+        <H1>Reviews</H1>
         <article>
           <img alt="Panayiotes (PK) Kakleas" src="/images/people/pk.jpg" />
           <header>
