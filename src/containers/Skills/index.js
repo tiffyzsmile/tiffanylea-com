@@ -1,12 +1,13 @@
 import React from 'react';
 import Page from 'components/Page';
+import { H1, H2 } from 'components/Typography';
 import './styles.css';
 
 const Skills = () => {
   return (
     <Page title="Skills" description="My tech Skills">
       <div className="content setwidth">
-        <h1>Skills</h1>
+        <H1>Skills</H1>
         <section className="gridWrap gridWrap2">
           <div className="gridBox">
             <div className="skill-group">
@@ -81,7 +82,7 @@ const Skills = () => {
             </div>
           </div>
           <div className="gridBox gridImg2 boxStyle1">
-            <h2>Content Management Systems</h2>
+            <H2>Content Management Systems</H2>
             <img
               src="/images/skills/skills-cms-cascade-server.jpg"
               alt="Cascade Server"
@@ -89,14 +90,14 @@ const Skills = () => {
             <img src="/images/skills/skills-cms-drupal.jpg" alt="Drupal" />
           </div>
           <div className="gridBox gridImg2 boxStyle1">
-            <h2>Blogging Platforms</h2>
+            <H2>Blogging Platforms</H2>
             <img
               src="/images/skills/skills-blogging-platform-wordpress.jpg"
               alt="Wordpress"
             />
           </div>
           <div className="gridBox gridImg2 boxStyle1">
-            <h2>e-Commerce</h2>
+            <H2>e-Commerce</H2>
             <img
               src="/images/skills/skills-ecommerce-aspdotnetstorefront.jpg"
               alt="aspdotnetStorefront"
@@ -107,7 +108,7 @@ const Skills = () => {
             />
           </div>
           <div className="gridBox gridImg3 boxStyle1">
-            <h2>Other</h2>
+            <H2>Other</H2>
             <img
               src="/images/skills/skills-other-w3c-compliant.jpg"
               alt="W3C Compliant"
