@@ -8,6 +8,7 @@ const Skills = () => {
     <Page title="Skills" description="My tech Skills">
       <div className="content setwidth">
         <H1>Skills</H1>
+        <p>Warning... this page is way outdated! Updates are coming soon...</p>
         <section className="gridWrap gridWrap2">
           <div className="gridBox">
             <div className="skill-group">
