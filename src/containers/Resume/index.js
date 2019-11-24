@@ -33,7 +33,7 @@ const Resume = () => {
         <section className="summary">
           <H2>Summary</H2>
           <p>
-            Passionate engineer with 12+ years experience and exceptional
+            Seasoned engineer with 12+ years experience and exceptional
             understanding of design and development. Ready to leverage decision
             making abilities for all things front end and be heavily involved in
             every stage of full project lifecycle from UX to
@@ -44,20 +44,14 @@ const Resume = () => {
           <H2>Skills Profile</H2>
           <ul>
             <li>
-              Strong knowledge of design/development, user experience, best
-              practice, web standards, architecture and full project life cycle
+              Extensive background in data structure architecture and
+              management, user experience, best practice, web standards, full
+              project life cycle, responsive design, accessibility, performance,
+              code reuse/modular mindset
             </li>
             <li>
-              Exceptional understanding of front end technologies: HTML/CSS/JS,
-              responsive design, accessibility, performance, components
-            </li>
-            <li>
-              Ability to plan, design and build websites ranging from small
-              static sites to large dynamic sites
-            </li>
-            <li>
-              Preferred Stack: React/React Native, functional patterns, hooks,
-              AWS, NPM, Webpack (apps), Rollup.js (libraries)
+              Ability to plan, design and build elegantly simple solutions
+              regardless of problem complexity, tech stack or industry
             </li>
           </ul>
         </section>
@@ -69,6 +63,12 @@ const Resume = () => {
             <p className="location">West Hollywood, CA</p>
             <ul>
               <li>Web development and consulting services</li>
+              <li>
+                React, React Native, GraphQL, Apollo, Storybook, NPM, Github,
+                AWS, Amplify, Cloud Formation, AppSync, Cloud Watch, S3,
+                Route53, DynamoDB, Cognito, Android, iOS, Continuous integration
+                (CI), continuous delivery (CD)
+              </li>
             </ul>
           </article>
           <article>
@@ -77,37 +77,34 @@ const Resume = () => {
             <p className="location">El Segundo, CA</p>
             <ul>
               <li>
-                Hands on for both web and native product from incubation plans
-                to production grade product
+                Led the development of both web and native applications from
+                inception to production
+              </li>
+              <li>
+                Architected a smart-form builder that dynamically generates
+                forms throughout the entire home-closing process
               </li>
               <li>
                 Directed design team in adapting a more component based process
                 and mindset
               </li>
               <li>
-                Headed planning and implementation of a universal component
-                library to support reuse between multiple applications and
-                platforms
+                Facilitated the creation of a universal component library to
+                support reuse between multiple applications and platforms{' '}
               </li>
               <li>
-                Noteworthy projects:
-                <ul>
-                  <li>
-                    Cross platform form builder that read in complex JSON
-                    schemas for all stages of buying a home, including digital
-                    signature and money transfers
-                  </li>
-                  <li>Advised on analytics, UX, scrum</li>
-                  <li>
-                    Lead UX presentation for entire company lunch and learn,
-                    focused on usability and accessibility
-                  </li>
-                </ul>
+                Assisted in planning and implementation of first iteration of
+                website analytics
+              </li>
+              <li>Performed multiple site audits focused on UX and security</li>
+              <li>
+                Company wide UX lunch and learn, focused on usability and
+                accessibility
               </li>
               <li>
                 React, React Native, Redux, Reselect, Jest, NPM, Jira, Webpack,
-                Rollup.js, Babel, ESLint, Segment, responsive web design (RWD),
-                Gitlab CI, AWS, DynamoDB, Lambda
+                Rollup.js, Babel, ESLint, responsive web design (RWD), Gitlab
+                CI, AWS, DynamoDB, Lambda
               </li>
             </ul>
           </article>
@@ -116,41 +113,40 @@ const Resume = () => {
             <H3>Manager of Front End Engineering, SKECHERS USA, Inc.</H3>
             <p className="location">Manhattan Beach, CA</p>
             <ul>
-              <li>Reported directly to VP of Digital Department</li>
               <li>
-                Handled hiring, managing, mentoring and scrum (Scrum Master) for
-                5-6 Direct reports
+                5-6 Direct reports, reported directly to VP of Digital
+                Department for all things front end
               </li>
               <li>
                 Collaborated across various departments and venders regarding
                 UX, analytics and A/B testing
               </li>
               <li>
-                Responsible for architecting and executing front end solutions
-                for multiple high traffic sites including:
+                Responsible for architecture and execution of front end
+                solutions for multiple high traffic sites:
                 <ul>
                   <li>
                     Consumer facing e-commerce site, extended to 5 locales and
-                    growing
+                    growing{' '}
                   </li>
                   <li>
                     E-commerce admin portal to manage products, discounts, site
                     content/features, orders and customers for each individual
-                    locale
+                    locale{' '}
                   </li>
                   <li>
                     B2B solution used within companies like Starbucks and Taco
-                    Bell to purchase selected work shoes at a discount
+                    Bell{' '}
                   </li>
                   <li>
                     B2B admin portal to manage products, discounts, site
                     content/features and orders for each individual company
                   </li>
-                  <li>Skechers corporate site</li>
                   <li>
                     SKECHERS Pier to Pier Friendship Walk event signup and
                     donation site, email campaigns, system admin
                   </li>
+                  <li>SKECHERS corporate site</li>
                 </ul>
               </li>
               <li>
@@ -163,10 +159,6 @@ const Resume = () => {
                   <li>
                     AI Chat bot to assist shoppers in finding the perfect shoes
                     based on 3 selections
-                  </li>
-                  <li>
-                    React/Redux environment and complete POC to prepare
-                    migration of legacy code base
                   </li>
                   <li>
                     Rewrote skechers.com from the ground up including separate
@@ -197,7 +189,7 @@ const Resume = () => {
                 standards, best practice and processes
               </li>
               <li>
-                Noteworthy Projects:
+                Projects:
                 <ul>
                   <li>
                     30+ Custom Cascade Server integrations for small, medium and
@@ -214,7 +206,7 @@ const Resume = () => {
                   </li>
                   <li>
                     3+ Intranet solutions with mix of blogs, forums, and custom
-                    features
+                    features{' '}
                   </li>
                   <li>
                     2+ Web services to automate content migration that on
@@ -250,7 +242,7 @@ const Resume = () => {
               </li>
               <li>Involved in all aspects and phases of project lifecycle</li>
               <li>
-                Noteworthy projects:
+                Projects:
                 <ul>
                   <li>
                     5+ Custom CMS integrations and site development for medium
@@ -276,7 +268,7 @@ const Resume = () => {
               </li>
               <li>Second level IT support</li>
               <li>
-                Noteworthy projects:
+                Projects:
                 <ul>
                   <li>
                     35+ Microsite&#39;s which included domain, DNS, website and
@@ -284,9 +276,10 @@ const Resume = () => {
                   </li>
                   <li>15+ Small to medium sized business sites</li>
                   <li>5+ Custom MySpace&#39;s</li>
-                  <li>Blackberry server management</li>
-                  <li>Migration to Plesk Business Automation</li>
-                  <li>Multiple weekly e-newsletters</li>
+                  <li>
+                    Blackberry server management, migration to Plesk Business
+                    Automation, and multiple weekly e-newsletters
+                  </li>
                 </ul>
               </li>
               <li>
@@ -294,8 +287,7 @@ const Resume = () => {
                 registrar, DNS, virtual private servers (VPS), Virtuozzo, Plesk,
                 Plesk Business Automation, Joomla, ZenCart, Drupal, design,
                 HTML, CSS, Javascript, W3C, SEO, Google Analytics, Autotask,
-                advanced CMS setup and configuration, e-commerce, Adobe Creative
-                Suite, Microsoft Office
+                advanced CMS configuration, e-commerce, Adobe Creative Suite
               </li>
             </ul>
           </article>
