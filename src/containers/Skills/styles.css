@@ -100,7 +100,7 @@
 }
 .grid {
   padding: 10px;
-  display: grid;
+ /* display: grid;
   grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  grid-gap: 5px 10px;
+  grid-gap: 5px 10px;*/
 }
