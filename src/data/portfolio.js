@@ -934,6 +934,7 @@ const portfolio = [
   {
     name: 'Inter-Tech Communications',
     display: true,
+    logo: '/images/portfolio/inter-tech-communications__logo.svg',
     slug: 'inter-tech-communications',
     employer: {
       name: 'Inter-Tech Communications',

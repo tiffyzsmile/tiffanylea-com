@@ -383,46 +383,6 @@ ol {
   overflow: hidden;
   text-align: center;
 }
-ul#portfolio-list {
-  min-height: 500px;
-  clear: both;
-  list-style: none outside none;
-  margin: 0;
-  padding: 0;
-}
-ul#portfolio-list li {
-  width: 18%;
-  display: block;
-  float: left;
-  padding: 0 1% 1%;
-}
-ul#portfolio-list li a {
-  background: none repeat scroll 0 0 #ffffff;
-  border: 1px solid #cdcdcd;
-  display: block;
-  height: 100%;
-  width: 100%;
-  max-height: 185px;
-  overflow: hidden;
-  max-width: 185px;
-  -webkit-box-shadow: 1px 1px 1px 1px rgba(100, 100, 100, 0.5);
-  box-shadow: 1px 1px 1px 1px rgba(100, 100, 100, 0.5);
-  text-align: center;
-}
-ul#portfolio-list li p {
-  width: 163px;
-  height: 40px;
-  color: #aaaaaa;
-  font-size: 11px;
-  line-height: 15px;
-  margin: 5px 0;
-}
-/*.portfolioImages ul { min-height: 500px;clear: both; list-style: none outside none; margin: 0; padding: 0; }
-.portfolioImages ul li {width: 18%;display: block;float: left;padding: 0 1% 1%;}
-.portfolioImages ul li a { background: none repeat scroll 0 0 #ffffff; border: 1px solid #CDCDCD; display: block; height:100%; width: 100%; max-height: 185px; overflow: hidden; max-width: 185px; -webkit-box-shadow: 1px 1px 1px 1px rgba(100, 100, 100, 0.5); box-shadow:  1px 1px 1px 1px rgba(100, 100, 100, 0.5);text-align: center;}
-.portfolioImages ul li p { width: 163px;   height: 40px;color: #AAAAAA; font-size: 11px; line-height: 15px; margin: 5px 0; }
-*/
-
 .portfolioImages {
   width: 45%;
   float: left;
@@ -435,7 +395,6 @@ ul#portfolio-list li p {
   float: right;
   padding: 25px 0 0 0;
 }
-
 /********GRID COLUMNS******/
 .gridWrap {
   padding: 0;
@@ -534,9 +493,7 @@ ul#portfolio-list li p {
     width: 94%;
     padding: 1em 2%;
   }
-  ul#portfolio-list li {
-    width: 31%;
-  }
+
   ul#portfolio-filter li {
     width: 25%;
   }
@@ -551,8 +508,6 @@ ul#portfolio-list li p {
     width: 96%;
     padding: 1em 2%;
   }
-  ul#portfolio-list li {
-  }
   ul#portfolio-filter li {
     width: 49%;
   }
@@ -563,9 +518,6 @@ ul#portfolio-list li p {
 }
 
 @media screen and (max-width: 240px) {
-  ul#portfolio-list li {
-    width: 98%;
-  }
   ul#portfolio-filter li {
     width: 94%;
     padding: 3px 3%;
