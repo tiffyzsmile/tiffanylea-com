@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+  <title>HTML5 Logo</title>
+  <g fillRule="evenodd" clipRule="evenodd">
+    <path fill="#f1662a" d="M64.5 5l-5 58.7-23 6.3V5z" />
+    <path
+      fill="#e44f26"
+      d="M64 5.4l-4.8 57.7-21.8 6.3-.1-64H64zM70 0s-4 45.4-6.1 67.3C55.2 69.9 38 75 37.4 75c-.4 0-17.6-5.1-26.5-7.7L5 0h65z"
+    />
+    <path
+      fill="#fff"
+      d="M57.8 13.9l-.8 7.9H25.9l.8 8.7 29.6.1L54.2 56l-16.7 4.6L20.8 56l-1.1-12.8h7.9l.5 6.4 9.2 2.6s6.1-1.6 9.2-2.6c.2 0 1.1-11 1.1-11H19.2l-2-24.7h40.6z"
+    />
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+  <title>BackboneJS</title>
+  <path fill="none" d="M-1-1h77v77H-1z" />
+  <g>
+    <title>Layer 1</title>
+    <path
+      fill="#002A41"
+      d="M7.3 0v40.6l30.2 17.2V46.1L17.3 34.6V16.5L37.5 28V17.2L7.3 0z"
+    />
+    <path
+      fill="#0071B5"
+      d="M67.7 0v40.6L37.5 57.8V46.1l20.2-11.5V16.5L37.5 28V17.2L67.7 0zM7.3 75V34.4l30.2-17.2v11.7L17.3 40.4v17.2l20.2-11.5v11.7L7.3 75z"
+    />
+    <path
+      fill="#002A41"
+      d="M67.7 75V34.4L37.5 17.2v11.7l20.2 11.5v17.2L37.5 46.1v11.7L67.7 75z"
+    />
+  </g>
+</svg>
