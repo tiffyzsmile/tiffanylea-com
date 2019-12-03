@@ -99,8 +99,8 @@
   width: 65%;
 }
 .grid {
-  padding: 10px;
- /* display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
-  grid-gap: 5px 10px;*/
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-auto-rows: 1fr; // this allows for equal height
 }

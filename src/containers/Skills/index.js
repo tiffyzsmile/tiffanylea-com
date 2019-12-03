@@ -1,13 +1,16 @@
 import React from 'react';
 import Page from 'components/Page';
 import { H1, H2 } from 'components/Typography';
-import './styles.css';
+import './styles.scss';
 
 const Skills = () => {
   return (
     <Page title="Skills" description="My tech Skills">
       <div className="content setwidth">
         <H1>Skills</H1>
+        <p>
+          Items still need organizing and styling... just updating for test.
+        </p>
         <section className="grid">
           <div>
             <H2>Languages</H2>
@@ -128,7 +131,7 @@ const Skills = () => {
             </ul>
           </div>
           <div>
-            <H2>Libraries/Frameworks</H2>
+            <H2>Libraries and Frameworks</H2>
             <div className="grid">
               <ul>
                 <li>
