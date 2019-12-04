@@ -727,6 +727,7 @@ const portfolio = [
     name: 'GCUMC',
     display: true,
     slug: 'guilford-college-united-methodist-church',
+    logo: '/images/logos/guilford-college-united-methodist-church__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -829,6 +830,7 @@ const portfolio = [
     name: 'Herron House',
     display: true,
     slug: 'herron-house',
+    logo: '/images/logos/herron-house-flowers__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -898,10 +900,12 @@ const portfolio = [
     name: 'A Cleaner World',
     display: true,
     slug: 'a-cleaner-world',
+    logo: '/images/logos/a-cleaner-world__logo.svg',
     employer: {
       name: 'Inter-Tech Communications',
       slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com'
+      url: 'http://www.itc123.com',
+      logo: '/images/logos/inter-tech-communications__logo.svg'
     },
     date: '2008-01-01',
     url: 'http://www.acleanerworld.com',
@@ -923,7 +927,8 @@ const portfolio = [
     employer: {
       name: 'Inter-Tech Communications',
       slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com'
+      url: 'http://www.itc123.com',
+      logo: '/images/logos/inter-tech-communications__logo.svg'
     },
     date: '2007-11-01',
     url: 'http://www.shoeparadise.net',
@@ -934,12 +939,13 @@ const portfolio = [
   {
     name: 'Inter-Tech Communications',
     display: true,
-    logo: '/images/portfolio/inter-tech-communications__logo.svg',
+    logo: '/images/logos/inter-tech-communications__logo.svg',
     slug: 'inter-tech-communications',
     employer: {
       name: 'Inter-Tech Communications',
       slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com'
+      url: 'http://www.itc123.com',
+      logo: '/images/logos/inter-tech-communications__logo.svg'
     },
     date: '2007-09-01',
     url: 'http://www.itc123.com',
