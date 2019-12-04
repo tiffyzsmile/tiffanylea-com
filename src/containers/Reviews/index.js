@@ -9,7 +9,10 @@ const Reviews = () => {
       <section className="quotes">
         <H1>Reviews</H1>
         <article>
-          <img alt="Panayiotes (PK) Kakleas" src="/images/people/pk.jpg" />
+          <img
+            alt="Panayiotes (PK) Kakleas"
+            src="/images/people/panayiotes-pk-kakleas.jpg"
+          />
           <header>
             <H2>Senior Node.js Engineer at SKECHERS</H2>
             <H3>
@@ -40,7 +43,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Binh Nguyen" src="/images/people/binh_nguyen.jpg" />
+          <img alt="Binh Nguyen" src="/images/people/binh-nguyen.jpg" />
           <header>
             <H2>Software Engineer at SKECHERS</H2>
             <H3>
@@ -69,7 +72,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Mark Beeson" src="/images/people/mark_beeson.jpg" />
+          <img alt="Mark Beeson" src="/images/people/mark-beeson.jpg" />
           <header>
             <H2>Director, Web Services at SKECHERS</H2>
             <H3>
@@ -105,7 +108,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Kaela Nichols" src="/images/people/kaela_nichols.jpg" />
+          <img alt="Kaela Nichols" src="/images/people/kaela-nichols.jpg" />
           <header>
             <H2>Web Developer at SKECHERS</H2>
             <H3>
@@ -132,7 +135,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="David Tang" src="/images/people/david_tang.jpg" />
+          <img alt="David Tang" src="/images/people/david-tang.jpg" />
           <header>
             <H2>Senior JavaScript Developer at SKECHERS</H2>
             <H3>
@@ -164,7 +167,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Justin Klingman" src="/images/people/justin_klingman.jpg" />
+          <img alt="Justin Klingman" src="/images/people/justin-klingman.jpg" />
           <header>
             <H2>Manager, Web Software Development at Beacon Technologies</H2>
             <H3>
@@ -206,7 +209,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Austin Fadely" src="/images/people/austin.jpg" />
+          <img alt="Austin Fadely" src="/images/people/austin-fadely.jpg" />
           <header>
             <H2>Project Manager at Beacon Technologies</H2>
             <H3>
@@ -237,7 +240,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Wendy Honeycutt" src="/images/people/wendy.jpg" />
+          <img alt="Wendy Honeycutt" src="/images/people/wendy-honeycutt.jpg" />
           <header>
             <H2>Graphic Design, Web Centered UX Design + Development </H2>
             <H3>
@@ -271,7 +274,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Annette Fowler" src="/images/people/annette-2019.jpg" />
+          <img alt="Annette Fowler" src="/images/people/annette-fowler.jpg" />
           <header>
             <H2>Senior Project Manager at Beacon Technologies</H2>
             <H3>
@@ -301,7 +304,7 @@ const Reviews = () => {
           </Quote>
         </article>
         <article>
-          <img alt="Jessamyn Bean" src="/images/people/jess.jpg" />
+          <img alt="Jessamyn Bean" src="/images/people/jessamyn-bean.jpg" />
           <header>
             <H2>Vice President at Get You Found Online Marketing</H2>
             <H3>
