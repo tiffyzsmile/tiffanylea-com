@@ -113,6 +113,9 @@ const Skills = () => {
                   <li>Custom in-house</li>
                   <li>AspDotNetStorefront</li>
                   <li>Magento</li>
+                  <li>WooCommerce (WordPress)</li>
+                  <li>Ubercart (Drupal)</li>
+                  <li>VirtueMart (Joomla!)</li>
                   <li>ZenCart</li>
                 </ul>
               </li>
@@ -125,7 +128,7 @@ const Skills = () => {
                   <li>WordPress</li>
                   <li>Cascade Server</li>
                   <li>Drupal</li>
-                  <li>Joomla</li>
+                  <li>Joomla!</li>
                 </ul>
               </li>
             </ul>
@@ -304,6 +307,18 @@ const Skills = () => {
                     <li>Squire.js</li>
                   </ul>
                 </li>
+              </ul>
+            </div>
+          </div>
+          <div>
+            <H2>Server Management</H2>
+            <div className="grid">
+              <ul>
+                <li>Virtuozzo</li>
+                <li>Parallels Business Automation</li>
+                <li>HSPcomplete</li>
+                <li>Plesk</li>
+                <li>CPanel</li>
               </ul>
             </div>
           </div>

@@ -43,6 +43,10 @@ const PortfolioItem = ({ match }) => {
       })
     : [];
 
+  const employerLogoSrc = portfolioItem.employer.logo
+    ? portfolioItem.employer.logo
+    : `/images/logos/${portfolioItem.employer.slug}.png`;
+
   return (
     <Page title="Portfolio" description="Portfolio">
       <section className="portfolio portfolioItem">
@@ -103,8 +107,9 @@ const PortfolioItem = ({ match }) => {
               target="_blank"
             >
               <img
+                style={{ maxWidth: '175px' }}
                 alt={portfolioItem.employer.name}
-                src={`/images/logos/${portfolioItem.employer.slug}.png`}
+                src={employerLogoSrc}
               />
             </a>
           </p>
