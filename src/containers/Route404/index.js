@@ -1,7 +1,6 @@
 import React from 'react';
 import Page from 'components/Page';
 import { Link } from 'react-router-dom';
-import 'containers/App/App.css';
 
 const Route404 = () => {
   return (

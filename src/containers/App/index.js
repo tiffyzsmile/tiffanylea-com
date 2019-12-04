@@ -12,7 +12,7 @@ import Reviews from 'containers/Reviews';
 import Contact from 'containers/Contact';
 import Tools from 'containers/Tools';
 import Route404 from 'containers/Route404';
-import './App.css';
+import './styles.scss';
 
 const App = () => {
   return (
