@@ -1,106 +1,11 @@
-/* 2.1 Normal
----------------------------------------- */
-.skill {
-  display: block;
-  margin: 0 0 18px;
-}
-.skill {
-  background-color: #eee;
-  position: relative;
-  width: 100%;
-  height: 30px;
-}
-.skill .bar {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 90%;
-  background: #b40606;
-  z-index: 10;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-}
-.skill .label {
-  color: #fff;
-  position: absolute;
-  left: 20px;
-  top: 0;
-  line-height: 30px;
-  z-index: 20;
-  text-transform: uppercase;
-  font-family: 'Oswald', sans-serif;
-  letter-spacing: 1px;
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  text-shadow: 1px 1px 1px rgba(150, 150, 150, 0.75);
-}
-/* 2.2 Group
----------------------------------------- */
-.skill-group {
-  display: block;
-}
-.skill-group {
-  overflow: hidden;
-}
-.skill-group .bar {
-  left: -100%;
-  background-color: #8da9b9;
-}
-.skill-group .label {
-  color: inherit;
-}
-.skill-group .bar {
-  left: 0;
-}
-.skill-group .label {
-  color: #fff;
-}
-.html5 .bar {
-  width: 98%;
-}
-.css3 .bar {
-  width: 98%;
-}
-.php .bar {
-  width: 75%;
-}
-.asp .bar {
-  width: 75%;
-}
-.xml .bar {
-  width: 98%;
-}
-.xslt .bar {
-  width: 98%;
-}
-.responsive .bar {
-  width: 98%;
-}
-.node .bar {
-  width: 30%;
-}
-.backbone .bar {
-  width: 30%;
-}
-.angular .bar {
-  width: 30%;
-}
-.mongodb .bar {
-  width: 75%;
-}
-.js .bar {
-  width: 65%;
-}
-.grid {
-  display: grid;
-  grid-gap: 15px;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  grid-auto-rows: 1fr; // this allows for equal height
+.skills {
+  .grid {
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    //grid-auto-rows: 40px;
+
+    //    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    //    grid-auto-rows: 1fr; // this allows for equal height
+  }
 }
