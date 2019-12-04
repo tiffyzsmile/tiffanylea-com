@@ -41,7 +41,7 @@ const Contact = () => {
         successMessage={
           <div>
             <p className="success">Your message has been sent!</p>
-            <img src="/images/good-news.png" alt="Good News!" />
+            <img src="/images/good-news.gif" alt="Good News!" />
           </div>
         }
         errorMessage={
