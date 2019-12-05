@@ -50,6 +50,7 @@ const portfolio = [
     name: 'Beacon Technologies - Blog',
     display: true,
     slug: 'beacon-blog',
+    logo: '/images/logos/beacon-technologies-blog__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -358,6 +359,31 @@ const portfolio = [
     other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services'],
     images: ['basin-electric-copy-site-1.png']
   },
+
+  {
+    name: 'University of Houston',
+    display: true,
+    slug: 'university-houston-2011',
+    logo: '/images/logos/university-of-houston__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2010-12-01',
+    url: 'https://www.uh.edu',
+    tags: [],
+    features: [
+      {
+        name: 'You are the pride',
+        details: ['Coming Soon...']
+      }
+    ],
+    responsibilities: ['Cascade Server integration'],
+    cms: ['Cascade Server'],
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: []
+  },
   {
     name: 'BMI Surplus',
     display: true,
@@ -464,6 +490,30 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
+    images: []
+  },
+  {
+    name: 'University of Houston',
+    display: true,
+    slug: 'university-houston-2010',
+    logo: '/images/logos/university-of-houston__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2010-12-01',
+    url: 'https://www.uh.edu',
+    tags: [],
+    features: [
+      {
+        name: 'News Releases',
+        details: ['Coming Soon...']
+      }
+    ],
+    responsibilities: ['Cascade Server integration'],
+    cms: ['Cascade Server'],
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
     images: []
   },
   {
@@ -723,6 +773,7 @@ const portfolio = [
     name: 'University of Hartford',
     display: true,
     slug: 'university-hartford-2010',
+    logo: '/images/logos/university-of-hartford__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -779,6 +830,7 @@ const portfolio = [
     name: 'Carolina Girl Furniture',
     display: true,
     slug: 'carolina-girl-furniture',
+    logo: '/images/logos/carolina-girl-furniture__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -799,6 +851,7 @@ const portfolio = [
     name: 'Envision',
     display: true,
     slug: 'envision',
+    logo: '/images/logos/envision__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -853,6 +906,7 @@ const portfolio = [
     name: 'NorthStar Management',
     display: true,
     slug: 'northstar-management',
+    logo: '/images/logos/northstar-management__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -870,6 +924,7 @@ const portfolio = [
     name: 'Matlab',
     display: true,
     slug: 'matlab',
+    logo: '/images/logos/matlab__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
