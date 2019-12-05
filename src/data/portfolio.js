@@ -14,8 +14,9 @@ const portfolio = [
     date: '2014-03-01',
     url: 'http://www.greensboroaa.com',
     tags: [],
-    responsibilities: ['Coming soon...'],
-    cms: ['Cascade Server'],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
     other: [],
     images: []
   },
@@ -177,6 +178,7 @@ const portfolio = [
     name: 'Tufenkian Outlet',
     display: true,
     slug: 'tufenkian-outlet',
+    logo: '/images/logos/tufenkian__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -265,9 +267,30 @@ const portfolio = [
     images: ['hartford-university-2012-1.png']
   },
   {
+    name: 'Southeastern Baptist Theological Seminary',
+    display: true,
+    slug: 'southeastern-baptist-theological-seminary',
+    logo: '/images/logos/southeastern-baptist-theological-seminary__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    lead: true,
+    date: '2012-03-01',
+    url: 'https://www.sebts.edu',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
     name: 'Texwipe',
     display: true,
     slug: 'texwipe',
+    logo: '/images/logos/texwipe__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -331,8 +354,9 @@ const portfolio = [
   },
   {
     name: 'BMI Surplus',
-    display: false,
+    display: true,
     slug: 'bmi-surplus',
+    logo: '/images/logos/bmi-surplus__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -341,6 +365,7 @@ const portfolio = [
     date: '2011-05-01',
     url: 'http://www.bmius.com',
     tags: [],
+    description: 'Coming Soon...',
     responsibilities: [],
     cms: [],
     other: []
@@ -415,6 +440,26 @@ const portfolio = [
     ]
   },
   {
+    name: 'Apex Analytix',
+    display: true,
+    slug: 'apex-analytix',
+    logo: '/images/logos/apex-analytix__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    lead: true,
+    date: '2011-01-01',
+    url: 'https://www.apexanalytix.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
     name: 'Burton and Burton',
     display: false,
     slug: 'burton-and-burton-2010',
@@ -445,6 +490,7 @@ const portfolio = [
     name: 'Greensboro Radiology',
     display: true,
     slug: 'greensboro-radiology',
+    logo: '/images/logos/greensboro-radiology__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -474,6 +520,7 @@ const portfolio = [
     name: 'Texas A&M Foundation',
     display: true,
     slug: 'texas-am-foundation',
+    logo: '/images/logos/texas-a-and-m-foundation__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -505,6 +552,7 @@ const portfolio = [
     name: 'Framingham University',
     display: true,
     slug: 'framingham-university',
+    logo: '/images/logos/framingham-state-university__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -557,6 +605,7 @@ const portfolio = [
     name: 'Staub Leadership',
     display: true,
     slug: 'staub-leadership',
+    logo: '/images/logos/staub-leadership-international__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -586,6 +635,7 @@ const portfolio = [
     name: 'Montgomery Family Law',
     display: true,
     slug: 'montgomery-family-law',
+    logo: '/images/logos/montgomery-family-law__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -847,6 +897,7 @@ const portfolio = [
     name: 'Machines and Wheels',
     display: true,
     slug: 'machines-and-wheels',
+    logo: '/images/logos/machines-and-wheels-inc__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
