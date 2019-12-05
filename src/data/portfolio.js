@@ -24,6 +24,7 @@ const portfolio = [
     name: 'Beacon Technologies',
     display: true,
     slug: 'beacon-main',
+    logo: '/images/logos/beacon-technologies__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -74,6 +75,7 @@ const portfolio = [
     name: 'Syracuse University, Whitman School of Management',
     display: true,
     slug: 'whitman-school-of-management-r',
+    logo: '/images/logos/whitman-school-of-management__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -123,6 +125,7 @@ const portfolio = [
     name: 'Syracuse University, Whitman School of Management',
     display: true,
     slug: 'whitman-school-of-management',
+    logo: '/images/logos/whitman-school-of-management__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -155,6 +158,7 @@ const portfolio = [
     name: 'North Carolina Technology Association',
     display: true,
     slug: 'ncta',
+    logo: '/images/logos/north-carolina-technology-association__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -234,6 +238,7 @@ const portfolio = [
     name: 'Hartford University - New jQuery Homepage',
     display: true,
     slug: 'hartford-university-2012',
+    logo: '/images/logos/university-of-hartford__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -338,6 +343,7 @@ const portfolio = [
     name: 'Basin Electric - Copy Site Script',
     display: true,
     slug: 'basin-electric-copy-site',
+    logo: '/images/logos/basin-electric-power-cooperative__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -374,6 +380,7 @@ const portfolio = [
     name: 'Basin Electric Power Cooperative',
     display: true,
     slug: 'basin-electric-power-cooperative',
+    logo: '/images/logos/basin-electric-power-cooperative__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -665,6 +672,7 @@ const portfolio = [
     name: 'Firefly Store Solutions',
     display: true,
     slug: 'firefly-store-solutions',
+    logo: '/images/logos/robert-h-ham__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -933,6 +941,7 @@ const portfolio = [
     name: 'Mod-U-Kraf',
     display: true,
     slug: 'mod-u-kraf',
+    logo: '/images/logos/mod-u-kraf__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -952,6 +961,7 @@ const portfolio = [
     name: 'Family Abuse Services',
     display: true,
     slug: 'family-abuse-services',
+    logo: '/images/logos/family-abuse-services__logo.svg',
     employer: {
       name: 'Carolinanet',
       slug: 'carolinanet',
