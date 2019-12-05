@@ -1,6 +1,25 @@
 /* eslint-disable */
 const portfolio = [
   {
+    name: 'Greensboro Auto Auction',
+    display: true,
+    slug: 'greensboro-auto-auction',
+    logo: '/images/logos/greensboro-auto-auction__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    lead: true,
+    date: '2014-03-01',
+    url: 'http://www.greensboroaa.com',
+    tags: [],
+    responsibilities: ['Coming soon...'],
+    cms: ['Cascade Server'],
+    other: [],
+    images: []
+  },
+  {
     name: 'Beacon Technologies',
     display: true,
     slug: 'beacon-main',
@@ -275,6 +294,24 @@ const portfolio = [
     images: ['texwipe-1.png']
   },
   {
+    name: 'Los Alamos National Laboratory',
+    display: true,
+    slug: 'los-alamos-national-laboratory',
+    logo: '/images/logos/los-alamos-national-laboratory__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com'
+    },
+    description: 'Coming Soon...',
+    date: '2011-12-01',
+    url: 'https://www.lanl.gov',
+    tags: [],
+    responsibilities: ['Coming Soon...'],
+    cms: [],
+    other: []
+  },
+  {
     name: 'Basin Electric - Copy Site Script',
     display: true,
     slug: 'basin-electric-copy-site',
@@ -283,7 +320,7 @@ const portfolio = [
       slug: 'beacon-technologies',
       url: 'http://www.beacontechnologies.com'
     },
-    date: '2012-01-01',
+    date: '2011-11-01',
     description:
       'This is a script that will copy one site into a new site within Cascade Server CMS. ',
     // "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
@@ -305,10 +342,6 @@ const portfolio = [
     url: 'http://www.bmius.com',
     tags: [],
     responsibilities: [],
-    more: {
-      text: '',
-      url: ''
-    },
     cms: [],
     other: []
   },
@@ -349,6 +382,7 @@ const portfolio = [
     name: 'Winston-Salem State University',
     display: true,
     slug: 'winston-salem-state-university',
+    logo: '/images/logos/winston-salem-state-university__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -497,6 +531,7 @@ const portfolio = [
     name: 'United Anesthesia',
     display: true,
     slug: 'united-anesthesia',
+    logo: '/images/logos/united-anesthesia__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
