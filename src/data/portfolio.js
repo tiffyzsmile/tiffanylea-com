@@ -1,6 +1,111 @@
 /* eslint-disable */
 const portfolio = [
   {
+    name: 'Skechers Corporate',
+    display: true,
+    slug: 'skechers-corporate',
+    logo: '/images/logos/skechers__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers Direct Admin',
+    display: true,
+    slug: 'skechers-direct-admin',
+    logo: '/images/logos/skechers-direct__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com/direct/',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers Direct',
+    display: true,
+    slug: 'skechers-direct',
+    logo: '/images/logos/skechers-direct__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com/direct/',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers Admin',
+    display: true,
+    slug: 'skechers-admin',
+    logo: '/images/logos/skechers-web__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers',
+    display: true,
+    slug: 'skechers',
+    logo: '/images/logos/skechers-web__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
     name: 'Greensboro Auto Auction',
     display: true,
     slug: 'greensboro-auto-auction',
@@ -84,23 +189,112 @@ const portfolio = [
     },
     date: '2013-06-01',
     url: 'http://whitman.syr.edu',
+    tags: [
+      'HTML/CSS',
+      'Javascript',
+      'jQuery',
+      'Responsive',
+      'Cross Browser Compatibility',
+      'W3C Compliant'
+    ],
+    description:
+      'Project involved extending all original development to be responsive',
+    responsibilities: [
+      'Project lead for development and design',
+      'Training team on responsive techniques/development',
+      'Ensuring accurate execution'
+    ],
+    cms: ['Cascade Server'],
+    images: ['whitman-school-of-management-r-1.png']
+  },
+  {
+    name: 'Grossmont College',
+    display: true,
+    slug: 'grossmont-college',
+    logo: '/images/logos/grossmont-college__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2013-01-01',
+    url: 'https://www.grossmont.edu',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
-      'Training and assisting as needed for Responsive techniques/development'
+      'All original front-end development',
+      'All custom Cascade Server integration'
     ],
-    more: {
-      text: 'Beacon Technologies Blog',
-      url:
-        'http://blog.beacontechnologies.com/syracuse-university-whitman-school-of-management-cascade-site-launch/'
-    },
+    features: [
+      {
+        details: [
+          'Web design and development using Cascade Server',
+          '4000+ content pages imported and implemented into the templates',
+          'Design provided by a third-party vendor and Beacon was responsible for the creation of a responsive design based on that layout',
+          'Buckets for displaying content/images on any content page',
+          'Accordions for expand/collapse functionality on any content page',
+          'Documents directory template to display contents of a folder',
+          'Customized calendar with a public Submit an Event form',
+          'News filtered from District listings, based on school',
+          'Optional Last Updated date on interior content pages',
+          'Mega site menu that is administered in one location in Cascade and does not require full site publish to update',
+          'Several built-in emergency information templates',
+          'Editable and optional Call to Action buttons',
+          'Photo gallery template',
+          'Custom faculty profile pages'
+        ]
+      }
+    ],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['whitman-school-of-management-r-1.png']
+    images: ['gcccd-1.png']
+  },
+  {
+    name: 'Cuyamaca College',
+    display: true,
+    slug: 'cuyamaca-college',
+    logo: '/images/logos/cuyamaca-college__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2013-01-01',
+    url: 'https://www.cuyamaca.edu',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    responsibilities: [
+      'All original front-end development',
+      'All custom Cascade Server integration'
+    ],
+    features: [
+      {
+        details: [
+          'Web design and development using Cascade Server',
+          '4000+ content pages imported and implemented into the templates',
+          'Design provided by a third-party vendor and Beacon was responsible for the creation of a responsive design based on that layout',
+          'Buckets for displaying content/images on any content page',
+          'Accordions for expand/collapse functionality on any content page',
+          'Documents directory template to display contents of a folder',
+          'Customized calendar with a public Submit an Event form',
+          'News filtered from District listings, based on school',
+          'Optional Last Updated date on interior content pages',
+          'Mega site menu that is administered in one location in Cascade and does not require full site publish to update',
+          'Several built-in emergency information templates',
+          'Editable and optional Call to Action buttons',
+          'Photo gallery template',
+          'Custom faculty profile pages'
+        ]
+      }
+    ],
+    cms: ['Cascade Server'],
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['gcccd-1.png']
   },
   {
     name: 'Grossmont-Cuyamaca Community College District',
     display: true,
     slug: 'gcccd',
+    logo:
+      '/images/logos/grossmont-cuyamaca-community-college-district__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -108,18 +302,39 @@ const portfolio = [
     },
     date: '2013-01-01',
     url: 'http://www.gcccd.edu',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: [
+      'HTML/CSS',
+      'Javascript',
+      'jQuery',
+      'Responsive',
+      'Cross Browser Compatibility',
+      'W3C Compliant'
+    ],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
     ],
-    more: {
-      text: 'Beacon Technologies Blog',
-      url:
-        'http://blog.beacontechnologies.com/cascade-responsive-design-site-launch/'
-    },
+    features: [
+      {
+        details: [
+          'Web design and development using Cascade Server',
+          '4000+ content pages imported and implemented into the templates',
+          'Design provided by a third-party vendor and Beacon was responsible for the creation of a responsive design based on that layout',
+          'Buckets for displaying content/images on any content page',
+          'Accordions for expand/collapse functionality on any content page',
+          'Documents directory template to display contents of a folder',
+          'Customized calendar with a public Submit an Event form',
+          'News filtered from District listings, based on school',
+          'Optional Last Updated date on interior content pages',
+          'Mega site menu that is administered in one location in Cascade and does not require full site publish to update',
+          'Several built-in emergency information templates',
+          'Editable and optional Call to Action buttons',
+          'Photo gallery template',
+          'Custom faculty profile pages'
+        ]
+      }
+    ],
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['gcccd-1.png']
   },
   {
@@ -134,18 +349,18 @@ const portfolio = [
     },
     date: '2012-10-01',
     url: 'http://whitman.syr.edu',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: [
+      'HTML/CSS',
+      'Javascript',
+      'jQuery',
+      'Cross Browser Compatibility',
+      'W3C Compliant'
+    ],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
     ],
-    more: {
-      text: 'Beacon Technologies Blog',
-      url:
-        'http://blog.beacontechnologies.com/syracuse-university-whitman-school-of-management-cascade-site-launch/'
-    },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: [
       'whitman-school-of-management-1.png',
       'whitman-school-of-management-2.png',
@@ -169,7 +384,9 @@ const portfolio = [
     url: 'http://www.nctechnology.org',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
-      'Training and assisting as neeeded for Responsive techniques/development'
+      'Project lead for responsive development and design',
+      'Training team on responsive techniques/development',
+      'Ensuring accurate execution'
     ],
     more: {
       text: 'Beacon Technologies Blog',
@@ -208,6 +425,7 @@ const portfolio = [
     name: 'Bassett Furniture Mobile Site',
     display: true,
     slug: 'bassett-furniture',
+    logo: '/images/logos/bassett__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -747,6 +965,7 @@ const portfolio = [
     name: 'Volvo Bus SCR',
     display: true,
     slug: 'volvo-bus-scr',
+    logo: '/images/logos/volvo__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -825,6 +1044,28 @@ const portfolio = [
       'university-hartford-2010-7.png',
       'university-hartford-2010-8.png'
     ]
+  },
+  {
+    name: 'Rollins Magazine',
+    display: true,
+    slug: 'rollins-university',
+    logo: '/images/logos/rollins-university__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com',
+      logo: '/images/logos/beacon-technologies__logo.svg'
+    },
+    date: '2010-02-01',
+    url: 'https://www.rollins.edu/magazine/',
+    tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery', 'CMS Configuration'],
+    responsibilities: [
+      'Original front-end development (HTML/CSS/JS)',
+      'Cascade Server integration'
+    ],
+    cms: ['Cascade Server'],
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: []
   },
   {
     name: 'Carolina Girl Furniture',
