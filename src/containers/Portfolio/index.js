@@ -5,13 +5,17 @@ import { getPortfolioItems, getAllTags } from 'helpers/portfolio';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { H1 } from 'components/Typography';
+import './styles.scss';
 
 const Portfolio = ({ match }) => {
   const portfolioItems = getPortfolioItems(match.params.filter).map(item => {
+    const logoSrc = item.logo
+      ? item.logo
+      : `/images/portfolio/${item.slug}.png`;
     return (
       <li key={item.slug}>
         <Link to={`/project/${item.slug}`}>
-          <img alt={item.name} src={`/images/portfolio/${item.slug}.png`} />
+          <img alt={item.name} src={logoSrc} />
         </Link>
       </li>
     );

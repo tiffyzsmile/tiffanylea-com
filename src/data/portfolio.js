@@ -1,9 +1,135 @@
 /* eslint-disable */
 const portfolio = [
   {
+    name: 'Skechers Corporate',
+    display: true,
+    slug: 'skechers-corporate',
+    logo: '/images/logos/skechers__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers Direct Admin',
+    display: true,
+    slug: 'skechers-direct-admin',
+    logo: '/images/logos/skechers-direct__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com/direct/',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers Direct',
+    display: true,
+    slug: 'skechers-direct',
+    logo: '/images/logos/skechers-direct__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com/direct/',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers Admin',
+    display: true,
+    slug: 'skechers-admin',
+    logo: '/images/logos/skechers-web__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Skechers',
+    display: true,
+    slug: 'skechers',
+    logo: '/images/logos/skechers-web__logo.svg',
+    employer: {
+      name: 'Skechers USA Inc',
+      slug: 'skechers',
+      url: 'https://www.skechers.com',
+      logo: '/images/logos/skechers__logo.svg'
+    },
+    lead: true,
+    date: '2014-06-01',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'Greensboro Auto Auction',
+    display: true,
+    slug: 'greensboro-auto-auction',
+    logo: '/images/logos/greensboro-auto-auction__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    lead: true,
+    date: '2014-03-01',
+    url: 'http://www.greensboroaa.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
     name: 'Beacon Technologies',
     display: true,
     slug: 'beacon-main',
+    logo: '/images/logos/beacon-technologies__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -29,6 +155,7 @@ const portfolio = [
     name: 'Beacon Technologies - Blog',
     display: true,
     slug: 'beacon-blog',
+    logo: '/images/logos/beacon-technologies-blog__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -54,6 +181,7 @@ const portfolio = [
     name: 'Syracuse University, Whitman School of Management',
     display: true,
     slug: 'whitman-school-of-management-r',
+    logo: '/images/logos/whitman-school-of-management__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -61,23 +189,112 @@ const portfolio = [
     },
     date: '2013-06-01',
     url: 'http://whitman.syr.edu',
+    tags: [
+      'HTML/CSS',
+      'Javascript',
+      'jQuery',
+      'Responsive',
+      'Cross Browser Compatibility',
+      'W3C Compliant'
+    ],
+    description:
+      'Project involved extending all original development to be responsive',
+    responsibilities: [
+      'Project lead for development and design',
+      'Training team on responsive techniques/development',
+      'Ensuring accurate execution'
+    ],
+    cms: ['Cascade Server'],
+    images: ['whitman-school-of-management-r-1.png']
+  },
+  {
+    name: 'Grossmont College',
+    display: true,
+    slug: 'grossmont-college',
+    logo: '/images/logos/grossmont-college__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2013-01-01',
+    url: 'https://www.grossmont.edu',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
-      'Training and assisting as needed for Responsive techniques/development'
+      'All original front-end development',
+      'All custom Cascade Server integration'
     ],
-    more: {
-      text: 'Beacon Technologies Blog',
-      url:
-        'http://blog.beacontechnologies.com/syracuse-university-whitman-school-of-management-cascade-site-launch/'
-    },
+    features: [
+      {
+        details: [
+          'Web design and development using Cascade Server',
+          '4000+ content pages imported and implemented into the templates',
+          'Design provided by a third-party vendor and Beacon was responsible for the creation of a responsive design based on that layout',
+          'Buckets for displaying content/images on any content page',
+          'Accordions for expand/collapse functionality on any content page',
+          'Documents directory template to display contents of a folder',
+          'Customized calendar with a public Submit an Event form',
+          'News filtered from District listings, based on school',
+          'Optional Last Updated date on interior content pages',
+          'Mega site menu that is administered in one location in Cascade and does not require full site publish to update',
+          'Several built-in emergency information templates',
+          'Editable and optional Call to Action buttons',
+          'Photo gallery template',
+          'Custom faculty profile pages'
+        ]
+      }
+    ],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['whitman-school-of-management-r-1.png']
+    images: ['gcccd-1.png']
+  },
+  {
+    name: 'Cuyamaca College',
+    display: true,
+    slug: 'cuyamaca-college',
+    logo: '/images/logos/cuyamaca-college__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2013-01-01',
+    url: 'https://www.cuyamaca.edu',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    responsibilities: [
+      'All original front-end development',
+      'All custom Cascade Server integration'
+    ],
+    features: [
+      {
+        details: [
+          'Web design and development using Cascade Server',
+          '4000+ content pages imported and implemented into the templates',
+          'Design provided by a third-party vendor and Beacon was responsible for the creation of a responsive design based on that layout',
+          'Buckets for displaying content/images on any content page',
+          'Accordions for expand/collapse functionality on any content page',
+          'Documents directory template to display contents of a folder',
+          'Customized calendar with a public Submit an Event form',
+          'News filtered from District listings, based on school',
+          'Optional Last Updated date on interior content pages',
+          'Mega site menu that is administered in one location in Cascade and does not require full site publish to update',
+          'Several built-in emergency information templates',
+          'Editable and optional Call to Action buttons',
+          'Photo gallery template',
+          'Custom faculty profile pages'
+        ]
+      }
+    ],
+    cms: ['Cascade Server'],
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
+    images: ['gcccd-1.png']
   },
   {
     name: 'Grossmont-Cuyamaca Community College District',
     display: true,
     slug: 'gcccd',
+    logo:
+      '/images/logos/grossmont-cuyamaca-community-college-district__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -85,24 +302,46 @@ const portfolio = [
     },
     date: '2013-01-01',
     url: 'http://www.gcccd.edu',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: [
+      'HTML/CSS',
+      'Javascript',
+      'jQuery',
+      'Responsive',
+      'Cross Browser Compatibility',
+      'W3C Compliant'
+    ],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
     ],
-    more: {
-      text: 'Beacon Technologies Blog',
-      url:
-        'http://blog.beacontechnologies.com/cascade-responsive-design-site-launch/'
-    },
+    features: [
+      {
+        details: [
+          'Web design and development using Cascade Server',
+          '4000+ content pages imported and implemented into the templates',
+          'Design provided by a third-party vendor and Beacon was responsible for the creation of a responsive design based on that layout',
+          'Buckets for displaying content/images on any content page',
+          'Accordions for expand/collapse functionality on any content page',
+          'Documents directory template to display contents of a folder',
+          'Customized calendar with a public Submit an Event form',
+          'News filtered from District listings, based on school',
+          'Optional Last Updated date on interior content pages',
+          'Mega site menu that is administered in one location in Cascade and does not require full site publish to update',
+          'Several built-in emergency information templates',
+          'Editable and optional Call to Action buttons',
+          'Photo gallery template',
+          'Custom faculty profile pages'
+        ]
+      }
+    ],
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['gcccd-1.png']
   },
   {
     name: 'Syracuse University, Whitman School of Management',
     display: true,
     slug: 'whitman-school-of-management',
+    logo: '/images/logos/whitman-school-of-management__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -110,18 +349,18 @@ const portfolio = [
     },
     date: '2012-10-01',
     url: 'http://whitman.syr.edu',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: [
+      'HTML/CSS',
+      'Javascript',
+      'jQuery',
+      'Cross Browser Compatibility',
+      'W3C Compliant'
+    ],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
     ],
-    more: {
-      text: 'Beacon Technologies Blog',
-      url:
-        'http://blog.beacontechnologies.com/syracuse-university-whitman-school-of-management-cascade-site-launch/'
-    },
     cms: ['Cascade Server'],
-    other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: [
       'whitman-school-of-management-1.png',
       'whitman-school-of-management-2.png',
@@ -135,6 +374,7 @@ const portfolio = [
     name: 'North Carolina Technology Association',
     display: true,
     slug: 'ncta',
+    logo: '/images/logos/north-carolina-technology-association__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -144,7 +384,9 @@ const portfolio = [
     url: 'http://www.nctechnology.org',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
     responsibilities: [
-      'Training and assisting as neeeded for Responsive techniques/development'
+      'Project lead for responsive development and design',
+      'Training team on responsive techniques/development',
+      'Ensuring accurate execution'
     ],
     more: {
       text: 'Beacon Technologies Blog',
@@ -158,6 +400,7 @@ const portfolio = [
     name: 'Tufenkian Outlet',
     display: true,
     slug: 'tufenkian-outlet',
+    logo: '/images/logos/tufenkian__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-main',
@@ -182,6 +425,7 @@ const portfolio = [
     name: 'Bassett Furniture Mobile Site',
     display: true,
     slug: 'bassett-furniture',
+    logo: '/images/logos/bassett__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -213,6 +457,7 @@ const portfolio = [
     name: 'Hartford University - New jQuery Homepage',
     display: true,
     slug: 'hartford-university-2012',
+    logo: '/images/logos/university-of-hartford__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -246,9 +491,30 @@ const portfolio = [
     images: ['hartford-university-2012-1.png']
   },
   {
+    name: 'Southeastern Baptist Theological Seminary',
+    display: true,
+    slug: 'southeastern-baptist-theological-seminary',
+    logo: '/images/logos/southeastern-baptist-theological-seminary__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    lead: true,
+    date: '2012-03-01',
+    url: 'https://www.sebts.edu',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
     name: 'Texwipe',
     display: true,
     slug: 'texwipe',
+    logo: '/images/logos/texwipe__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -275,15 +541,34 @@ const portfolio = [
     images: ['texwipe-1.png']
   },
   {
-    name: 'Basin Electric - Copy Site Script',
+    name: 'Los Alamos National Laboratory',
     display: true,
-    slug: 'basin-electric-copy-site',
+    slug: 'los-alamos-national-laboratory',
+    logo: '/images/logos/los-alamos-national-laboratory__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
       url: 'http://www.beacontechnologies.com'
     },
-    date: '2012-01-01',
+    description: 'Coming Soon...',
+    date: '2011-12-01',
+    url: 'https://www.lanl.gov',
+    tags: [],
+    responsibilities: ['Coming Soon...'],
+    cms: [],
+    other: []
+  },
+  {
+    name: 'Basin Electric - Copy Site Script',
+    display: true,
+    slug: 'basin-electric-copy-site',
+    logo: '/images/logos/basin-electric-power-cooperative__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2011-11-01',
     description:
       'This is a script that will copy one site into a new site within Cascade Server CMS. ',
     // "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
@@ -292,10 +577,36 @@ const portfolio = [
     other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services'],
     images: ['basin-electric-copy-site-1.png']
   },
+
+  {
+    name: 'University of Houston',
+    display: true,
+    slug: 'university-houston-2011',
+    logo: '/images/logos/university-of-houston__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2010-12-01',
+    url: 'https://www.uh.edu',
+    tags: [],
+    features: [
+      {
+        name: 'You are the pride',
+        details: ['Coming Soon...']
+      }
+    ],
+    responsibilities: ['Cascade Server integration'],
+    cms: ['Cascade Server'],
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: []
+  },
   {
     name: 'BMI Surplus',
-    display: false,
+    display: true,
     slug: 'bmi-surplus',
+    logo: '/images/logos/bmi-surplus__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -304,11 +615,8 @@ const portfolio = [
     date: '2011-05-01',
     url: 'http://www.bmius.com',
     tags: [],
+    description: 'Coming Soon...',
     responsibilities: [],
-    more: {
-      text: '',
-      url: ''
-    },
     cms: [],
     other: []
   },
@@ -316,6 +624,7 @@ const portfolio = [
     name: 'Basin Electric Power Cooperative',
     display: true,
     slug: 'basin-electric-power-cooperative',
+    logo: '/images/logos/basin-electric-power-cooperative__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -349,6 +658,7 @@ const portfolio = [
     name: 'Winston-Salem State University',
     display: true,
     slug: 'winston-salem-state-university',
+    logo: '/images/logos/winston-salem-state-university__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -381,6 +691,50 @@ const portfolio = [
     ]
   },
   {
+    name: 'Apex Analytix',
+    display: true,
+    slug: 'apex-analytix',
+    logo: '/images/logos/apex-analytix__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-main',
+      url: 'http://www.beacontechnologies.com'
+    },
+    lead: true,
+    date: '2011-01-01',
+    url: 'https://www.apexanalytix.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: []
+  },
+  {
+    name: 'University of Houston',
+    display: true,
+    slug: 'university-houston-2010',
+    logo: '/images/logos/university-of-houston__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com'
+    },
+    date: '2010-12-01',
+    url: 'https://www.uh.edu',
+    tags: [],
+    features: [
+      {
+        name: 'News Releases',
+        details: ['Coming Soon...']
+      }
+    ],
+    responsibilities: ['Cascade Server integration'],
+    cms: ['Cascade Server'],
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: []
+  },
+  {
     name: 'Burton and Burton',
     display: false,
     slug: 'burton-and-burton-2010',
@@ -411,6 +765,7 @@ const portfolio = [
     name: 'Greensboro Radiology',
     display: true,
     slug: 'greensboro-radiology',
+    logo: '/images/logos/greensboro-radiology__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -440,6 +795,7 @@ const portfolio = [
     name: 'Texas A&M Foundation',
     display: true,
     slug: 'texas-am-foundation',
+    logo: '/images/logos/texas-a-and-m-foundation__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -471,6 +827,7 @@ const portfolio = [
     name: 'Framingham University',
     display: true,
     slug: 'framingham-university',
+    logo: '/images/logos/framingham-state-university__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -497,6 +854,7 @@ const portfolio = [
     name: 'United Anesthesia',
     display: true,
     slug: 'united-anesthesia',
+    logo: '/images/logos/united-anesthesia__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -522,6 +880,7 @@ const portfolio = [
     name: 'Staub Leadership',
     display: true,
     slug: 'staub-leadership',
+    logo: '/images/logos/staub-leadership-international__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -551,6 +910,7 @@ const portfolio = [
     name: 'Montgomery Family Law',
     display: true,
     slug: 'montgomery-family-law',
+    logo: '/images/logos/montgomery-family-law__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -580,6 +940,7 @@ const portfolio = [
     name: 'Firefly Store Solutions',
     display: true,
     slug: 'firefly-store-solutions',
+    logo: '/images/logos/robert-h-ham__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -604,6 +965,7 @@ const portfolio = [
     name: 'Volvo Bus SCR',
     display: true,
     slug: 'volvo-bus-scr',
+    logo: '/images/logos/volvo__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -630,6 +992,7 @@ const portfolio = [
     name: 'University of Hartford',
     display: true,
     slug: 'university-hartford-2010',
+    logo: '/images/logos/university-of-hartford__logo.svg',
     employer: {
       name: 'Beacon Technologies',
       slug: 'beacon-technologies',
@@ -683,9 +1046,32 @@ const portfolio = [
     ]
   },
   {
+    name: 'Rollins Magazine',
+    display: true,
+    slug: 'rollins-university',
+    logo: '/images/logos/rollins-university__logo.svg',
+    employer: {
+      name: 'Beacon Technologies',
+      slug: 'beacon-technologies',
+      url: 'http://www.beacontechnologies.com',
+      logo: '/images/logos/beacon-technologies__logo.svg'
+    },
+    date: '2010-02-01',
+    url: 'https://www.rollins.edu/magazine/',
+    tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery', 'CMS Configuration'],
+    responsibilities: [
+      'Original front-end development (HTML/CSS/JS)',
+      'Cascade Server integration'
+    ],
+    cms: ['Cascade Server'],
+    other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
+    images: []
+  },
+  {
     name: 'Carolina Girl Furniture',
     display: true,
     slug: 'carolina-girl-furniture',
+    logo: '/images/logos/carolina-girl-furniture__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -706,6 +1092,7 @@ const portfolio = [
     name: 'Envision',
     display: true,
     slug: 'envision',
+    logo: '/images/logos/envision__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -727,6 +1114,7 @@ const portfolio = [
     name: 'GCUMC',
     display: true,
     slug: 'guilford-college-united-methodist-church',
+    logo: '/images/logos/guilford-college-united-methodist-church__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -759,6 +1147,7 @@ const portfolio = [
     name: 'NorthStar Management',
     display: true,
     slug: 'northstar-management',
+    logo: '/images/logos/northstar-management__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -776,6 +1165,7 @@ const portfolio = [
     name: 'Matlab',
     display: true,
     slug: 'matlab',
+    logo: '/images/logos/matlab__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -811,6 +1201,7 @@ const portfolio = [
     name: 'Machines and Wheels',
     display: true,
     slug: 'machines-and-wheels',
+    logo: '/images/logos/machines-and-wheels-inc__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -829,6 +1220,7 @@ const portfolio = [
     name: 'Herron House',
     display: true,
     slug: 'herron-house',
+    logo: '/images/logos/herron-house-flowers__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -845,6 +1237,7 @@ const portfolio = [
     name: 'Mod-U-Kraf',
     display: true,
     slug: 'mod-u-kraf',
+    logo: '/images/logos/mod-u-kraf__logo.svg',
     employer: {
       name: 'Get You Found Online Marketing',
       slug: 'get-you-found',
@@ -864,6 +1257,7 @@ const portfolio = [
     name: 'Family Abuse Services',
     display: true,
     slug: 'family-abuse-services',
+    logo: '/images/logos/family-abuse-services__logo.svg',
     employer: {
       name: 'Carolinanet',
       slug: 'carolinanet',
@@ -898,10 +1292,12 @@ const portfolio = [
     name: 'A Cleaner World',
     display: true,
     slug: 'a-cleaner-world',
+    logo: '/images/logos/a-cleaner-world__logo.svg',
     employer: {
       name: 'Inter-Tech Communications',
       slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com'
+      url: 'http://www.itc123.com',
+      logo: '/images/logos/inter-tech-communications__logo.svg'
     },
     date: '2008-01-01',
     url: 'http://www.acleanerworld.com',
@@ -923,7 +1319,8 @@ const portfolio = [
     employer: {
       name: 'Inter-Tech Communications',
       slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com'
+      url: 'http://www.itc123.com',
+      logo: '/images/logos/inter-tech-communications__logo.svg'
     },
     date: '2007-11-01',
     url: 'http://www.shoeparadise.net',
@@ -934,11 +1331,13 @@ const portfolio = [
   {
     name: 'Inter-Tech Communications',
     display: true,
+    logo: '/images/logos/inter-tech-communications__logo.svg',
     slug: 'inter-tech-communications',
     employer: {
       name: 'Inter-Tech Communications',
       slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com'
+      url: 'http://www.itc123.com',
+      logo: '/images/logos/inter-tech-communications__logo.svg'
     },
     date: '2007-09-01',
     url: 'http://www.itc123.com',

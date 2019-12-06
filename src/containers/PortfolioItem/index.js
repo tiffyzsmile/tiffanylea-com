@@ -43,6 +43,10 @@ const PortfolioItem = ({ match }) => {
       })
     : [];
 
+  const employerLogoSrc = portfolioItem.employer.logo
+    ? portfolioItem.employer.logo
+    : `/images/logos/${portfolioItem.employer.slug}.png`;
+
   return (
     <Page title="Portfolio" description="Portfolio">
       <section className="portfolio portfolioItem">
@@ -51,12 +55,6 @@ const PortfolioItem = ({ match }) => {
           <H1>
             {portfolioItem.name} ({portfolioItem.date.substring(0, 4)})
           </H1>
-          {portfolioItem.responsibilities && (
-            <div>
-              <H2>Responsible for:</H2>
-              <ul>{responsibilities}</ul>
-            </div>
-          )}
           {portfolioItem.description && (
             <div>
               <H2>Description:</H2>
@@ -66,10 +64,19 @@ const PortfolioItem = ({ match }) => {
 
           {portfolioItem.features && (
             <div>
-              <H2>Description:</H2>
+              <H2>Project Features:</H2>
               {features}
             </div>
           )}
+
+          {portfolioItem.responsibilities &&
+            portfolioItem.responsibilities.length > 0 && (
+              <div>
+                <H2>Responsible for:</H2>
+                <ul>{responsibilities}</ul>
+              </div>
+            )}
+
           <H2>Links</H2>
           <ul>
             {portfolioItem.url && (
@@ -103,8 +110,9 @@ const PortfolioItem = ({ match }) => {
               target="_blank"
             >
               <img
+                style={{ maxWidth: '175px' }}
                 alt={portfolioItem.employer.name}
-                src={`/images/logos/${portfolioItem.employer.slug}.png`}
+                src={employerLogoSrc}
               />
             </a>
           </p>

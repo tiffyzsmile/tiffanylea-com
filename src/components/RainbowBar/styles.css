@@ -1,0 +1,15 @@
+.rainbowBar {
+  height: 5px;
+  width: 100%;
+  background: linear-gradient(
+      90deg,
+      rgba(253, 29, 29, 1) 0%,
+      rgba(253, 101, 49, 1) 20%,
+      rgba(246, 252, 69, 1) 40%,
+      rgba(48, 242, 0, 1) 60%,
+      rgba(0, 158, 210, 1) 80%,
+      rgba(129, 0, 255, 1) 100%
+    )
+    left bottom #8da9b9 no-repeat;
+  background-size: 100% 6px;
+}

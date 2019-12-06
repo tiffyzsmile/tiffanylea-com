@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75 75">
+  <title>Amazon Simple Email Service SES</title>
+  <g id="Reference">
+    <path
+      id="Blue_Light_BG"
+      fill="#3b48cc"
+      d="M0 0h75v75H0z"
+      data-name="Blue Light BG"
+    />
+    <g id="Product_Icon" data-name="Product Icon">
+      <path
+        d="M37.5 12.5a25 25 0 00-20.3 39.6l1.6-1.2a23 23 0 1141.7-13.4 22.8 22.8 0 01-4.3 13.4l1.6 1.2a25 25 0 00-20.3-39.6z"
+        fill="#fff"
+      />
+      <path
+        d="M50.5 52.1v-3.6a1 1 0 00-1-1h-11v-6h11a1 1 0 001-1v-15a1 1 0 00-1-1h-24a1 1 0 00-1 1v15a1 1 0 001 1h11v6h-11a1 1 0 00-1 1v3.6a4.5 4.5 0 102 0v-2.6h10v4.1a4.5 4.5 0 102 0v-4.1h10v2.6a4.5 4.5 0 102 0zm-8.7-19l6.7-5.5v10.8zm-4.3.8l-9.2-7.4h18.4zm-4.3-.9l-6.7 5.4V27.6zm1.6 1.3l2 1.7a1 1 0 001.3 0l2-1.7 6.5 5.2H28.3zM28 56.5a2.5 2.5 0 11-2.5-2.5 2.5 2.5 0 012.5 2.5zM40 58a2.5 2.5 0 11-2.5-2.5A2.5 2.5 0 0140 58zm9.5 1a2.5 2.5 0 112.5-2.5 2.5 2.5 0 01-2.5 2.5z"
+        fill="#fff"
+      />
+    </g>
+  </g>
+</svg>
