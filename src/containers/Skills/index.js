@@ -9,12 +9,9 @@ const Skills = () => {
       <div className="content setwidth skills">
         <H1>Skills</H1>
         <p>
-          <Strong>TLDR</Strong>: It is kind of insane what we need to know to be
-          web/app engineers in {new Date().getFullYear()}. The many different
-          tools, technologies, methodologies and blabla that I{`'`}ve had to
-          dive into at full depths over the years... is overwhelming.
-          Specifically overwhelming when asked what are your {`'skills'`}{' '}
-          haha... if I had to name just 1... I{`'`}m a fast learner ;)
+          <Strong>TLDR</Strong>: The many different tools, technologies,
+          methodologies and blabla that I{`'`}ve had to dive into at full depths
+          over the years is overwhelming. This is a gigantic WIP.
         </p>
         <section className="grid">
           <div>
