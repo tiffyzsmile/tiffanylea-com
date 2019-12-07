@@ -16,18 +16,18 @@ const PortfolioItem = ({ match }) => {
 
   const responsibilities = portfolioItem.responsibilities
     ? portfolioItem.responsibilities.map(responsibility => {
-        return <li>{responsibility}</li>;
+        return <li key={responsibility}>{responsibility}</li>;
       })
     : [];
 
   const features = portfolioItem.features
     ? portfolioItem.features.map(feature => {
         const details = feature.details.map(detail => {
-          return <li>{detail}</li>;
+          return <li key={detail}>{detail}</li>;
         });
         return (
-          <div>
-            <H3>{feature.name}</H3>
+          <div key={`key-${feature.name}`}>
+            {feature.name && <H3>{feature.name}</H3>}
             <ul>{details}</ul>
           </div>
         );

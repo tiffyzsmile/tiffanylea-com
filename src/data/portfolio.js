@@ -344,7 +344,7 @@ const portfolio = [
     ],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['gcccd-1.png']
+    images: ['grossmont-college-responsive.jpg']
   },
   {
     name: 'Cuyamaca College',
@@ -381,7 +381,7 @@ const portfolio = [
     ],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['gcccd-1.png']
+    images: ['cuyamaca-college-responsive.jpg']
   },
   {
     name: 'Grossmont-Cuyamaca Community College District',
