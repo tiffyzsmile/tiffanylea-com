@@ -4,6 +4,7 @@ import Page from 'components/Page';
 import Filter from 'components/Filter';
 import ImageGallery from 'components/ImageGallery';
 import portfolio from 'data/portfolio';
+import employers from 'data/employers';
 import { getAllTags } from 'helpers/portfolio';
 import { H1, H2, H3 } from 'components/Typography';
 
@@ -42,10 +43,6 @@ const PortfolioItem = ({ match }) => {
         };
       })
     : [];
-
-  const employerLogoSrc = portfolioItem.employer.logo
-    ? portfolioItem.employer.logo
-    : `/images/logos/${portfolioItem.employer.slug}.png`;
 
   return (
     <Page title="Portfolio" description="Portfolio">
@@ -104,17 +101,11 @@ const PortfolioItem = ({ match }) => {
           </ul>
           <H2>While Working For:</H2>
           <p>
-            <a
-              href={portfolioItem.employer.url}
-              rel="noopener noreferrer"
-              target="_blank"
-            >
-              <img
-                style={{ maxWidth: '175px' }}
-                alt={portfolioItem.employer.name}
-                src={employerLogoSrc}
-              />
-            </a>
+            <img
+              style={{ maxWidth: '175px' }}
+              alt={employers[portfolioItem.employer].name}
+              src={employers[portfolioItem.employer].logo}
+            />
           </p>
         </section>
         <section className="portfolioImages">
