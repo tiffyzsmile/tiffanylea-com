@@ -1,58 +1,136 @@
 /* eslint-disable */
 const portfolio = [
   {
-    name: 'Skechers Corporate',
+    name: 'Skechers - Germany',
     display: true,
-    slug: 'skechers-corporate',
-    logo: '/images/logos/skechers__logo.svg',
-    employer: {
-      name: 'Skechers USA Inc',
-      slug: 'skechers',
-      url: 'https://www.skechers.com',
-      logo: '/images/logos/skechers__logo.svg'
-    },
+    slug: 'skechers-de',
+    logo: '/images/logos/skechers-web-de__logo.svg',
+    employer: 'skechers',
     lead: true,
-    date: '2014-06-01',
-    url: 'https://www.skechers.com',
-    tags: [],
-    description: 'Coming soon...',
-    responsibilities: [],
+    date: '2017-01-01',
+    url: 'https://www.skechers.com/de-de/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description: 'Extended United States e-commerce code for Germany.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
     cms: [],
     other: [],
-    images: []
+    images: ['skechers-web-de.gif']
   },
   {
-    name: 'Skechers Direct Admin',
+    name: 'Skechers - United Kingdom/Ireland',
     display: true,
-    slug: 'skechers-direct-admin',
-    logo: '/images/logos/skechers-direct__logo.svg',
-    employer: {
-      name: 'Skechers USA Inc',
-      slug: 'skechers',
-      url: 'https://www.skechers.com',
-      logo: '/images/logos/skechers__logo.svg'
-    },
+    slug: 'skechers-gb',
+    logo: '/images/logos/skechers-web-gb__logo.svg',
+    employer: 'skechers',
     lead: true,
-    date: '2014-06-01',
-    url: 'https://www.skechers.com/direct/',
-    tags: [],
-    description: 'Coming soon...',
-    responsibilities: [],
+    date: '2017-10-01',
+    url: 'https://www.skechers.com/en-gb/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description:
+      'Extended United States e-commerce code for United Kingdom/Ireland.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers - Spain',
+    display: true,
+    slug: 'skechers-es',
+    logo: '/images/logos/skechers-web-es__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2017-07-01',
+    url: 'https://www.skechers.com/es-es/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description: 'Extended United States e-commerce code for Spain.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers - Canada ',
+    display: true,
+    slug: 'skechers-ca',
+    logo: '/images/logos/skechers-web-ca__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2017-05-01',
+    url: 'https://www.skechers.com/fr-ca/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description: 'Extended United States e-commerce code for Canada.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Skechers Direct',
     display: true,
     slug: 'skechers-direct',
     logo: '/images/logos/skechers-direct__logo.svg',
-    employer: {
-      name: 'Skechers USA Inc',
-      slug: 'skechers',
-      url: 'https://www.skechers.com',
-      logo: '/images/logos/skechers__logo.svg'
-    },
+    employer: 'skechers',
     lead: true,
     date: '2014-06-01',
     url: 'https://www.skechers.com/direct/',
@@ -61,40 +139,64 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
-    name: 'Skechers Admin',
+    name: 'Skechers Direct Admin',
     display: true,
     slug: 'skechers-admin',
     logo: '/images/logos/skechers-web__logo.svg',
-    employer: {
-      name: 'Skechers USA Inc',
-      slug: 'skechers',
-      url: 'https://www.skechers.com',
-      logo: '/images/logos/skechers__logo.svg'
-    },
+    employer: 'skechers',
+    slug: 'skechers-direct-admin',
+    logo: '/images/logos/skechers-direct-admin__logo.svg',
+    employer: 'skechers',
     lead: true,
     date: '2014-06-01',
-    url: 'https://www.skechers.com',
+    url: 'https://www.skechers.com/direct/',
     tags: [],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Skechers',
     display: true,
     slug: 'skechers',
     logo: '/images/logos/skechers-web__logo.svg',
-    employer: {
-      name: 'Skechers USA Inc',
-      slug: 'skechers',
-      url: 'https://www.skechers.com',
-      logo: '/images/logos/skechers__logo.svg'
-    },
+    employer: 'skechers',
+    lead: true,
+    date: '2015-09-10',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: ['skechers-web-us.jpg']
+  },
+  {
+    name: 'Skechers Admin',
+    display: true,
+    slug: 'skechers-admin',
+    logo: '/images/logos/skechers-web-admin__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2015-09-10',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers Corporate',
+    display: true,
+    slug: 'skechers-corporate',
+    logo: '/images/logos/skechers__logo.svg',
+    employer: 'skechers',
     lead: true,
     date: '2014-06-01',
     url: 'https://www.skechers.com',
@@ -103,18 +205,30 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers Friendship Walk',
+    display: true,
+    slug: 'skechers-friendship-walk-2014',
+    logo: '/images/logos/skechers-friendship-walk__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2014-06-15',
+    url: 'http://www.skechersfriendshipwalk.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Greensboro Auto Auction',
     display: true,
     slug: 'greensboro-auto-auction',
     logo: '/images/logos/greensboro-auto-auction__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     lead: true,
     date: '2014-03-01',
     url: 'http://www.greensboroaa.com',
@@ -123,18 +237,14 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Beacon Technologies',
     display: true,
     slug: 'beacon-main',
     logo: '/images/logos/beacon-technologies__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-08-01',
     url: 'http://www.beacontechnologies.com',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
@@ -156,11 +266,7 @@ const portfolio = [
     display: true,
     slug: 'beacon-blog',
     logo: '/images/logos/beacon-technologies-blog__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-08-01',
     url: 'http://blog.beacontechnologies.com',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
@@ -182,11 +288,7 @@ const portfolio = [
     display: true,
     slug: 'whitman-school-of-management-r',
     logo: '/images/logos/whitman-school-of-management__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-06-01',
     url: 'http://whitman.syr.edu',
     tags: [
@@ -212,11 +314,7 @@ const portfolio = [
     display: true,
     slug: 'grossmont-college',
     logo: '/images/logos/grossmont-college__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-01-01',
     url: 'https://www.grossmont.edu',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
@@ -246,18 +344,14 @@ const portfolio = [
     ],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['gcccd-1.png']
+    images: ['grossmont-college-responsive.jpg']
   },
   {
     name: 'Cuyamaca College',
     display: true,
     slug: 'cuyamaca-college',
     logo: '/images/logos/cuyamaca-college__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-01-01',
     url: 'https://www.cuyamaca.edu',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
@@ -287,7 +381,7 @@ const portfolio = [
     ],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
-    images: ['gcccd-1.png']
+    images: ['cuyamaca-college-responsive.jpg']
   },
   {
     name: 'Grossmont-Cuyamaca Community College District',
@@ -295,11 +389,7 @@ const portfolio = [
     slug: 'gcccd',
     logo:
       '/images/logos/grossmont-cuyamaca-community-college-district__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-01-01',
     url: 'http://www.gcccd.edu',
     tags: [
@@ -342,11 +432,7 @@ const portfolio = [
     display: true,
     slug: 'whitman-school-of-management',
     logo: '/images/logos/whitman-school-of-management__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2012-10-01',
     url: 'http://whitman.syr.edu',
     tags: [
@@ -375,11 +461,7 @@ const portfolio = [
     display: true,
     slug: 'ncta',
     logo: '/images/logos/north-carolina-technology-association__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2013-04-01',
     url: 'http://www.nctechnology.org',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
@@ -401,11 +483,7 @@ const portfolio = [
     display: true,
     slug: 'tufenkian-outlet',
     logo: '/images/logos/tufenkian__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2012-06-01',
     url: 'http://www.tufenkianoutlet.com/',
     tags: ['HTML/CSS', 'Javascript', 'jQuery'],
@@ -426,11 +504,7 @@ const portfolio = [
     display: true,
     slug: 'bassett-furniture',
     logo: '/images/logos/bassett__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2012-03-01',
     url: 'http://www.bassettfurniture.com/mobile/',
     tags: ['ASP', 'Javascript', 'Mobile'],
@@ -458,11 +532,7 @@ const portfolio = [
     display: true,
     slug: 'hartford-university-2012',
     logo: '/images/logos/university-of-hartford__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2012-03-01',
     url: 'http://www.hartford.edu/',
     tags: ['HTML/CSS', 'Javascript', 'jQuery'],
@@ -495,11 +565,7 @@ const portfolio = [
     display: true,
     slug: 'southeastern-baptist-theological-seminary',
     logo: '/images/logos/southeastern-baptist-theological-seminary__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     lead: true,
     date: '2012-03-01',
     url: 'https://www.sebts.edu',
@@ -508,18 +574,14 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Texwipe',
     display: true,
     slug: 'texwipe',
     logo: '/images/logos/texwipe__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2012-01-01',
     url: 'http://www.texwipe.com',
     tags: ['HTML/CSS', 'Javascript', 'jQuery'],
@@ -545,11 +607,7 @@ const portfolio = [
     display: true,
     slug: 'los-alamos-national-laboratory',
     logo: '/images/logos/los-alamos-national-laboratory__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     description: 'Coming Soon...',
     date: '2011-12-01',
     url: 'https://www.lanl.gov',
@@ -563,11 +621,7 @@ const portfolio = [
     display: true,
     slug: 'basin-electric-copy-site',
     logo: '/images/logos/basin-electric-power-cooperative__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2011-11-01',
     description:
       'This is a script that will copy one site into a new site within Cascade Server CMS. ',
@@ -583,11 +637,7 @@ const portfolio = [
     display: true,
     slug: 'university-houston-2011',
     logo: '/images/logos/university-of-houston__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-12-01',
     url: 'https://www.uh.edu',
     tags: [],
@@ -600,18 +650,15 @@ const portfolio = [
     responsibilities: ['Cascade Server integration'],
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'BMI Surplus',
     display: true,
     slug: 'bmi-surplus',
     logo: '/images/logos/bmi-surplus__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+
+    employer: 'beacon',
     date: '2011-05-01',
     url: 'http://www.bmius.com',
     tags: [],
@@ -625,11 +672,7 @@ const portfolio = [
     display: true,
     slug: 'basin-electric-power-cooperative',
     logo: '/images/logos/basin-electric-power-cooperative__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2011-05-01',
     url: 'http://www.basinelectric.com/',
     tags: ['PHP'],
@@ -659,11 +702,7 @@ const portfolio = [
     display: true,
     slug: 'winston-salem-state-university',
     logo: '/images/logos/winston-salem-state-university__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2011-01-01',
     url: 'http://wssu.edu',
     tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'jQuery', 'Mobile'],
@@ -695,11 +734,7 @@ const portfolio = [
     display: true,
     slug: 'apex-analytix',
     logo: '/images/logos/apex-analytix__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-main',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     lead: true,
     date: '2011-01-01',
     url: 'https://www.apexanalytix.com',
@@ -708,18 +743,14 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'University of Houston',
     display: true,
     slug: 'university-houston-2010',
     logo: '/images/logos/university-of-houston__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-12-01',
     url: 'https://www.uh.edu',
     tags: [],
@@ -732,17 +763,13 @@ const portfolio = [
     responsibilities: ['Cascade Server integration'],
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Burton and Burton',
     display: false,
     slug: 'burton-and-burton-2010',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-11-01',
     url: 'http://burtonandburton.com',
     tags: [],
@@ -766,11 +793,7 @@ const portfolio = [
     display: true,
     slug: 'greensboro-radiology',
     logo: '/images/logos/greensboro-radiology__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-09-01',
     url: 'http://greensbororadiology.com',
     tags: ['ASP', 'HTML/CSS', 'Javascript'],
@@ -796,11 +819,7 @@ const portfolio = [
     display: true,
     slug: 'texas-am-foundation',
     logo: '/images/logos/texas-a-and-m-foundation__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-09-01',
     url: 'http://giving.tamu.edu',
     tags: ['Flash/Actionscript', 'HTML/CSS', 'jQuery'],
@@ -828,11 +847,7 @@ const portfolio = [
     display: true,
     slug: 'framingham-university',
     logo: '/images/logos/framingham-state-university__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-08-01',
     url: 'http://framingham.edu',
     tags: ['ASP', 'Flash/Actionscript', 'HTML/CSS'],
@@ -855,11 +870,7 @@ const portfolio = [
     display: true,
     slug: 'united-anesthesia',
     logo: '/images/logos/united-anesthesia__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-07-01',
     url: 'http://www.unitedanesthesia.com',
     tags: ['ASP', 'HTML/CSS', 'Javascript'],
@@ -881,11 +892,7 @@ const portfolio = [
     display: true,
     slug: 'staub-leadership',
     logo: '/images/logos/staub-leadership-international__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-04-01',
     url: 'http://www.staubleadership.com',
     tags: ['ASP', 'HTML/CSS', 'Javascript'],
@@ -911,11 +918,7 @@ const portfolio = [
     display: true,
     slug: 'montgomery-family-law',
     logo: '/images/logos/montgomery-family-law__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-03-01',
     url: 'http://www.montylaw.com',
     tags: ['HTML/CSS', 'Javascript'],
@@ -941,11 +944,7 @@ const portfolio = [
     display: true,
     slug: 'firefly-store-solutions',
     logo: '/images/logos/robert-h-ham__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-03-01',
     url: 'http://www.fireflystoresolutions.com',
     tags: ['HTML/CSS', 'Javascript'],
@@ -966,11 +965,8 @@ const portfolio = [
     display: true,
     slug: 'volvo-bus-scr',
     logo: '/images/logos/volvo__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+
+    employer: 'beacon',
     date: '2010-02-01',
     url: 'http://www.volvobusscr.com/',
     tags: ['ASP', 'HTML/CSS'],
@@ -993,11 +989,7 @@ const portfolio = [
     display: true,
     slug: 'university-hartford-2010',
     logo: '/images/logos/university-of-hartford__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com'
-    },
+    employer: 'beacon',
     date: '2010-02-01',
     url: 'http://www.hartford.edu',
     tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery'],
@@ -1050,12 +1042,7 @@ const portfolio = [
     display: true,
     slug: 'rollins-university',
     logo: '/images/logos/rollins-university__logo.svg',
-    employer: {
-      name: 'Beacon Technologies',
-      slug: 'beacon-technologies',
-      url: 'http://www.beacontechnologies.com',
-      logo: '/images/logos/beacon-technologies__logo.svg'
-    },
+    employer: 'beacon',
     date: '2010-02-01',
     url: 'https://www.rollins.edu/magazine/',
     tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery', 'CMS Configuration'],
@@ -1065,18 +1052,14 @@ const portfolio = [
     ],
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Carolina Girl Furniture',
     display: true,
     slug: 'carolina-girl-furniture',
     logo: '/images/logos/carolina-girl-furniture__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-11-01',
     url: 'http://www.carolinagirlfurniture.com',
     tags: ['HTML/CSS', 'PHP'],
@@ -1093,11 +1076,7 @@ const portfolio = [
     display: true,
     slug: 'envision',
     logo: '/images/logos/envision__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-10-01',
     url: 'http://www.envisionfurniture.com',
     tags: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
@@ -1115,11 +1094,7 @@ const portfolio = [
     display: true,
     slug: 'guilford-college-united-methodist-church',
     logo: '/images/logos/guilford-college-united-methodist-church__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-08-01',
     url: 'http://www.guilfordcollegeumc.org',
     tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
@@ -1132,11 +1107,7 @@ const portfolio = [
     name: 'EQ3',
     display: false,
     slug: 'eq3',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-07-01',
     url: 'http://www.eq3charlotte.com/',
     cms: [],
@@ -1148,11 +1119,7 @@ const portfolio = [
     display: true,
     slug: 'northstar-management',
     logo: '/images/logos/northstar-management__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-07-01',
     url: 'http://northstarone.com',
     tags: ['HTML/CSS', 'Javascript', 'PHP'],
@@ -1166,11 +1133,7 @@ const portfolio = [
     display: true,
     slug: 'matlab',
     logo: '/images/logos/matlab__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-06-01',
     url: 'http://www.matlabinc.com',
     tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
@@ -1186,11 +1149,7 @@ const portfolio = [
     name: 'Twicon 2009',
     display: false,
     slug: 'twicon-2009',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-06-01',
     url: 'http://twiconstore.com',
     cms: [],
@@ -1202,11 +1161,7 @@ const portfolio = [
     display: true,
     slug: 'machines-and-wheels',
     logo: '/images/logos/machines-and-wheels-inc__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-04',
     url: 'http://www.machinesandwheels.com',
     tags: ['Flash/Actionscript', 'HTML/CSS', 'PHP'],
@@ -1221,11 +1176,7 @@ const portfolio = [
     display: true,
     slug: 'herron-house',
     logo: '/images/logos/herron-house-flowers__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-04',
     url: 'http://www.herronhouse.com',
     tags: ['HTML/CSS', 'PHP'],
@@ -1238,11 +1189,7 @@ const portfolio = [
     display: true,
     slug: 'mod-u-kraf',
     logo: '/images/logos/mod-u-kraf__logo.svg',
-    employer: {
-      name: 'Get You Found Online Marketing',
-      slug: 'get-you-found',
-      url: 'http://www.getyoufound.com'
-    },
+    employer: 'gyf',
     date: '2009-02',
     url: 'http://www.modukraf.com',
     tags: ['HTML/CSS', 'Javascript', 'PHP'],
@@ -1258,11 +1205,7 @@ const portfolio = [
     display: true,
     slug: 'family-abuse-services',
     logo: '/images/logos/family-abuse-services__logo.svg',
-    employer: {
-      name: 'Carolinanet',
-      slug: 'carolinanet',
-      url: 'http://carolinanet.com'
-    },
+    employer: 'carolinanet',
     date: '2009-01-01',
     url: 'http://familyabuseservices.org',
     tags: ['HTML/CSS', 'PHP'],
@@ -1283,7 +1226,7 @@ const portfolio = [
     name: 'Triad Construction Services',
     display: false,
     slug: 'triad-construction-services-inc',
-    employer: 'XMG',
+    employer: 'xmg',
     date: '2008-12-01',
     url: 'http://www.triadconstructs.com',
     images: ['triad-construction-services-inc-1.png']
@@ -1293,12 +1236,7 @@ const portfolio = [
     display: true,
     slug: 'a-cleaner-world',
     logo: '/images/logos/a-cleaner-world__logo.svg',
-    employer: {
-      name: 'Inter-Tech Communications',
-      slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com',
-      logo: '/images/logos/inter-tech-communications__logo.svg'
-    },
+    employer: 'itc',
     date: '2008-01-01',
     url: 'http://www.acleanerworld.com',
     tags: ['ASP', 'HTML/CSS'],
@@ -1316,12 +1254,7 @@ const portfolio = [
     name: 'Shoe Paradise',
     display: false,
     slug: 'shoe-paradise',
-    employer: {
-      name: 'Inter-Tech Communications',
-      slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com',
-      logo: '/images/logos/inter-tech-communications__logo.svg'
-    },
+    employer: 'itc',
     date: '2007-11-01',
     url: 'http://www.shoeparadise.net',
     cms: [],
@@ -1333,12 +1266,7 @@ const portfolio = [
     display: true,
     logo: '/images/logos/inter-tech-communications__logo.svg',
     slug: 'inter-tech-communications',
-    employer: {
-      name: 'Inter-Tech Communications',
-      slug: 'inter-tech-communications',
-      url: 'http://www.itc123.com',
-      logo: '/images/logos/inter-tech-communications__logo.svg'
-    },
+    employer: 'itc',
     date: '2007-09-01',
     url: 'http://www.itc123.com',
     tags: ['HTML/CSS', 'Flash/Actionscript'],
