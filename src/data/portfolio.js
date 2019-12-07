@@ -9,7 +9,8 @@ const portfolio = [
     lead: true,
     date: '2017-01-01',
     url: 'https://www.skechers.com/de-de/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tags: ['JavaScript', 'Responsive', 'Lead', 'Global'],
+    tech: ['Backbone.js', 'Marionette', 'HTML5', 'CSS3', 'Braintree'],
     description: 'Extended United States e-commerce code for Germany.',
     features: [
       {
@@ -27,8 +28,7 @@ const portfolio = [
         ]
       }
     ],
-    cms: [],
-    other: [],
+    cms: ['in-house'],
     images: ['skechers-web-de.gif']
   },
   {
@@ -41,6 +41,7 @@ const portfolio = [
     date: '2017-10-01',
     url: 'https://www.skechers.com/en-gb/',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tech: ['Backbone.js', 'Marionette', 'HTML5', 'CSS3', 'Braintree'],
     description:
       'Extended United States e-commerce code for United Kingdom/Ireland.',
     features: [
@@ -73,6 +74,7 @@ const portfolio = [
     date: '2017-07-01',
     url: 'https://www.skechers.com/es-es/',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tech: ['Backbone.js', 'Marionette', 'HTML5', 'CSS3', 'Braintree'],
     description: 'Extended United States e-commerce code for Spain.',
     features: [
       {
@@ -104,6 +106,7 @@ const portfolio = [
     date: '2017-05-01',
     url: 'https://www.skechers.com/fr-ca/',
     tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tech: ['Backbone.js', 'Marionette', 'HTML5', 'CSS3', 'Braintree'],
     description: 'Extended United States e-commerce code for Canada.',
     features: [
       {
@@ -135,6 +138,7 @@ const portfolio = [
     date: '2014-06-01',
     url: 'https://www.skechers.com/direct/',
     tags: [],
+    tech: ['Backbone.js', 'Marionette', 'HTML5', 'CSS3', 'Payroll'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -154,6 +158,7 @@ const portfolio = [
     date: '2014-06-01',
     url: 'https://www.skechers.com/direct/',
     tags: [],
+    tech: ['Angular', 'HTML5', 'CSS3'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -185,6 +190,7 @@ const portfolio = [
     lead: true,
     date: '2015-09-10',
     tags: [],
+    tech: ['Angular', 'HTML5', 'CSS3', 'CoffeeScript'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -477,6 +483,47 @@ const portfolio = [
     cms: ['aspDotNetStorefront'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['ncta-1.png']
+  },
+  {
+    name: 'Artsy Abode',
+    display: true,
+    slug: 'artsy-abode',
+    logo: '/images/logos/artsy-abode__logo.svg',
+    employer: 'beacon',
+    date: '2013-02-26',
+    url: 'https://artsyabode.com',
+    tags: ['HTML/CSS', 'Javascript'],
+    features: [
+      {
+        name: 'Site-Wide',
+        details: [
+          'Brand-based graphics in site header that link to topic pages maintainable by client in Admin',
+          'Background color is an appconfig that can be changed by client via Admin simply by adding a new HEX color code!'
+        ]
+      },
+      {
+        name: 'Home page',
+        details: [
+          'Flash home page slide show from original site replaced by a custom Beacon module that is administered in the Admin site',
+          'Customer favorites section on home page populated by mapping products to the “Favorites” category',
+          'Promotional graphics (under rotating banner) editable via topic page'
+        ]
+      },
+
+      {
+        name: 'Other',
+        details: [
+          'Thumbnail images displayed on search results page (nonstandard functionality for AspDotNetStorefront)',
+          'Enabled product option to display ring sizes',
+          'Enhanced store locations page with links to Google maps and maintainable by client in Admin',
+          'Direct integration with Constant Contact for newsletter registration',
+          'We also updated the design a bit and made it more modern and fresh'
+        ]
+      }
+    ],
+    cms: ['aspDotNetStorefront'],
+    other: ['Cross Browser Compatibility'],
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Tufenkian Outlet',
