@@ -1,36 +1,129 @@
 /* eslint-disable */
 const portfolio = [
   {
-    name: 'Skechers Corporate',
+    name: 'Skechers - Germany',
     display: true,
-    slug: 'skechers-corporate',
-    logo: '/images/logos/skechers__logo.svg',
+    slug: 'skechers-de',
+    logo: '/images/logos/skechers-web-de__logo.svg',
     employer: 'skechers',
     lead: true,
-    date: '2014-06-01',
-    url: 'https://www.skechers.com',
-    tags: [],
-    description: 'Coming soon...',
-    responsibilities: [],
+    date: '2017-01-01',
+    url: 'https://www.skechers.com/de-de/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description: 'Extended United States e-commerce code for Germany.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
     cms: [],
     other: [],
-    images: []
+    images: ['skechers-web-de.gif']
   },
   {
-    name: 'Skechers Direct Admin',
+    name: 'Skechers - United Kingdom/Ireland',
     display: true,
-    slug: 'skechers-direct-admin',
-    logo: '/images/logos/skechers-direct__logo.svg',
+    slug: 'skechers-gb',
+    logo: '/images/logos/skechers-web-gb__logo.svg',
     employer: 'skechers',
     lead: true,
-    date: '2014-06-01',
-    url: 'https://www.skechers.com/direct/',
-    tags: [],
-    description: 'Coming soon...',
-    responsibilities: [],
+    date: '2017-10-01',
+    url: 'https://www.skechers.com/en-gb/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description:
+      'Extended United States e-commerce code for United Kingdom/Ireland.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers - Spain',
+    display: true,
+    slug: 'skechers-es',
+    logo: '/images/logos/skechers-web-es__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2017-07-01',
+    url: 'https://www.skechers.com/es-es/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description: 'Extended United States e-commerce code for Spain.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers - Canada ',
+    display: true,
+    slug: 'skechers-ca',
+    logo: '/images/logos/skechers-web-ca__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2017-05-01',
+    url: 'https://www.skechers.com/fr-ca/',
+    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    description: 'Extended United States e-commerce code for Canada.',
+    features: [
+      {
+        details: [
+          'Locale specific products',
+          'Locale specific categories',
+          'Locale specific content',
+          'Locale specific currency',
+          'Locale specific translations of text',
+          'Locale specific shipping address requirements',
+          'Locale specific shipping services',
+          'Locale specific payment processing',
+          'Locale specific tax/VAT handling',
+          'Locale specific laws and regulations'
+        ]
+      }
+    ],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Skechers Direct',
@@ -46,23 +139,26 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
-    name: 'Skechers Admin',
+    name: 'Skechers Direct Admin',
     display: true,
     slug: 'skechers-admin',
     logo: '/images/logos/skechers-web__logo.svg',
     employer: 'skechers',
+    slug: 'skechers-direct-admin',
+    logo: '/images/logos/skechers-direct-admin__logo.svg',
+    employer: 'skechers',
     lead: true,
     date: '2014-06-01',
-    url: 'https://www.skechers.com',
+    url: 'https://www.skechers.com/direct/',
     tags: [],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Skechers',
@@ -71,6 +167,37 @@ const portfolio = [
     logo: '/images/logos/skechers-web__logo.svg',
     employer: 'skechers',
     lead: true,
+    date: '2015-09-10',
+    url: 'https://www.skechers.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: ['skechers-web-us.jpg']
+  },
+  {
+    name: 'Skechers Admin',
+    display: true,
+    slug: 'skechers-admin',
+    logo: '/images/logos/skechers-web-admin__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2015-09-10',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers Corporate',
+    display: true,
+    slug: 'skechers-corporate',
+    logo: '/images/logos/skechers__logo.svg',
+    employer: 'skechers',
+    lead: true,
     date: '2014-06-01',
     url: 'https://www.skechers.com',
     tags: [],
@@ -78,7 +205,23 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'Skechers Friendship Walk',
+    display: true,
+    slug: 'skechers-friendship-walk-2014',
+    logo: '/images/logos/skechers-friendship-walk__logo.svg',
+    employer: 'skechers',
+    lead: true,
+    date: '2014-06-15',
+    url: 'http://www.skechersfriendshipwalk.com',
+    tags: [],
+    description: 'Coming soon...',
+    responsibilities: [],
+    cms: [],
+    other: [],
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Greensboro Auto Auction',
@@ -94,7 +237,7 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Beacon Technologies',
@@ -431,7 +574,7 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Texwipe',
@@ -507,7 +650,7 @@ const portfolio = [
     responsibilities: ['Cascade Server integration'],
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'BMI Surplus',
@@ -600,7 +743,7 @@ const portfolio = [
     responsibilities: [],
     cms: [],
     other: [],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'University of Houston',
@@ -620,7 +763,7 @@ const portfolio = [
     responsibilities: ['Cascade Server integration'],
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Burton and Burton',
@@ -909,7 +1052,7 @@ const portfolio = [
     ],
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
-    images: []
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Carolina Girl Furniture',

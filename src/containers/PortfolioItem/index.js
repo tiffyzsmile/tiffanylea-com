@@ -73,32 +73,24 @@ const PortfolioItem = ({ match }) => {
                 <ul>{responsibilities}</ul>
               </div>
             )}
-
-          <H2>Links</H2>
-          <ul>
-            {portfolioItem.url && (
-              <li>
-                <a
-                  href={portfolioItem.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Visit site &raquo;
-                </a>
-              </li>
-            )}
-            {portfolioItem.more && portfolioItem.more.url && (
-              <li>
-                <a
-                  href={portfolioItem.more.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Read more &raquo;
-                </a>
-              </li>
-            )}
-          </ul>
+          {portfolioItem.url && (
+            <div>
+              <H2>Links</H2>
+              <ul>
+                {portfolioItem.url && (
+                  <li>
+                    <a
+                      href={portfolioItem.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Visit site &raquo;
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </div>
+          )}
           <H2>While Working For:</H2>
           <p>
             <img
