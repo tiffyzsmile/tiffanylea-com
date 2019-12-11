@@ -1,1 +1,25 @@
-{}
+{
+  "auth": {
+    "tiffanyleacom0b033fd5": {
+      "service": "Cognito",
+      "providerPlugin": "awscloudformation",
+      "dependsOn": []
+    }
+  },
+  "hosting": {},
+  "storage": {
+    "tiffanyleacomcontent": {
+      "service": "S3",
+      "providerPlugin": "awscloudformation"
+    }
+  },
+  "api": {
+    "tiffanyleacom": {
+      "service": "AppSync",
+      "providerPlugin": "awscloudformation",
+      "output": {
+        "securityType": "AMAZON_COGNITO_USER_POOLS"
+      }
+    }
+  }
+}

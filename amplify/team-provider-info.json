@@ -1,14 +1,19 @@
 {
-  "local": {
+  "master": {
     "awscloudformation": {
-      "AuthRoleName": "tiffanylea-com-local-20191210113327-authRole",
-      "UnauthRoleArn": "arn:aws:iam::011206842424:role/tiffanylea-com-local-20191210113327-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::011206842424:role/tiffanylea-com-local-20191210113327-authRole",
+      "AuthRoleName": "tiffanylea-com-master-20191210135709-authRole",
+      "UnauthRoleArn": "arn:aws:iam::011206842424:role/tiffanylea-com-master-20191210135709-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::011206842424:role/tiffanylea-com-master-20191210135709-authRole",
       "Region": "us-west-2",
-      "DeploymentBucketName": "tiffanylea-com-local-20191210113327-deployment",
-      "UnauthRoleName": "tiffanylea-com-local-20191210113327-unauthRole",
-      "StackName": "tiffanylea-com-local-20191210113327",
-      "StackId": "arn:aws:cloudformation:us-west-2:011206842424:stack/tiffanylea-com-local-20191210113327/f0d491f0-1b83-11ea-a9d0-0a90939a96ce"
+      "DeploymentBucketName": "tiffanylea-com-master-20191210135709-deployment",
+      "UnauthRoleName": "tiffanylea-com-master-20191210135709-unauthRole",
+      "StackName": "tiffanylea-com-master-20191210135709",
+      "StackId": "arn:aws:cloudformation:us-west-2:011206842424:stack/tiffanylea-com-master-20191210135709/0391fee0-1b98-11ea-8b1e-02ca0801967a"
+    },
+    "categories": {
+      "auth": {
+        "tiffanyleacom0b033fd5": {}
+      }
     }
   }
 }
