@@ -35,5 +35,6 @@
     "Ref": "AWS::StackId"
   },
   "permissions": [],
-  "dependsOn": []
+  "dependsOn": [],
+  "userPoolGroupList": ["admin"]
 }

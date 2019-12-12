@@ -8,7 +8,8 @@
       "DeploymentBucketName": "tiffanylea-com-master-20191210135709-deployment",
       "UnauthRoleName": "tiffanylea-com-master-20191210135709-unauthRole",
       "StackName": "tiffanylea-com-master-20191210135709",
-      "StackId": "arn:aws:cloudformation:us-west-2:011206842424:stack/tiffanylea-com-master-20191210135709/0391fee0-1b98-11ea-8b1e-02ca0801967a"
+      "StackId": "arn:aws:cloudformation:us-west-2:011206842424:stack/tiffanylea-com-master-20191210135709/0391fee0-1b98-11ea-8b1e-02ca0801967a",
+      "AmplifyAppId": "d37k5n4ssz46yc"
     },
     "categories": {
       "auth": {

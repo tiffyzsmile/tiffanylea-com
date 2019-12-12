@@ -15,8 +15,9 @@ RouteWithAuth.propTypes = {
 
 export default withAuthenticator(RouteWithAuth, {
   // This fixes the sign up and sign in forms to not have email 2 times
-  // usernameAttributes: 'email',
-  // signUpConfig: {
-  // This hides phone field from sign up
-  // hiddenDefaults: ['phone_number']}
+  usernameAttributes: 'email',
+  signUpConfig: {
+    // This hides phone field from sign up
+    hiddenDefaults: ['phone_number']
+  }
 });

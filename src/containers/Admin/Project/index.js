@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
+import S3ImageUpload from 'components/S3ImageUpload';
 
 const Project = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ const Project = () => {
   return (
     <div>
       <h1>Project Details</h1>
+      <S3ImageUpload />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (
