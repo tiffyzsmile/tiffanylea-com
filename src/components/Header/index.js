@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
-import './styles.css';
+import './styles.scss';
 
-const Header = () => {
+const Header = ({ isAdmin }) => {
   return (
     <header>
       <div className="header">
@@ -36,9 +37,32 @@ const Header = () => {
             </li>
           </ul>
         </div>
+        {isAdmin && (
+          <div className="adminNav">
+            <ul className="nav">
+              <li>
+                <Link to="/admin/projects">Projects</Link>
+              </li>
+              <li>
+                <Link to="/admin/employers">Employers</Link>
+              </li>
+              <li>
+                <Link to="/admin/clients">Clients</Link>
+              </li>
+            </ul>
+          </div>
+        )}
       </nav>
     </header>
   );
+};
+
+Header.defaultProps = {
+  isAdmin: false
+};
+
+Header.propTypes = {
+  isAdmin: PropTypes.bool
 };
 
 export default Header;

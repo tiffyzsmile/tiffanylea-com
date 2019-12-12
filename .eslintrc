@@ -7,6 +7,14 @@
   "extends": ["airbnb", "prettier", "prettier/react"],
   "plugins": ["react", "prettier", "module-resolver"],
   "rules": {
+    "jsx-a11y/label-has-associated-control": [
+      2,
+      {
+        "controlComponents": ["Field"],
+        "depth": 3
+      }
+    ],
+    "jsx-a11y/label-has-for": 0,
     "module-resolver/use-alias": [
       "error",
       {

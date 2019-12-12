@@ -6,7 +6,12 @@
       "dependsOn": []
     }
   },
-  "hosting": {},
+  "hosting": {
+    "S3AndCloudFront": {
+      "service": "S3AndCloudFront",
+      "providerPlugin": "awscloudformation"
+    }
+  },
   "storage": {
     "tiffanyleacomcontent": {
       "service": "S3",

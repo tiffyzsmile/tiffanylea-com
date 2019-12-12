@@ -1,0 +1,107 @@
+header {
+  z-index: 100;
+}
+.header {
+  background-color: #8da9b9;
+  text-align: center;
+  position: relative;
+  z-index: 100;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, 0.5);
+  box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, 0.5);
+}
+
+.header h1 a {
+  font-family: InspirationROB;
+  color: #ffffff;
+  font-size: 1.5em;
+  line-height: 1.5em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 100;
+  text-shadow: 0 0 1px #ccc, 0 0 1px #ccc, 0 0 1px #ccc;
+}
+
+/* Navigation Styles */
+
+.topNav {
+  background-color: #b1d1dd;
+  -webkit-box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, 0.5);
+  box-shadow: 0px 0px 3px 1px rgba(100, 100, 100, 0.5);
+  .nav {
+    max-width: 980px;
+    margin: 0 auto; /* width: 97.916666666666666666666666666667%; 940px / 960px */
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0;
+    list-style: none;
+  }
+  .nav li {
+    flex-grow: 1;
+    flex: 1 1 30%;
+    background-color: #b1d1dd;
+    text-align: center;
+    padding: 0 0;
+  }
+  .nav li a {
+    display: block;
+    width: 98%;
+    font-weight: bold;
+    padding: 0.5em 1%;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  @media screen and (min-width: 650px) {
+    .nav {
+      flex-wrap: nowrap;
+    }
+    .header h1 a {
+      font-size: 3em;
+    }
+  }
+  @media screen and (max-width: 655px) {
+    .nav li {
+      width: 16.5%;
+      background-color: #b1d1dd;
+      text-align: center;
+      -webkit-box-shadow: 0 0 3px 1px rgba(100, 100, 100, 0.5);
+      box-shadow: 0 0 3px 1px rgba(100, 100, 100, 0.5);
+      padding: 0;
+    }
+    a.active {
+      background-color: #8da9b9;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .nav li a {
+      font-size: 0.8em;
+    }
+  }
+
+  @media screen and (max-width: 240px) {
+    .nav li a {
+      font-size: 0.6em;
+    }
+  }
+}
+
+.adminNav {
+  background-color: #8da9b9;
+  .nav {
+    list-style: none;
+    max-width: 980px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(175px, 1fr));
+    grid-gap: 15px;
+    padding: 0;
+    li {
+      a {
+        padding: 5px;
+        display: block;
+        color: #fff;
+      }
+    }
+  }
+}
