@@ -9,7 +9,15 @@ const portfolio = [
     lead: true,
     date: '2017-01-01',
     url: 'https://www.skechers.com/de-de/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tags: ['JavaScript', 'Responsive', 'Lead', 'Global'],
+    tech: [
+      'Backbone.js',
+      'Marionette',
+      'HTML5',
+      'CSS3',
+      'Braintree',
+      'Zepto.js'
+    ],
     description: 'Extended United States e-commerce code for Germany.',
     features: [
       {
@@ -27,9 +35,8 @@ const portfolio = [
         ]
       }
     ],
-    cms: [],
-    other: [],
-    images: ['skechers-web-de.gif']
+    cms: ['in-house'],
+    images: ['skechers-de-de@0.25x.jpg']
   },
   {
     name: 'Skechers - United Kingdom/Ireland',
@@ -40,7 +47,15 @@ const portfolio = [
     lead: true,
     date: '2017-10-01',
     url: 'https://www.skechers.com/en-gb/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'Lead', 'Global'],
+    tech: [
+      'Backbone.js',
+      'Marionette',
+      'HTML5',
+      'CSS3',
+      'Braintree',
+      'Zepto.js'
+    ],
     description:
       'Extended United States e-commerce code for United Kingdom/Ireland.',
     features: [
@@ -72,7 +87,15 @@ const portfolio = [
     lead: true,
     date: '2017-07-01',
     url: 'https://www.skechers.com/es-es/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'Lead', 'Global'],
+    tech: [
+      'Backbone.js',
+      'Marionette',
+      'HTML5',
+      'CSS3',
+      'Braintree',
+      'Zepto.js'
+    ],
     description: 'Extended United States e-commerce code for Spain.',
     features: [
       {
@@ -103,7 +126,15 @@ const portfolio = [
     lead: true,
     date: '2017-05-01',
     url: 'https://www.skechers.com/fr-ca/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive', 'Lead'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'Lead', 'Global'],
+    tech: [
+      'Backbone.js',
+      'Marionette',
+      'HTML5',
+      'CSS3',
+      'Braintree',
+      'Zepto.js'
+    ],
     description: 'Extended United States e-commerce code for Canada.',
     features: [
       {
@@ -134,7 +165,8 @@ const portfolio = [
     lead: true,
     date: '2014-06-01',
     url: 'https://www.skechers.com/direct/',
-    tags: [],
+    tags: ['B2B'],
+    tech: ['Backbone.js', 'Marionette', 'HTML5', 'CSS3', 'Payroll', 'Lead'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -153,7 +185,8 @@ const portfolio = [
     lead: true,
     date: '2014-06-01',
     url: 'https://www.skechers.com/direct/',
-    tags: [],
+    tags: ['Lead'],
+    tech: ['Angular', 'HTML5', 'CSS3'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -169,7 +202,7 @@ const portfolio = [
     lead: true,
     date: '2015-09-10',
     url: 'https://www.skechers.com',
-    tags: [],
+    tags: ['Lead', 'Global'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -184,7 +217,8 @@ const portfolio = [
     employer: 'skechers',
     lead: true,
     date: '2015-09-10',
-    tags: [],
+    tags: ['Lead'],
+    tech: ['Angular', 'HTML5', 'CSS3', 'CoffeeScript'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -200,7 +234,7 @@ const portfolio = [
     lead: true,
     date: '2014-06-01',
     url: 'https://www.skechers.com',
-    tags: [],
+    tags: ['Lead'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -216,7 +250,7 @@ const portfolio = [
     lead: true,
     date: '2014-06-15',
     url: 'http://www.skechersfriendshipwalk.com',
-    tags: [],
+    tags: ['Lead'],
     description: 'Coming soon...',
     responsibilities: [],
     cms: [],
@@ -240,6 +274,87 @@ const portfolio = [
     images: ['image-coming-soon.png']
   },
   {
+    name: 'Holyoke Gas & Electric',
+    display: true,
+    slug: 'holyoke-gas-and-electric',
+    logo: '/images/logos/holyoke-gas-and-electric__logo.svg',
+    employer: 'beacon',
+    lead: true,
+    date: '2013-12-15',
+    url: 'http://www.hged.com',
+    tags: ['HTML/CSS', 'Responsive', 'CMS Configuration'],
+    features: [
+      {
+        details: ['Responsive Design']
+      },
+      {
+        details: [
+          'Audience-Based Site Maps: When a visitor clicks on one of the audience based icons in the site footer (like “Residential”), they are directed to an audience-based site map, displaying the pages that the client has tagged as relevant to that audience within the CMS'
+        ]
+      },
+      {
+        details: [
+          'Emergency Notifications: For severe emergencies the notification pops up in an ajax window on every page of the site. For less severe emergencies there is a banner message that appears on every page of the site'
+        ]
+      },
+      {
+        details: [
+          'Custom Widgets: Widgets that can be included on pages throughout the site like content, images, videos or external links'
+        ]
+      },
+      {
+        details: [
+          'Animated banner images: Can be incorporated on any internal page on the site'
+        ]
+      },
+      {
+        details: [
+          'Google Map integration: Client can enter location details into Cascade to display an interactive Google map '
+        ]
+      },
+      {
+        details: [
+          'Custom “calculators”: Custom .NET forms that allow the visitor to calculate their own energy costs'
+        ]
+      },
+      {
+        details: [
+          'Web and social media tracking: The site makes extensive use of web and social media tracking tools so that the client can be well informed of all client interaction with the site'
+        ]
+      },
+      {
+        details: [
+          'Weather feed: Weather related info for the Holyoke area displayed from a 3rd party tool in the site footer'
+        ]
+      },
+      {
+        details: [
+          'Google Translate: Easy to access Google translate widget in the footer of every page of the site'
+        ]
+      }
+    ],
+    responsibilities: [],
+    cms: ['Cascade Server'],
+    other: [],
+    images: ['image-coming-soon.png']
+  },
+  {
+    name: 'The University of Scranton',
+    display: true,
+    slug: 'university-of-scranton',
+    logo: '/images/logos/university-of-scranton__logo.svg',
+    employer: 'beacon',
+    lead: true,
+    date: '2013-08-13',
+    url: 'https://www.scranton.edu',
+    tags: ['HTML/CSS', 'Responsive', 'CMS Configuration'],
+    description: 'Coming Soon...',
+    responsibilities: [],
+    cms: ['Cascade Server'],
+    other: [],
+    images: ['scranton-1.png']
+  },
+  {
     name: 'Beacon Technologies',
     display: true,
     slug: 'beacon-main',
@@ -247,7 +362,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2013-08-01',
     url: 'http://www.beacontechnologies.com',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'CMS Configuration', 'Lead'],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development',
       'Custom Cascade Server integration'
@@ -269,7 +385,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2013-08-01',
     url: 'http://blog.beacontechnologies.com',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive'],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development',
       'All custom WordPress integration'
@@ -291,14 +408,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2013-06-01',
     url: 'http://whitman.syr.edu',
-    tags: [
-      'HTML/CSS',
-      'Javascript',
-      'jQuery',
-      'Responsive',
-      'Cross Browser Compatibility',
-      'W3C Compliant'
-    ],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'CMS Configuration', 'Lead'],
+    tech: ['jQuery'],
     description:
       'Project involved extending all original development to be responsive',
     responsibilities: [
@@ -307,7 +418,23 @@ const portfolio = [
       'Ensuring accurate execution'
     ],
     cms: ['Cascade Server'],
+    other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['whitman-school-of-management-r-1.png']
+  },
+  {
+    name: 'burton + Burton',
+    display: true,
+    slug: 'burton-and-burton-2013',
+    logo: '/images/logos/burton-and-burton__logo.svg',
+    employer: 'beacon',
+    date: '2013-03-01',
+    //url: 'http://burtonandburton.com',
+    tags: ['HTML/CSS', 'Responsive', 'Global', 'E-commerce', 'B2B'],
+    responsibilities: [],
+    description: 'Coming Soon...',
+    cms: ['Cascade Server', 'in-house'],
+    other: [],
+    images: ['burton-and-burton-1.png']
   },
   {
     name: 'Grossmont College',
@@ -317,7 +444,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2013-01-01',
     url: 'https://www.grossmont.edu',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'CMS Configuration', 'Lead'],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
@@ -354,7 +482,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2013-01-01',
     url: 'https://www.cuyamaca.edu',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive', 'CMS Configuration'],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
@@ -394,12 +523,13 @@ const portfolio = [
     url: 'http://www.gcccd.edu',
     tags: [
       'HTML/CSS',
-      'Javascript',
-      'jQuery',
+      'JavaScript',
       'Responsive',
       'Cross Browser Compatibility',
-      'W3C Compliant'
+      'W3C Compliant',
+      'CMS Configuration'
     ],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
@@ -437,11 +567,12 @@ const portfolio = [
     url: 'http://whitman.syr.edu',
     tags: [
       'HTML/CSS',
-      'Javascript',
-      'jQuery',
+      'JavaScript',
       'Cross Browser Compatibility',
-      'W3C Compliant'
+      'W3C Compliant',
+      'CMS Configuration'
     ],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development',
       'All custom Cascade Server integration'
@@ -464,7 +595,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2013-04-01',
     url: 'http://www.nctechnology.org',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery', 'Responsive'],
+    tags: ['HTML/CSS', 'JavaScript', 'Responsive'],
+    tech: ['jQuery'],
     responsibilities: [
       'Project lead for responsive development and design',
       'Training team on responsive techniques/development',
@@ -474,9 +606,50 @@ const portfolio = [
       text: 'Beacon Technologies Blog',
       url: 'http://blog.beacontechnologies.com/ncta-responsive-redesign-launch/'
     },
-    cms: ['aspDotNetStorefront'],
+    cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
     images: ['ncta-1.png']
+  },
+  {
+    name: 'Artsy Abode',
+    display: true,
+    slug: 'artsy-abode',
+    logo: '/images/logos/artsy-abode__logo.svg',
+    employer: 'beacon',
+    date: '2013-02-26',
+    url: 'https://artsyabode.com',
+    tags: ['HTML/CSS', 'JavaScript'],
+    features: [
+      {
+        name: 'Site-Wide',
+        details: [
+          'Brand-based graphics in site header that link to topic pages maintainable by client in Admin',
+          'Background color is an appconfig that can be changed by client via Admin simply by adding a new HEX color code!'
+        ]
+      },
+      {
+        name: 'Home page',
+        details: [
+          'Flash home page slide show from original site replaced by a custom Beacon module that is administered in the Admin site',
+          'Customer favorites section on home page populated by mapping products to the “Favorites” category',
+          'Promotional graphics (under rotating banner) editable via topic page'
+        ]
+      },
+
+      {
+        name: 'Other',
+        details: [
+          'Thumbnail images displayed on search results page (nonstandard functionality for AspDotNetStorefront)',
+          'Enabled product option to display ring sizes',
+          'Enhanced store locations page with links to Google maps and maintainable by client in Admin',
+          'Direct integration with Constant Contact for newsletter registration',
+          'We also updated the design a bit and made it more modern and fresh'
+        ]
+      }
+    ],
+    cms: ['aspDotNetStorefront'],
+    other: ['Cross Browser Compatibility'],
+    images: ['image-coming-soon.png']
   },
   {
     name: 'Tufenkian Outlet',
@@ -486,7 +659,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2012-06-01',
     url: 'http://www.tufenkianoutlet.com/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'JavaScript'],
+    tech: ['jQuery'],
     responsibilities: [
       'All original front-end development (HTML/CSS/JS)',
       'AspDotNetStorefront integration (E-Commerce)'
@@ -507,7 +681,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2012-03-01',
     url: 'http://www.bassettfurniture.com/mobile/',
-    tags: ['ASP', 'Javascript', 'Mobile'],
+    tags: ['ASP', 'JavaScript', 'Mobile', 'CMS Configuration'],
     description: '',
     responsibilities: [
       'All original front-end development (HTML/CSS/JS)',
@@ -528,14 +702,15 @@ const portfolio = [
     ]
   },
   {
-    name: 'Hartford University - New jQuery Homepage',
+    name: 'Hartford University - New Homepage',
     display: true,
     slug: 'hartford-university-2012',
     logo: '/images/logos/university-of-hartford__logo.svg',
     employer: 'beacon',
     date: '2012-03-01',
     url: 'http://www.hartford.edu/',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'JavaScript', 'CMS Configuration'],
+    tech: ['jQuery'],
     features: [
       {
         name: 'Homepage My Story Feature',
@@ -584,7 +759,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2012-01-01',
     url: 'http://www.texwipe.com',
-    tags: ['HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['HTML/CSS', 'JavaScript', 'CMS Configuration'],
+    tech: ['jQuery'],
     description:
       "This is one of my favorites because it is actually very complex and custom yet we were able to keep the back-end and front-end code relatively simple and clean. You've got to love a site that simplifies complexity...  :)",
     responsibilities: [
@@ -626,7 +802,8 @@ const portfolio = [
     description:
       'This is a script that will copy one site into a new site within Cascade Server CMS. ',
     // "<p>This is a script that will copy one site into a new site within Cascade Server CMS.</p><p>I was able to find a lot of code out there that helped me out immensely. &nbsp;Most was outdated and did not work with the most recent version of Cascade Server but they allowed me to learn from them and with a lot of work I was able to create a working Site Copy script (PHP and Web Services) for version 6.10.7 of Cascade Server.</p><p>Knowing the client was going to be running this script on their own I gave it a friendlier front-end that provided instructions on its use.</p><p>I do plan to continue working on this script when I can. &nbsp;I want to iron out the current bugs as well as work on adding in some of the functionality it is currently missing. I am not sure I will get there before Hannon Hill includes a 'Copy Site' feature in one of the upcoming releases but it is on my 'want-to' list.</p>",
-    tags: ['HTML/CSS', 'PHP'],
+    tags: ['CMS Configuration'],
+    tech: ['PHP', 'HTML/CSS'],
     cms: ['Cascade Server'],
     other: ['Cross Browser Compatibility', 'W3C Compliant', 'Web Services'],
     images: ['basin-electric-copy-site-1.png']
@@ -640,7 +817,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-12-01',
     url: 'https://www.uh.edu',
-    tags: [],
+    tags: ['HTML/CSS', 'JavaScript', 'CMS Configuration'],
     features: [
       {
         name: 'You are the pride',
@@ -675,12 +852,13 @@ const portfolio = [
     employer: 'beacon',
     date: '2011-05-01',
     url: 'http://www.basinelectric.com/',
-    tags: ['PHP'],
+    tags: ['CMS Configuration'],
+    tech: ['PHP'],
     // description:
     //  "<p>This was my first attempt at Web Services and it was a very big learning experience for me.  After successfully writing the script that imported the content it opened my eyes to the many ways Web Services can be used as what I like to call 'an easy button' for certain Cascade Server tasks.</p>",
     responsibilities: [
       'Importing the existing site content for both Basin Electric Power Cooperative and Dakota Gasification Company into Cascade Server via a custom Web Services (PHP) script',
-      'Assisted with general Cascade Server integration',
+      'Cascade Server integration',
       'Back-end PHP work on their existing calendar',
       'Back-end PHP and custom Cascade Server integration for new related items in right column'
     ],
@@ -705,17 +883,20 @@ const portfolio = [
     employer: 'beacon',
     date: '2011-01-01',
     url: 'http://wssu.edu',
-    tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'jQuery', 'Mobile'],
+    tags: [
+      'Flash/Actionscript',
+      'HTML/CSS',
+      'JavaScript',
+      'Mobile',
+      'CMS Configuration'
+    ],
+    tech: ['jQuery'],
     responsibilities: [
       'Homepage Flash (configurable through Cascade Server)',
       'Advanced campus maps (2D, 3D and mobile versions) using Google maps API (configurable through Cascade Server)',
-      'Original Mobile site including detection script, front-end development and Cascade Server integration.',
-      'Assisted with general front-end development and cascade integration'
+      'Mobile site including detection script, front-end development and Cascade Server integration',
+      'Full site front-end development and Cascade Server integration'
     ],
-    more: {
-      text: '',
-      url: ''
-    },
     cms: ['Cascade Server'],
     other: ['Accessible (508)', 'Cross Browser Compatibility', 'W3C Compliant'],
     images: [
@@ -753,7 +934,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-12-01',
     url: 'https://www.uh.edu',
-    tags: [],
+    tags: ['HTML/CSS', 'CMS Configuration'],
     features: [
       {
         name: 'News Releases',
@@ -767,17 +948,36 @@ const portfolio = [
   },
   {
     name: 'Burton and Burton',
-    display: false,
+    display: true,
     slug: 'burton-and-burton-2010',
+    logo: '/images/logos/burton-and-burton__logo.svg',
     employer: 'beacon',
     date: '2010-11-01',
-    url: 'http://burtonandburton.com',
-    tags: [],
-    responsibilities: [],
-    more: {
-      text: '',
-      url: ''
-    },
+    //url: 'http://burtonandburton.com',
+    tags: [
+      'in-house',
+      'E-commerce',
+      'HTML/CSS',
+      'video',
+      'JavaScript',
+      'B2B',
+      'Global'
+    ],
+    description: [
+      'burton+BURTON is the largest wholesaler of balloon and gift products. Site is multi-platform eCommerce (ASP-based) and Cascade Server content management.'
+    ],
+    features: [
+      {
+        details: [
+          'The new design split the site into three “subsites” off of the main homepage: About Us, Online Store, and Education',
+          'A rewrite of the product listing page and a new, more modern filtering system',
+          'Numerous search engine improvements to the site, including URL rewrites and dynamically feeding the meta descriptions and titles for each category and product',
+          'Type-ahead AJAX search for their “Quick Order” form',
+          'Improved shopping cart experience',
+          'Ability to add videos to each of the four homepages'
+        ]
+      }
+    ],
     cms: [],
     other: [],
     images: [
@@ -796,7 +996,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-09-01',
     url: 'http://greensbororadiology.com',
-    tags: ['ASP', 'HTML/CSS', 'Javascript'],
+    tags: ['ASP', 'HTML/CSS', 'JavaScript', 'CMS Configuration'],
     responsibilities: [
       'Original front-end development',
       'Custom Cascade Server integration'
@@ -822,12 +1022,13 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-09-01',
     url: 'http://giving.tamu.edu',
-    tags: ['Flash/Actionscript', 'HTML/CSS', 'jQuery'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'CMS Configuration'],
+    tech: ['jQuery'],
     description: '',
     responsibilities: [
       'Homepage flash (configurable through Cascade Server)',
       'Publications archive',
-      'Assisting with general Cascade Server integration'
+      'Cascade Server integration'
     ],
     more: {
       text: 'Beacon Technologies Blog',
@@ -850,11 +1051,11 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-08-01',
     url: 'http://framingham.edu',
-    tags: ['ASP', 'Flash/Actionscript', 'HTML/CSS'],
+    tags: ['ASP', 'Flash/Actionscript', 'HTML/CSS', 'CMS Configuration'],
     responsibilities: [
       'Homepage flash (configurable through Cascade Server)',
-      'Assisting with general front-end development',
-      'Assisting with general Cascade Server integration'
+      'Front-end development',
+      'Cascade Server integration'
     ],
     more: {
       text: 'Beacon Technologies Blog',
@@ -873,7 +1074,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-07-01',
     url: 'http://www.unitedanesthesia.com',
-    tags: ['ASP', 'HTML/CSS', 'Javascript'],
+    tags: ['ASP', 'HTML/CSS', 'JavaScript'],
     responsibilities: [
       'Original front-end development',
       'Merging existing back-end code into new front-end code'
@@ -895,7 +1096,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-04-01',
     url: 'http://www.staubleadership.com',
-    tags: ['ASP', 'HTML/CSS', 'Javascript'],
+    tags: ['ASP', 'HTML/CSS', 'JavaScript', 'CMS Configuration'],
     responsibilities: [
       'Orignal front-end development',
       'Customized Cascade Server integration'
@@ -921,7 +1122,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-03-01',
     url: 'http://www.montylaw.com',
-    tags: ['HTML/CSS', 'Javascript'],
+    tags: ['HTML/CSS', 'JavaScript', 'CMS Configuration'],
     responsibilities: [
       'Original front-end development',
       'Custom Cascade Server integration'
@@ -947,7 +1148,7 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-03-01',
     url: 'http://www.fireflystoresolutions.com',
-    tags: ['HTML/CSS', 'Javascript'],
+    tags: ['HTML/CSS', 'JavaScript'],
     responsibilities: [
       'Original front-end development',
       'AspDotNetStorefront integration'
@@ -992,7 +1193,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-02-01',
     url: 'http://www.hartford.edu',
-    tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery'],
+    tags: ['ASP', 'HTML/CSS', 'JavaScript', 'CMS Configuration'],
+    tech: ['jQuery'],
     features: [
       {
         name: 'Campus Calendar',
@@ -1045,7 +1247,8 @@ const portfolio = [
     employer: 'beacon',
     date: '2010-02-01',
     url: 'https://www.rollins.edu/magazine/',
-    tags: ['ASP', 'HTML/CSS', 'Javascript', 'jQuery', 'CMS Configuration'],
+    tags: ['ASP', 'HTML/CSS', 'JavaScript', 'CMS Configuration'],
+    tech: ['jQuery'],
     responsibilities: [
       'Original front-end development (HTML/CSS/JS)',
       'Cascade Server integration'
@@ -1062,7 +1265,8 @@ const portfolio = [
     employer: 'gyf',
     date: '2009-11-01',
     url: 'http://www.carolinagirlfurniture.com',
-    tags: ['HTML/CSS', 'PHP'],
+    tags: [],
+    tech: ['HTML/CSS', 'PHP'],
     cms: ['Magento'],
     other: ['Cross Browser Compatibility'],
     images: [
@@ -1097,7 +1301,7 @@ const portfolio = [
     employer: 'gyf',
     date: '2009-08-01',
     url: 'http://www.guilfordcollegeumc.org',
-    tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['Flash/Actionscript', 'HTML/CSS', 'JavaScript', 'PHP'],
     description: 'Custom Modules & Calendar integration',
     cms: ['Drupal'],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
@@ -1122,7 +1326,7 @@ const portfolio = [
     employer: 'gyf',
     date: '2009-07-01',
     url: 'http://northstarone.com',
-    tags: ['HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['HTML/CSS', 'JavaScript', 'PHP'],
     responsibilities: ['All original site development'],
     cms: [],
     other: ['Cross Browser Compatibility', 'W3C Compliant'],
@@ -1136,7 +1340,8 @@ const portfolio = [
     employer: 'gyf',
     date: '2009-06-01',
     url: 'http://www.matlabinc.com',
-    tags: ['Flash/Actionscript', 'HTML/CSS', 'Javascript', 'PHP'],
+    tags: [],
+    tech: ['HTML/CSS', 'JavaScript', 'PHP', 'Flash/Actionscript'],
     responsibilities: [
       'Original front-end development',
       'Flash animations throughout the site'
@@ -1192,7 +1397,7 @@ const portfolio = [
     employer: 'gyf',
     date: '2009-02',
     url: 'http://www.modukraf.com',
-    tags: ['HTML/CSS', 'Javascript', 'PHP'],
+    tags: ['HTML/CSS', 'JavaScript', 'PHP'],
     description:
       'Mod-U-Kraf came to Get You Found Online Marketing with a clear vision of how they wanted their site to function.  This site was rather complex given the many different areas within the site as well as the large amount of information about their products and services.',
     // I enjoyed working with the chosen graphics, content and flow of the site.  The site turned out great and I was especially pleased with the final outcome. --- OLD content

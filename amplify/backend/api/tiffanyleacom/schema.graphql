@@ -1,0 +1,21 @@
+type Project @model {
+  id: ID!
+  name: String!
+  description: String
+  url: AWSURL
+  employer: Employer @connection(name: "EmployerProjects")
+  client: Client @connection(name: "ClientProjects")
+}
+
+type Employer @model {
+  id: ID!
+  name: String!
+  startdate: AWSDate
+  projects: [Project] @connection(name: "EmployerProjects")
+}
+
+type Client @model {
+  id: ID!
+  name: String
+  projects: Project @connection(name: "ClientProjects")
+}

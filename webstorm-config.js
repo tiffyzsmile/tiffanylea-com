@@ -3,6 +3,7 @@ System.config({
     '~/*': './src/*',
     components: './src/components/*',
     containers: './src/containers/*',
-    helpers: './src/helpers/*'
+    helpers: './src/helpers/*',
+    hooks: './src/hooks/*'
   }
 });

@@ -1,0 +1,2 @@
+# Ignore built AWS files
+src/aws-exports.js
