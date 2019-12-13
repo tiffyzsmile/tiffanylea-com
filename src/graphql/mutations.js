@@ -1,8 +1,11 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const createProject = `mutation CreateProject($input: CreateProjectInput!) {
-  createProject(input: $input) {
+export const createProject = `mutation CreateProject(
+  $input: CreateProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  createProject(input: $input, condition: $condition) {
     id
     name
     description
@@ -28,8 +31,11 @@ export const createProject = `mutation CreateProject($input: CreateProjectInput!
   }
 }
 `;
-export const updateProject = `mutation UpdateProject($input: UpdateProjectInput!) {
-  updateProject(input: $input) {
+export const updateProject = `mutation UpdateProject(
+  $input: UpdateProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  updateProject(input: $input, condition: $condition) {
     id
     name
     description
@@ -55,8 +61,11 @@ export const updateProject = `mutation UpdateProject($input: UpdateProjectInput!
   }
 }
 `;
-export const deleteProject = `mutation DeleteProject($input: DeleteProjectInput!) {
-  deleteProject(input: $input) {
+export const deleteProject = `mutation DeleteProject(
+  $input: DeleteProjectInput!
+  $condition: ModelProjectConditionInput
+) {
+  deleteProject(input: $input, condition: $condition) {
     id
     name
     description
@@ -82,8 +91,11 @@ export const deleteProject = `mutation DeleteProject($input: DeleteProjectInput!
   }
 }
 `;
-export const createEmployer = `mutation CreateEmployer($input: CreateEmployerInput!) {
-  createEmployer(input: $input) {
+export const createEmployer = `mutation CreateEmployer(
+  $input: CreateEmployerInput!
+  $condition: ModelEmployerConditionInput
+) {
+  createEmployer(input: $input, condition: $condition) {
     id
     name
     startdate
@@ -99,8 +111,11 @@ export const createEmployer = `mutation CreateEmployer($input: CreateEmployerInp
   }
 }
 `;
-export const updateEmployer = `mutation UpdateEmployer($input: UpdateEmployerInput!) {
-  updateEmployer(input: $input) {
+export const updateEmployer = `mutation UpdateEmployer(
+  $input: UpdateEmployerInput!
+  $condition: ModelEmployerConditionInput
+) {
+  updateEmployer(input: $input, condition: $condition) {
     id
     name
     startdate
@@ -116,8 +131,11 @@ export const updateEmployer = `mutation UpdateEmployer($input: UpdateEmployerInp
   }
 }
 `;
-export const deleteEmployer = `mutation DeleteEmployer($input: DeleteEmployerInput!) {
-  deleteEmployer(input: $input) {
+export const deleteEmployer = `mutation DeleteEmployer(
+  $input: DeleteEmployerInput!
+  $condition: ModelEmployerConditionInput
+) {
+  deleteEmployer(input: $input, condition: $condition) {
     id
     name
     startdate
@@ -133,8 +151,11 @@ export const deleteEmployer = `mutation DeleteEmployer($input: DeleteEmployerInp
   }
 }
 `;
-export const createClient = `mutation CreateClient($input: CreateClientInput!) {
-  createClient(input: $input) {
+export const createClient = `mutation CreateClient(
+  $input: CreateClientInput!
+  $condition: ModelClientConditionInput
+) {
+  createClient(input: $input, condition: $condition) {
     id
     name
     projects {
@@ -155,8 +176,11 @@ export const createClient = `mutation CreateClient($input: CreateClientInput!) {
   }
 }
 `;
-export const updateClient = `mutation UpdateClient($input: UpdateClientInput!) {
-  updateClient(input: $input) {
+export const updateClient = `mutation UpdateClient(
+  $input: UpdateClientInput!
+  $condition: ModelClientConditionInput
+) {
+  updateClient(input: $input, condition: $condition) {
     id
     name
     projects {
@@ -177,8 +201,11 @@ export const updateClient = `mutation UpdateClient($input: UpdateClientInput!) {
   }
 }
 `;
-export const deleteClient = `mutation DeleteClient($input: DeleteClientInput!) {
-  deleteClient(input: $input) {
+export const deleteClient = `mutation DeleteClient(
+  $input: DeleteClientInput!
+  $condition: ModelClientConditionInput
+) {
+  deleteClient(input: $input, condition: $condition) {
     id
     name
     projects {
