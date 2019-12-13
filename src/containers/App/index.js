@@ -25,6 +25,16 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import awsconfig from '../../aws-exports';
 import './styles.scss';
 
+// This is just a get it done for now attempt
+// If it is the public site then use 'AWS_IAM'
+// If it is in the admin section use cognito
+// TODO: go back and look at auth method choices closer
+// Do I need cognito?  Should I just stick with IAM?
+
+const authType = window.location.pathname.includes('admin')
+  ? awsconfig.aws_appsync_authenticationType
+  : 'AWS_IAM';
+
 const httpLink = createHttpLink({
   uri: awsconfig.aws_appsync_graphqlEndpoint
 });
@@ -33,7 +43,7 @@ const awsLink = createAppSyncLink({
   url: awsconfig.aws_appsync_graphqlEndpoint,
   region: awsconfig.aws_appsync_region,
   auth: {
-    type: awsconfig.aws_appsync_authenticationType,
+    type: authType,
     credentials: () => Auth.currentCredentials(),
     jwtToken: async () =>
       (await Auth.currentSession()).getAccessToken().getJwtToken()

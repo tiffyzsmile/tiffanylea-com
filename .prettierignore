@@ -1,0 +1,2 @@
+# Ignore graphql schema so I can trigger rebuilds:
+/amplify/backend/api/tiffanyleacom/schema.graphql

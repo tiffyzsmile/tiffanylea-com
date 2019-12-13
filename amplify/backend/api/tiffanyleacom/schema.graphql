@@ -1,21 +1,72 @@
-type Project @model {
+type Project
+@model
+@auth(
+  rules: [
+    { allow: public, provider: iam, operations: [read] }
+    { allow: groups, groups: ["admin"] }
+  ]
+) {
   id: ID!
   name: String!
   description: String
+  features: [String]
   url: AWSURL
   employer: Employer @connection(name: "EmployerProjects")
   client: Client @connection(name: "ClientProjects")
+  images: [String]
+  industries: [TaggedProject!]! @connection(name: "TagsForProject")
 }
 
-type Employer @model {
+type Employer
+@model
+@auth(
+  rules: [
+    { allow: public, provider: iam, operations: [read] }
+    { allow: groups, groups: ["admin"] }
+  ]
+) {
   id: ID!
   name: String!
   startdate: AWSDate
   projects: [Project] @connection(name: "EmployerProjects")
 }
 
-type Client @model {
+type Client
+@model
+@auth(
+  rules: [
+    { allow: public, provider: iam, operations: [read] }
+    { allow: groups, groups: ["admin"] }
+  ]
+) {
   id: ID!
   name: String
   projects: Project @connection(name: "ClientProjects")
+}
+
+type Tag
+@model
+@auth(
+  rules: [
+    { allow: public, provider: iam, operations: [read] }
+    { allow: groups, groups: ["admin"] }
+  ]
+) {
+  id: ID!
+  name: String
+  category: String
+  projects: [TaggedProject!]! @connection(name: "ProjectsWithTag")
+}
+
+type TaggedProject
+@model
+@auth(
+  rules: [
+    { allow: public, provider: iam, operations: [read] }
+    { allow: groups, groups: ["admin"] }
+  ]
+) {
+  id: ID!
+  tag: Tag! @connection(name: "ProjectsWithTag")
+  project: Project! @connection(name: "TagsForProject")
 }

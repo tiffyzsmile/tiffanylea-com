@@ -38,7 +38,6 @@ const Project = () => {
   return (
     <div>
       <h1>Project Details</h1>
-      <S3ImageUpload />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (
@@ -85,6 +84,18 @@ const Project = () => {
                         <option />
                         {employersOptionList}
                       </Field>
+                    </label>
+                  </div>
+                  <div>
+                    <label htmlFor="images">
+                      Screenshots
+                      <Field
+                        id="images"
+                        name="images"
+                        render={({ input }) => {
+                          return <S3ImageUpload {...input} />;
+                        }}
+                      />
                     </label>
                   </div>
                   <div className="buttons">
