@@ -31,7 +31,19 @@
   "storage": {
     "tiffanyleacomcontent": {
       "service": "S3",
-      "providerPlugin": "awscloudformation"
+      "providerPlugin": "awscloudformation",
+      "dependsOn": [
+        {
+          "category": "auth",
+          "resourceName": "tiffanyleacom0b033fd5",
+          "attributes": ["UserPoolId"]
+        },
+        {
+          "category": "auth",
+          "resourceName": "userPoolGroups",
+          "attributes": ["adminGroupRole"]
+        }
+      ]
     }
   },
   "api": {

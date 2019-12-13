@@ -70,6 +70,14 @@
     },
     "triggerFunction": {
       "Type": "String"
+    },
+    "authtiffanyleacom0b033fd5UserPoolId": {
+      "Type": "String",
+      "Default": "authtiffanyleacom0b033fd5UserPoolId"
+    },
+    "authuserPoolGroupsadminGroupRole": {
+      "Type": "String",
+      "Default": "authuserPoolGroupsadminGroupRole"
     }
   },
   "Conditions": {
@@ -85,7 +93,9 @@
       "Fn::Not": [
         {
           "Fn::Equals": [
-            { "Ref": "s3PermissionsAuthenticatedPublic" },
+            {
+              "Ref": "s3PermissionsAuthenticatedPublic"
+            },
             "DISALLOW"
           ]
         }
@@ -95,7 +105,9 @@
       "Fn::Not": [
         {
           "Fn::Equals": [
-            { "Ref": "s3PermissionsAuthenticatedProtected" },
+            {
+              "Ref": "s3PermissionsAuthenticatedProtected"
+            },
             "DISALLOW"
           ]
         }
@@ -105,7 +117,9 @@
       "Fn::Not": [
         {
           "Fn::Equals": [
-            { "Ref": "s3PermissionsAuthenticatedPrivate" },
+            {
+              "Ref": "s3PermissionsAuthenticatedPrivate"
+            },
             "DISALLOW"
           ]
         }
@@ -115,7 +129,9 @@
       "Fn::Not": [
         {
           "Fn::Equals": [
-            { "Ref": "s3PermissionsAuthenticatedUploads" },
+            {
+              "Ref": "s3PermissionsAuthenticatedUploads"
+            },
             "DISALLOW"
           ]
         }
@@ -124,28 +140,48 @@
     "CreateGuestPublic": {
       "Fn::Not": [
         {
-          "Fn::Equals": [{ "Ref": "s3PermissionsGuestPublic" }, "DISALLOW"]
+          "Fn::Equals": [
+            {
+              "Ref": "s3PermissionsGuestPublic"
+            },
+            "DISALLOW"
+          ]
         }
       ]
     },
     "CreateGuestUploads": {
       "Fn::Not": [
         {
-          "Fn::Equals": [{ "Ref": "s3PermissionsGuestUploads" }, "DISALLOW"]
+          "Fn::Equals": [
+            {
+              "Ref": "s3PermissionsGuestUploads"
+            },
+            "DISALLOW"
+          ]
         }
       ]
     },
     "AuthReadAndList": {
       "Fn::Not": [
         {
-          "Fn::Equals": [{ "Ref": "AuthenticatedAllowList" }, "DISALLOW"]
+          "Fn::Equals": [
+            {
+              "Ref": "AuthenticatedAllowList"
+            },
+            "DISALLOW"
+          ]
         }
       ]
     },
     "GuestReadAndList": {
       "Fn::Not": [
         {
-          "Fn::Equals": [{ "Ref": "GuestAllowList" }, "DISALLOW"]
+          "Fn::Equals": [
+            {
+              "Ref": "GuestAllowList"
+            },
+            "DISALLOW"
+          ]
         }
       ]
     }
@@ -153,7 +189,6 @@
   "Resources": {
     "S3Bucket": {
       "Type": "AWS::S3::Bucket",
-
       "DeletionPolicy": "Retain",
       "Properties": {
         "BucketName": {
@@ -178,7 +213,6 @@
             }
           ]
         },
-
         "CorsConfiguration": {
           "CorsRules": [
             {
@@ -198,7 +232,6 @@
         }
       }
     },
-
     "S3AuthPublicPolicy": {
       "DependsOn": ["S3Bucket"],
       "Condition": "CreateAuthPublic",
@@ -596,6 +629,53 @@
                   ]
                 }
               }
+            }
+          ]
+        }
+      }
+    },
+    "adminGroupPolicy": {
+      "Type": "AWS::IAM::Policy",
+      "Properties": {
+        "PolicyName": "admin-group-s3-policy",
+        "Roles": [
+          {
+            "Fn::Join": [
+              "",
+              [
+                {
+                  "Ref": "authtiffanyleacom0b033fd5UserPoolId"
+                },
+                "-adminGroupRole"
+              ]
+            ]
+          }
+        ],
+        "PolicyDocument": {
+          "Version": "2012-10-17",
+          "Statement": [
+            {
+              "Effect": "Allow",
+              "Action": [
+                "s3:PutObject",
+                "s3:GetObject",
+                "s3:ListBucket",
+                "s3:DeleteObject"
+              ],
+              "Resource": [
+                {
+                  "Fn::Join": [
+                    "",
+                    [
+                      "arn:aws:s3:::",
+                      {
+                        "Ref": "S3Bucket"
+                      },
+                      "/*"
+                    ]
+                  ]
+                }
+              ]
             }
           ]
         }

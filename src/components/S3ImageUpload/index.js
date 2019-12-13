@@ -8,7 +8,7 @@ const S3ImageUpload = ({ fileName, contentType }) => {
     console.log('file', file);
     console.log('fileName', fileName);
     console.log('fileName', fileName);
-    Storage.put('example.png', file, {
+    Storage.put('example2.png', file, {
       contentType
     })
       .then(result => console.log(result))
