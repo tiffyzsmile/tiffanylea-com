@@ -1,7 +1,7 @@
 {
-  "bucketName": "tiffanylea-coma1481824ba14431f8658106c68464f98",
-  "authPolicyName": "s3_amplify_22408d4b",
-  "unauthPolicyName": "s3_amplify_22408d4b",
+  "bucketName": "tiffanylea-com-content",
+  "authPolicyName": "s3_amplify_800be719",
+  "unauthPolicyName": "s3_amplify_800be719",
   "authRoleName": {
     "Ref": "AuthRoleName"
   },
@@ -11,17 +11,17 @@
   "selectedGuestPermissions": ["s3:GetObject", "s3:ListBucket"],
   "selectedAuthenticatedPermissions": ["s3:GetObject", "s3:ListBucket"],
   "s3PermissionsAuthenticatedPublic": "s3:GetObject",
-  "s3PublicPolicy": "Public_policy_10db611f",
+  "s3PublicPolicy": "Public_policy_aa4ea347",
   "s3PermissionsAuthenticatedUploads": "DISALLOW",
-  "s3UploadsPolicy": "Uploads_policy_10db611f",
+  "s3UploadsPolicy": "Uploads_policy_aa4ea347",
   "s3PermissionsAuthenticatedProtected": "s3:GetObject",
-  "s3ProtectedPolicy": "Protected_policy_f3b54b6b",
+  "s3ProtectedPolicy": "Protected_policy_2e8d5958",
   "s3PermissionsAuthenticatedPrivate": "s3:GetObject",
-  "s3PrivatePolicy": "Private_policy_f3b54b6b",
+  "s3PrivatePolicy": "Private_policy_2e8d5958",
   "AuthenticatedAllowList": "ALLOW",
-  "s3ReadPolicy": "read_policy_10db611f",
+  "s3ReadPolicy": "read_policy_aa4ea347",
   "s3PermissionsGuestPublic": "s3:GetObject",
   "s3PermissionsGuestUploads": "DISALLOW",
   "GuestAllowList": "ALLOW",
-  "triggerFunction": "NONE"
+  "triggerFunction": "S3Trigger52e00513"
 }
