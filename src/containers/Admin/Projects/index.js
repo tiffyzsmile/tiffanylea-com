@@ -59,6 +59,7 @@ const Projects = () => {
                 >
                   Add Project
                 </Button>
+                <Link to="/admin/project">Add Project</Link>
               </td>
             </tr>
           </tfoot>

@@ -2,125 +2,102 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 import { useParams } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
-import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
 import S3FileUpload from 'components/S3FileUpload';
+import EmployerField from 'components/EmployerField';
+import ClientField from 'components/ClientField';
 
 const Project = () => {
   const { id } = useParams();
-  const { getProject, updateProject } = useProjects();
-  const { loading, data, error } = getProject(id);
-  const { getEmployers } = useEmployers();
-  const {
-    loading: loadingEmployers,
-    data: employers,
-    error: employersError
-  } = getEmployers();
+  const { getProject, addProject, updateProject } = useProjects();
+  const { loading, data = { name: '', images: [] } } = getProject(id);
 
-  const onSubmit = ({ id: projectId, name, description, employer, images }) => {
-    updateProject({
-      id: projectId,
-      name,
-      description,
-      projectEmployerId: employer.id,
-      images
-    });
+  const onSubmit = ({ ...formValues }) => {
+    if (id) {
+      updateProject(formValues);
+    } else {
+      addProject(formValues);
+    }
   };
-
-  // may want to remove this completely and make it an autocomplete field
-  const employersOptionList = (employers || []).map(e => {
-    return (
-      <option key={e.id} value={e.id}>
-        {e.name}
-      </option>
-    );
-  });
 
   return (
     <div>
       <h1>Project Details</h1>
-      {loading && <h1>Loading...</h1>}
-      {error && <h1>Error...</h1>}
-      {data && (
-        <section>
-          <Form
-            onSubmit={onSubmit}
-            initialValues={data}
-            render={({ handleSubmit, pristine, form, submitting, values }) => {
-              return (
-                <form onSubmit={handleSubmit}>
-                  {loading && <div className="loading" />}
-                  <div>
-                    <label htmlFor="name">
-                      Project Name
-                      <Field
-                        id="name"
-                        name="name"
-                        component="input"
-                        placeholder="Project Name"
-                      />
-                    </label>
-                    <label htmlFor="description">
-                      Project Description
-                      <Field
-                        id="description"
-                        name="description"
-                        component="textarea"
-                        placeholder="Project Description"
-                      />
-                    </label>
-                  </div>
-                  <div>
-                    <label htmlFor="employer">
-                      Employer
-                      <Field
-                        id="employer"
-                        name="employer.id"
-                        component="select"
-                      >
-                        {loadingEmployers && <option>Loading Employers</option>}
-                        {employersError && (
-                          <option>Error Loading Employers</option>
-                        )}
-                        <option />
-                        {employersOptionList}
-                      </Field>
-                    </label>
-                  </div>
-                  <div>
-                    <label htmlFor="images">
-                      Screenshots
-                      <Field
-                        id="images"
-                        name="images"
-                        render={({ input }) => {
-                          return (
-                            <S3FileUpload
-                              {...input}
-                              filePath={id}
-                              alt={`Screenshot of ${data.name}`}
-                            />
-                          );
-                        }}
-                      />
-                    </label>
-                  </div>
-                  <div className="buttons">
-                    <Button
-                      onClick={() => onSubmit(values)}
-                      type="submit"
-                      disabled={submitting || pristine}
-                    >
-                      Submit
-                    </Button>
-                  </div>
-                  <pre>{JSON.stringify(values, 0, 2)}</pre>
-                </form>
-              );
-            }}
-          />
-        </section>
-      )}
+      <section>
+        <Form
+          onSubmit={onSubmit}
+          initialValues={data}
+          render={({ handleSubmit, pristine, form, submitting, values }) => {
+            return (
+              <form onSubmit={handleSubmit}>
+                {loading && <div className="loading" />}
+                <div>
+                  <label htmlFor="id">
+                    Project ID
+                    <Field
+                      id="id"
+                      name="id"
+                      component="input"
+                      placeholder="Project ID"
+                    />
+                  </label>
+                  <label htmlFor="name">
+                    Project Name
+                    <Field
+                      id="name"
+                      name="name"
+                      component="input"
+                      placeholder="Project Name"
+                    />
+                  </label>
+                  <label htmlFor="description">
+                    Project Description
+                    <Field
+                      id="description"
+                      name="description"
+                      component="textarea"
+                      placeholder="Project Description"
+                    />
+                  </label>
+                </div>
+                <div>
+                  <EmployerField />
+                </div>
+                <div>
+                  <ClientField />
+                </div>
+                <div>
+                  <label htmlFor="images">
+                    Screenshots
+                    <Field
+                      id="images"
+                      name="images"
+                      render={({ input }) => {
+                        return (
+                          <S3FileUpload
+                            {...input}
+                            filePath={id}
+                            alt={`Screenshot of ${values.name || ''}`}
+                          />
+                        );
+                      }}
+                    />
+                  </label>
+                </div>
+                <div className="buttons">
+                  <Button
+                    onClick={() => onSubmit(values)}
+                    disabled={submitting || pristine}
+                  >
+                    Submit
+                  </Button>
+                </div>
+                <pre>{JSON.stringify(values, 0, 2)}</pre>
+              </form>
+            );
+          }}
+        />
+      </section>
     </div>
   );
 };

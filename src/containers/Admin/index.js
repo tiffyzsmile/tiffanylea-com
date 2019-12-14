@@ -18,7 +18,7 @@ const Admin = () => {
     <Page isAdmin title="Admin" description="Admin Area">
       <Switch>
         <Route path="/admin/projects" component={Projects} />
-        <Route path="/admin/project/:id" component={Project} />
+        <Route path="/admin/project/:id?" component={Project} />
         <Route path="/admin/employers" component={Employers} />
         <Route path="/admin/employer/:id" component={Employer} />
         <Route path="/admin/clients" component={Clients} />

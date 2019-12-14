@@ -7,6 +7,23 @@ import {
   deleteProject as deleteProjectMutation
 } from 'graphql/mutations';
 
+const getFormattedInput = originalInput => {
+  const { employer, client, industries, __typename, ...input } = originalInput;
+  console.log('industries', industries);
+  console.log('__typename', __typename);
+  const formattedInput = {};
+
+  if (employer && employer.id) {
+    formattedInput.projectEmployerId = employer.id;
+  }
+
+  if (client && client.id) {
+    formattedInput.projectClientId = client.id;
+  }
+
+  return { ...input, ...formattedInput };
+};
+
 const useProjects = () => {
   const [newProject] = useMutation(gql(createProjectMutation));
   const [changeProject] = useMutation(gql(updateProjectMutation));
@@ -28,9 +45,11 @@ const useProjects = () => {
   };
 
   const addProject = projectToAdd => {
+    const input = getFormattedInput(projectToAdd);
+
     newProject({
       variables: {
-        input: projectToAdd
+        input
       },
       //      onCompleted: data => console.log('Project Added!', data),
       refetchQueries: [{ query: gql(listProjects) }]
@@ -48,9 +67,11 @@ const useProjects = () => {
   };
 
   const updateProject = projectToUpdate => {
+    const input = getFormattedInput(projectToUpdate);
+
     const { loading, data, error } = changeProject({
       variables: {
-        input: projectToUpdate
+        input
       }
     });
     const project = data ? data.updateProject : data;
