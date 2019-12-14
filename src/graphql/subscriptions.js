@@ -6,7 +6,9 @@ export const onCreateProject = `subscription OnCreateProject {
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -22,8 +24,16 @@ export const onCreateProject = `subscription OnCreateProject {
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -33,7 +43,9 @@ export const onUpdateProject = `subscription OnUpdateProject {
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -49,8 +61,16 @@ export const onUpdateProject = `subscription OnUpdateProject {
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -60,7 +80,9 @@ export const onDeleteProject = `subscription OnDeleteProject {
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -76,8 +98,16 @@ export const onDeleteProject = `subscription OnDeleteProject {
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -92,7 +122,9 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -109,7 +141,9 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -126,7 +160,9 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -141,7 +177,9 @@ export const onCreateClient = `subscription OnCreateClient {
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -150,6 +188,9 @@ export const onCreateClient = `subscription OnCreateClient {
       client {
         id
         name
+      }
+      industries {
+        nextToken
       }
     }
   }
@@ -163,7 +204,9 @@ export const onUpdateClient = `subscription OnUpdateClient {
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -172,6 +215,9 @@ export const onUpdateClient = `subscription OnUpdateClient {
       client {
         id
         name
+      }
+      industries {
+        nextToken
       }
     }
   }
@@ -185,7 +231,9 @@ export const onDeleteClient = `subscription OnDeleteClient {
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -194,6 +242,153 @@ export const onDeleteClient = `subscription OnDeleteClient {
       client {
         id
         name
+      }
+      industries {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const onCreateTag = `subscription OnCreateTag {
+  onCreateTag {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const onUpdateTag = `subscription OnUpdateTag {
+  onUpdateTag {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const onDeleteTag = `subscription OnDeleteTag {
+  onDeleteTag {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
+  onCreateTaggedProject {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
+  onUpdateTaggedProject {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
+  onDeleteTaggedProject {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
       }
     }
   }

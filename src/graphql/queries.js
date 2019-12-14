@@ -11,7 +11,9 @@ export const listProjects = `query ListProjects(
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -20,6 +22,9 @@ export const listProjects = `query ListProjects(
       client {
         id
         name
+      }
+      industries {
+        nextToken
       }
     }
     nextToken
@@ -31,7 +36,9 @@ export const getProject = `query GetProject($id: ID!) {
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -47,8 +54,16 @@ export const getProject = `query GetProject($id: ID!) {
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -81,7 +96,9 @@ export const getEmployer = `query GetEmployer($id: ID!) {
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -101,7 +118,9 @@ export const listClients = `query ListClients(
         id
         name
         description
+        features
         url
+        images
       }
     }
     nextToken
@@ -116,7 +135,9 @@ export const getClient = `query GetClient($id: ID!) {
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -126,7 +147,98 @@ export const getClient = `query GetClient($id: ID!) {
         id
         name
       }
+      industries {
+        nextToken
+      }
     }
+  }
+}
+`;
+export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: Int, $nextToken: String) {
+  listTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      category
+      projects {
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getTag = `query GetTag($id: ID!) {
+  getTag(id: $id) {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const getTaggedProject = `query GetTaggedProject($id: ID!) {
+  getTaggedProject(id: $id) {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const listTaggedProjects = `query ListTaggedProjects(
+  $filter: ModelTaggedProjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTaggedProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      project {
+        id
+        name
+        description
+        features
+        url
+        images
+      }
+      tag {
+        id
+        name
+        category
+      }
+    }
+    nextToken
   }
 }
 `;

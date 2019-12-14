@@ -9,7 +9,9 @@ export const createProject = `mutation CreateProject(
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -25,8 +27,16 @@ export const createProject = `mutation CreateProject(
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -39,7 +49,9 @@ export const updateProject = `mutation UpdateProject(
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -55,8 +67,16 @@ export const updateProject = `mutation UpdateProject(
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -69,7 +89,9 @@ export const deleteProject = `mutation DeleteProject(
     id
     name
     description
+    features
     url
+    images
     employer {
       id
       name
@@ -85,8 +107,16 @@ export const deleteProject = `mutation DeleteProject(
         id
         name
         description
+        features
         url
+        images
       }
+    }
+    industries {
+      items {
+        id
+      }
+      nextToken
     }
   }
 }
@@ -104,7 +134,9 @@ export const createEmployer = `mutation CreateEmployer(
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -124,7 +156,9 @@ export const updateEmployer = `mutation UpdateEmployer(
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -144,7 +178,9 @@ export const deleteEmployer = `mutation DeleteEmployer(
         id
         name
         description
+        features
         url
+        images
       }
       nextToken
     }
@@ -162,7 +198,9 @@ export const createClient = `mutation CreateClient(
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -171,6 +209,9 @@ export const createClient = `mutation CreateClient(
       client {
         id
         name
+      }
+      industries {
+        nextToken
       }
     }
   }
@@ -187,7 +228,9 @@ export const updateClient = `mutation UpdateClient(
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -196,6 +239,9 @@ export const updateClient = `mutation UpdateClient(
       client {
         id
         name
+      }
+      industries {
+        nextToken
       }
     }
   }
@@ -212,7 +258,9 @@ export const deleteClient = `mutation DeleteClient(
       id
       name
       description
+      features
       url
+      images
       employer {
         id
         name
@@ -221,6 +269,171 @@ export const deleteClient = `mutation DeleteClient(
       client {
         id
         name
+      }
+      industries {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const createTag = `mutation CreateTag(
+  $input: CreateTagInput!
+  $condition: ModelTagConditionInput
+) {
+  createTag(input: $input, condition: $condition) {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const updateTag = `mutation UpdateTag(
+  $input: UpdateTagInput!
+  $condition: ModelTagConditionInput
+) {
+  updateTag(input: $input, condition: $condition) {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const deleteTag = `mutation DeleteTag(
+  $input: DeleteTagInput!
+  $condition: ModelTagConditionInput
+) {
+  deleteTag(input: $input, condition: $condition) {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const createTaggedProject = `mutation CreateTaggedProject(
+  $input: CreateTaggedProjectInput!
+  $condition: ModelTaggedProjectConditionInput
+) {
+  createTaggedProject(input: $input, condition: $condition) {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const updateTaggedProject = `mutation UpdateTaggedProject(
+  $input: UpdateTaggedProjectInput!
+  $condition: ModelTaggedProjectConditionInput
+) {
+  updateTaggedProject(input: $input, condition: $condition) {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const deleteTaggedProject = `mutation DeleteTaggedProject(
+  $input: DeleteTaggedProjectInput!
+  $condition: ModelTaggedProjectConditionInput
+) {
+  deleteTaggedProject(input: $input, condition: $condition) {
+    id
+    project {
+      id
+      name
+      description
+      features
+      url
+      images
+      employer {
+        id
+        name
+        startdate
+      }
+      client {
+        id
+        name
+      }
+      industries {
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        nextToken
       }
     }
   }
