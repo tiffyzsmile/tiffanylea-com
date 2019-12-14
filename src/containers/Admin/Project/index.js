@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
-import S3ImageUpload from 'components/S3ImageUpload';
+import S3FileUpload from 'components/S3FileUpload';
 
 const Project = () => {
   const { id } = useParams();
@@ -17,12 +17,13 @@ const Project = () => {
     error: employersError
   } = getEmployers();
 
-  const onSubmit = ({ id: projectId, name, description, employer }) => {
+  const onSubmit = ({ id: projectId, name, description, employer, images }) => {
     updateProject({
       id: projectId,
       name,
       description,
-      projectEmployerId: employer.id
+      projectEmployerId: employer.id,
+      images
     });
   };
 
@@ -93,7 +94,13 @@ const Project = () => {
                         id="images"
                         name="images"
                         render={({ input }) => {
-                          return <S3ImageUpload {...input} />;
+                          return (
+                            <S3FileUpload
+                              {...input}
+                              filePath={id}
+                              alt={`Screenshot of ${data.name}`}
+                            />
+                          );
                         }}
                       />
                     </label>

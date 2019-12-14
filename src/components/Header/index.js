@@ -49,6 +49,9 @@ const Header = ({ isAdmin }) => {
               <li>
                 <Link to="/admin/clients">Clients</Link>
               </li>
+              <li>
+                <Link to="/admin/tags">Tags</Link>
+              </li>
             </ul>
           </div>
         )}

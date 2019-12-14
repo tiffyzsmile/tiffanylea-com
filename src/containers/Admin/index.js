@@ -7,6 +7,7 @@ import Employers from 'Employers';
 import Employer from 'Employer';
 import Clients from 'Clients';
 import Client from 'Client';
+import Tags from 'Tags';
 import './styles.scss';
 
 const Admin = () => {
@@ -22,6 +23,7 @@ const Admin = () => {
         <Route path="/admin/employer/:id" component={Employer} />
         <Route path="/admin/clients" component={Clients} />
         <Route path="/admin/client/:id" component={Client} />
+        <Route path="/admin/tags/:id?" component={Tags} />
       </Switch>
     </Page>
   );
