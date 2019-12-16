@@ -18,12 +18,59 @@ export const listProjects = `query ListProjects(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -44,6 +91,26 @@ export const getProject = `query GetProject($id: ID!) {
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -57,11 +124,65 @@ export const getProject = `query GetProject($id: ID!) {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -79,6 +200,26 @@ export const listEmployers = `query ListEmployers(
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -99,6 +240,32 @@ export const getEmployer = `query GetEmployer($id: ID!) {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -121,6 +288,32 @@ export const listClients = `query ListClients(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
     nextToken
@@ -142,12 +335,59 @@ export const getClient = `query GetClient($id: ID!) {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -161,6 +401,22 @@ export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: In
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -176,6 +432,34 @@ export const getTag = `query GetTag($id: ID!) {
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -196,12 +480,59 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -210,6 +541,22 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -231,11 +578,43 @@ export const listTaggedProjects = `query ListTaggedProjects(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       tag {
         id
         name
         category
+        projects {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
     nextToken

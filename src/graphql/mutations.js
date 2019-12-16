@@ -17,6 +17,26 @@ export const createProject = `mutation CreateProject(
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -30,11 +50,65 @@ export const createProject = `mutation CreateProject(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -57,6 +131,26 @@ export const updateProject = `mutation UpdateProject(
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -70,11 +164,65 @@ export const updateProject = `mutation UpdateProject(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -97,6 +245,26 @@ export const deleteProject = `mutation DeleteProject(
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -110,11 +278,65 @@ export const deleteProject = `mutation DeleteProject(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -137,6 +359,32 @@ export const createEmployer = `mutation CreateEmployer(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -159,6 +407,32 @@ export const updateEmployer = `mutation UpdateEmployer(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -181,6 +455,32 @@ export const deleteEmployer = `mutation DeleteEmployer(
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -205,12 +505,59 @@ export const createClient = `mutation CreateClient(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -235,12 +582,59 @@ export const updateClient = `mutation UpdateClient(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -265,12 +659,59 @@ export const deleteClient = `mutation DeleteClient(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -288,6 +729,34 @@ export const createTag = `mutation CreateTag(
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -305,6 +774,34 @@ export const updateTag = `mutation UpdateTag(
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -322,6 +819,34 @@ export const deleteTag = `mutation DeleteTag(
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -345,12 +870,59 @@ export const createTaggedProject = `mutation CreateTaggedProject(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -359,6 +931,22 @@ export const createTaggedProject = `mutation CreateTaggedProject(
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -382,12 +970,59 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -396,6 +1031,22 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -419,12 +1070,59 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -433,6 +1131,22 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }

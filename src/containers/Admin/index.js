@@ -1,5 +1,5 @@
 import React from 'react';
-import { Switch, Route, useParams } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 import Page from 'components/Page';
 import Projects from 'Projects';
 import Project from 'Project';
@@ -8,12 +8,10 @@ import Employer from 'Employer';
 import Clients from 'Clients';
 import Client from 'Client';
 import Tags from 'Tags';
+import TaggedProjects from 'TaggedProjects';
 import './styles.scss';
 
 const Admin = () => {
-  const { page, id } = useParams();
-  console.log('page', page);
-  console.log('id', id);
   return (
     <Page isAdmin title="Admin" description="Admin Area">
       <Switch>
@@ -24,6 +22,7 @@ const Admin = () => {
         <Route path="/admin/clients" component={Clients} />
         <Route path="/admin/client/:id" component={Client} />
         <Route path="/admin/tags/:id?" component={Tags} />
+        <Route path="/admin/taggedprojects/:id?" component={TaggedProjects} />
       </Switch>
     </Page>
   );

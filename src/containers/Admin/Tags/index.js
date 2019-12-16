@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Form, Field } from 'react-final-form';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
+import CategoryField from 'components/CategoryField';
 
 const Tag = () => {
   const [idToEdit, setIdToEdit] = useState();
@@ -9,12 +10,13 @@ const Tag = () => {
   const { getTags, addTag, deleteTag, updateTag } = useTags();
   const { loading, data, error } = getTags();
 
-  const onSubmit = ({ id: tagId, name, category }) => {
-    updateTag({
-      id: tagId,
-      name,
-      category
-    });
+  const onSubmit = formValues => {
+    if (formValues.id) {
+      updateTag(formValues);
+    } else {
+      addTag(formValues);
+    }
+    setIdToEdit(0);
   };
 
   const tagsContent = tags =>
@@ -34,20 +36,13 @@ const Tag = () => {
               </label>
             </td>
             <td>
-              <label htmlFor="category">
-                Category
-                <Field id="category" name="category" component="select">
-                  <option />
-                  <option value="industry">Industry</option>
-                  <option value="language">Language</option>
-                  <option value="type">Type</option>
-                </Field>
-              </label>
+              <CategoryField />
             </td>
             <td className="center">
               <div className="buttons">
-                <Button onClick={() => onSubmit()} type="submit">
-                  Submit
+                <Button onClick={() => onSubmit(tagValues)}>Submit</Button>
+                <Button styleAs="link" onClick={() => setIdToEdit(0)}>
+                  Cancel
                 </Button>
               </div>
             </td>
@@ -57,7 +52,7 @@ const Tag = () => {
       return (
         <tr key={n.id}>
           <td>{n.name}</td>
-          <td>{n.categories}</td>
+          <td>{n.category}</td>
           <td className="center">
             <Button
               styleAs="link"
@@ -82,15 +77,6 @@ const Tag = () => {
       );
     });
 
-  // may want to remove this completely and make it an autocomplete field
-  // const employersOptionList = (employers || []).map(e => {
-  //   return (
-  //     <option key={e.id} value={e.id}>
-  //       {e.name}
-  //     </option>
-  //   );
-  // });
-
   return (
     <div>
       <h1>Tags</h1>
@@ -100,7 +86,7 @@ const Tag = () => {
       {data && (
         <Form
           onSubmit={onSubmit}
-          initialValues={data.filter(d => d.id === idToEdit)}
+          initialValues={data.filter(d => d.id === idToEdit)[0]}
           render={({ handleSubmit, form, values }) => {
             setTagValues(values);
             return (
@@ -109,11 +95,37 @@ const Tag = () => {
                   <thead>
                     <tr>
                       <th>Tag</th>
-                      <th>Categories</th>
+                      <th>Category</th>
                       <th>Actions</th>
                     </tr>
                   </thead>
-                  <tbody>{tagsContent(data)}</tbody>
+                  <tbody>
+                    <tr key="0">
+                      <td>
+                        <label htmlFor="name">
+                          Tag Name
+                          <Field
+                            id="name"
+                            name="name"
+                            component="input"
+                            placeholder="Tag Name"
+                          />
+                        </label>
+                      </td>
+                      <td>
+                        <CategoryField />
+                      </td>
+                      <td className="center">
+                        <div className="buttons">
+                          <Button onClick={() => onSubmit(tagValues)}>
+                            Submit
+                          </Button>
+                        </div>
+                      </td>
+                    </tr>
+
+                    {tagsContent(data)}
+                  </tbody>
                   <tfoot>
                     <tr>
                       <td colSpan="3">
@@ -138,8 +150,6 @@ const Tag = () => {
           }}
         />
       )}
-
-      <h1>Tag Details</h1>
       <pre>{JSON.stringify(tagValues, 0, 2)}</pre>
     </div>
   );

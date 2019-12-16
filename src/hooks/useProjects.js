@@ -7,11 +7,21 @@ import {
   deleteProject as deleteProjectMutation
 } from 'graphql/mutations';
 
-const getFormattedInput = originalInput => {
-  const { employer, client, industries, __typename, ...input } = originalInput;
-  console.log('industries', industries);
-  console.log('__typename', __typename);
+const getFormattedInput = ({
+  id,
+  name,
+  description,
+  features,
+  url,
+  images,
+  employer,
+  client
+}) => {
   const formattedInput = {};
+
+  if (id) {
+    formattedInput.id = id;
+  }
 
   if (employer && employer.id) {
     formattedInput.projectEmployerId = employer.id;
@@ -21,7 +31,7 @@ const getFormattedInput = originalInput => {
     formattedInput.projectClientId = client.id;
   }
 
-  return { ...input, ...formattedInput };
+  return { name, description, features, url, images, ...formattedInput };
 };
 
 const useProjects = () => {

@@ -37,8 +37,10 @@ const S3FileUpload = ({ filePath, contentType, value, onChange, alt }) => {
                 onChange(values);
               }
             })
+            // eslint-disable-next-line
             .catch(err => console.error('get url error', err));
         })
+        // eslint-disable-next-line
         .catch(err => console.error('put image error', err));
     });
   };

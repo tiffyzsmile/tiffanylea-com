@@ -14,6 +14,26 @@ export const onCreateProject = `subscription OnCreateProject {
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -27,11 +47,65 @@ export const onCreateProject = `subscription OnCreateProject {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -51,6 +125,26 @@ export const onUpdateProject = `subscription OnUpdateProject {
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -64,11 +158,65 @@ export const onUpdateProject = `subscription OnUpdateProject {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -88,6 +236,26 @@ export const onDeleteProject = `subscription OnDeleteProject {
       name
       startdate
       projects {
+        items {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -101,11 +269,65 @@ export const onDeleteProject = `subscription OnDeleteProject {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
-    industries {
+    tags {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -125,6 +347,32 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -144,6 +392,32 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -163,6 +437,32 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
         features
         url
         images
+        employer {
+          id
+          name
+          startdate
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          projects {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
       nextToken
     }
@@ -184,12 +484,59 @@ export const onCreateClient = `subscription OnCreateClient {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -211,12 +558,59 @@ export const onUpdateClient = `subscription OnUpdateClient {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -238,12 +632,59 @@ export const onDeleteClient = `subscription OnDeleteClient {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -258,6 +699,34 @@ export const onCreateTag = `subscription OnCreateTag {
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -272,6 +741,34 @@ export const onUpdateTag = `subscription OnUpdateTag {
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -286,6 +783,34 @@ export const onDeleteTag = `subscription OnDeleteTag {
     projects {
       items {
         id
+        project {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -306,12 +831,59 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -320,6 +892,22 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -340,12 +928,59 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -354,6 +989,22 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -374,12 +1025,59 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
         id
         name
         startdate
+        projects {
+          items {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        projects {
+          id
+          name
+          description
+          features
+          url
+          images
+          employer {
+            id
+            name
+            startdate
+          }
+          client {
+            id
+            name
+          }
+          tags {
+            nextToken
+          }
+        }
       }
-      industries {
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }
@@ -388,6 +1086,22 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
       name
       category
       projects {
+        items {
+          id
+          project {
+            id
+            name
+            description
+            features
+            url
+            images
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
         nextToken
       }
     }

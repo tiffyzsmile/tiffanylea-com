@@ -14,7 +14,7 @@ type Project
   employer: Employer @connection(name: "EmployerProjects")
   client: Client @connection(name: "ClientProjects")
   images: [String]
-  industries: [TaggedProject!]! @connection(name: "TagsForProject")
+  tags: [TaggedProject] @connection(name: "TagsForProject")
 }
 
 type Employer
@@ -55,7 +55,7 @@ type Tag
   id: ID!
   name: String
   category: String
-  projects: [TaggedProject!]! @connection(name: "ProjectsWithTag")
+  projects: [TaggedProject] @connection(name: "ProjectsWithTag")
 }
 
 type TaggedProject
