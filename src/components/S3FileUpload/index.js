@@ -23,9 +23,9 @@ const S3FileUpload = ({
   multiple
 }) => {
   // for type of multiple
-  const values = [...value];
+  const values = [];
 
-  const listOfCurrentFiles = (values || []).map(f => {
+  const listOfCurrentFiles = ([...values, ...value] || []).map(f => {
     return <img style={styles.image} src={f} key={f} alt={alt || ''} />;
   });
 
@@ -35,19 +35,23 @@ const S3FileUpload = ({
 
   const onInputChange = e => {
     const filesArray = Array.from(e.target.files);
-    filesArray.forEach((file, i) => {
+    filesArray.forEach(file => {
       Storage.put(`${filePath}/${file.name}`, file, {
         contentType: file.type
       })
         .then(({ key: itemKey }) => {
+          // Go and get the URL of the image we just uploaded
           Storage.get(itemKey)
             .then(itemUrl => {
               const justUrl = itemUrl.split('?')[0];
-              values.push(justUrl);
-              // If this is last item in array
-              if (filesArray.length - 1 === i && multiple) {
-                onChange(values);
+              if (multiple) {
+                values.push(justUrl);
+                // If we have all the uploaded images
+                if (filesArray.length === values.length) {
+                  onChange([...value, ...values]);
+                }
               } else {
+                // we only have 1 image
                 onChange(justUrl);
               }
             })

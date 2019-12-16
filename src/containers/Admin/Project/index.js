@@ -93,6 +93,7 @@ const Project = () => {
                             <S3FileUpload
                               {...input}
                               filePath={id}
+                              multiple
                               alt={`Screenshot of ${values.name || ''}`}
                             />
                           );
