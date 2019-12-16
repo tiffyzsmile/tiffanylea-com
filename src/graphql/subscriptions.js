@@ -5,30 +5,45 @@ export const onCreateProject = `subscription OnCreateProject {
   onCreateProject {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -40,17 +55,26 @@ export const onCreateProject = `subscription OnCreateProject {
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -58,13 +82,20 @@ export const onCreateProject = `subscription OnCreateProject {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -81,18 +112,27 @@ export const onCreateProject = `subscription OnCreateProject {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -116,30 +156,45 @@ export const onUpdateProject = `subscription OnUpdateProject {
   onUpdateProject {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -151,17 +206,26 @@ export const onUpdateProject = `subscription OnUpdateProject {
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -169,13 +233,20 @@ export const onUpdateProject = `subscription OnUpdateProject {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -192,18 +263,27 @@ export const onUpdateProject = `subscription OnUpdateProject {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -227,30 +307,45 @@ export const onDeleteProject = `subscription OnDeleteProject {
   onDeleteProject {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -262,17 +357,26 @@ export const onDeleteProject = `subscription OnDeleteProject {
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -280,13 +384,20 @@ export const onDeleteProject = `subscription OnDeleteProject {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -303,18 +414,27 @@ export const onDeleteProject = `subscription OnDeleteProject {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -339,18 +459,26 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -358,13 +486,20 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -384,18 +519,26 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -403,13 +546,20 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -429,18 +579,26 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -448,13 +606,20 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -473,25 +638,38 @@ export const onCreateClient = `subscription OnCreateClient {
   onCreateClient {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -499,21 +677,33 @@ export const onCreateClient = `subscription OnCreateClient {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -526,10 +716,14 @@ export const onCreateClient = `subscription OnCreateClient {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -547,25 +741,38 @@ export const onUpdateClient = `subscription OnUpdateClient {
   onUpdateClient {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -573,21 +780,33 @@ export const onUpdateClient = `subscription OnUpdateClient {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -600,10 +819,14 @@ export const onUpdateClient = `subscription OnUpdateClient {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -621,25 +844,38 @@ export const onDeleteClient = `subscription OnDeleteClient {
   onDeleteClient {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -647,21 +883,33 @@ export const onDeleteClient = `subscription OnDeleteClient {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -674,10 +922,14 @@ export const onDeleteClient = `subscription OnDeleteClient {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -702,18 +954,27 @@ export const onCreateTag = `subscription OnCreateTag {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -744,18 +1005,27 @@ export const onUpdateTag = `subscription OnUpdateTag {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -786,18 +1056,27 @@ export const onDeleteTag = `subscription OnDeleteTag {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -823,22 +1102,32 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -846,21 +1135,33 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -873,10 +1174,14 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -897,10 +1202,14 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -920,22 +1229,32 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -943,21 +1262,33 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -970,10 +1301,14 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -994,10 +1329,14 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -1017,22 +1356,32 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -1040,21 +1389,33 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -1067,10 +1428,14 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -1091,10 +1456,14 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id

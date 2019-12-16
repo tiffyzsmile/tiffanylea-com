@@ -10,22 +10,32 @@ export const listProjects = `query ListProjects(
     items {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -33,21 +43,33 @@ export const listProjects = `query ListProjects(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -60,10 +82,14 @@ export const listProjects = `query ListProjects(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -82,30 +108,45 @@ export const getProject = `query GetProject($id: ID!) {
   getProject(id: $id) {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -117,17 +158,26 @@ export const getProject = `query GetProject($id: ID!) {
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -135,13 +185,20 @@ export const getProject = `query GetProject($id: ID!) {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -158,18 +215,27 @@ export const getProject = `query GetProject($id: ID!) {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -199,22 +265,33 @@ export const listEmployers = `query ListEmployers(
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -232,18 +309,26 @@ export const getEmployer = `query GetEmployer($id: ID!) {
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -251,13 +336,20 @@ export const getEmployer = `query GetEmployer($id: ID!) {
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -281,17 +373,26 @@ export const listClients = `query ListClients(
     items {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -299,13 +400,20 @@ export const listClients = `query ListClients(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -324,25 +432,38 @@ export const getClient = `query GetClient($id: ID!) {
   getClient(id: $id) {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -350,21 +471,33 @@ export const getClient = `query GetClient($id: ID!) {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -377,10 +510,14 @@ export const getClient = `query GetClient($id: ID!) {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -406,10 +543,14 @@ export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: In
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -435,18 +576,27 @@ export const getTag = `query GetTag($id: ID!) {
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -472,22 +622,32 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -495,21 +655,33 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -522,10 +694,14 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -546,10 +722,14 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -574,14 +754,20 @@ export const listTaggedProjects = `query ListTaggedProjects(
       project {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -589,13 +775,20 @@ export const listTaggedProjects = `query ListTaggedProjects(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {

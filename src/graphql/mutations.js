@@ -8,30 +8,45 @@ export const createProject = `mutation CreateProject(
   createProject(input: $input, condition: $condition) {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -43,17 +58,26 @@ export const createProject = `mutation CreateProject(
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -61,13 +85,20 @@ export const createProject = `mutation CreateProject(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -84,18 +115,27 @@ export const createProject = `mutation CreateProject(
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -122,30 +162,45 @@ export const updateProject = `mutation UpdateProject(
   updateProject(input: $input, condition: $condition) {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -157,17 +212,26 @@ export const updateProject = `mutation UpdateProject(
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -175,13 +239,20 @@ export const updateProject = `mutation UpdateProject(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -198,18 +269,27 @@ export const updateProject = `mutation UpdateProject(
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -236,30 +316,45 @@ export const deleteProject = `mutation DeleteProject(
   deleteProject(input: $input, condition: $condition) {
     id
     name
+    date
     description
     features
     url
     images
+    display
+    logo
+    internal
     employer {
       id
       name
       startdate
+      enddate
+      url
       projects {
         items {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -271,17 +366,26 @@ export const deleteProject = `mutation DeleteProject(
     client {
       id
       name
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -289,13 +393,20 @@ export const deleteProject = `mutation DeleteProject(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -312,18 +423,27 @@ export const deleteProject = `mutation DeleteProject(
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -351,18 +471,26 @@ export const createEmployer = `mutation CreateEmployer(
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -370,13 +498,20 @@ export const createEmployer = `mutation CreateEmployer(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -399,18 +534,26 @@ export const updateEmployer = `mutation UpdateEmployer(
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -418,13 +561,20 @@ export const updateEmployer = `mutation UpdateEmployer(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -447,18 +597,26 @@ export const deleteEmployer = `mutation DeleteEmployer(
     id
     name
     startdate
+    enddate
+    url
     projects {
       items {
         id
         name
+        date
         description
         features
         url
         images
+        display
+        logo
+        internal
         employer {
           id
           name
           startdate
+          enddate
+          url
           projects {
             nextToken
           }
@@ -466,13 +624,20 @@ export const deleteEmployer = `mutation DeleteEmployer(
         client {
           id
           name
+          logo
+          url
+          feedback
           projects {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
         }
         tags {
@@ -494,25 +659,38 @@ export const createClient = `mutation CreateClient(
   createClient(input: $input, condition: $condition) {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -520,21 +698,33 @@ export const createClient = `mutation CreateClient(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -547,10 +737,14 @@ export const createClient = `mutation CreateClient(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -571,25 +765,38 @@ export const updateClient = `mutation UpdateClient(
   updateClient(input: $input, condition: $condition) {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -597,21 +804,33 @@ export const updateClient = `mutation UpdateClient(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -624,10 +843,14 @@ export const updateClient = `mutation UpdateClient(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -648,25 +871,38 @@ export const deleteClient = `mutation DeleteClient(
   deleteClient(input: $input, condition: $condition) {
     id
     name
+    logo
+    url
+    feedback
     projects {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -674,21 +910,33 @@ export const deleteClient = `mutation DeleteClient(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -701,10 +949,14 @@ export const deleteClient = `mutation DeleteClient(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -732,18 +984,27 @@ export const createTag = `mutation CreateTag(
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -777,18 +1038,27 @@ export const updateTag = `mutation UpdateTag(
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -822,18 +1092,27 @@ export const deleteTag = `mutation DeleteTag(
         project {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -862,22 +1141,32 @@ export const createTaggedProject = `mutation CreateTaggedProject(
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -885,21 +1174,33 @@ export const createTaggedProject = `mutation CreateTaggedProject(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -912,10 +1213,14 @@ export const createTaggedProject = `mutation CreateTaggedProject(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -936,10 +1241,14 @@ export const createTaggedProject = `mutation CreateTaggedProject(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -962,22 +1271,32 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -985,21 +1304,33 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -1012,10 +1343,14 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -1036,10 +1371,14 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -1062,22 +1401,32 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
     project {
       id
       name
+      date
       description
       features
       url
       images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
         projects {
           items {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           nextToken
         }
@@ -1085,21 +1434,33 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
       client {
         id
         name
+        logo
+        url
+        feedback
         projects {
           id
           name
+          date
           description
           features
           url
           images
+          display
+          logo
+          internal
           employer {
             id
             name
             startdate
+            enddate
+            url
           }
           client {
             id
             name
+            logo
+            url
+            feedback
           }
           tags {
             nextToken
@@ -1112,10 +1473,14 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id
@@ -1136,10 +1501,14 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
           project {
             id
             name
+            date
             description
             features
             url
             images
+            display
+            logo
+            internal
           }
           tag {
             id

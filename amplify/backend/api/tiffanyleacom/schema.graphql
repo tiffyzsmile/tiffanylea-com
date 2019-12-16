@@ -8,13 +8,17 @@ type Project
 ) {
   id: ID!
   name: String!
+  date: AWSDate
   description: String
-  features: [String]
+  features: [AWSJSON]
   url: AWSURL
   employer: Employer @connection(name: "EmployerProjects")
   client: Client @connection(name: "ClientProjects")
   images: [String]
   tags: [TaggedProject] @connection(name: "TagsForProject")
+  display: Boolean
+  logo: String
+  internal: String
 }
 
 type Employer
@@ -28,6 +32,8 @@ type Employer
   id: ID!
   name: String!
   startdate: AWSDate
+  enddate: AWSDate
+  url: AWSURL
   projects: [Project] @connection(name: "EmployerProjects")
 }
 
@@ -41,6 +47,9 @@ type Client
 ) {
   id: ID!
   name: String
+  logo: String
+  url: AWSURL
+  feedback: String
   projects: Project @connection(name: "ClientProjects")
 }
 

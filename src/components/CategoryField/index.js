@@ -14,12 +14,12 @@ const CategoryField = () => {
           <option>Automotive</option>
           <option>Attorneys/Law Firms</option>
           <option>Financial</option>
-          <option>Medical Supplies</option>
+          <option>Medical</option>
           <option>Utilities</option>
           <option>Tourism</option>
           <option>Religious</option>
           <option>Global</option>
-          <option>Non-profits</option>
+          <option>Non-profit</option>
         </optgroup>
         <option>Languages</option>
         <option>Project Types</option>
