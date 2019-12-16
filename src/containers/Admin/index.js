@@ -18,7 +18,7 @@ const Admin = () => {
         <Route path="/admin/projects" component={Projects} />
         <Route path="/admin/project/:id?" component={Project} />
         <Route path="/admin/employers" component={Employers} />
-        <Route path="/admin/employer/:id" component={Employer} />
+        <Route path="/admin/employer/:id?" component={Employer} />
         <Route path="/admin/clients" component={Clients} />
         <Route path="/admin/client/:id" component={Client} />
         <Route path="/admin/tags/:id?" component={Tags} />
