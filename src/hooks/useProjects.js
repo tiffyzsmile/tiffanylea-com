@@ -6,10 +6,12 @@ import {
   updateProject as updateProjectMutation,
   deleteProject as deleteProjectMutation
 } from 'graphql/mutations';
+import { formatDateForAWS, formatDateFromAWS } from 'helpers/forms';
 
 const getFormattedInput = ({
   id,
   name,
+  date,
   description,
   features,
   url,
@@ -31,6 +33,10 @@ const getFormattedInput = ({
     formattedInput.projectClientId = client.id;
   }
 
+  if (date) {
+    formattedInput.date = formatDateForAWS(date);
+  }
+
   return { name, description, features, url, images, ...formattedInput };
 };
 
@@ -45,6 +51,12 @@ const useProjects = () => {
     });
 
     const project = data ? data.getProject : data;
+    // Need to convert aws format 'yyyy-mm-dd' back to date object
+    // for react-datepicker
+    if (project && project.date) {
+      project.date = formatDateFromAWS(project.date);
+    }
+
     return { loading, data: project, error };
   };
 

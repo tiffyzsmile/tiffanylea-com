@@ -43,6 +43,7 @@ export const onCreateProject = `subscription OnCreateProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -57,6 +58,7 @@ export const onCreateProject = `subscription OnCreateProject {
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -85,6 +87,7 @@ export const onCreateProject = `subscription OnCreateProject {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -134,6 +137,7 @@ export const onCreateProject = `subscription OnCreateProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -198,6 +202,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -212,6 +217,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -240,6 +246,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -289,6 +296,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -353,6 +361,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -367,6 +376,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -395,6 +405,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -444,6 +455,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -500,6 +512,7 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -562,6 +575,7 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -624,6 +638,7 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -656,6 +671,7 @@ export const onCreateClient = `subscription OnCreateClient {
   onCreateClient {
     id
     name
+    description
     logo
     url
     feedback
@@ -696,6 +712,7 @@ export const onCreateClient = `subscription OnCreateClient {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -721,6 +738,7 @@ export const onCreateClient = `subscription OnCreateClient {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -761,6 +779,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
   onUpdateClient {
     id
     name
+    description
     logo
     url
     feedback
@@ -801,6 +820,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -826,6 +846,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -866,6 +887,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
   onDeleteClient {
     id
     name
+    description
     logo
     url
     feedback
@@ -906,6 +928,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -931,6 +954,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -997,6 +1021,7 @@ export const onCreateTag = `subscription OnCreateTag {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1049,6 +1074,7 @@ export const onUpdateTag = `subscription OnUpdateTag {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1101,6 +1127,7 @@ export const onDeleteTag = `subscription OnDeleteTag {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1163,6 +1190,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -1188,6 +1216,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1292,6 +1321,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -1317,6 +1347,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1421,6 +1452,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -1446,6 +1478,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
           client {
             id
             name
+            description
             logo
             url
             feedback

@@ -7,6 +7,7 @@ import S3FileUpload from 'components/S3FileUpload';
 import EmployerField from 'components/EmployerField';
 import ClientField from 'components/ClientField';
 import TaggedProjectField from 'components/TaggedProjectField';
+import DatePicker from 'components/DatePicker';
 
 const styles = {
   gridWrapper: {
@@ -56,6 +57,8 @@ const Project = () => {
                         placeholder="Project ID"
                       />
                     </label>
+                  </div>
+                  <div>
                     <label htmlFor="name">
                       Project Name
                       <Field
@@ -65,6 +68,27 @@ const Project = () => {
                         placeholder="Project Name"
                       />
                     </label>
+                  </div>
+                  <div>
+                    <label htmlFor="date">
+                      Date:
+                      <Field
+                        id="date"
+                        name="date"
+                        render={({ input }) => {
+                          return (
+                            <DatePicker
+                              {...input}
+                              showMonthDropdown
+                              showYearDropdown
+                              dropdownMode="select"
+                            />
+                          );
+                        }}
+                      />
+                    </label>
+                  </div>
+                  <div>
                     <br />
                     <label htmlFor="description">
                       Project Description

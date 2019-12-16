@@ -44,6 +44,7 @@ export const listProjects = `query ListProjects(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -69,6 +70,7 @@ export const listProjects = `query ListProjects(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -148,6 +150,7 @@ export const getProject = `query GetProject($id: ID!) {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -162,6 +165,7 @@ export const getProject = `query GetProject($id: ID!) {
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -190,6 +194,7 @@ export const getProject = `query GetProject($id: ID!) {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -239,6 +244,7 @@ export const getProject = `query GetProject($id: ID!) {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -297,6 +303,7 @@ export const listEmployers = `query ListEmployers(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -346,6 +353,7 @@ export const getEmployer = `query GetEmployer($id: ID!) {
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -383,6 +391,7 @@ export const listClients = `query ListClients(
     items {
       id
       name
+      description
       logo
       url
       feedback
@@ -411,6 +420,7 @@ export const listClients = `query ListClients(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -443,6 +453,7 @@ export const getClient = `query GetClient($id: ID!) {
   getClient(id: $id) {
     id
     name
+    description
     logo
     url
     feedback
@@ -483,6 +494,7 @@ export const getClient = `query GetClient($id: ID!) {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -508,6 +520,7 @@ export const getClient = `query GetClient($id: ID!) {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -608,6 +621,7 @@ export const getTag = `query GetTag($id: ID!) {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -670,6 +684,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -695,6 +710,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -792,6 +808,7 @@ export const listTaggedProjects = `query ListTaggedProjects(
         client {
           id
           name
+          description
           logo
           url
           feedback

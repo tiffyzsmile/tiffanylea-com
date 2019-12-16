@@ -48,6 +48,7 @@ type Client
 ) {
   id: ID!
   name: String
+  description: String
   logo: String
   url: AWSURL
   feedback: String

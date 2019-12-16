@@ -46,6 +46,7 @@ export const createProject = `mutation CreateProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -60,6 +61,7 @@ export const createProject = `mutation CreateProject(
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -88,6 +90,7 @@ export const createProject = `mutation CreateProject(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -137,6 +140,7 @@ export const createProject = `mutation CreateProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -204,6 +208,7 @@ export const updateProject = `mutation UpdateProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -218,6 +223,7 @@ export const updateProject = `mutation UpdateProject(
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -246,6 +252,7 @@ export const updateProject = `mutation UpdateProject(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -295,6 +302,7 @@ export const updateProject = `mutation UpdateProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -362,6 +370,7 @@ export const deleteProject = `mutation DeleteProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -376,6 +385,7 @@ export const deleteProject = `mutation DeleteProject(
     client {
       id
       name
+      description
       logo
       url
       feedback
@@ -404,6 +414,7 @@ export const deleteProject = `mutation DeleteProject(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -453,6 +464,7 @@ export const deleteProject = `mutation DeleteProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -512,6 +524,7 @@ export const createEmployer = `mutation CreateEmployer(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -577,6 +590,7 @@ export const updateEmployer = `mutation UpdateEmployer(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -642,6 +656,7 @@ export const deleteEmployer = `mutation DeleteEmployer(
         client {
           id
           name
+          description
           logo
           url
           feedback
@@ -677,6 +692,7 @@ export const createClient = `mutation CreateClient(
   createClient(input: $input, condition: $condition) {
     id
     name
+    description
     logo
     url
     feedback
@@ -717,6 +733,7 @@ export const createClient = `mutation CreateClient(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -742,6 +759,7 @@ export const createClient = `mutation CreateClient(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -785,6 +803,7 @@ export const updateClient = `mutation UpdateClient(
   updateClient(input: $input, condition: $condition) {
     id
     name
+    description
     logo
     url
     feedback
@@ -825,6 +844,7 @@ export const updateClient = `mutation UpdateClient(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -850,6 +870,7 @@ export const updateClient = `mutation UpdateClient(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -893,6 +914,7 @@ export const deleteClient = `mutation DeleteClient(
   deleteClient(input: $input, condition: $condition) {
     id
     name
+    description
     logo
     url
     feedback
@@ -933,6 +955,7 @@ export const deleteClient = `mutation DeleteClient(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -958,6 +981,7 @@ export const deleteClient = `mutation DeleteClient(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1027,6 +1051,7 @@ export const createTag = `mutation CreateTag(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1082,6 +1107,7 @@ export const updateTag = `mutation UpdateTag(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1137,6 +1163,7 @@ export const deleteTag = `mutation DeleteTag(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1202,6 +1229,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -1227,6 +1255,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1334,6 +1363,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -1359,6 +1389,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
           client {
             id
             name
+            description
             logo
             url
             feedback
@@ -1466,6 +1497,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
       client {
         id
         name
+        description
         logo
         url
         feedback
@@ -1491,6 +1523,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
           client {
             id
             name
+            description
             logo
             url
             feedback

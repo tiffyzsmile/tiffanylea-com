@@ -20,7 +20,7 @@ const Admin = () => {
         <Route path="/admin/employers" component={Employers} />
         <Route path="/admin/employer/:id?" component={Employer} />
         <Route path="/admin/clients" component={Clients} />
-        <Route path="/admin/client/:id" component={Client} />
+        <Route path="/admin/client/:id?" component={Client} />
         <Route path="/admin/tags/:id?" component={Tags} />
         <Route path="/admin/taggedprojects/:id?" component={TaggedProjects} />
       </Switch>
