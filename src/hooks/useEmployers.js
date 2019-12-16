@@ -11,6 +11,24 @@ import {
 } from 'graphql/mutations';
 import { formatDateForAWS, formatDateFromAWS } from 'helpers/forms';
 
+const getFormattedInput = ({ id, name, startdate, enddate, logo, url }) => {
+  const formattedInput = {};
+
+  if (id) {
+    formattedInput.id = id;
+  }
+
+  if (startdate) {
+    formattedInput.startdate = formatDateForAWS(startdate);
+  }
+
+  if (enddate) {
+    formattedInput.enddate = formatDateForAWS(enddate);
+  }
+
+  return { name, url, logo, ...formattedInput };
+};
+
 const useEmployers = () => {
   const [newEmployer] = useMutation(gql(createEmployerMutation));
   const [changeEmployer] = useMutation(gql(updateEmployerMutation));
@@ -27,6 +45,9 @@ const useEmployers = () => {
     if (employer && employer.startdate) {
       employer.startdate = formatDateFromAWS(employer.startdate);
     }
+    if (employer && employer.enddate) {
+      employer.enddate = formatDateFromAWS(employer.enddate);
+    }
     return { loading, data: employer, error };
   };
 
@@ -37,9 +58,11 @@ const useEmployers = () => {
   };
 
   const addEmployer = employerToAdd => {
+    const input = getFormattedInput(employerToAdd);
+
     newEmployer({
       variables: {
-        input: employerToAdd
+        input
       },
       //      onCompleted: data => console.log('Employer Added!', data),
       refetchQueries: [{ query: gql(listEmployers) }]
@@ -57,12 +80,11 @@ const useEmployers = () => {
   };
 
   const updateEmployer = employerToUpdate => {
+    const input = getFormattedInput(employerToUpdate);
+
     const { loading, data, error } = changeEmployer({
       variables: {
-        input: {
-          ...employerToUpdate,
-          startdate: formatDateForAWS(employerToUpdate.startdate)
-        }
+        input
       }
     });
     const employer = data ? data.updateEmployer : data;

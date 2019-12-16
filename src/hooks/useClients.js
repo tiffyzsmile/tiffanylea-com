@@ -7,6 +7,16 @@ import {
   deleteClient as deleteClientMutation
 } from 'graphql/mutations';
 
+const getFormattedInput = ({ id, name, description, logo, url, feedback }) => {
+  const formattedInput = {};
+
+  if (id) {
+    formattedInput.id = id;
+  }
+
+  return { name, description, logo, url, feedback, ...formattedInput };
+};
+
 const useClients = () => {
   const [newClient] = useMutation(gql(createClientMutation));
   const [changeClient] = useMutation(gql(updateClientMutation));
@@ -22,19 +32,21 @@ const useClients = () => {
   };
 
   const getClients = () => {
-    const { loading, data, error } = useQuery(gql(listClients));
+    const { loading, data, error } = useQuery(gql(listClients), {
+      variables: { limit: 500 }
+    });
     const clients = data ? data.listClients.items : data;
     return { loading, data: clients, error };
   };
 
-  const addClient = clientToAdd => {
+  const addClient = (clientToAdd, onCompleted) => {
+    const input = getFormattedInput(clientToAdd);
+
     newClient({
       variables: {
-        input: clientToAdd
-      },
-      //      onCompleted: data => console.log('Client Added!', data),
-      refetchQueries: [{ query: gql(listClients) }]
-    });
+        input
+      }
+    }).then(({ data: { createClient } }) => onCompleted(createClient));
   };
 
   const deleteClient = clientToDelete => {
@@ -42,15 +54,16 @@ const useClients = () => {
       variables: {
         input: clientToDelete
       },
-      //      onCompleted: data => console.log('Client Deleted!', data),
-      refetchQueries: [{ query: gql(listClients) }]
+      refetchQueries: [{ query: gql(listClients), variables: { limit: 500 } }]
     });
   };
 
   const updateClient = clientToUpdate => {
+    const input = getFormattedInput(clientToUpdate);
+
     const { loading, data, error } = changeClient({
       variables: {
-        input: clientToUpdate
+        input
       }
     });
     const client = data ? data.updateClient : data;

@@ -13,7 +13,11 @@
     },
     "categories": {
       "auth": {
-        "tiffanyleacom0b033fd5": {}
+        "tiffanyleacom0b033fd5": {},
+        "userPoolGroups": {}
+      },
+      "function": {
+        "AdminQueriese282e554": {}
       }
     }
   }

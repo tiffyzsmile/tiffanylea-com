@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
 import Button from 'components/Button';
 
 const Clients = () => {
-  const { getClients, addClient, deleteClient } = useClients();
+  const history = useHistory();
+  const { getClients, deleteClient } = useClients();
   const { loading, data, error } = getClients();
 
   const clientsContent = clients =>
@@ -40,20 +41,14 @@ const Clients = () => {
           <thead>
             <tr>
               <th>Client</th>
-              <th>Delete</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>{clientsContent(data)}</tbody>
           <tfoot>
             <tr>
               <td colSpan="2">
-                <Button
-                  onClick={() =>
-                    addClient({
-                      name: `Example Client ${Math.floor(Math.random() * 5000)}`
-                    })
-                  }
-                >
+                <Button onClick={() => history.push(`/admin/client`)}>
                   Add Client
                 </Button>
               </td>

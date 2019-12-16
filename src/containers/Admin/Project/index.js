@@ -1,47 +1,44 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
-import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
-import S3ImageUpload from 'components/S3ImageUpload';
+import S3FileUpload from 'components/S3FileUpload';
+import EmployerField from 'components/EmployerField';
+import ClientField from 'components/ClientField';
+import TaggedProjectField from 'components/TaggedProjectField';
+import DatePicker from 'components/DatePicker';
+
+const styles = {
+  gridWrapper: {
+    display: 'grid',
+    gridTemplateColumns: '60% 40%'
+  }
+};
 
 const Project = () => {
   const { id } = useParams();
-  const { getProject, updateProject } = useProjects();
-  const { loading, data, error } = getProject(id);
-  const { getEmployers } = useEmployers();
+  const history = useHistory();
+  const { getProject, addProject, updateProject } = useProjects();
   const {
-    loading: loadingEmployers,
-    data: employers,
-    error: employersError
-  } = getEmployers();
+    loading,
+    data = { id: '', name: '', images: [], tags: {} }
+  } = getProject(id);
 
-  const onSubmit = ({ id: projectId, name, description, employer }) => {
-    updateProject({
-      id: projectId,
-      name,
-      description,
-      projectEmployerId: employer.id
-    });
+  const onSubmit = formValues => {
+    if (id) {
+      updateProject(formValues);
+    } else {
+      addProject(formValues, onCompleteData => {
+        history.push(`/admin/project/${onCompleteData.id}`);
+      });
+    }
   };
-
-  // may want to remove this completely and make it an autocomplete field
-  const employersOptionList = (employers || []).map(e => {
-    return (
-      <option key={e.id} value={e.id}>
-        {e.name}
-      </option>
-    );
-  });
 
   return (
     <div>
       <h1>Project Details</h1>
-      <S3ImageUpload />
-      {loading && <h1>Loading...</h1>}
-      {error && <h1>Error...</h1>}
-      {data && (
+      <div style={styles.gridWrapper}>
         <section>
           <Form
             onSubmit={onSubmit}
@@ -50,6 +47,17 @@ const Project = () => {
               return (
                 <form onSubmit={handleSubmit}>
                   {loading && <div className="loading" />}
+                  <div>
+                    <label htmlFor="id">
+                      Project ID
+                      <Field
+                        id="id"
+                        name="id"
+                        component="input"
+                        placeholder="Project ID"
+                      />
+                    </label>
+                  </div>
                   <div>
                     <label htmlFor="name">
                       Project Name
@@ -60,6 +68,28 @@ const Project = () => {
                         placeholder="Project Name"
                       />
                     </label>
+                  </div>
+                  <div>
+                    <label htmlFor="date">
+                      Date:
+                      <Field
+                        id="date"
+                        name="date"
+                        render={({ input }) => {
+                          return (
+                            <DatePicker
+                              {...input}
+                              showMonthDropdown
+                              showYearDropdown
+                              dropdownMode="select"
+                            />
+                          );
+                        }}
+                      />
+                    </label>
+                  </div>
+                  <div>
+                    <br />
                     <label htmlFor="description">
                       Project Description
                       <Field
@@ -71,26 +101,33 @@ const Project = () => {
                     </label>
                   </div>
                   <div>
-                    <label htmlFor="employer">
-                      Employer
+                    <EmployerField />
+                  </div>
+                  <div>
+                    <ClientField />
+                  </div>
+                  <div>
+                    <label htmlFor="images">
+                      Screenshots
                       <Field
-                        id="employer"
-                        name="employer.id"
-                        component="select"
-                      >
-                        {loadingEmployers && <option>Loading Employers</option>}
-                        {employersError && (
-                          <option>Error Loading Employers</option>
-                        )}
-                        <option />
-                        {employersOptionList}
-                      </Field>
+                        id="images"
+                        name="images"
+                        render={({ input }) => {
+                          return (
+                            <S3FileUpload
+                              {...input}
+                              filePath={id}
+                              multiple
+                              alt={`Screenshot of ${values.name || ''}`}
+                            />
+                          );
+                        }}
+                      />
                     </label>
                   </div>
                   <div className="buttons">
                     <Button
                       onClick={() => onSubmit(values)}
-                      type="submit"
                       disabled={submitting || pristine}
                     >
                       Submit
@@ -102,7 +139,10 @@ const Project = () => {
             }}
           />
         </section>
-      )}
+        <section>
+          <TaggedProjectField projectId={data.id} selected={data.tags.items} />
+        </section>
+      </div>
     </div>
   );
 };

@@ -1,33 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const getProject = `query GetProject($id: ID!) {
-  getProject(id: $id) {
-    id
-    name
-    description
-    url
-    employer {
-      id
-      name
-      startdate
-      projects {
-        nextToken
-      }
-    }
-    client {
-      id
-      name
-      projects {
-        id
-        name
-        description
-        url
-      }
-    }
-  }
-}
-`;
 export const listProjects = `query ListProjects(
   $filter: ModelProjectFilterInput
   $limit: Int
@@ -37,33 +10,257 @@ export const listProjects = `query ListProjects(
     items {
       id
       name
+      date
       description
+      features
       url
+      images
+      display
+      logo
+      internal
       employer {
         id
         name
         startdate
+        enddate
+        url
+        logo
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          nextToken
+        }
       }
       client {
         id
         name
+        description
+        logo
+        url
+        feedback
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
+        nextToken
       }
     }
     nextToken
   }
 }
 `;
-export const getEmployer = `query GetEmployer($id: ID!) {
-  getEmployer(id: $id) {
+export const getProject = `query GetProject($id: ID!) {
+  getProject(id: $id) {
     id
     name
-    startdate
-    projects {
-      items {
+    date
+    description
+    features
+    url
+    images
+    display
+    logo
+    internal
+    employer {
+      id
+      name
+      startdate
+      enddate
+      url
+      logo
+      projects {
+        items {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
+        nextToken
+      }
+    }
+    client {
+      id
+      name
+      description
+      logo
+      url
+      feedback
+      projects {
         id
         name
+        date
         description
+        features
         url
+        images
+        display
+        logo
+        internal
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
+      }
+    }
+    tags {
+      items {
+        id
+        project {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
       }
       nextToken
     }
@@ -80,7 +277,41 @@ export const listEmployers = `query ListEmployers(
       id
       name
       startdate
+      enddate
+      url
+      logo
       projects {
+        items {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
         nextToken
       }
     }
@@ -88,24 +319,65 @@ export const listEmployers = `query ListEmployers(
   }
 }
 `;
-export const getClient = `query GetClient($id: ID!) {
-  getClient(id: $id) {
+export const getEmployer = `query GetEmployer($id: ID!) {
+  getEmployer(id: $id) {
     id
     name
+    startdate
+    enddate
+    url
+    logo
     projects {
-      id
-      name
-      description
-      url
-      employer {
+      items {
         id
         name
-        startdate
+        date
+        description
+        features
+        url
+        images
+        display
+        logo
+        internal
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
       }
-      client {
-        id
-        name
-      }
+      nextToken
     }
   }
 }
@@ -119,11 +391,457 @@ export const listClients = `query ListClients(
     items {
       id
       name
+      description
+      logo
+      url
+      feedback
       projects {
         id
         name
+        date
         description
+        features
         url
+        images
+        display
+        logo
+        internal
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getClient = `query GetClient($id: ID!) {
+  getClient(id: $id) {
+    id
+    name
+    description
+    logo
+    url
+    feedback
+    projects {
+      id
+      name
+      date
+      description
+      features
+      url
+      images
+      display
+      logo
+      internal
+      employer {
+        id
+        name
+        startdate
+        enddate
+        url
+        logo
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          nextToken
+        }
+      }
+      client {
+        id
+        name
+        description
+        logo
+        url
+        feedback
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: Int, $nextToken: String) {
+  listTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      name
+      category
+      projects {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
+        nextToken
+      }
+    }
+    nextToken
+  }
+}
+`;
+export const getTag = `query GetTag($id: ID!) {
+  getTag(id: $id) {
+    id
+    name
+    category
+    projects {
+      items {
+        id
+        project {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
+        tag {
+          id
+          name
+          category
+          projects {
+            nextToken
+          }
+        }
+      }
+      nextToken
+    }
+  }
+}
+`;
+export const getTaggedProject = `query GetTaggedProject($id: ID!) {
+  getTaggedProject(id: $id) {
+    id
+    project {
+      id
+      name
+      date
+      description
+      features
+      url
+      images
+      display
+      logo
+      internal
+      employer {
+        id
+        name
+        startdate
+        enddate
+        url
+        logo
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          nextToken
+        }
+      }
+      client {
+        id
+        name
+        description
+        logo
+        url
+        feedback
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+          }
+          tags {
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
+        nextToken
+      }
+    }
+    tag {
+      id
+      name
+      category
+      projects {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+          }
+        }
+        nextToken
+      }
+    }
+  }
+}
+`;
+export const listTaggedProjects = `query ListTaggedProjects(
+  $filter: ModelTaggedProjectFilterInput
+  $limit: Int
+  $nextToken: String
+) {
+  listTaggedProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    items {
+      id
+      project {
+        id
+        name
+        date
+        description
+        features
+        url
+        images
+        display
+        logo
+        internal
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
+      }
+      tag {
+        id
+        name
+        category
+        projects {
+          items {
+            id
+          }
+          nextToken
+        }
       }
     }
     nextToken

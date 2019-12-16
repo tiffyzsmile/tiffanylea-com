@@ -6,6 +6,39 @@ import {
   updateProject as updateProjectMutation,
   deleteProject as deleteProjectMutation
 } from 'graphql/mutations';
+import { formatDateForAWS, formatDateFromAWS } from 'helpers/forms';
+
+const getFormattedInput = ({
+  id,
+  name,
+  date,
+  description,
+  features,
+  url,
+  images,
+  employer,
+  client
+}) => {
+  const formattedInput = {};
+
+  if (id) {
+    formattedInput.id = id;
+  }
+
+  if (employer && employer.id) {
+    formattedInput.projectEmployerId = employer.id;
+  }
+
+  if (client && client.id) {
+    formattedInput.projectClientId = client.id;
+  }
+
+  if (date) {
+    formattedInput.date = formatDateForAWS(date);
+  }
+
+  return { name, description, features, url, images, ...formattedInput };
+};
 
 const useProjects = () => {
   const [newProject] = useMutation(gql(createProjectMutation));
@@ -18,23 +51,31 @@ const useProjects = () => {
     });
 
     const project = data ? data.getProject : data;
+    // Need to convert aws format 'yyyy-mm-dd' back to date object
+    // for react-datepicker
+    if (project && project.date) {
+      project.date = formatDateFromAWS(project.date);
+    }
+
     return { loading, data: project, error };
   };
 
   const getProjects = () => {
-    const { loading, data, error } = useQuery(gql(listProjects));
+    const { loading, data, error } = useQuery(gql(listProjects), {
+      variables: { limit: 500 }
+    });
     const projects = data ? data.listProjects.items : data;
     return { loading, data: projects, error };
   };
 
-  const addProject = projectToAdd => {
+  const addProject = (projectToAdd, onCompleted) => {
+    const input = getFormattedInput(projectToAdd);
+
     newProject({
       variables: {
-        input: projectToAdd
-      },
-      //      onCompleted: data => console.log('Project Added!', data),
-      refetchQueries: [{ query: gql(listProjects) }]
-    });
+        input
+      }
+    }).then(({ data: { createProject } }) => onCompleted(createProject));
   };
 
   const deleteProject = projectToDelete => {
@@ -42,15 +83,16 @@ const useProjects = () => {
       variables: {
         input: projectToDelete
       },
-      //      onCompleted: data => console.log('Project Deleted!', data),
-      refetchQueries: [{ query: gql(listProjects) }]
+      refetchQueries: [{ query: gql(listProjects), variables: { limit: 500 } }]
     });
   };
 
   const updateProject = projectToUpdate => {
+    const input = getFormattedInput(projectToUpdate);
+
     const { loading, data, error } = changeProject({
       variables: {
-        input: projectToUpdate
+        input
       }
     });
     const project = data ? data.updateProject : data;

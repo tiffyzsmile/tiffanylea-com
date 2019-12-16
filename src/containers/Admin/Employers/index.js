@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
 
 const Employers = () => {
-  const { getEmployers, addEmployer, deleteEmployer } = useEmployers();
+  const history = useHistory();
+  const { getEmployers, deleteEmployer } = useEmployers();
   const { loading, data, error } = getEmployers();
 
   const employersContent = employers =>
@@ -16,12 +17,18 @@ const Employers = () => {
           </td>
           <td className="center">
             <Button
+              styleAs="link"
+              onClick={() => history.push(`/admin/employer/${n.id}`)}
+            >
+              Edit
+            </Button>
+            <Button
+              styleAs="link"
               onClick={() =>
                 deleteEmployer({
                   id: n.id
                 })
               }
-              type="button"
             >
               Delete
             </Button>
@@ -39,23 +46,14 @@ const Employers = () => {
           <thead>
             <tr>
               <th>Employer</th>
-              <th>Delete</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>{employersContent(data)}</tbody>
           <tfoot>
             <tr>
               <td colSpan="2">
-                <Button
-                  onClick={() =>
-                    addEmployer({
-                      name: `Example Employer ${Math.floor(
-                        Math.random() * 5000
-                      )}`
-                    })
-                  }
-                  type="button"
-                >
+                <Button onClick={() => history.push(`/admin/employer`)}>
                   Add Employer
                 </Button>
               </td>
@@ -66,5 +64,9 @@ const Employers = () => {
     </div>
   );
 };
+
+Employers.defaultProps = {};
+
+Employers.propTypes = {};
 
 export default Employers;
