@@ -11,7 +11,8 @@ const Tag = () => {
   const { loading, data, error } = getTags();
 
   const onSubmit = formValues => {
-    if (formValues.id) {
+    // If this is an existing tag
+    if (idToEdit === formValues.id) {
       updateTag(formValues);
     } else {
       addTag(formValues);
@@ -24,6 +25,17 @@ const Tag = () => {
       if (idToEdit === n.id) {
         return (
           <tr key={n.id}>
+            <td>
+              <label htmlFor="id">
+                Tag ID
+                <Field
+                  id="id"
+                  name="id"
+                  component="input"
+                  placeholder="Tag ID"
+                />
+              </label>
+            </td>
             <td>
               <label htmlFor="name">
                 Tag Name
@@ -51,6 +63,7 @@ const Tag = () => {
       }
       return (
         <tr key={n.id}>
+          <td>{n.id}</td>
           <td>{n.name}</td>
           <td>{n.category}</td>
           <td className="center">
@@ -94,6 +107,7 @@ const Tag = () => {
                 <table>
                   <thead>
                     <tr>
+                      <th>ID</th>
                       <th>Tag</th>
                       <th>Category</th>
                       <th>Actions</th>
@@ -101,6 +115,17 @@ const Tag = () => {
                   </thead>
                   <tbody>
                     <tr key="0">
+                      <td>
+                        <label htmlFor="id">
+                          Tag ID
+                          <Field
+                            id="id"
+                            name="id"
+                            component="input"
+                            placeholder="Tag ID"
+                          />
+                        </label>
+                      </td>
                       <td>
                         <label htmlFor="name">
                           Tag Name
@@ -128,7 +153,7 @@ const Tag = () => {
                   </tbody>
                   <tfoot>
                     <tr>
-                      <td colSpan="3">
+                      <td colSpan="4">
                         <Button
                           onClick={() =>
                             addTag({
