@@ -1,6 +1,6 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import Button from 'components/Button';
 import S3FileUpload from 'components/S3FileUpload';
@@ -17,6 +17,7 @@ const styles = {
 
 const Project = () => {
   const { id } = useParams();
+  const history = useHistory();
   const { getProject, addProject, updateProject } = useProjects();
   const {
     loading,
@@ -27,7 +28,9 @@ const Project = () => {
     if (id) {
       updateProject(formValues);
     } else {
-      addProject(formValues);
+      addProject(formValues, onCompleteData => {
+        history.push(`/admin/project/${onCompleteData.id}`);
+      });
     }
   };
 

@@ -49,21 +49,21 @@ const useProjects = () => {
   };
 
   const getProjects = () => {
-    const { loading, data, error } = useQuery(gql(listProjects));
+    const { loading, data, error } = useQuery(gql(listProjects), {
+      variables: { limit: 500 }
+    });
     const projects = data ? data.listProjects.items : data;
     return { loading, data: projects, error };
   };
 
-  const addProject = projectToAdd => {
+  const addProject = (projectToAdd, onCompleted) => {
     const input = getFormattedInput(projectToAdd);
 
     newProject({
       variables: {
         input
-      },
-      //      onCompleted: data => console.log('Project Added!', data),
-      refetchQueries: [{ query: gql(listProjects) }]
-    });
+      }
+    }).then(({ data: { createProject } }) => onCompleted(createProject));
   };
 
   const deleteProject = projectToDelete => {
@@ -71,8 +71,7 @@ const useProjects = () => {
       variables: {
         input: projectToDelete
       },
-      //      onCompleted: data => console.log('Project Deleted!', data),
-      refetchQueries: [{ query: gql(listProjects) }]
+      refetchQueries: [{ query: gql(listProjects), variables: { limit: 500 } }]
     });
   };
 

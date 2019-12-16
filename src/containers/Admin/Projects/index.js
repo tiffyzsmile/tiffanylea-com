@@ -1,10 +1,11 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import Button from 'components/Button';
 
 const Projects = () => {
-  const { getProjects, addProject, deleteProject } = useProjects();
+  const history = useHistory();
+  const { getProjects, deleteProject } = useProjects();
   const { loading, data, error } = getProjects();
 
   const projectsContent = projects =>
@@ -47,19 +48,9 @@ const Projects = () => {
           <tfoot>
             <tr>
               <td colSpan="2">
-                <Button
-                  onClick={() =>
-                    addProject({
-                      name: `Example Project ${Math.floor(
-                        Math.random() * 5000
-                      )}`
-                    })
-                  }
-                  type="button"
-                >
+                <Button onClick={() => history.push(`/admin/project`)}>
                   Add Project
                 </Button>
-                <Link to="/admin/project">Add Project</Link>
               </td>
             </tr>
           </tfoot>
