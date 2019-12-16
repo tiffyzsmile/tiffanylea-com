@@ -18,7 +18,10 @@ const styles = {
 const Project = () => {
   const { id } = useParams();
   const { getProject, addProject, updateProject } = useProjects();
-  const { loading, data = { name: '', images: [], tags: {} } } = getProject(id);
+  const {
+    loading,
+    data = { id: '', name: '', images: [], tags: {} }
+  } = getProject(id);
 
   const onSubmit = formValues => {
     if (id) {
@@ -109,7 +112,7 @@ const Project = () => {
           />
         </section>
         <section>
-          <TaggedProjectField projectId={id} selected={data.tags.items} />
+          <TaggedProjectField projectId={data.id} selected={data.tags.items} />
         </section>
       </div>
     </div>
