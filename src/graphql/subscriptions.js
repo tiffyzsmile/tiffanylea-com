@@ -19,6 +19,7 @@ export const onCreateProject = `subscription OnCreateProject {
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -37,6 +38,7 @@ export const onCreateProject = `subscription OnCreateProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -75,6 +77,7 @@ export const onCreateProject = `subscription OnCreateProject {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -126,6 +129,7 @@ export const onCreateProject = `subscription OnCreateProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -170,6 +174,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -188,6 +193,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -226,6 +232,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -277,6 +284,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -321,6 +329,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -339,6 +348,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -377,6 +387,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -428,6 +439,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -461,6 +473,7 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -479,6 +492,7 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -521,6 +535,7 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -539,6 +554,7 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -581,6 +597,7 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -599,6 +616,7 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -658,6 +676,7 @@ export const onCreateClient = `subscription OnCreateClient {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -697,6 +716,7 @@ export const onCreateClient = `subscription OnCreateClient {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -761,6 +781,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -800,6 +821,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -864,6 +886,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -903,6 +926,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -968,6 +992,7 @@ export const onCreateTag = `subscription OnCreateTag {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1019,6 +1044,7 @@ export const onUpdateTag = `subscription OnUpdateTag {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1070,6 +1096,7 @@ export const onDeleteTag = `subscription OnDeleteTag {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1116,6 +1143,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -1155,6 +1183,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1243,6 +1272,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -1282,6 +1312,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1370,6 +1401,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -1409,6 +1441,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             startdate
             enddate
             url
+            logo
           }
           client {
             id

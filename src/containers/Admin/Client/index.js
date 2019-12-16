@@ -1,17 +1,24 @@
 import React from 'react';
 import { Form, Field } from 'react-final-form';
-import { useParams } from 'react-router-dom';
+import { useParams, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
+import S3FileUpload from 'components/S3FileUpload';
+import Button from 'components/Button';
 
 const Client = () => {
   const { id } = useParams();
-  const { getClient, updateClient } = useClients();
+  const history = useHistory();
+  const { getClient, updateClient, addClient } = useClients();
   const { loading, data, error } = getClient(id);
-  const onSubmit = ({ name }) => {
-    updateClient({
-      id,
-      name
-    });
+
+  const onSubmit = formValues => {
+    if (id) {
+      updateClient(formValues);
+    } else {
+      addClient(formValues, onCompleteData => {
+        history.push(`/admin/client/${onCompleteData.id}`);
+      });
+    }
   };
 
   return (
@@ -28,6 +35,17 @@ const Client = () => {
               <form onSubmit={handleSubmit}>
                 {loading && <div className="loading" />}
                 <div>
+                  <label htmlFor="id">
+                    Client ID
+                    <Field
+                      id="id"
+                      name="id"
+                      component="input"
+                      placeholder="Client ID"
+                    />
+                  </label>
+                </div>
+                <div>
                   <label htmlFor="name">
                     Client Name
                     <Field
@@ -38,17 +56,31 @@ const Client = () => {
                     />
                   </label>
                 </div>
+                <div>
+                  <label htmlFor="images">
+                    Logo
+                    <Field
+                      id="logo"
+                      name="logo"
+                      render={({ input }) => {
+                        return (
+                          <S3FileUpload
+                            {...input}
+                            filePath="employer-logos/"
+                            alt={`Logo of ${values.name || ''}`}
+                          />
+                        );
+                      }}
+                    />
+                  </label>
+                </div>
                 <div className="buttons">
-                  <button type="submit" disabled={submitting || pristine}>
-                    Submit
-                  </button>
-                  <button
-                    type="button"
-                    onClick={form.reset}
+                  <Button
+                    onClick={() => onSubmit(values)}
                     disabled={submitting || pristine}
                   >
-                    Reset
-                  </button>
+                    Submit
+                  </Button>
                 </div>
                 <pre>{JSON.stringify(values, 0, 2)}</pre>
               </form>

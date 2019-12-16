@@ -24,6 +24,7 @@ export const listProjects = `query ListProjects(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -63,6 +64,7 @@ export const listProjects = `query ListProjects(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -122,6 +124,7 @@ export const getProject = `query GetProject($id: ID!) {
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -140,6 +143,7 @@ export const getProject = `query GetProject($id: ID!) {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -178,6 +182,7 @@ export const getProject = `query GetProject($id: ID!) {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -229,6 +234,7 @@ export const getProject = `query GetProject($id: ID!) {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -267,6 +273,7 @@ export const listEmployers = `query ListEmployers(
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -285,6 +292,7 @@ export const listEmployers = `query ListEmployers(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -311,6 +319,7 @@ export const getEmployer = `query GetEmployer($id: ID!) {
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -329,6 +338,7 @@ export const getEmployer = `query GetEmployer($id: ID!) {
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -393,6 +403,7 @@ export const listClients = `query ListClients(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -452,6 +463,7 @@ export const getClient = `query GetClient($id: ID!) {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -491,6 +503,7 @@ export const getClient = `query GetClient($id: ID!) {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -590,6 +603,7 @@ export const getTag = `query GetTag($id: ID!) {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -636,6 +650,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -675,6 +690,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -768,6 +784,7 @@ export const listTaggedProjects = `query ListTaggedProjects(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }

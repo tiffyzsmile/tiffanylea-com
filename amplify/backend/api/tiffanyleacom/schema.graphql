@@ -34,6 +34,7 @@ type Employer
   startdate: AWSDate
   enddate: AWSDate
   url: AWSURL
+  logo: String
   projects: [Project] @connection(name: "EmployerProjects")
 }
 

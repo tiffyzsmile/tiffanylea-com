@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom';
 import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
 import DatePicker from 'components/DatePicker';
+import S3FileUpload from 'components/S3FileUpload';
 
 const Employer = () => {
   const { id } = useParams();
@@ -45,6 +46,24 @@ const Employer = () => {
                     name="name"
                     component="input"
                     placeholder="Employer Name"
+                  />
+                </label>
+              </div>
+              <div>
+                <label htmlFor="images">
+                  Logo
+                  <Field
+                    id="logo"
+                    name="logo"
+                    render={({ input }) => {
+                      return (
+                        <S3FileUpload
+                          {...input}
+                          filePath="employer-logos"
+                          alt={`Logo of ${values.name || ''}`}
+                        />
+                      );
+                    }}
                   />
                 </label>
               </div>

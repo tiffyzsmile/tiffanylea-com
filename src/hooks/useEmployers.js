@@ -11,7 +11,7 @@ import {
 } from 'graphql/mutations';
 import { formatDateForAWS, formatDateFromAWS } from 'helpers/forms';
 
-const getFormattedInput = ({ id, name, startdate, enddate, url }) => {
+const getFormattedInput = ({ id, name, startdate, enddate, logo, url }) => {
   const formattedInput = {};
 
   if (id) {
@@ -26,7 +26,7 @@ const getFormattedInput = ({ id, name, startdate, enddate, url }) => {
     formattedInput.enddate = formatDateForAWS(enddate);
   }
 
-  return { name, url, ...formattedInput };
+  return { name, url, logo, ...formattedInput };
 };
 
 const useEmployers = () => {
@@ -44,6 +44,9 @@ const useEmployers = () => {
     // for react-datepicker
     if (employer && employer.startdate) {
       employer.startdate = formatDateFromAWS(employer.startdate);
+    }
+    if (employer && employer.enddate) {
+      employer.enddate = formatDateFromAWS(employer.enddate);
     }
     return { loading, data: employer, error };
   };

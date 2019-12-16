@@ -22,6 +22,7 @@ export const createProject = `mutation CreateProject(
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -40,6 +41,7 @@ export const createProject = `mutation CreateProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -78,6 +80,7 @@ export const createProject = `mutation CreateProject(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -129,6 +132,7 @@ export const createProject = `mutation CreateProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -176,6 +180,7 @@ export const updateProject = `mutation UpdateProject(
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -194,6 +199,7 @@ export const updateProject = `mutation UpdateProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -232,6 +238,7 @@ export const updateProject = `mutation UpdateProject(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -283,6 +290,7 @@ export const updateProject = `mutation UpdateProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -330,6 +338,7 @@ export const deleteProject = `mutation DeleteProject(
       startdate
       enddate
       url
+      logo
       projects {
         items {
           id
@@ -348,6 +357,7 @@ export const deleteProject = `mutation DeleteProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -386,6 +396,7 @@ export const deleteProject = `mutation DeleteProject(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -437,6 +448,7 @@ export const deleteProject = `mutation DeleteProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -473,6 +485,7 @@ export const createEmployer = `mutation CreateEmployer(
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -491,6 +504,7 @@ export const createEmployer = `mutation CreateEmployer(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -536,6 +550,7 @@ export const updateEmployer = `mutation UpdateEmployer(
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -554,6 +569,7 @@ export const updateEmployer = `mutation UpdateEmployer(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -599,6 +615,7 @@ export const deleteEmployer = `mutation DeleteEmployer(
     startdate
     enddate
     url
+    logo
     projects {
       items {
         id
@@ -617,6 +634,7 @@ export const deleteEmployer = `mutation DeleteEmployer(
           startdate
           enddate
           url
+          logo
           projects {
             nextToken
           }
@@ -679,6 +697,7 @@ export const createClient = `mutation CreateClient(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -718,6 +737,7 @@ export const createClient = `mutation CreateClient(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -785,6 +805,7 @@ export const updateClient = `mutation UpdateClient(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -824,6 +845,7 @@ export const updateClient = `mutation UpdateClient(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -891,6 +913,7 @@ export const deleteClient = `mutation DeleteClient(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -930,6 +953,7 @@ export const deleteClient = `mutation DeleteClient(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -998,6 +1022,7 @@ export const createTag = `mutation CreateTag(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1052,6 +1077,7 @@ export const updateTag = `mutation UpdateTag(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1106,6 +1132,7 @@ export const deleteTag = `mutation DeleteTag(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1155,6 +1182,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -1194,6 +1222,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1285,6 +1314,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -1324,6 +1354,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
@@ -1415,6 +1446,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
         startdate
         enddate
         url
+        logo
         projects {
           items {
             id
@@ -1454,6 +1486,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
             startdate
             enddate
             url
+            logo
           }
           client {
             id
