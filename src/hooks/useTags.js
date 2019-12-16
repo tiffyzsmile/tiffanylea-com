@@ -26,7 +26,9 @@ const useTags = () => {
   };
 
   const getTags = () => {
-    const { loading, data, error } = useQuery(gql(listTags));
+    const { loading, data, error } = useQuery(gql(listTags), {
+      variables: { limit: 500 }
+    });
     const tags = data ? data.listTags.items : data;
     return { loading, data: tags, error };
   };
