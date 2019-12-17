@@ -12,9 +12,17 @@ const Tag = () => {
     tags.map(n => {
       return (
         <tr key={n.id}>
-          <td>{n.id}</td>
           <td>{n.name}</td>
           <td>{n.category}</td>
+          <td>
+            {n.logo && (
+              <img
+                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                src={n.logo}
+                alt={`Logo of ${n.name}`}
+              />
+            )}
+          </td>
           <td className="center">
             <Button
               styleAs="link"
@@ -51,9 +59,9 @@ const Tag = () => {
         <table>
           <thead>
             <tr>
-              <th>ID</th>
               <th>Tag</th>
               <th>Category</th>
+              <th>Logo</th>
               <th>Actions</th>
             </tr>
           </thead>
