@@ -15,6 +15,13 @@ const Employers = () => {
           <td>
             <Link to={`/admin/employer/${n.id}`}>{n.name}</Link>
           </td>
+          <td>
+            <img
+              style={{ maxWidth: '100px', maxHeight: '100px' }}
+              src={n.logo}
+              alt={`Logo of ${n.name}`}
+            />
+          </td>
           <td className="center">
             <Button
               styleAs="link"
@@ -46,13 +53,14 @@ const Employers = () => {
           <thead>
             <tr>
               <th>Employer</th>
+              <th>Logo</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>{employersContent(data)}</tbody>
           <tfoot>
             <tr>
-              <td colSpan="2">
+              <td colSpan="3">
                 <Button onClick={() => history.push(`/admin/employer`)}>
                   Add Employer
                 </Button>
