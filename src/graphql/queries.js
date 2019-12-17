@@ -101,6 +101,7 @@ export const listProjects = `query ListProjects(
             id
             name
             category
+            display
             logo
           }
         }
@@ -264,6 +265,7 @@ export const getProject = `query GetProject($id: ID!) {
           id
           name
           category
+          display
           logo
           projects {
             nextToken
@@ -564,6 +566,7 @@ export const getClient = `query GetClient($id: ID!) {
             id
             name
             category
+            display
             logo
           }
         }
@@ -579,6 +582,7 @@ export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: In
       id
       name
       category
+      display
       logo
       projects {
         items {
@@ -599,6 +603,7 @@ export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: In
             id
             name
             category
+            display
             logo
           }
         }
@@ -614,6 +619,7 @@ export const getTag = `query GetTag($id: ID!) {
     id
     name
     category
+    display
     logo
     projects {
       items {
@@ -654,6 +660,7 @@ export const getTag = `query GetTag($id: ID!) {
           id
           name
           category
+          display
           logo
           projects {
             nextToken
@@ -762,6 +769,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
             id
             name
             category
+            display
             logo
           }
         }
@@ -772,6 +780,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
       id
       name
       category
+      display
       logo
       projects {
         items {
@@ -792,6 +801,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
             id
             name
             category
+            display
             logo
           }
         }
@@ -863,6 +873,7 @@ export const listTaggedProjects = `query ListTaggedProjects(
         id
         name
         category
+        display
         logo
         projects {
           items {
