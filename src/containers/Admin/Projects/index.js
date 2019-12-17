@@ -5,7 +5,7 @@ import Button from 'components/Button';
 
 const Projects = () => {
   const history = useHistory();
-  const { getProjects, deleteProject } = useProjects();
+  const { getProjects } = useProjects();
   const { loading, data, error } = getProjects();
 
   const projectsContent = projects =>
@@ -15,16 +15,19 @@ const Projects = () => {
           <td>
             <Link to={`/admin/project/${n.id}`}>{n.name}</Link>
           </td>
+          <td>
+            <img
+              style={{ maxWidth: '100px', maxHeight: '100px' }}
+              src={n.logo}
+              alt={`Logo of ${n.name}`}
+            />
+          </td>
           <td className="center">
             <Button
-              onClick={() =>
-                deleteProject({
-                  id: n.id
-                })
-              }
-              type="button"
+              styleAs="link"
+              onClick={() => history.push(`/admin/project/${n.id}`)}
             >
-              Delete
+              Edit
             </Button>
           </td>
         </tr>
@@ -33,6 +36,11 @@ const Projects = () => {
   return (
     <div>
       <h1>Projects</h1>
+      <div style={{ float: 'right' }}>
+        <Button styleAs="link" onClick={() => history.push(`/admin/project`)}>
+          Add Project
+        </Button>
+      </div>
 
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
@@ -41,19 +49,11 @@ const Projects = () => {
           <thead>
             <tr>
               <th>Project</th>
-              <th>Delete</th>
+              <th>Logo</th>
+              <th>Actions</th>
             </tr>
           </thead>
           <tbody>{projectsContent(data)}</tbody>
-          <tfoot>
-            <tr>
-              <td colSpan="2">
-                <Button onClick={() => history.push(`/admin/project`)}>
-                  Add Project
-                </Button>
-              </td>
-            </tr>
-          </tfoot>
         </table>
       )}
     </div>

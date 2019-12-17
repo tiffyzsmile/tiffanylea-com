@@ -16,6 +16,7 @@ const getFormattedInput = ({
   features,
   display,
   url,
+  logo,
   images,
   employer,
   client
@@ -44,6 +45,7 @@ const getFormattedInput = ({
     features,
     display,
     url,
+    logo,
     images,
     ...formattedInput
   };

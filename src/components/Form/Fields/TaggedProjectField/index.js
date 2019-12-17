@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { Form } from 'react-final-form';
 import useTaggedProjects from 'hooks/useTaggedProjects';
 import Button from 'components/Button';
-import TagField from 'components/TagField';
+import { TagField } from 'components/Form/Fields';
 
 const TaggedProjectField = ({ projectId, selected }) => {
   const { addTaggedProject, deleteTaggedProject } = useTaggedProjects();

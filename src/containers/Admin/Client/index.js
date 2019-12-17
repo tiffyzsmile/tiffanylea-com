@@ -2,14 +2,20 @@ import React from 'react';
 import { Form, Field } from 'react-final-form';
 import { useParams, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
-import S3FileUpload from 'components/S3FileUpload';
-import BooleanField from 'components/BooleanField';
+import {
+  DescriptionField,
+  IdField,
+  NameField,
+  BooleanField,
+  LogoField,
+  UrlField
+} from 'components/Form/Fields';
 import Button from 'components/Button';
 
 const Client = () => {
   const { id } = useParams();
   const history = useHistory();
-  const { getClient, updateClient, addClient } = useClients();
+  const { getClient, updateClient, addClient, deleteClient } = useClients();
   const { loading, data = { id: '', name: '' } } = getClient(id);
 
   const onSubmit = formValues => {
@@ -24,6 +30,20 @@ const Client = () => {
 
   return (
     <div>
+      {id && (
+        <div style={{ float: 'right' }}>
+          <Button
+            styleAs="link"
+            onClick={() =>
+              deleteClient({
+                id
+              })
+            }
+          >
+            Delete Client
+          </Button>
+        </div>
+      )}
       <h1>Client Detail</h1>
       <Form
         onSubmit={onSubmit}
@@ -32,53 +52,11 @@ const Client = () => {
           return (
             <form onSubmit={handleSubmit}>
               {loading && <div className="loading" />}
-              <div>
-                <label htmlFor="id">
-                  Client ID
-                  <Field
-                    id="id"
-                    name="id"
-                    component="input"
-                    placeholder="Client ID"
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="name">
-                  Client Name
-                  <Field
-                    id="name"
-                    name="name"
-                    component="input"
-                    placeholder="Client Name"
-                  />
-                </label>
-              </div>
-              <div>
-                <BooleanField label="Display?" name="display" />
-              </div>
-              <div>
-                <label htmlFor="url">
-                  Client URL
-                  <Field
-                    id="url"
-                    name="url"
-                    component="input"
-                    placeholder="Client URL"
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="description">
-                  Client Description
-                  <Field
-                    id="description"
-                    name="description"
-                    component="textarea"
-                    placeholder="Client Description"
-                  />
-                </label>
-              </div>
+              <IdField />
+              <NameField />
+              <BooleanField label="Display?" name="display" />
+              <UrlField />
+              <DescriptionField />
               <div>
                 <label htmlFor="feedback">
                   Client Feedback
@@ -90,24 +68,7 @@ const Client = () => {
                   />
                 </label>
               </div>
-              <div>
-                <label htmlFor="logo">
-                  Logo
-                  <Field
-                    id="logo"
-                    name="logo"
-                    render={({ input }) => {
-                      return (
-                        <S3FileUpload
-                          {...input}
-                          filePath="client-logos/"
-                          alt={`Logo of ${values.name || ''}`}
-                        />
-                      );
-                    }}
-                  />
-                </label>
-              </div>
+              <LogoField folder="client-logos" />
               <div className="buttons">
                 <Button
                   onClick={() => onSubmit(values)}

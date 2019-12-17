@@ -71,10 +71,12 @@ const S3FileUpload = ({
         multiple={multiple}
         onChange={e => onInputChange(e)}
       />
-      <div style={styles.images}>
-        {multiple && listOfCurrentFiles}
-        {!multiple && singleImage}
-      </div>
+      {value && (
+        <div style={styles.images}>
+          {multiple && listOfCurrentFiles}
+          {!multiple && singleImage}
+        </div>
+      )}
     </div>
   );
 };

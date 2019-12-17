@@ -5,7 +5,7 @@ import Button from 'components/Button';
 
 const Employers = () => {
   const history = useHistory();
-  const { getEmployers, deleteEmployer } = useEmployers();
+  const { getEmployers } = useEmployers();
   const { loading, data, error } = getEmployers();
 
   const employersContent = employers =>
@@ -29,16 +29,6 @@ const Employers = () => {
             >
               Edit
             </Button>
-            <Button
-              styleAs="link"
-              onClick={() =>
-                deleteEmployer({
-                  id: n.id
-                })
-              }
-            >
-              Delete
-            </Button>
           </td>
         </tr>
       );
@@ -46,6 +36,11 @@ const Employers = () => {
   return (
     <div>
       <h1>Employers</h1>
+      <div style={{ float: 'right' }}>
+        <Button styleAs="link" onClick={() => history.push(`/admin/employer`)}>
+          Add Employer
+        </Button>
+      </div>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (
@@ -58,15 +53,6 @@ const Employers = () => {
             </tr>
           </thead>
           <tbody>{employersContent(data)}</tbody>
-          <tfoot>
-            <tr>
-              <td colSpan="3">
-                <Button onClick={() => history.push(`/admin/employer`)}>
-                  Add Employer
-                </Button>
-              </td>
-            </tr>
-          </tfoot>
         </table>
       )}
     </div>

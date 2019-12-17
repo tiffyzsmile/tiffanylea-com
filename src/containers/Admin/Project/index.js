@@ -3,12 +3,19 @@ import { Form, Field } from 'react-final-form';
 import { useParams, useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import Button from 'components/Button';
-import S3FileUpload from 'components/S3FileUpload';
-import EmployerField from 'components/EmployerField';
-import ClientField from 'components/ClientField';
-import TaggedProjectField from 'components/TaggedProjectField';
-import DatePicker from 'components/DatePicker';
-import BooleanField from 'components/BooleanField';
+import {
+  S3FileUpload,
+  EmployerField,
+  ClientField,
+  TaggedProjectField,
+  DateField,
+  BooleanField,
+  UrlField,
+  DescriptionField,
+  IdField,
+  NameField,
+  LogoField
+} from 'components/Form/Fields';
 
 const styles = {
   gridWrapper: {
@@ -20,7 +27,12 @@ const styles = {
 const Project = () => {
   const { id } = useParams();
   const history = useHistory();
-  const { getProject, addProject, updateProject } = useProjects();
+  const {
+    getProject,
+    addProject,
+    updateProject,
+    deleteProject
+  } = useProjects();
   const {
     loading,
     data = { id: '', name: '', images: [], tags: {} }
@@ -38,6 +50,20 @@ const Project = () => {
 
   return (
     <div>
+      {id && (
+        <div style={{ float: 'right' }}>
+          <Button
+            styleAs="link"
+            onClick={() =>
+              deleteProject({
+                id
+              })
+            }
+          >
+            Delete Project
+          </Button>
+        </div>
+      )}
       <h1>Project Details</h1>
       <div style={styles.gridWrapper}>
         <section>
@@ -48,68 +74,15 @@ const Project = () => {
               return (
                 <form onSubmit={handleSubmit}>
                   {loading && <div className="loading" />}
-                  <div>
-                    <label htmlFor="id">
-                      Project ID
-                      <Field
-                        id="id"
-                        name="id"
-                        component="input"
-                        placeholder="Project ID"
-                      />
-                    </label>
-                  </div>
-                  <div>
-                    <label htmlFor="name">
-                      Project Name
-                      <Field
-                        id="name"
-                        name="name"
-                        component="input"
-                        placeholder="Project Name"
-                      />
-                    </label>
-                  </div>
-                  <div>
-                    <BooleanField label="Display?" name="display" />
-                  </div>
-                  <div>
-                    <label htmlFor="date">
-                      Date:
-                      <Field
-                        id="date"
-                        name="date"
-                        render={({ input }) => {
-                          return (
-                            <DatePicker
-                              {...input}
-                              showMonthDropdown
-                              showYearDropdown
-                              dropdownMode="select"
-                            />
-                          );
-                        }}
-                      />
-                    </label>
-                  </div>
-                  <div>
-                    <br />
-                    <label htmlFor="description">
-                      Project Description
-                      <Field
-                        id="description"
-                        name="description"
-                        component="textarea"
-                        placeholder="Project Description"
-                      />
-                    </label>
-                  </div>
-                  <div>
-                    <EmployerField />
-                  </div>
-                  <div>
-                    <ClientField />
-                  </div>
+                  <IdField />
+                  <NameField />
+                  <BooleanField label="Display?" name="display" />
+                  <LogoField folder={`${values.id}`} />
+                  <EmployerField />
+                  <ClientField />
+                  <DateField />
+                  <UrlField />
+                  <DescriptionField />
                   <div>
                     <label htmlFor="images">
                       Screenshots

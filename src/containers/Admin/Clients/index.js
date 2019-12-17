@@ -5,8 +5,8 @@ import Button from 'components/Button';
 
 const Clients = () => {
   const history = useHistory();
-  const { getClients, deleteClient } = useClients();
-  const { loading, data, error } = getClients();
+  const { getClients } = useClients();
+  const { loading, data } = getClients();
 
   const clientsContent = clients =>
     clients.map(n => {
@@ -24,14 +24,10 @@ const Clients = () => {
           </td>
           <td className="center">
             <Button
-              onClick={() =>
-                deleteClient({
-                  id: n.id
-                })
-              }
-              type="button"
+              styleAs="link"
+              onClick={() => history.push(`/admin/client/${n.id}`)}
             >
-              Delete
+              Edit
             </Button>
           </td>
         </tr>
@@ -40,9 +36,12 @@ const Clients = () => {
   return (
     <div>
       <h1>Clients</h1>
-
+      <div style={{ float: 'right' }}>
+        <Button styleAs="link" onClick={() => history.push(`/admin/client`)}>
+          Add Client
+        </Button>
+      </div>
       {loading && <h1>Loading...</h1>}
-      {error && <h1>Error...</h1>}
       {data && (
         <table>
           <thead>
@@ -53,15 +52,6 @@ const Clients = () => {
             </tr>
           </thead>
           <tbody>{clientsContent(data)}</tbody>
-          <tfoot>
-            <tr>
-              <td colSpan="3">
-                <Button onClick={() => history.push(`/admin/client`)}>
-                  Add Client
-                </Button>
-              </td>
-            </tr>
-          </tfoot>
         </table>
       )}
     </div>

@@ -3,12 +3,16 @@ import { Form, Field } from 'react-final-form';
 import { useParams } from 'react-router-dom';
 import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
-import DatePicker from 'components/DatePicker';
-import S3FileUpload from 'components/S3FileUpload';
+import { DateField, S3FileUpload } from 'components/Form/Fields';
 
 const Employer = () => {
   const { id } = useParams();
-  const { getEmployer, updateEmployer, addEmployer } = useEmployers();
+  const {
+    getEmployer,
+    updateEmployer,
+    addEmployer,
+    deleteEmployer
+  } = useEmployers();
   const { loading, data = { id: '', name: '' } } = getEmployer(id);
 
   const onSubmit = formValues => {
@@ -21,6 +25,20 @@ const Employer = () => {
 
   return (
     <div>
+      {id && (
+        <div style={{ float: 'right' }}>
+          <Button
+            styleAs="link"
+            onClick={() =>
+              deleteEmployer({
+                id
+              })
+            }
+          >
+            Delete Employer
+          </Button>
+        </div>
+      )}
       <h1>Employer Detail</h1>
       <Form
         onSubmit={onSubmit}
@@ -67,45 +85,8 @@ const Employer = () => {
                   />
                 </label>
               </div>
-              <div>
-                <label htmlFor="startdate">
-                  Start Date:
-                  <Field
-                    id="startdate"
-                    name="startdate"
-                    render={({ input }) => {
-                      return (
-                        <DatePicker
-                          {...input}
-                          showMonthDropdown
-                          showYearDropdown
-                          dropdownMode="select"
-                        />
-                      );
-                    }}
-                  />
-                </label>
-              </div>
-              <div>
-                <label htmlFor="enddate">
-                  End Date:
-                  <Field
-                    id="enddate"
-                    name="enddate"
-                    render={({ input }) => {
-                      return (
-                        <DatePicker
-                          {...input}
-                          showMonthDropdown
-                          showYearDropdown
-                          dropdownMode="select"
-                        />
-                      );
-                    }}
-                  />
-                </label>
-              </div>
-
+              <DateField name="startdate" label="Start Date: " />
+              <DateField name="enddate" label="End Date: " />
               <div className="buttons">
                 <Button
                   onClick={() => onSubmit(values)}

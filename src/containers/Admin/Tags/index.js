@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Field } from 'react-final-form';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
-import CategoryField from 'components/CategoryField';
+import { CategoryField } from 'components/Form/Fields';
 
 const Tag = () => {
   const [idToEdit, setIdToEdit] = useState();
@@ -151,24 +151,6 @@ const Tag = () => {
 
                     {tagsContent(data)}
                   </tbody>
-                  <tfoot>
-                    <tr>
-                      <td colSpan="4">
-                        <Button
-                          onClick={() =>
-                            addTag({
-                              name: `Example Tag ${Math.floor(
-                                Math.random() * 5000
-                              )}`
-                            })
-                          }
-                          type="button"
-                        >
-                          Add Tag
-                        </Button>
-                      </td>
-                    </tr>
-                  </tfoot>
                 </table>
               </form>
             );

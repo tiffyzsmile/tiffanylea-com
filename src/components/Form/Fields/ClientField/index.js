@@ -20,15 +20,17 @@ const ClientField = () => {
   });
 
   return (
-    <label htmlFor="client">
-      Client
-      <Field id="client" name="client.id" component="select">
-        {loadingClients && <option>Loading Clients</option>}
-        {clientsError && <option>Error Loading Clients</option>}
-        <option />
-        {clientsOptionList}
-      </Field>
-    </label>
+    <div>
+      <label htmlFor="client">
+        Client
+        <Field id="client" name="client.id" component="select">
+          {loadingClients && <option>Loading Clients</option>}
+          {clientsError && <option>Error Loading Clients</option>}
+          <option />
+          {clientsOptionList}
+        </Field>
+      </label>
+    </div>
   );
 };
 
