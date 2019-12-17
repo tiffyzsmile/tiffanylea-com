@@ -52,6 +52,7 @@ type Client
   logo: String
   url: AWSURL
   feedback: String
+  display: Boolean
   projects: Project @connection(name: "ClientProjects")
 }
 

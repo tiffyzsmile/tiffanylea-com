@@ -50,6 +50,7 @@ export const createProject = `mutation CreateProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -65,6 +66,7 @@ export const createProject = `mutation CreateProject(
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -94,6 +96,7 @@ export const createProject = `mutation CreateProject(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -144,6 +147,7 @@ export const createProject = `mutation CreateProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -212,6 +216,7 @@ export const updateProject = `mutation UpdateProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -227,6 +232,7 @@ export const updateProject = `mutation UpdateProject(
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -256,6 +262,7 @@ export const updateProject = `mutation UpdateProject(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -306,6 +313,7 @@ export const updateProject = `mutation UpdateProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -374,6 +382,7 @@ export const deleteProject = `mutation DeleteProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -389,6 +398,7 @@ export const deleteProject = `mutation DeleteProject(
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -418,6 +428,7 @@ export const deleteProject = `mutation DeleteProject(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -468,6 +479,7 @@ export const deleteProject = `mutation DeleteProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -528,6 +540,7 @@ export const createEmployer = `mutation CreateEmployer(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -594,6 +607,7 @@ export const updateEmployer = `mutation UpdateEmployer(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -660,6 +674,7 @@ export const deleteEmployer = `mutation DeleteEmployer(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -696,6 +711,7 @@ export const createClient = `mutation CreateClient(
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -737,6 +753,7 @@ export const createClient = `mutation CreateClient(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -763,6 +780,7 @@ export const createClient = `mutation CreateClient(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -807,6 +825,7 @@ export const updateClient = `mutation UpdateClient(
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -848,6 +867,7 @@ export const updateClient = `mutation UpdateClient(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -874,6 +894,7 @@ export const updateClient = `mutation UpdateClient(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -918,6 +939,7 @@ export const deleteClient = `mutation DeleteClient(
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -959,6 +981,7 @@ export const deleteClient = `mutation DeleteClient(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -985,6 +1008,7 @@ export const deleteClient = `mutation DeleteClient(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1055,6 +1079,7 @@ export const createTag = `mutation CreateTag(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1111,6 +1136,7 @@ export const updateTag = `mutation UpdateTag(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1167,6 +1193,7 @@ export const deleteTag = `mutation DeleteTag(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1233,6 +1260,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -1259,6 +1287,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1367,6 +1396,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -1393,6 +1423,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1501,6 +1532,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -1527,6 +1559,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken

@@ -3,6 +3,7 @@ import { Form, Field } from 'react-final-form';
 import { useParams, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
 import S3FileUpload from 'components/S3FileUpload';
+import BooleanField from 'components/BooleanField';
 import Button from 'components/Button';
 
 const Client = () => {
@@ -52,6 +53,9 @@ const Client = () => {
                     placeholder="Client Name"
                   />
                 </label>
+              </div>
+              <div>
+                <BooleanField label="Display?" name="display" />
               </div>
               <div>
                 <label htmlFor="url">

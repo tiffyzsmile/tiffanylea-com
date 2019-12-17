@@ -8,6 +8,7 @@ import EmployerField from 'components/EmployerField';
 import ClientField from 'components/ClientField';
 import TaggedProjectField from 'components/TaggedProjectField';
 import DatePicker from 'components/DatePicker';
+import BooleanField from 'components/BooleanField';
 
 const styles = {
   gridWrapper: {
@@ -68,6 +69,9 @@ const Project = () => {
                         placeholder="Project Name"
                       />
                     </label>
+                  </div>
+                  <div>
+                    <BooleanField label="Display?" name="display" />
                   </div>
                   <div>
                     <label htmlFor="date">

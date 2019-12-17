@@ -7,14 +7,22 @@ import {
   deleteClient as deleteClientMutation
 } from 'graphql/mutations';
 
-const getFormattedInput = ({ id, name, description, logo, url, feedback }) => {
+const getFormattedInput = ({
+  id,
+  name,
+  description,
+  logo,
+  url,
+  feedback,
+  display
+}) => {
   const formattedInput = {};
 
   if (id) {
     formattedInput.id = id;
   }
 
-  return { name, description, logo, url, feedback, ...formattedInput };
+  return { name, description, logo, url, feedback, display, ...formattedInput };
 };
 
 const useClients = () => {
