@@ -5,7 +5,7 @@ import Button from 'components/Button';
 
 const Employers = () => {
   const history = useHistory();
-  const { getEmployers, deleteEmployer } = useEmployers();
+  const { getEmployers } = useEmployers();
   const { loading, data, error } = getEmployers();
 
   const employersContent = employers =>
@@ -15,22 +15,19 @@ const Employers = () => {
           <td>
             <Link to={`/admin/employer/${n.id}`}>{n.name}</Link>
           </td>
+          <td>
+            <img
+              style={{ maxWidth: '100px', maxHeight: '100px' }}
+              src={n.logo}
+              alt={`Logo of ${n.name}`}
+            />
+          </td>
           <td className="center">
             <Button
               styleAs="link"
               onClick={() => history.push(`/admin/employer/${n.id}`)}
             >
               Edit
-            </Button>
-            <Button
-              styleAs="link"
-              onClick={() =>
-                deleteEmployer({
-                  id: n.id
-                })
-              }
-            >
-              Delete
             </Button>
           </td>
         </tr>
@@ -39,6 +36,11 @@ const Employers = () => {
   return (
     <div>
       <h1>Employers</h1>
+      <div style={{ float: 'right' }}>
+        <Button styleAs="link" onClick={() => history.push(`/admin/employer`)}>
+          Add Employer
+        </Button>
+      </div>
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (
@@ -46,19 +48,11 @@ const Employers = () => {
           <thead>
             <tr>
               <th>Employer</th>
+              <th>Logo</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>{employersContent(data)}</tbody>
-          <tfoot>
-            <tr>
-              <td colSpan="2">
-                <Button onClick={() => history.push(`/admin/employer`)}>
-                  Add Employer
-                </Button>
-              </td>
-            </tr>
-          </tfoot>
         </table>
       )}
     </div>

@@ -14,7 +14,9 @@ const getFormattedInput = ({
   date,
   description,
   features,
+  display,
   url,
+  logo,
   images,
   employer,
   client
@@ -37,7 +39,16 @@ const getFormattedInput = ({
     formattedInput.date = formatDateForAWS(date);
   }
 
-  return { name, description, features, url, images, ...formattedInput };
+  return {
+    name,
+    description,
+    features,
+    display,
+    url,
+    logo,
+    images,
+    ...formattedInput
+  };
 };
 
 const useProjects = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './styles.css';
+import './styles.scss';
 
 const Form = ({ status, onSubmit, children, successMessage, errorMessage }) => {
   // if form succesfully submitted return success message

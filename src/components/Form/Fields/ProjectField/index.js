@@ -1,8 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
 import useProjects from 'hooks/useProjects';
 
-const ProjectField = () => {
+const ProjectField = ({ name, label, multiple }) => {
   const { getProjects } = useProjects();
   const {
     loading: loadingProjects,
@@ -20,9 +21,15 @@ const ProjectField = () => {
   });
 
   return (
-    <label htmlFor="project">
-      Project
-      <Field id="project" name="project.id" component="select">
+    <label htmlFor={name}>
+      {label}
+      <Field
+        id={name}
+        name={name}
+        component="select"
+        type="select"
+        multiple={multiple}
+      >
         {loadingProjects && <option>Loading Projects</option>}
         {projectsError && <option>Error Loading Projects</option>}
         <option />
@@ -30,6 +37,17 @@ const ProjectField = () => {
       </Field>
     </label>
   );
+};
+
+ProjectField.defaultProps = {
+  label: 'Projects',
+  multiple: false
+};
+
+ProjectField.propTypes = {
+  name: PropTypes.string.isRequired,
+  label: PropTypes.string,
+  multiple: PropTypes.bool
 };
 
 export default ProjectField;

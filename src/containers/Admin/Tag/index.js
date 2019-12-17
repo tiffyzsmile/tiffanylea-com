@@ -1,21 +1,16 @@
 import React from 'react';
-import { Form, Field } from 'react-final-form';
+import { Form } from 'react-final-form';
 import { useParams, useHistory } from 'react-router-dom';
-import useProjects from 'hooks/useProjects';
+import useTags from 'hooks/useTags';
 import Button from 'components/Button';
 import {
-  S3FileUpload,
-  EmployerField,
-  ClientField,
-  TaggedProjectTagsField,
-  DateField,
   BooleanField,
-  UrlField,
-  DescriptionField,
+  CategoryField,
   IdField,
   NameField,
   LogoField,
-  DebugField
+  DebugField,
+  TaggedProjectProjectsField
 } from 'components/Form/Fields';
 
 const styles = {
@@ -25,26 +20,21 @@ const styles = {
   }
 };
 
-const Project = () => {
+const Tag = () => {
   const { id } = useParams();
   const history = useHistory();
-  const {
-    getProject,
-    addProject,
-    updateProject,
-    deleteProject
-  } = useProjects();
+  const { getTag, addTag, updateTag, deleteTag } = useTags();
   const {
     loading,
-    data = { id: '', name: '', images: [], tags: {}, logo: '' }
-  } = getProject(id);
+    data = { id: '', name: '', images: [], projects: {} }
+  } = getTag(id);
 
   const onSubmit = formValues => {
     if (id) {
-      updateProject(formValues);
+      updateTag(formValues);
     } else {
-      addProject(formValues, onCompleteData => {
-        history.push(`/admin/project/${onCompleteData.id}`);
+      addTag(formValues, onCompleteData => {
+        history.push(`/admin/tag/${onCompleteData.id}`);
       });
     }
   };
@@ -56,16 +46,16 @@ const Project = () => {
           <Button
             styleAs="link"
             onClick={() =>
-              deleteProject({
+              deleteTag({
                 id
               })
             }
           >
-            Delete Project
+            Delete Tag
           </Button>
         </div>
       )}
-      <h1>Project Details</h1>
+      <h1>Tag Details</h1>
       <div style={styles.gridWrapper}>
         <section>
           <Form
@@ -78,31 +68,8 @@ const Project = () => {
                   <IdField />
                   <NameField />
                   <BooleanField label="Display?" name="display" />
-                  <LogoField folder={`${values.id}`} />
-                  <EmployerField />
-                  <ClientField />
-                  <DateField />
-                  <UrlField />
-                  <DescriptionField />
-                  <div>
-                    <label htmlFor="images">
-                      Screenshots
-                      <Field
-                        id="images"
-                        name="images"
-                        render={({ input }) => {
-                          return (
-                            <S3FileUpload
-                              {...input}
-                              filePath={id}
-                              multiple
-                              alt={`Screenshot of ${values.name || ''}`}
-                            />
-                          );
-                        }}
-                      />
-                    </label>
-                  </div>
+                  <CategoryField />
+                  <LogoField folder="tag-logos" />
                   <div className="buttons">
                     <Button
                       onClick={() => onSubmit(values)}
@@ -118,9 +85,9 @@ const Project = () => {
           />
         </section>
         <section>
-          <TaggedProjectTagsField
-            projectId={data.id}
-            selected={data.tags.items}
+          <TaggedProjectProjectsField
+            tagId={data.id}
+            selected={data.projects.items}
           />
         </section>
       </div>
@@ -128,4 +95,4 @@ const Project = () => {
   );
 };
 
-export default Project;
+export default Tag;

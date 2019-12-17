@@ -47,6 +47,7 @@ export const onCreateProject = `subscription OnCreateProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -62,6 +63,7 @@ export const onCreateProject = `subscription OnCreateProject {
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -91,6 +93,7 @@ export const onCreateProject = `subscription OnCreateProject {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -141,6 +144,7 @@ export const onCreateProject = `subscription OnCreateProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -150,6 +154,8 @@ export const onCreateProject = `subscription OnCreateProject {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -206,6 +212,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -221,6 +228,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -250,6 +258,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -300,6 +309,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -309,6 +319,8 @@ export const onUpdateProject = `subscription OnUpdateProject {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -365,6 +377,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -380,6 +393,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -409,6 +423,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -459,6 +474,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -468,6 +484,8 @@ export const onDeleteProject = `subscription OnDeleteProject {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -516,6 +534,7 @@ export const onCreateEmployer = `subscription OnCreateEmployer {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -579,6 +598,7 @@ export const onUpdateEmployer = `subscription OnUpdateEmployer {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -642,6 +662,7 @@ export const onDeleteEmployer = `subscription OnDeleteEmployer {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -675,6 +696,7 @@ export const onCreateClient = `subscription OnCreateClient {
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -716,6 +738,7 @@ export const onCreateClient = `subscription OnCreateClient {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -742,6 +765,7 @@ export const onCreateClient = `subscription OnCreateClient {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -767,6 +791,8 @@ export const onCreateClient = `subscription OnCreateClient {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -783,6 +809,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -824,6 +851,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -850,6 +878,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -875,6 +904,8 @@ export const onUpdateClient = `subscription OnUpdateClient {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -891,6 +922,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -932,6 +964,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -958,6 +991,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -983,6 +1017,8 @@ export const onDeleteClient = `subscription OnDeleteClient {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -996,6 +1032,8 @@ export const onCreateTag = `subscription OnCreateTag {
     id
     name
     category
+    display
+    logo
     projects {
       items {
         id
@@ -1025,6 +1063,7 @@ export const onCreateTag = `subscription OnCreateTag {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1034,6 +1073,8 @@ export const onCreateTag = `subscription OnCreateTag {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -1049,6 +1090,8 @@ export const onUpdateTag = `subscription OnUpdateTag {
     id
     name
     category
+    display
+    logo
     projects {
       items {
         id
@@ -1078,6 +1121,7 @@ export const onUpdateTag = `subscription OnUpdateTag {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1087,6 +1131,8 @@ export const onUpdateTag = `subscription OnUpdateTag {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -1102,6 +1148,8 @@ export const onDeleteTag = `subscription OnDeleteTag {
     id
     name
     category
+    display
+    logo
     projects {
       items {
         id
@@ -1131,6 +1179,7 @@ export const onDeleteTag = `subscription OnDeleteTag {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1140,6 +1189,8 @@ export const onDeleteTag = `subscription OnDeleteTag {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -1194,6 +1245,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -1220,6 +1272,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1245,6 +1298,8 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -1254,6 +1309,8 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
       id
       name
       category
+      display
+      logo
       projects {
         items {
           id
@@ -1273,6 +1330,8 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -1325,6 +1384,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -1351,6 +1411,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1376,6 +1437,8 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -1385,6 +1448,8 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
       id
       name
       category
+      display
+      logo
       projects {
         items {
           id
@@ -1404,6 +1469,8 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -1456,6 +1523,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -1482,6 +1550,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -1507,6 +1576,8 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -1516,6 +1587,8 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
       id
       name
       category
+      display
+      logo
       projects {
         items {
           id
@@ -1535,6 +1608,8 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken

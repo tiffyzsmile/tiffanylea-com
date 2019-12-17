@@ -52,6 +52,7 @@ type Client
   logo: String
   url: AWSURL
   feedback: String
+  display: Boolean
   projects: Project @connection(name: "ClientProjects")
 }
 
@@ -66,6 +67,8 @@ type Tag
   id: ID!
   name: String
   category: String
+  display: Boolean
+  logo: String
   projects: [TaggedProject] @connection(name: "ProjectsWithTag")
 }
 

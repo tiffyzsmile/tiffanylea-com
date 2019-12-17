@@ -48,6 +48,7 @@ export const listProjects = `query ListProjects(
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -74,6 +75,7 @@ export const listProjects = `query ListProjects(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -99,6 +101,8 @@ export const listProjects = `query ListProjects(
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -154,6 +158,7 @@ export const getProject = `query GetProject($id: ID!) {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -169,6 +174,7 @@ export const getProject = `query GetProject($id: ID!) {
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -198,6 +204,7 @@ export const getProject = `query GetProject($id: ID!) {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -248,6 +255,7 @@ export const getProject = `query GetProject($id: ID!) {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -257,6 +265,8 @@ export const getProject = `query GetProject($id: ID!) {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -307,6 +317,7 @@ export const listEmployers = `query ListEmployers(
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -357,6 +368,7 @@ export const getEmployer = `query GetEmployer($id: ID!) {
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -395,6 +407,7 @@ export const listClients = `query ListClients(
       logo
       url
       feedback
+      display
       projects {
         id
         name
@@ -424,6 +437,7 @@ export const listClients = `query ListClients(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -457,6 +471,7 @@ export const getClient = `query GetClient($id: ID!) {
     logo
     url
     feedback
+    display
     projects {
       id
       name
@@ -498,6 +513,7 @@ export const getClient = `query GetClient($id: ID!) {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -524,6 +540,7 @@ export const getClient = `query GetClient($id: ID!) {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -549,6 +566,8 @@ export const getClient = `query GetClient($id: ID!) {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -563,6 +582,8 @@ export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: In
       id
       name
       category
+      display
+      logo
       projects {
         items {
           id
@@ -582,6 +603,8 @@ export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: In
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -596,6 +619,8 @@ export const getTag = `query GetTag($id: ID!) {
     id
     name
     category
+    display
+    logo
     projects {
       items {
         id
@@ -625,6 +650,7 @@ export const getTag = `query GetTag($id: ID!) {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -634,6 +660,8 @@ export const getTag = `query GetTag($id: ID!) {
           id
           name
           category
+          display
+          logo
           projects {
             nextToken
           }
@@ -688,6 +716,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
         logo
         url
         feedback
+        display
         projects {
           id
           name
@@ -714,6 +743,7 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
             logo
             url
             feedback
+            display
           }
           tags {
             nextToken
@@ -739,6 +769,8 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -748,6 +780,8 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
       id
       name
       category
+      display
+      logo
       projects {
         items {
           id
@@ -767,6 +801,8 @@ export const getTaggedProject = `query GetTaggedProject($id: ID!) {
             id
             name
             category
+            display
+            logo
           }
         }
         nextToken
@@ -812,6 +848,7 @@ export const listTaggedProjects = `query ListTaggedProjects(
           logo
           url
           feedback
+          display
           projects {
             id
             name
@@ -836,6 +873,8 @@ export const listTaggedProjects = `query ListTaggedProjects(
         id
         name
         category
+        display
+        logo
         projects {
           items {
             id

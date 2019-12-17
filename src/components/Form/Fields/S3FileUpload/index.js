@@ -1,15 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Storage } from 'aws-amplify';
+import Button from 'components/Button';
 
 const styles = {
   images: {
     display: 'grid',
-    gridTemplateColumns: '50% 50%',
-    gridTemplateRows: 'minmax(100px, 1fr)'
+    gridTemplateColumns: '125px 125px 125px',
+    gridTemplateRows: '1fr',
+    justifyItems: 'center',
+    alignItems: 'center',
+    textAlign: 'center'
   },
   image: {
-    maxWidth: '100px',
+    width: '100px',
     maxHeight: '100px'
   }
 };
@@ -25,12 +29,40 @@ const S3FileUpload = ({
   // for type of multiple
   const values = [];
 
+  const deleteItem = imageUrl => {
+    const imageKey = imageUrl.split('public/')[1];
+    Storage.remove(imageKey).then(() => {
+      if (multiple) {
+        const filteredValues = value.filter(v => {
+          return v !== imageUrl;
+        });
+        onChange([...filteredValues]);
+      } else {
+        onChange(null);
+      }
+    });
+  };
+
   const listOfCurrentFiles = ([...values, ...value] || []).map(f => {
-    return <img style={styles.image} src={f} key={f} alt={alt || ''} />;
+    return (
+      <div key={f}>
+        <img style={styles.image} src={f} alt={alt || ''} />
+        <br />
+        <Button styleAs="link" onClick={() => deleteItem(f)}>
+          Delete
+        </Button>
+      </div>
+    );
   });
 
   const singleImage = [
-    <img style={styles.image} src={value} key={value} alt={alt || ''} />
+    <div key={value}>
+      <img style={styles.image} src={value} alt={alt || ''} />
+      <br />
+      <Button styleAs="link" onClick={() => deleteItem(value)}>
+        Delete
+      </Button>
+    </div>
   ];
 
   const onInputChange = e => {
@@ -71,10 +103,12 @@ const S3FileUpload = ({
         multiple={multiple}
         onChange={e => onInputChange(e)}
       />
-      <div style={styles.images}>
-        {multiple && listOfCurrentFiles}
-        {!multiple && singleImage}
-      </div>
+      {value && (
+        <div style={styles.images}>
+          {multiple && listOfCurrentFiles}
+          {!multiple && singleImage}
+        </div>
+      )}
     </div>
   );
 };

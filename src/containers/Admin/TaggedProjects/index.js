@@ -2,15 +2,13 @@ import React, { useState } from 'react';
 import { Form } from 'react-final-form';
 import useTaggedProjects from 'hooks/useTaggedProjects';
 import Button from 'components/Button';
-import ProjectField from 'components/ProjectField';
-import TagField from 'components/TagField';
+import { DebugField, ProjectField, TagField } from 'components/Form/Fields';
 
 const TaggedProject = () => {
   const [idToEdit, setIdToEdit] = useState();
   const [taggedProjectValues, setTaggedProjectValues] = useState();
   const {
     getTaggedProjects,
-    addTaggedProject,
     deleteTaggedProject,
     updateTaggedProject
   } = useTaggedProjects();
@@ -72,7 +70,7 @@ const TaggedProject = () => {
 
   return (
     <div>
-      <h1>TaggedProjects</h1>
+      <h1>Tagged Projects</h1>
       <p>
         This page is just for reference and debugging purposes. Most updates
         should be made directly in the project edit screen.
@@ -96,31 +94,13 @@ const TaggedProject = () => {
                     </tr>
                   </thead>
                   <tbody>{taggedProjectsContent(data)}</tbody>
-                  <tfoot>
-                    <tr>
-                      <td colSpan="3">
-                        <Button
-                          onClick={() =>
-                            addTaggedProject({
-                              name: `Example TaggedProject ${Math.floor(
-                                Math.random() * 5000
-                              )}`
-                            })
-                          }
-                          type="button"
-                        >
-                          Add TaggedProject
-                        </Button>
-                      </td>
-                    </tr>
-                  </tfoot>
                 </table>
               </form>
             );
           }}
         />
       )}
-      <pre>{JSON.stringify(taggedProjectValues, 0, 2)}</pre>
+      <DebugField values={taggedProjectValues} />
     </div>
   );
 };
