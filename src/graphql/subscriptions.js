@@ -154,6 +154,7 @@ export const onCreateProject = `subscription OnCreateProject {
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -317,6 +318,7 @@ export const onUpdateProject = `subscription OnUpdateProject {
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -480,6 +482,7 @@ export const onDeleteProject = `subscription OnDeleteProject {
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -785,6 +788,7 @@ export const onCreateClient = `subscription OnCreateClient {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -896,6 +900,7 @@ export const onUpdateClient = `subscription OnUpdateClient {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1007,6 +1012,7 @@ export const onDeleteClient = `subscription OnDeleteClient {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1020,6 +1026,7 @@ export const onCreateTag = `subscription OnCreateTag {
     id
     name
     category
+    logo
     projects {
       items {
         id
@@ -1059,6 +1066,7 @@ export const onCreateTag = `subscription OnCreateTag {
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -1074,6 +1082,7 @@ export const onUpdateTag = `subscription OnUpdateTag {
     id
     name
     category
+    logo
     projects {
       items {
         id
@@ -1113,6 +1122,7 @@ export const onUpdateTag = `subscription OnUpdateTag {
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -1128,6 +1138,7 @@ export const onDeleteTag = `subscription OnDeleteTag {
     id
     name
     category
+    logo
     projects {
       items {
         id
@@ -1167,6 +1178,7 @@ export const onDeleteTag = `subscription OnDeleteTag {
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -1274,6 +1286,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1283,6 +1296,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
       id
       name
       category
+      logo
       projects {
         items {
           id
@@ -1302,6 +1316,7 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1407,6 +1422,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1416,6 +1432,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
       id
       name
       category
+      logo
       projects {
         items {
           id
@@ -1435,6 +1452,7 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1540,6 +1558,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1549,6 +1568,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
       id
       name
       category
+      logo
       projects {
         items {
           id
@@ -1568,6 +1588,7 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             id
             name
             category
+            logo
           }
         }
         nextToken

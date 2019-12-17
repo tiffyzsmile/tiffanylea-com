@@ -67,6 +67,7 @@ type Tag
   id: ID!
   name: String
   category: String
+  logo: String
   projects: [TaggedProject] @connection(name: "ProjectsWithTag")
 }
 

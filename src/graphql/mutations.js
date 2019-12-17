@@ -157,6 +157,7 @@ export const createProject = `mutation CreateProject(
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -323,6 +324,7 @@ export const updateProject = `mutation UpdateProject(
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -489,6 +491,7 @@ export const deleteProject = `mutation DeleteProject(
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -806,6 +809,7 @@ export const createClient = `mutation CreateClient(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -920,6 +924,7 @@ export const updateClient = `mutation UpdateClient(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1034,6 +1039,7 @@ export const deleteClient = `mutation DeleteClient(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1050,6 +1056,7 @@ export const createTag = `mutation CreateTag(
     id
     name
     category
+    logo
     projects {
       items {
         id
@@ -1089,6 +1096,7 @@ export const createTag = `mutation CreateTag(
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -1107,6 +1115,7 @@ export const updateTag = `mutation UpdateTag(
     id
     name
     category
+    logo
     projects {
       items {
         id
@@ -1146,6 +1155,7 @@ export const updateTag = `mutation UpdateTag(
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -1164,6 +1174,7 @@ export const deleteTag = `mutation DeleteTag(
     id
     name
     category
+    logo
     projects {
       items {
         id
@@ -1203,6 +1214,7 @@ export const deleteTag = `mutation DeleteTag(
           id
           name
           category
+          logo
           projects {
             nextToken
           }
@@ -1313,6 +1325,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1322,6 +1335,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
       id
       name
       category
+      logo
       projects {
         items {
           id
@@ -1341,6 +1355,7 @@ export const createTaggedProject = `mutation CreateTaggedProject(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1449,6 +1464,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1458,6 +1474,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
       id
       name
       category
+      logo
       projects {
         items {
           id
@@ -1477,6 +1494,7 @@ export const updateTaggedProject = `mutation UpdateTaggedProject(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1585,6 +1603,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
             id
             name
             category
+            logo
           }
         }
         nextToken
@@ -1594,6 +1613,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
       id
       name
       category
+      logo
       projects {
         items {
           id
@@ -1613,6 +1633,7 @@ export const deleteTaggedProject = `mutation DeleteTaggedProject(
             id
             name
             category
+            logo
           }
         }
         nextToken
