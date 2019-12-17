@@ -277,6 +277,124 @@ export const getProject = `query GetProject($id: ID!) {
   }
 }
 `;
+export const searchProjects = `query SearchProjects(
+  $filter: SearchableProjectFilterInput
+  $sort: SearchableProjectSortInput
+  $limit: Int
+  $nextToken: String
+) {
+  searchProjects(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      date
+      description
+      features
+      url
+      images
+      display
+      logo
+      internal
+      employer {
+        id
+        name
+        startdate
+        enddate
+        url
+        logo
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          nextToken
+        }
+      }
+      client {
+        id
+        name
+        description
+        logo
+        url
+        feedback
+        display
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+          }
+          tags {
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+            display
+            logo
+          }
+        }
+        nextToken
+      }
+    }
+    nextToken
+    total
+  }
+}
+`;
 export const listEmployers = `query ListEmployers(
   $filter: ModelEmployerFilterInput
   $limit: Int
