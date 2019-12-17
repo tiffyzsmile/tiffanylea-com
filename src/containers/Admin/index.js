@@ -8,6 +8,7 @@ import Employer from 'Employer';
 import Clients from 'Clients';
 import Client from 'Client';
 import Tags from 'Tags';
+import Tag from 'Tag';
 import TaggedProjects from 'TaggedProjects';
 import './styles.scss';
 
@@ -21,7 +22,8 @@ const Admin = () => {
         <Route path="/admin/employer/:id?" component={Employer} />
         <Route path="/admin/clients" component={Clients} />
         <Route path="/admin/client/:id?" component={Client} />
-        <Route path="/admin/tags/:id?" component={Tags} />
+        <Route path="/admin/tags" component={Tags} />
+        <Route path="/admin/tag/:id?" component={Tag} />
         <Route path="/admin/taggedprojects/:id?" component={TaggedProjects} />
       </Switch>
     </Page>

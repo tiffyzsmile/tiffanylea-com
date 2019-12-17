@@ -7,8 +7,8 @@ import {
   deleteTag as deleteTagMutation
 } from 'graphql/mutations';
 
-const getFormattedInput = ({ id, name, category }) => {
-  return { id, name, category };
+const getFormattedInput = ({ id, name, category, logo, display }) => {
+  return { id, name, category, logo, display };
 };
 
 const useTags = () => {
@@ -39,16 +39,15 @@ const useTags = () => {
     return { loading, data: tags, error };
   };
 
-  const addTag = tagToAdd => {
+  const addTag = (tagToAdd, onCompleted) => {
     const input = getFormattedInput(tagToAdd);
 
     newTag({
       variables: {
         input
       },
-      //      onCompleted: data => console.log('Tag Added!', data),
       refetchQueries: [{ query: gql(listTags) }]
-    });
+    }).then(({ data: { createTag } }) => onCompleted(createTag));
   };
 
   const deleteTag = tagToDelete => {
@@ -56,8 +55,7 @@ const useTags = () => {
       variables: {
         input: tagToDelete
       },
-      //      onCompleted: data => console.log('Tag Deleted!', data),
-      refetchQueries: [{ query: gql(listTags) }]
+      refetchQueries: [{ query: gql(listTags), variables: { limit: 500 } }]
     });
   };
 
