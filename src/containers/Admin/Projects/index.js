@@ -16,11 +16,13 @@ const Projects = () => {
             <Link to={`/admin/project/${n.id}`}>{n.name}</Link>
           </td>
           <td>
-            <img
-              style={{ maxWidth: '100px', maxHeight: '100px' }}
-              src={n.logo}
-              alt={`Logo of ${n.name}`}
-            />
+            {n.logo && (
+              <img
+                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                src={n.logo}
+                alt={`Logo of ${n.name}`}
+              />
+            )}
           </td>
           <td className="center">
             <Button
