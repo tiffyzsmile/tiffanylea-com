@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
+import { Form } from 'react-final-form';
+import { CategoryField } from 'components/Form/Fields';
 
 const Tag = () => {
+  const [selectedCategory, setSelectedCategory] = useState();
   const history = useHistory();
   const { getTags, deleteTag } = useTags();
-  const { loading, data, error } = getTags();
+  const { loading, data, error } = getTags(selectedCategory);
 
   const tagsContent = tags =>
     tags.map(n => {
@@ -60,7 +63,21 @@ const Tag = () => {
           <thead>
             <tr>
               <th>Tag</th>
-              <th>Category</th>
+              <th>
+                <Form
+                  onSubmit={() => {}} // Can't be empty
+                  initialValues={{ category: selectedCategory }}
+                  render={() => {
+                    return (
+                      <form>
+                        <CategoryField
+                          onCatChange={cat => setSelectedCategory(cat)}
+                        />
+                      </form>
+                    );
+                  }}
+                />
+              </th>
               <th>Logo</th>
               <th>Actions</th>
             </tr>
