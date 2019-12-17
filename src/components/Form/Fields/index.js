@@ -13,7 +13,7 @@ export { default as NameField } from './NameField';
 export { default as ProjectField } from './ProjectField';
 export { default as S3FileUpload } from './S3FileUpload';
 export { default as TagField } from './TagField';
-export { default as TaggedProjectField } from './TaggedProjectField';
+export { default as TaggedProjectTagsField } from './TaggedProjectTagsField';
 export { default as UrlField } from './UrlField';
 
 export default {};

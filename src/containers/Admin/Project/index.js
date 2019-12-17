@@ -7,7 +7,7 @@ import {
   S3FileUpload,
   EmployerField,
   ClientField,
-  TaggedProjectField,
+  TaggedProjectTagsField,
   DateField,
   BooleanField,
   UrlField,
@@ -118,7 +118,10 @@ const Project = () => {
           />
         </section>
         <section>
-          <TaggedProjectField projectId={data.id} selected={data.tags.items} />
+          <TaggedProjectTagsField
+            projectId={data.id}
+            selected={data.tags.items}
+          />
         </section>
       </div>
     </div>

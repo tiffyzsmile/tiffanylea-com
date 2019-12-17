@@ -5,7 +5,7 @@ import useTaggedProjects from 'hooks/useTaggedProjects';
 import Button from 'components/Button';
 import { TagField } from 'components/Form/Fields';
 
-const TaggedProjectField = ({ projectId, selected }) => {
+const TaggedProjectTagsField = ({ projectId, selected }) => {
   const { addTaggedProject, deleteTaggedProject } = useTaggedProjects();
 
   const onSubmit = ({ tags }) => {
@@ -51,12 +51,12 @@ const TaggedProjectField = ({ projectId, selected }) => {
   );
 };
 
-TaggedProjectField.defaultProps = {
+TaggedProjectTagsField.defaultProps = {
   selected: []
 };
 
-TaggedProjectField.propTypes = {
+TaggedProjectTagsField.propTypes = {
   projectId: PropTypes.string.isRequired,
   selected: PropTypes.arrayOf(PropTypes.shape)
 };
-export default TaggedProjectField;
+export default TaggedProjectTagsField;
