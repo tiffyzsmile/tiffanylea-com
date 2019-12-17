@@ -8,7 +8,8 @@ import {
   NameField,
   BooleanField,
   LogoField,
-  UrlField
+  UrlField,
+  DebugField
 } from 'components/Form/Fields';
 import Button from 'components/Button';
 
@@ -77,7 +78,7 @@ const Client = () => {
                   Submit
                 </Button>
               </div>
-              <pre>{JSON.stringify(values, 0, 2)}</pre>
+              <DebugField values={values} />
             </form>
           );
         }}

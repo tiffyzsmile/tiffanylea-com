@@ -3,7 +3,7 @@ import { Form, Field } from 'react-final-form';
 import { useParams } from 'react-router-dom';
 import useEmployers from 'hooks/useEmployers';
 import Button from 'components/Button';
-import { DateField, S3FileUpload } from 'components/Form/Fields';
+import { DateField, DebugField, S3FileUpload } from 'components/Form/Fields';
 
 const Employer = () => {
   const { id } = useParams();
@@ -95,7 +95,7 @@ const Employer = () => {
                   Submit
                 </Button>
               </div>
-              <pre>{JSON.stringify(values, 0, 2)}</pre>
+              <DebugField values={values} />{' '}
             </form>
           );
         }}

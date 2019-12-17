@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form } from 'react-final-form';
 import useTaggedProjects from 'hooks/useTaggedProjects';
 import Button from 'components/Button';
-import { ProjectField, TagField } from 'components/Form/Fields';
+import { DebugField, ProjectField, TagField } from 'components/Form/Fields';
 
 const TaggedProject = () => {
   const [idToEdit, setIdToEdit] = useState();
@@ -100,7 +100,7 @@ const TaggedProject = () => {
           }}
         />
       )}
-      <pre>{JSON.stringify(taggedProjectValues, 0, 2)}</pre>
+      <DebugField values={taggedProjectValues} />
     </div>
   );
 };

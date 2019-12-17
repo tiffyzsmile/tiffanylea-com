@@ -14,7 +14,8 @@ import {
   DescriptionField,
   IdField,
   NameField,
-  LogoField
+  LogoField,
+  DebugField
 } from 'components/Form/Fields';
 
 const styles = {
@@ -110,7 +111,7 @@ const Project = () => {
                       Submit
                     </Button>
                   </div>
-                  <pre>{JSON.stringify(values, 0, 2)}</pre>
+                  <DebugField values={values} />
                 </form>
               );
             }}

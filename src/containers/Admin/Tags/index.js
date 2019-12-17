@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Form, Field } from 'react-final-form';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
-import { CategoryField } from 'components/Form/Fields';
+import { CategoryField, DebugField } from 'components/Form/Fields';
 
 const Tag = () => {
   const [idToEdit, setIdToEdit] = useState();
@@ -157,7 +157,8 @@ const Tag = () => {
           }}
         />
       )}
-      <pre>{JSON.stringify(tagValues, 0, 2)}</pre>
+
+      <DebugField values={tagValues} />
     </div>
   );
 };
