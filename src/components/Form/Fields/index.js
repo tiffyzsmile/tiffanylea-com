@@ -14,6 +14,7 @@ export { default as ProjectField } from './ProjectField';
 export { default as S3FileUpload } from './S3FileUpload';
 export { default as TagField } from './TagField';
 export { default as TaggedProjectTagsField } from './TaggedProjectTagsField';
+export { default as TaggedProjectProjectsField } from './TaggedProjectProjectsField';
 export { default as UrlField } from './UrlField';
 
 export default {};

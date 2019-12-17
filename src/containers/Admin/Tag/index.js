@@ -9,7 +9,8 @@ import {
   IdField,
   NameField,
   LogoField,
-  DebugField
+  DebugField,
+  TaggedProjectProjectsField
 } from 'components/Form/Fields';
 
 const styles = {
@@ -23,9 +24,10 @@ const Tag = () => {
   const { id } = useParams();
   const history = useHistory();
   const { getTag, addTag, updateTag, deleteTag } = useTags();
-  const { loading, data = { id: '', name: '', images: [], tags: {} } } = getTag(
-    id
-  );
+  const {
+    loading,
+    data = { id: '', name: '', images: [], projects: {} }
+  } = getTag(id);
 
   const onSubmit = formValues => {
     if (id) {
@@ -83,7 +85,10 @@ const Tag = () => {
           />
         </section>
         <section>
-          {/* < tagId={data.id} selected={data.tags.items} /> */}
+          <TaggedProjectProjectsField
+            tagId={data.id}
+            selected={data.projects.items}
+          />
         </section>
       </div>
     </div>
