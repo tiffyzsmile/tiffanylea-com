@@ -59,7 +59,7 @@ const Tag = () => {
           </Button>
         </div>
       )}
-      <h1>Tag Details {bulkEdit.toString()}</h1>
+      <h1>Tag Details</h1>
       <label htmlFor="bulkEdit">
         Bulk Edit:
         <input
