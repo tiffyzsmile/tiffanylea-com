@@ -78,5 +78,11 @@
       "providerPlugin": "awscloudformation",
       "build": true
     }
+  },
+  "analytics": {
+    "tiffanyleacom": {
+      "service": "Pinpoint",
+      "providerPlugin": "awscloudformation"
+    }
   }
 }
