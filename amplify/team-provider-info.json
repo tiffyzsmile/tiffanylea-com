@@ -21,27 +21,5 @@
         "S3Trigger52e00513": {}
       }
     }
-  },
-  "test": {
-    "awscloudformation": {
-      "AuthRoleName": "amplify-tiffanylea-com-test-112553-authRole",
-      "UnauthRoleArn": "arn:aws:iam::011206842424:role/amplify-tiffanylea-com-test-112553-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::011206842424:role/amplify-tiffanylea-com-test-112553-authRole",
-      "Region": "us-west-2",
-      "DeploymentBucketName": "amplify-tiffanylea-com-test-112553-deployment",
-      "UnauthRoleName": "amplify-tiffanylea-com-test-112553-unauthRole",
-      "StackName": "amplify-tiffanylea-com-test-112553",
-      "StackId": "arn:aws:cloudformation:us-west-2:011206842424:stack/amplify-tiffanylea-com-test-112553/3635ec50-21cc-11ea-a62a-020934000518",
-      "AmplifyAppId": "d37k5n4ssz46yc"
-    },
-    "categories": {
-      "auth": {
-        "tiffanyleacom0b033fd5": {},
-        "userPoolGroups": {}
-      },
-      "function": {
-        "S3Trigger52e00513": {}
-      }
-    }
   }
 }
