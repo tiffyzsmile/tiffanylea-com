@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Form } from 'react-final-form';
 import { useParams, useHistory } from 'react-router-dom';
 import useTags from 'hooks/useTags';
@@ -22,6 +22,7 @@ const styles = {
 
 const Tag = () => {
   const { id } = useParams();
+  const [bulkEdit, setBulkEdit] = useState(true);
   const history = useHistory();
   const { getTag, addTag, updateTag, deleteTag } = useTags();
   const {
@@ -34,7 +35,10 @@ const Tag = () => {
       updateTag(formValues);
     } else {
       addTag(formValues, onCompleteData => {
-        history.push(`/admin/tag/${onCompleteData.id}`);
+        // bulk edit will just be one tag after another
+        if (!bulkEdit) {
+          history.push(`/admin/tag/${onCompleteData.id}`);
+        }
       });
     }
   };
@@ -55,7 +59,19 @@ const Tag = () => {
           </Button>
         </div>
       )}
-      <h1>Tag Details</h1>
+      <h1>Tag Details {bulkEdit.toString()}</h1>
+      <label htmlFor="bulkEdit">
+        Bulk Edit:
+        <input
+          style={{ display: 'inline' }}
+          type="checkbox"
+          value={bulkEdit}
+          checked={bulkEdit}
+          onChange={e => {
+            setBulkEdit(e.target.checked);
+          }}
+        />
+      </label>
       <div style={styles.gridWrapper}>
         <section>
           <Form
