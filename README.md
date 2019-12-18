@@ -1,70 +1,34 @@
-[![Build Status](https://travis-ci.org/tiffyzsmile/tiffanylea-com.svg?branch=test)](https://travis-ci.org/tiffyzsmile/tiffanylea-com)
+# admin-tiffanylea-com
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Admin management site at admin.tiffanylea.com 
 
-## Available Scripts
+## Quick Start
+Start local app at http://localhost:5000/
+```
+npm start
+```
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Splitting Admin and WWW
+Split Admin and WWW across multiple repos for the following reasons:
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+- Don't want required admin assets loaded on the public facing site
+- Don't want AWS resources to be rebuilt for both on every push to monorepo
+- Want to easily assign subdomain to admin area
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Shared AWS Amplify backend resources
 
-### `npm run build`
+The same AWS Amplify backend resources are being used across multiple front-end repos thus the need to pick the source of truth.
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The source of truth will always be Admin for the following reasons:
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Modifying www repo should not normally involve modifying data models
+- Data model modifications would likely come with admin additions prior to any www updates
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## All backend modifications should be made in this repo
 
-### `npm run eject`
+Further Reading https://aws-amplify.github.io/docs/cli-toolchain/quickstart#multiple-frontends
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
