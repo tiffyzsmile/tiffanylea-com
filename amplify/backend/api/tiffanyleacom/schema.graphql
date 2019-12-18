@@ -1,5 +1,6 @@
 type Project
 @model
+@searchable
 @auth(
   rules: [
     { allow: public, provider: iam, operations: [read] }

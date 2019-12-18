@@ -36,7 +36,17 @@ const Project = () => {
   } = useProjects();
   const {
     loading,
-    data = { id: '', name: '', images: [], tags: {}, logo: '' }
+    data = {
+      id: '',
+      name: '',
+      images: [],
+      tags: {},
+      logo: null,
+      display: false,
+      date: null,
+      url: null,
+      description: null
+    }
   } = getProject(id);
 
   const onSubmit = formValues => {

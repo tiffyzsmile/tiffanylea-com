@@ -2,11 +2,14 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import Button from 'components/Button';
+import { SearchFilterField } from 'components/Form/Fields';
+import { useStateValue } from 'containers/Admin/State';
 
 const Projects = () => {
+  const [{ search }] = useStateValue();
   const history = useHistory();
   const { getProjects } = useProjects();
-  const { loading, data, error } = getProjects();
+  const { loading, data, error } = getProjects(search);
 
   const projectsContent = projects =>
     projects.map(n => {
@@ -16,11 +19,13 @@ const Projects = () => {
             <Link to={`/admin/project/${n.id}`}>{n.name}</Link>
           </td>
           <td>
-            <img
-              style={{ maxWidth: '100px', maxHeight: '100px' }}
-              src={n.logo}
-              alt={`Logo of ${n.name}`}
-            />
+            {n.logo && (
+              <img
+                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                src={n.logo}
+                alt={`Logo of ${n.name}`}
+              />
+            )}
           </td>
           <td className="center">
             <Button
@@ -35,13 +40,13 @@ const Projects = () => {
     });
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>Projects {search}</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/project`)}>
           Add Project
         </Button>
       </div>
-
+      <SearchFilterField />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (

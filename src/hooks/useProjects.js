@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { getProject as getProjectQuery, listProjects } from 'graphql/queries';
+import { getProject as getProjectQuery, searchProjects } from 'graphql/queries';
 import {
   createProject as createProjectMutation,
   updateProject as updateProjectMutation,
@@ -71,11 +71,27 @@ const useProjects = () => {
     return { loading, data: project, error };
   };
 
-  const getProjects = () => {
-    const { loading, data, error } = useQuery(gql(listProjects), {
-      variables: { limit: 500 }
+  const getProjects = filterString => {
+    let filters = {};
+    if (filterString) {
+      filters = {
+        filter: {
+          or: [
+            { id: { match: filterString } },
+            { name: { match: filterString } },
+            { description: { match: filterString } }
+          ]
+        }
+      };
+    }
+
+    const { loading, data, error } = useQuery(gql(searchProjects), {
+      variables: {
+        limit: 500,
+        ...filters
+      }
     });
-    const projects = data ? data.listProjects.items : data;
+    const projects = data ? data.searchProjects.items : data;
     return { loading, data: projects, error };
   };
 
@@ -94,7 +110,9 @@ const useProjects = () => {
       variables: {
         input: projectToDelete
       },
-      refetchQueries: [{ query: gql(listProjects), variables: { limit: 500 } }]
+      refetchQueries: [
+        { query: gql(searchProjects), variables: { limit: 500 } }
+      ]
     });
   };
 

@@ -25,9 +25,13 @@ const useTags = () => {
     return { loading, data: tag, error };
   };
 
-  const getTags = () => {
+  const getTags = category => {
+    let filters = {};
+    if (category) {
+      filters = { filter: { category: { contains: category } } };
+    }
     const { loading, data, error } = useQuery(gql(listTags), {
-      variables: { limit: 500 }
+      variables: { ...filters, limit: 500 }
     });
     const tags = data ? data.listTags.items : data;
     return { loading, data: tags, error };

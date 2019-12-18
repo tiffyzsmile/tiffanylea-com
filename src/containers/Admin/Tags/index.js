@@ -1,20 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
+import { Form } from 'react-final-form';
+import { CategoryField } from 'components/Form/Fields';
 
 const Tag = () => {
+  const [selectedCategory, setSelectedCategory] = useState();
   const history = useHistory();
   const { getTags, deleteTag } = useTags();
-  const { loading, data, error } = getTags();
+  const { loading, data, error } = getTags(selectedCategory);
 
   const tagsContent = tags =>
     tags.map(n => {
       return (
         <tr key={n.id}>
-          <td>{n.id}</td>
           <td>{n.name}</td>
           <td>{n.category}</td>
+          <td>
+            {n.logo && (
+              <img
+                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                src={n.logo}
+                alt={`Logo of ${n.name}`}
+              />
+            )}
+          </td>
           <td className="center">
             <Button
               styleAs="link"
@@ -51,9 +62,23 @@ const Tag = () => {
         <table>
           <thead>
             <tr>
-              <th>ID</th>
               <th>Tag</th>
-              <th>Category</th>
+              <th>
+                <Form
+                  onSubmit={() => {}} // Can't be empty
+                  initialValues={{ category: selectedCategory }}
+                  render={() => {
+                    return (
+                      <form>
+                        <CategoryField
+                          onCatChange={cat => setSelectedCategory(cat)}
+                        />
+                      </form>
+                    );
+                  }}
+                />
+              </th>
+              <th>Logo</th>
               <th>Actions</th>
             </tr>
           </thead>
