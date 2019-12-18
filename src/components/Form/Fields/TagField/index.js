@@ -5,7 +5,7 @@ import useTags from 'hooks/useTags';
 
 const TagField = ({ name, label, category, multiple }) => {
   const { getTags } = useTags();
-  const { loading: loadingTags, data: tags, error: tagsError } = getTags();
+  const { loading: loadingTags, data: tags, error: tagsError } = getTags({});
 
   const tagsOptionList = (tags || []).map(e => {
     if (category === 'all' || category === e.category) {
