@@ -41,6 +41,7 @@ type Employer
 
 type Client
 @model
+@searchable
 @auth(
   rules: [
     { allow: public, provider: iam, operations: [read] }
@@ -59,6 +60,7 @@ type Client
 
 type Tag
 @model
+@searchable
 @auth(
   rules: [
     { allow: public, provider: iam, operations: [read] }
