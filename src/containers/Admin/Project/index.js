@@ -41,10 +41,11 @@ const Project = () => {
       name: '',
       images: [],
       tags: {},
-      logo: '',
+      logo: null,
       display: false,
-      url: '',
-      description: ''
+      date: null,
+      url: null,
+      description: null
     }
   } = getProject(id);
 
