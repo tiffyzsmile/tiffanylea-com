@@ -77,9 +77,9 @@ const useProjects = () => {
       filters = {
         filter: {
           or: [
-            { id: { match: filterString } },
-            { name: { match: filterString } },
-            { description: { match: filterString } }
+            { id: { wildcard: `*${filterString}*` } },
+            { name: { wildcard: `*${filterString}*` } },
+            { description: { wildcard: `*${filterString}*` } }
           ]
         }
       };

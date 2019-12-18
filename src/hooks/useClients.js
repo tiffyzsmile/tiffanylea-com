@@ -45,10 +45,10 @@ const useClients = () => {
       filters = {
         filter: {
           or: [
-            { id: { match: filterString } },
-            { name: { match: filterString } },
-            { description: { match: filterString } },
-            { feedback: { match: filterString } }
+            { id: { wildcard: `*${filterString}*` } },
+            { name: { wildcard: `*${filterString}*` } },
+            { description: { wildcard: `*${filterString}*` } },
+            { feedback: { wildcard: `*${filterString}*` } }
           ]
         }
       };
