@@ -3,13 +3,18 @@ import { useHistory } from 'react-router-dom';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
 import { Form } from 'react-final-form';
-import { CategoryField } from 'components/Form/Fields';
+import { CategoryField, SearchFilterField } from 'components/Form/Fields';
+import { useStateValue } from 'containers/Admin/State';
 
 const Tag = () => {
+  const [{ search }] = useStateValue();
   const [selectedCategory, setSelectedCategory] = useState();
   const history = useHistory();
   const { getTags, deleteTag } = useTags();
-  const { loading, data, error } = getTags(selectedCategory);
+  const { loading, data, error } = getTags({
+    category: selectedCategory,
+    filterString: search
+  });
 
   const tagsContent = tags =>
     tags.map(n => {
@@ -56,6 +61,7 @@ const Tag = () => {
           Add Tag
         </Button>
       </div>
+      <SearchFilterField />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (
