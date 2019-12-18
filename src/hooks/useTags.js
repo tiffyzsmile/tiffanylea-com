@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { getTag as getTagQuery, listTags } from 'graphql/queries';
+import { getTag as getTagQuery, searchTags } from 'graphql/queries';
 import {
   createTag as createTagMutation,
   updateTag as updateTagMutation,
@@ -25,21 +25,33 @@ const useTags = () => {
     return { loading, data: tag, error };
   };
 
-  const getTags = category => {
+  const getTags = ({ filterString, category }) => {
     let filters = {};
     if (category) {
-      filters = { filter: { category: { contains: category } } };
+      filters = { filter: { category: { match: category } } };
     }
-    const { loading, data, error } = useQuery(gql(listTags), {
+    if (filterString) {
+      filters = {
+        filter: {
+          or: [
+            { id: { wildcard: `*${filterString}*` } },
+            { name: { wildcard: `*${filterString}*` } },
+            { category: { wildcard: `*${filterString}*` } }
+          ]
+        }
+      };
+    }
+
+    const { loading, data, error } = useQuery(gql(searchTags), {
       variables: { ...filters, limit: 500 }
     });
-    const tags = data ? data.listTags.items : data;
+    const tags = data ? data.searchTags.items : data;
     return { loading, data: tags, error };
   };
 
   const getTagsByCategory = () => {
-    const { loading, data, error } = useQuery(gql(listTags));
-    const tags = data ? data.listTags.items : data;
+    const { loading, data, error } = useQuery(gql(searchTags));
+    const tags = data ? data.searchTags.items : data;
     return { loading, data: tags, error };
   };
 
@@ -50,7 +62,7 @@ const useTags = () => {
       variables: {
         input
       },
-      refetchQueries: [{ query: gql(listTags) }]
+      refetchQueries: [{ query: gql(searchTags) }]
     }).then(({ data: { createTag } }) => onCompleted(createTag));
   };
 
@@ -59,7 +71,7 @@ const useTags = () => {
       variables: {
         input: tagToDelete
       },
-      refetchQueries: [{ query: gql(listTags), variables: { limit: 500 } }]
+      refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
     });
   };
 

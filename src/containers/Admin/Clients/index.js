@@ -2,11 +2,14 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
 import Button from 'components/Button';
+import { SearchFilterField } from 'components/Form/Fields';
+import { useStateValue } from 'containers/Admin/State';
 
 const Clients = () => {
+  const [{ search }] = useStateValue();
   const history = useHistory();
   const { getClients } = useClients();
-  const { loading, data } = getClients();
+  const { loading, data } = getClients(search);
 
   const clientsContent = clients =>
     clients.map(n => {
@@ -16,11 +19,13 @@ const Clients = () => {
             <Link to={`/admin/client/${n.id}`}>{n.name}</Link>
           </td>
           <td>
-            <img
-              style={{ maxWidth: '100px', maxHeight: '100px' }}
-              src={n.logo}
-              alt={`Logo of ${n.name}`}
-            />
+            {n.logo && (
+              <img
+                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                src={n.logo}
+                alt={`Logo of ${n.name}`}
+              />
+            )}
           </td>
           <td className="center">
             <Button
@@ -41,6 +46,7 @@ const Clients = () => {
           Add Client
         </Button>
       </div>
+      <SearchFilterField />
       {loading && <h1>Loading...</h1>}
       {data && (
         <table>

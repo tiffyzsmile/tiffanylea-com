@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { getClient as getClientQuery, listClients } from 'graphql/queries';
+import { getClient as getClientQuery, searchClients } from 'graphql/queries';
 import {
   createClient as createClientMutation,
   updateClient as updateClientMutation,
@@ -39,11 +39,24 @@ const useClients = () => {
     return { loading, data: client, error };
   };
 
-  const getClients = () => {
-    const { loading, data, error } = useQuery(gql(listClients), {
-      variables: { limit: 500 }
+  const getClients = filterString => {
+    let filters = {};
+    if (filterString) {
+      filters = {
+        filter: {
+          or: [
+            { id: { wildcard: `*${filterString}*` } },
+            { name: { wildcard: `*${filterString}*` } },
+            { description: { wildcard: `*${filterString}*` } },
+            { feedback: { wildcard: `*${filterString}*` } }
+          ]
+        }
+      };
+    }
+    const { loading, data, error } = useQuery(gql(searchClients), {
+      variables: { limit: 500, ...filters }
     });
-    const clients = data ? data.listClients.items : data;
+    const clients = data ? data.searchClients.items : data;
     return { loading, data: clients, error };
   };
 
@@ -62,7 +75,7 @@ const useClients = () => {
       variables: {
         input: clientToDelete
       },
-      refetchQueries: [{ query: gql(listClients), variables: { limit: 500 } }]
+      refetchQueries: [{ query: gql(searchClients), variables: { limit: 500 } }]
     });
   };
 

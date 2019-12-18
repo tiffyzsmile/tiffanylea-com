@@ -694,6 +694,82 @@ export const getClient = `query GetClient($id: ID!) {
   }
 }
 `;
+export const searchClients = `query SearchClients(
+  $filter: SearchableClientFilterInput
+  $sort: SearchableClientSortInput
+  $limit: Int
+  $nextToken: String
+) {
+  searchClients(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      description
+      logo
+      url
+      feedback
+      display
+      projects {
+        id
+        name
+        date
+        description
+        features
+        url
+        images
+        display
+        logo
+        internal
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          projects {
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          display
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+        }
+        tags {
+          items {
+            id
+          }
+          nextToken
+        }
+      }
+    }
+    nextToken
+    total
+  }
+}
+`;
 export const listTags = `query ListTags($filter: ModelTagFilterInput, $limit: Int, $nextToken: String) {
   listTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
     items {
@@ -787,6 +863,55 @@ export const getTag = `query GetTag($id: ID!) {
       }
       nextToken
     }
+  }
+}
+`;
+export const searchTags = `query SearchTags(
+  $filter: SearchableTagFilterInput
+  $sort: SearchableTagSortInput
+  $limit: Int
+  $nextToken: String
+) {
+  searchTags(
+    filter: $filter
+    sort: $sort
+    limit: $limit
+    nextToken: $nextToken
+  ) {
+    items {
+      id
+      name
+      category
+      display
+      logo
+      projects {
+        items {
+          id
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+          }
+          tag {
+            id
+            name
+            category
+            display
+            logo
+          }
+        }
+        nextToken
+      }
+    }
+    nextToken
+    total
   }
 }
 `;

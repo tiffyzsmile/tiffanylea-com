@@ -40,7 +40,7 @@ const Projects = () => {
     });
   return (
     <div>
-      <h1>Projects {search}</h1>
+      <h1>Projects</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/project`)}>
           Add Project
