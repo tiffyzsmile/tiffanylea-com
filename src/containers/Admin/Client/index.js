@@ -17,7 +17,7 @@ const Client = () => {
   const { id } = useParams();
   const history = useHistory();
   const { getClient, updateClient, addClient, deleteClient } = useClients();
-  const { loading, data = { id: '', name: '' } } = getClient(id);
+  const { loading, data = { id: '', name: '', display: true } } = getClient(id);
 
   const onSubmit = formValues => {
     if (id) {

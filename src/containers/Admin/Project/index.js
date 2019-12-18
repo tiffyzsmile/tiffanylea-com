@@ -42,7 +42,7 @@ const Project = () => {
       images: [],
       tags: {},
       logo: null,
-      display: false,
+      display: true,
       date: null,
       url: null,
       description: null

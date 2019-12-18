@@ -27,7 +27,7 @@ const Tag = () => {
   const { getTag, addTag, updateTag, deleteTag } = useTags();
   const {
     loading,
-    data = { id: '', name: '', images: [], projects: {} }
+    data = { id: '', name: '', images: [], projects: {}, display: true }
   } = getTag(id);
 
   const onSubmit = formValues => {
