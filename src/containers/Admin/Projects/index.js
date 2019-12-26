@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import Button from 'components/Button';
-import { SearchFilterField } from 'components/Form/Fields';
+import { SearchFilter } from 'components/Form/Filters';
 import { useStateValue } from 'containers/Admin/State';
 
 const Projects = () => {
@@ -46,7 +46,7 @@ const Projects = () => {
           Add Project
         </Button>
       </div>
-      <SearchFilterField />
+      <SearchFilter />
       {loading && <h1>Loading...</h1>}
       {error && <h1>Error...</h1>}
       {data && (

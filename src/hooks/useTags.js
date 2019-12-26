@@ -1,4 +1,6 @@
-import { useMutation, useQuery } from '@apollo/react-hooks';
+import { useMutation, useQuery, useSubscription } from '@apollo/react-hooks';
+import { API, graphqlOperation } from 'aws-amplify';
+import { onDeleteTag } from 'graphql/subscriptions';
 import gql from 'graphql-tag';
 import { getTag as getTagQuery, searchTags } from 'graphql/queries';
 import {
@@ -6,6 +8,7 @@ import {
   updateTag as updateTagMutation,
   deleteTag as deleteTagMutation
 } from 'graphql/mutations';
+import getFilterOptions from 'helpers/getFilterOptions';
 
 const getFormattedInput = ({ id, name, category, logo, display }) => {
   return { id, name, category, logo, display };
@@ -16,6 +19,8 @@ const useTags = () => {
   const [changeTag] = useMutation(gql(updateTagMutation));
   const [removeTag] = useMutation(gql(deleteTagMutation));
 
+  const listingQueryOptions = getFilterOptions(['id', 'name', 'category']);
+
   const getTag = tagIdToGet => {
     const { loading, data, error } = useQuery(gql(getTagQuery), {
       variables: { id: tagIdToGet }
@@ -25,34 +30,31 @@ const useTags = () => {
     return { loading, data: tag, error };
   };
 
-  const getTags = ({ filterString, category }) => {
-    let filters = {};
-    if (category) {
-      filters = { filter: { category: { match: category } } };
-    }
-    if (filterString) {
-      filters = {
-        filter: {
-          or: [
-            { id: { wildcard: `*${filterString}*` } },
-            { name: { wildcard: `*${filterString}*` } },
-            { category: { wildcard: `*${filterString}*` } }
-          ]
-        }
-      };
-    }
+  const getTags = () => {
+    const { loading, data, error, refetch } = useQuery(
+      gql(searchTags),
+      listingQueryOptions
+    );
 
-    const { loading, data, error } = useQuery(gql(searchTags), {
-      variables: { ...filters, limit: 500 }
+    const { data: data1 } = useSubscription(gql(onDeleteTag), {
+      onSubscriptionData: data2 => {
+        console.log('data2', data2);
+      }
     });
-    const tags = data ? data.searchTags.items : data;
-    return { loading, data: tags, error };
-  };
 
-  const getTagsByCategory = () => {
-    const { loading, data, error } = useQuery(gql(searchTags));
+    console.log('data1', data1);
+
+    API.graphql(graphqlOperation(onDeleteTag)).subscribe({
+      next: tagData => {
+        if (tagData) {
+          console.log('tagData', tagData);
+          refetch();
+        }
+      }
+    });
+
     const tags = data ? data.searchTags.items : data;
-    return { loading, data: tags, error };
+    return { loading, data: tags, error, refetch };
   };
 
   const addTag = (tagToAdd, onCompleted) => {
@@ -61,18 +63,18 @@ const useTags = () => {
     newTag({
       variables: {
         input
-      },
-      refetchQueries: [{ query: gql(searchTags) }]
+      }
+      // refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
     }).then(({ data: { createTag } }) => onCompleted(createTag));
   };
 
-  const deleteTag = tagToDelete => {
+  const deleteTag = (tagToDelete, onCompleted) => {
     removeTag({
       variables: {
         input: tagToDelete
-      },
-      refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
-    });
+      }
+      // refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
+    }).then(({ data: { deleteTag: deletedTag } }) => onCompleted(deletedTag));
   };
 
   const updateTag = tagToUpdate => {
@@ -91,7 +93,6 @@ const useTags = () => {
   return {
     getTag,
     getTags,
-    getTagsByCategory,
     addTag,
     deleteTag,
     updateTag

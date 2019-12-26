@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
 import Button from 'components/Button';
-import { SearchFilterField } from 'components/Form/Fields';
+import { SearchFilter } from 'components/Form/Filters';
 import { useStateValue } from 'containers/Admin/State';
 
 const Clients = () => {
@@ -46,7 +46,7 @@ const Clients = () => {
           Add Client
         </Button>
       </div>
-      <SearchFilterField />
+      <SearchFilter />
       {loading && <h1>Loading...</h1>}
       {data && (
         <table>
