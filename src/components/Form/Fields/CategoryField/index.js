@@ -5,7 +5,7 @@ import categories from 'data/categories';
 
 const CategoryField = ({ onCatChange }) => {
   const options = categories.map(category => {
-    return <option>{category}</option>;
+    return <option key={category}>{category}</option>;
   });
 
   return (
