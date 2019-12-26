@@ -1,9 +1,15 @@
 import React, { useEffect } from 'react';
 import { Field, Form } from 'react-final-form';
 import { useStateValue } from 'containers/Admin/State';
+import categories from 'data/categories';
 
 const CategoryFilter = () => {
   const [{ filters }, dispatch] = useStateValue();
+
+  const options = categories.map(category => {
+    return <option>{category}</option>;
+  });
+
   return (
     <Form
       onSubmit={() => {}} // Can't be empty
@@ -26,23 +32,7 @@ const CategoryFilter = () => {
                 type="select"
               >
                 <option />
-                <option>Industry</option>
-                <option>Language</option>
-                <option>Project Type</option>
-                <option>User Interface(UI)</option>
-                <option>User Experience (UX)</option>
-                <option>Data</option>
-                <option>CMS</option>
-                <option>E-Commerce</option>
-                <option>Server</option>
-                <option>Analytics</option>
-                <option>Tooling</option>
-                <option>AWS</option>
-                <option>Devops</option>
-                <option>Role</option>
-                <option>Library</option>
-                <option>Framework</option>
-                <option>Software</option>
+                {options}
               </Field>
             </label>
           </form>
