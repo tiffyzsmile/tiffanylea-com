@@ -24,7 +24,7 @@ const Tags = () => {
           <td>
             {n.logo && (
               <img
-                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                style={{ maxWidth: '25px', maxHeight: '25px' }}
                 src={n.logo}
                 alt={`Logo of ${n.name}`}
               />
