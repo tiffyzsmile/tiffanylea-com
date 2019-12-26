@@ -9,7 +9,7 @@ const Projects = () => {
   const [{ search }] = useStateValue();
   const history = useHistory();
   const { getProjects } = useProjects();
-  const { loading, data, error } = getProjects(search);
+  const { loading, data = [], error } = getProjects(search);
 
   const projectsContent = projects =>
     projects.map(n => {
@@ -40,7 +40,7 @@ const Projects = () => {
     });
   return (
     <div>
-      <h1>Projects</h1>
+      <h1>Projects ({data.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/project`)}>
           Add Project

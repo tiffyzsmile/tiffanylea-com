@@ -1,5 +1,7 @@
 import { useStateValue } from 'containers/Admin/State';
 
+// TODO: make all listing pages use this
+
 const getFilterOptions = (fieldsToFilter = ['id']) => {
   // get global state filters object
   const [{ filters }] = useStateValue();

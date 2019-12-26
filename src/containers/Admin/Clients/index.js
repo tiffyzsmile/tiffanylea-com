@@ -9,7 +9,7 @@ const Clients = () => {
   const [{ search }] = useStateValue();
   const history = useHistory();
   const { getClients } = useClients();
-  const { loading, data } = getClients(search);
+  const { loading, data = [] } = getClients(search);
 
   const clientsContent = clients =>
     clients.map(n => {
@@ -40,7 +40,7 @@ const Clients = () => {
     });
   return (
     <div>
-      <h1>Clients</h1>
+      <h1>Clients ({data.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/client`)}>
           Add Client

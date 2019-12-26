@@ -54,7 +54,7 @@ const Tags = () => {
 
   return (
     <div>
-      <h1>Tags</h1>
+      <h1>Tags ({data.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/tag`)}>
           Add Tag
