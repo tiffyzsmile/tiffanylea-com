@@ -27,7 +27,7 @@ const Tag = () => {
   const { getTag, addTag, updateTag, deleteTag } = useTags();
   const {
     loading,
-    data = { id: '', name: '', images: [], projects: {} }
+    data = { id: '', name: '', images: [], projects: {}, display: true }
   } = getTag(id);
 
   const onSubmit = formValues => {
@@ -59,7 +59,7 @@ const Tag = () => {
           </Button>
         </div>
       )}
-      <h1>Tag Details {bulkEdit.toString()}</h1>
+      <h1>Tag Details</h1>
       <label htmlFor="bulkEdit">
         Bulk Edit:
         <input

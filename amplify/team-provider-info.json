@@ -17,7 +17,8 @@
         "userPoolGroups": {}
       },
       "function": {
-        "AdminQueriese282e554": {}
+        "AdminQueriese282e554": {},
+        "S3Trigger52e00513": {}
       }
     }
   }

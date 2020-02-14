@@ -2,14 +2,14 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import useClients from 'hooks/useClients';
 import Button from 'components/Button';
-import { SearchFilterField } from 'components/Form/Fields';
+import { SearchFilter } from 'components/Form/Filters';
 import { useStateValue } from 'containers/Admin/State';
 
 const Clients = () => {
   const [{ search }] = useStateValue();
   const history = useHistory();
   const { getClients } = useClients();
-  const { loading, data } = getClients(search);
+  const { loading, data = [] } = getClients(search);
 
   const clientsContent = clients =>
     clients.map(n => {
@@ -40,13 +40,13 @@ const Clients = () => {
     });
   return (
     <div>
-      <h1>Clients</h1>
+      <h1>Clients ({data.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/client`)}>
           Add Client
         </Button>
       </div>
-      <SearchFilterField />
+      <SearchFilter />
       {loading && <h1>Loading...</h1>}
       {data && (
         <table>

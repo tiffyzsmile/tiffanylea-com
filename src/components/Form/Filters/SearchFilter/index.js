@@ -2,20 +2,21 @@ import React, { useEffect } from 'react';
 import { Field, Form } from 'react-final-form';
 import { useStateValue } from 'containers/Admin/State';
 
-const SearchFilterField = () => {
-  const [{ search }, dispatch] = useStateValue();
+const SearchFilter = () => {
+  const [{ filters }, dispatch] = useStateValue();
   return (
     <div>
       <Form
         onSubmit={() => {}}
-        initialValues={{ search }}
+        initialValues={filters}
         render={({ handleSubmit, values }) => {
           useEffect(() => {
+            console.log('SearchFilter values', values);
             dispatch({
-              type: 'changeSearch',
-              newSearch: values.search
+              type: 'updateFilters',
+              newFilters: { ...values }
             });
-          }, [values]);
+          }, [values.search]);
           return (
             <form onSubmit={handleSubmit}>
               <div>
@@ -36,8 +37,8 @@ const SearchFilterField = () => {
   );
 };
 
-SearchFilterField.defaultProps = {};
+SearchFilter.defaultProps = {};
 
-SearchFilterField.propTypes = {};
+SearchFilter.propTypes = {};
 
-export default SearchFilterField;
+export default SearchFilter;

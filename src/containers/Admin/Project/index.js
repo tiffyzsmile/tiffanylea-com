@@ -42,7 +42,7 @@ const Project = () => {
       images: [],
       tags: {},
       logo: null,
-      display: false,
+      display: true,
       date: null,
       url: null,
       description: null
@@ -88,7 +88,7 @@ const Project = () => {
                   <IdField />
                   <NameField />
                   <BooleanField label="Display?" name="display" />
-                  <LogoField folder={`${values.id}`} />
+                  <LogoField folder={`projects/${values.id}`} />
                   <EmployerField />
                   <ClientField />
                   <DateField />
@@ -104,7 +104,7 @@ const Project = () => {
                           return (
                             <S3FileUpload
                               {...input}
-                              filePath={id}
+                              filePath={`projects/${values.id}`}
                               multiple
                               alt={`Screenshot of ${values.name || ''}`}
                             />

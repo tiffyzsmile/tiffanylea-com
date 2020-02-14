@@ -6,7 +6,7 @@ import Button from 'components/Button';
 const Employers = () => {
   const history = useHistory();
   const { getEmployers } = useEmployers();
-  const { loading, data, error } = getEmployers();
+  const { loading, data = [], error } = getEmployers();
 
   const employersContent = employers =>
     employers.map(n => {
@@ -35,7 +35,7 @@ const Employers = () => {
     });
   return (
     <div>
-      <h1>Employers</h1>
+      <h1>Employers ({data.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/employer`)}>
           Add Employer

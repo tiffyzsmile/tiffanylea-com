@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { useHistory } from 'react-router-dom';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
-import { Form } from 'react-final-form';
-import { CategoryField, SearchFilterField } from 'components/Form/Fields';
-import { useStateValue } from 'containers/Admin/State';
+import { CategoryFilter, SearchFilter } from 'components/Form/Filters';
 
-const Tag = () => {
-  const [{ search }] = useStateValue();
-  const [selectedCategory, setSelectedCategory] = useState();
+const Tags = () => {
   const history = useHistory();
   const { getTags, deleteTag } = useTags();
-  const { loading, data, error } = getTags({
-    category: selectedCategory,
-    filterString: search
-  });
-
+  // const [{ tags: data }] = useStateValue();
+  // const { data1 } = getTags();
+  // useEffect(() => {
+  //   console.log('data', data);
+  //   console.log('data1', data1);
+  //   // getTags();
+  // }, []);
+  const { data = [] } = getTags();
   const tagsContent = tags =>
     tags.map(n => {
       return (
@@ -25,7 +24,7 @@ const Tag = () => {
           <td>
             {n.logo && (
               <img
-                style={{ maxWidth: '100px', maxHeight: '100px' }}
+                style={{ maxWidth: '25px', maxHeight: '25px' }}
                 src={n.logo}
                 alt={`Logo of ${n.name}`}
               />
@@ -55,44 +54,28 @@ const Tag = () => {
 
   return (
     <div>
-      <h1>Tags</h1>
+      <h1>Tags ({data.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/tag`)}>
           Add Tag
         </Button>
       </div>
-      <SearchFilterField />
-      {loading && <h1>Loading...</h1>}
-      {error && <h1>Error...</h1>}
-      {data && (
-        <table>
-          <thead>
-            <tr>
-              <th>Tag</th>
-              <th>
-                <Form
-                  onSubmit={() => {}} // Can't be empty
-                  initialValues={{ category: selectedCategory }}
-                  render={() => {
-                    return (
-                      <form>
-                        <CategoryField
-                          onCatChange={cat => setSelectedCategory(cat)}
-                        />
-                      </form>
-                    );
-                  }}
-                />
-              </th>
-              <th>Logo</th>
-              <th>Actions</th>
-            </tr>
-          </thead>
-          <tbody>{tagsContent(data)}</tbody>
-        </table>
-      )}
+      <SearchFilter />
+      <table>
+        <thead>
+          <tr>
+            <th>Tag</th>
+            <th>
+              <CategoryFilter />
+            </th>
+            <th>Logo</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>{tagsContent(data)}</tbody>
+      </table>
     </div>
   );
 };
 
-export default Tag;
+export default Tags;

@@ -1,0 +1,17 @@
+{
+  "appName": "tiffanyleacom",
+  "roleName": "pinpointLambdaRole68804408",
+  "cloudWatchPolicyName": "cloudWatchPolicy68804408",
+  "pinpointPolicyName": "pinpointPolicy68804408",
+  "authPolicyName": "pinpoint_amplify_68804408",
+  "unauthPolicyName": "pinpoint_amplify_68804408",
+  "authRoleName": {
+    "Ref": "AuthRoleName"
+  },
+  "unauthRoleName": {
+    "Ref": "UnauthRoleName"
+  },
+  "authRoleArn": {
+    "Fn::GetAtt": ["AuthRole", "Arn"]
+  }
+}

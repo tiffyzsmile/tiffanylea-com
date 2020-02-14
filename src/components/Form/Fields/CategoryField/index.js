@@ -1,8 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Field } from 'react-final-form';
+import categories from 'data/categories';
 
 const CategoryField = ({ onCatChange }) => {
+  const options = categories.map(category => {
+    return <option key={category}>{category}</option>;
+  });
+
   return (
     <label htmlFor="category">
       Category
@@ -21,23 +26,7 @@ const CategoryField = ({ onCatChange }) => {
               }}
             >
               <option />
-              <option>Industry</option>
-              <option>Language</option>
-              <option>Project Type</option>
-              <option>User Interface(UI)</option>
-              <option>User Experience (UX)</option>
-              <option>Data</option>
-              <option>CMS</option>
-              <option>E-Commerce</option>
-              <option>Server</option>
-              <option>Analytics</option>
-              <option>Tooling</option>
-              <option>AWS</option>
-              <option>Devops</option>
-              <option>Role</option>
-              <option>Library</option>
-              <option>Framework</option>
-              <option>Software</option>
+              {options}
             </select>
           );
         }}

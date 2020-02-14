@@ -7,15 +7,31 @@ export const StateContext = createContext();
 // but it works for now so : )
 export const StateProvider = ({ children }) => {
   const initialState = {
-    search: ''
+    filters: {
+      category: '',
+      search: ''
+    },
+    data: {
+      tag: { id: 'blaaaaa' },
+      tags: []
+    },
+    tags: [{ id: 'bla' }]
   };
 
   const reducer = (state, action) => {
     switch (action.type) {
-      case 'changeSearch':
+      case 'updateListingData':
+        console.log('updateListingData action', action);
         return {
           ...state,
-          search: action.newSearch
+          ...action.newData
+        };
+
+      case 'updateFilters':
+        console.log('updateFilters action', action);
+        return {
+          ...state,
+          filters: action.newFilters
         };
 
       default:
