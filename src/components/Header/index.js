@@ -26,9 +26,9 @@ const Header = ({ isAdmin }) => {
             <li>
               <Link to="/portfolio">Portfolio</Link>
             </li>
-            <li>
-              <Link to="/skills">Skills</Link>
-            </li>
+            {/* <li> */}
+            {/*  <Link to="/skills">Skills</Link> */}
+            {/* </li> */}
             <li>
               <Link to="/reviews">Reviews</Link>
             </li>
