@@ -1,23 +1,24 @@
 /* eslint-disable */
 
 const categories = [
+  'Analytics',
+  'AWS',
+  'CMS',
+  'Compliance',
+  'Data',
+  'Devops',
+  'E-Commerce',
+  'Framework',
   'Industry',
   'Language',
+  'Library',
   'Project Type',
+  'Role',
+  'Server',
+  'Software',
+  'Tooling',
   'User Interface(UI)',
   'User Experience (UX)',
-  'Data',
-  'CMS',
-  'E-Commerce',
-  'Server',
-  'Analytics',
-  'Tooling',
-  'AWS',
-  'Devops',
-  'Role',
-  'Library',
-  'Framework',
-  'Software',
   'Other'
 ];
 
