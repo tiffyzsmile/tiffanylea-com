@@ -4,18 +4,27 @@ import { Field } from 'react-final-form';
 import useTags from 'hooks/useTags';
 
 const TagField = ({ name, label, category, multiple }) => {
-  const { getTags } = useTags();
-  const { loading: loadingTags, data: tags, error: tagsError } = getTags({});
+  const { getTags, getGroupedTags } = useTags();
+  const { loading: loadingTags, error: tagsError } = getTags({});
+  const { data } = getGroupedTags({});
 
-  const tagsOptionList = (tags || []).map(e => {
-    if (category === 'all' || category === e.category) {
-      return (
-        <option key={e.id} value={e.id}>
-          {e.name}
-        </option>
-      );
-    }
-    return false;
+  console.log('data NEW FIELD', data);
+
+  const tagsSubOptionList = tags =>
+    tags.map(e => {
+      if (category === 'all' || category === e.category) {
+        return (
+          <option key={e.id} value={e.id}>
+            {e.name}
+          </option>
+        );
+      }
+      return false;
+    });
+
+  const tagsOptionList = Object.keys(data).map(group => {
+    const categoryTags = tagsSubOptionList(data[group] || []);
+    return <optgroup label={group}>{categoryTags}</optgroup>;
   });
 
   return (
@@ -27,6 +36,7 @@ const TagField = ({ name, label, category, multiple }) => {
         component="select"
         type="select"
         multiple={multiple}
+        size={15}
       >
         {loadingTags && <option>Loading Tags</option>}
         {tagsError && <option>Error Loading Tags</option>}

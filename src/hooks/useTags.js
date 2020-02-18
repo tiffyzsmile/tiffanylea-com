@@ -57,6 +57,21 @@ const useTags = () => {
     return { loading, data: tags, error, refetch };
   };
 
+  const getGroupedTags = () => {
+    const { data = [] } = getTags();
+
+    const groupedData = {};
+    data.map(tagObj => {
+      const currentValues = groupedData[tagObj.category]
+        ? groupedData[tagObj.category]
+        : [];
+      groupedData[tagObj.category] = [...currentValues, tagObj];
+      return false;
+    });
+
+    return { data: groupedData };
+  };
+
   const addTag = (tagToAdd, onCompleted) => {
     const input = getFormattedInput(tagToAdd);
 
@@ -93,6 +108,7 @@ const useTags = () => {
   return {
     getTag,
     getTags,
+    getGroupedTags,
     addTag,
     deleteTag,
     updateTag
