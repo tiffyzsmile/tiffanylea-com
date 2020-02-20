@@ -11,6 +11,7 @@ export const StateProvider = ({ children }) => {
       category: '',
       search: ''
     },
+    sort: { field: 'date', direction: 'desc' },
     data: {
       tag: { id: 'blaaaaa' },
       tags: []
@@ -28,10 +29,15 @@ export const StateProvider = ({ children }) => {
         };
 
       case 'updateFilters':
-        console.log('updateFilters action', action);
         return {
           ...state,
           filters: action.newFilters
+        };
+
+      case 'updateSort':
+        return {
+          ...state,
+          sort: action.newSort
         };
 
       default:

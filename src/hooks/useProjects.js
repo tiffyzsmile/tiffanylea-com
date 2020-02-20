@@ -71,7 +71,11 @@ const useProjects = () => {
     return { loading, data: project, error };
   };
 
-  const getProjects = filterString => {
+  const getProjects = (filterString, sortObj) => {
+    let sort = {};
+    if (sortObj) {
+      sort = { sort: sortObj };
+    }
     let filters = {};
     if (filterString) {
       filters = {
@@ -88,7 +92,8 @@ const useProjects = () => {
     const { loading, data, error } = useQuery(gql(searchProjects), {
       variables: {
         limit: 500,
-        ...filters
+        ...filters,
+        ...sort
       }
     });
     const projects = data ? data.searchProjects.items : data;

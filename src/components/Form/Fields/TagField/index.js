@@ -8,8 +8,6 @@ const TagField = ({ name, label, category, multiple }) => {
   const { loading: loadingTags, error: tagsError } = getTags({});
   const { data } = getGroupedTags({});
 
-  console.log('data NEW FIELD', data);
-
   const tagsSubOptionList = tags =>
     tags.map(e => {
       if (category === 'all' || category === e.category) {
@@ -24,7 +22,11 @@ const TagField = ({ name, label, category, multiple }) => {
 
   const tagsOptionList = Object.keys(data).map(group => {
     const categoryTags = tagsSubOptionList(data[group] || []);
-    return <optgroup label={group}>{categoryTags}</optgroup>;
+    return (
+      <optgroup key={group} label={group}>
+        {categoryTags}
+      </optgroup>
+    );
   });
 
   return (
