@@ -1,6 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Storage } from 'aws-amplify';
+import { sortableContainer, sortableElement } from 'react-sortable-hoc';
+import arrayMove from 'array-move';
+
 import Button from 'components/Button';
 
 const styles = {
@@ -43,18 +46,6 @@ const S3FileUpload = ({
     });
   };
 
-  const listOfCurrentFiles = ([...values, ...value] || []).map(f => {
-    return (
-      <div key={f}>
-        <img style={styles.image} src={f} alt={alt || ''} />
-        <br />
-        <Button styleAs="link" onClick={() => deleteItem(f)}>
-          Delete
-        </Button>
-      </div>
-    );
-  });
-
   const singleImage = [
     <div key={value}>
       <img style={styles.image} src={value} alt={alt || ''} />
@@ -94,6 +85,24 @@ const S3FileUpload = ({
         .catch(err => console.error('put image error', err));
     });
   };
+  const onSortEnd = ({ oldIndex, newIndex }) =>
+    onChange(arrayMove([...values, ...value], oldIndex, newIndex));
+
+  const SortableImageContainer = sortableContainer(({ children }) => (
+    <div style={styles.images}>{children}</div>
+  ));
+
+  const SortableImage = sortableElement(({ imageSrc }) => {
+    return (
+      <div key={imageSrc}>
+        <img style={styles.image} src={imageSrc} alt={alt || ''} />
+        <br />
+        <Button styleAs="link" onClick={() => deleteItem(imageSrc)}>
+          Delete
+        </Button>
+      </div>
+    );
+  });
 
   return (
     <div>
@@ -104,8 +113,20 @@ const S3FileUpload = ({
         onChange={e => onInputChange(e)}
       />
       {value && (
-        <div style={styles.images}>
-          {multiple && listOfCurrentFiles}
+        <div>
+          <SortableImageContainer axis="x" onSortEnd={onSortEnd}>
+            {multiple &&
+              ([...values, ...value] || []).map((f, i) => {
+                return (
+                  <SortableImage
+                    // don't forget to pass index prop with item index
+                    index={i}
+                    key={f}
+                    imageSrc={f}
+                  />
+                );
+              })}
+          </SortableImageContainer>
           {!multiple && singleImage}
         </div>
       )}
