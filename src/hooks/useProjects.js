@@ -71,19 +71,31 @@ const useProjects = () => {
     return { loading, data: project, error };
   };
 
-  const getProjects = (filterString, sortObj) => {
-    let sort = {};
-    if (sortObj) {
-      sort = { sort: sortObj };
+  const getProjects = ({ search, sort, showAll = false }) => {
+    let sortObj = {};
+    if (sort) {
+      sortObj = { sort };
     }
-    let filters = {};
-    if (filterString) {
+
+    // we want to show all in admin but not on website
+    const showAllFilter = () => {
+      if (showAll !== true) {
+        return {
+          filter: { display: { eq: true } }
+        };
+      }
+      return false;
+    };
+
+    let filters = { ...showAllFilter() };
+    if (search) {
       filters = {
+        ...filters,
         filter: {
           or: [
-            { id: { wildcard: `*${filterString}*` } },
-            { name: { wildcard: `*${filterString}*` } },
-            { description: { wildcard: `*${filterString}*` } }
+            { id: { wildcard: `*${search}*` } },
+            { name: { wildcard: `*${search}*` } },
+            { description: { wildcard: `*${search}*` } }
           ]
         }
       };
@@ -93,7 +105,7 @@ const useProjects = () => {
       variables: {
         limit: 500,
         ...filters,
-        ...sort
+        ...sortObj
       }
     });
     const projects = data ? data.searchProjects.items : data;

@@ -1,21 +1,31 @@
 import React from 'react';
 import Page from 'components/Page';
 import Filter from 'components/Filter';
-import { getPortfolioItems, getAllTags } from 'helpers/portfolio';
+import { getAllTags } from 'helpers/portfolio';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import useProjects from 'hooks/useProjects';
+import { useStateValue } from 'containers/Admin/State';
 import { H1 } from 'components/Typography';
 import './styles.scss';
 
 const Portfolio = ({ match }) => {
-  const portfolioItems = getPortfolioItems(match.params.filter).map(item => {
-    const logoSrc = item.logo
-      ? item.logo
-      : `/images/portfolio/${item.slug}.png`;
+  const [
+    {
+      filters: { search },
+      sort
+    }
+  ] = useStateValue();
+  const { getProjects } = useProjects();
+  const { loading, data = [], error } = getProjects({ search, sort });
+  // need to figure out how to add filters from url back in
+  console.log('match.params.filter', match.params.filter);
+  console.log('loading, data = [], error ', loading, data, error);
+  const portfolioItems = data.map(item => {
     return (
-      <li key={item.slug}>
-        <Link to={`/project/${item.slug}`}>
-          <img alt={item.name} src={logoSrc} />
+      <li key={item.id}>
+        <Link to={`/project/${item.id}`}>
+          <img alt={item.name} src={item.logo} />
         </Link>
       </li>
     );

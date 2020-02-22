@@ -15,7 +15,11 @@ const Projects = () => {
   ] = useStateValue();
   const history = useHistory();
   const { getProjects } = useProjects();
-  const { loading, data = [], error } = getProjects(search, sort);
+  const { loading, data = [], error } = getProjects({
+    search,
+    sort,
+    showAll: true
+  });
 
   const updateSort = newSort => {
     dispatch({
