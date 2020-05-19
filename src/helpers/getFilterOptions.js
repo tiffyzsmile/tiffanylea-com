@@ -28,7 +28,8 @@ const getFilterOptions = (fieldsToFilter = ['id']) => {
   }
 
   // If category is present add it to the filters
-  if (category) {
+  // AND in the fields to filter....
+  if (category && fieldsToFilter.includes('category')) {
     queryOptions.variables.filter = { category: { match: category } };
   }
 
