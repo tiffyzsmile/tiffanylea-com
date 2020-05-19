@@ -22,13 +22,15 @@ export const StateProvider = ({ children }) => {
   const reducer = (state, action) => {
     switch (action.type) {
       case 'updateListingData':
-        console.log('updateListingData action', action);
+        // console.log('updateListingData action', action);
         return {
           ...state,
           ...action.newData
         };
 
       case 'updateFilters':
+        // console.log('updateFilters state', state);
+        // console.log('updateFilters action', action);
         return {
           ...state,
           filters: action.newFilters
