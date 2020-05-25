@@ -32,18 +32,21 @@ export const getAllTags = () => {
   });
 };
 
-export const getPortfolioItems = filter => {
-  return portfolio
-    .filter(item => {
-      // only returns results with display set to true
-      return item.display;
-    })
-    .filter(item => {
-      if (filter) {
-        // if filter is passed then only return items that match
-        return getItemTagSlugs(item).indexOf(filter) >= 0;
-      }
-      // else return all items
-      return item;
-    });
+// create a better structured array of projects
+// for easier access to tags and categories
+export const getProjectsWithTagsAndCategories = projects => {
+  const projectsWithTags = projects.map(project => {
+    const categories = [];
+    const tags = [];
+    if (project.tags.items.length) {
+      project.tags.items.forEach(projectTag => {
+        tags.push(projectTag.tag.id);
+        if (!categories.includes(projectTag.tag.category)) {
+          categories.push(projectTag.tag.category);
+        }
+      });
+    }
+    return { ...project, tags, categories };
+  });
+  return projectsWithTags;
 };
