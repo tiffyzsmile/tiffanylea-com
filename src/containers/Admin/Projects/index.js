@@ -6,17 +6,11 @@ import { SearchFilter } from 'components/Form/Filters';
 import { useStateValue } from 'containers/Admin/State';
 
 const Projects = () => {
-  const [
-    {
-      filters: { search },
-      sort
-    },
-    dispatch
-  ] = useStateValue();
+  const [{ currentSearch, sort }, dispatch] = useStateValue();
   const history = useHistory();
   const { getProjects } = useProjects();
   const { loading, data = [], error } = getProjects({
-    search,
+    search: currentSearch,
     sort,
     showAll: true
   });

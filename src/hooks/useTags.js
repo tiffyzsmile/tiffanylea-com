@@ -1,6 +1,4 @@
-import { useMutation, useQuery, useSubscription } from '@apollo/react-hooks';
-import { API, graphqlOperation } from 'aws-amplify';
-import { onDeleteTag } from 'graphql/subscriptions';
+import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
 import { getTag as getTagQuery, searchTags } from 'graphql/queries';
 import {
@@ -19,47 +17,29 @@ const useTags = () => {
   const [changeTag] = useMutation(gql(updateTagMutation));
   const [removeTag] = useMutation(gql(deleteTagMutation));
 
-  const listingQueryOptions = getFilterOptions(['id', 'name', 'category']);
-
   const getTag = tagIdToGet => {
     const { loading, data, error } = useQuery(gql(getTagQuery), {
-      variables: { id: tagIdToGet }
+      variables: { id: tagIdToGet, limit: 500 }
     });
 
     const tag = data ? data.getTag : data;
     return { loading, data: tag, error };
   };
 
-  const getTags = () => {
+  const getTags = ({ search }) => {
     const { loading, data, error, refetch } = useQuery(
       gql(searchTags),
-      listingQueryOptions
+      getFilterOptions({ search, fieldsToFilter: ['id', 'name', 'category'] })
     );
 
-    const { data: data1 } = useSubscription(gql(onDeleteTag), {
-      onSubscriptionData: data2 => {
-        console.log('data2', data2);
-      }
-    });
-
-    console.log('data1', data1);
-
-    API.graphql(graphqlOperation(onDeleteTag)).subscribe({
-      next: tagData => {
-        if (tagData) {
-          console.log('tagData', tagData);
-          refetch();
-        }
-      }
-    });
+    // TODO: in admin we want to subscribe to add and delete changes
 
     const tags = data ? data.searchTags.items : data;
     return { loading, data: tags, error, refetch };
   };
 
   const getGroupedTags = () => {
-    const { data = [] } = getTags();
-
+    const { data = [] } = getTags({});
     const groupedData = {};
     data.map(tagObj => {
       const currentValues = groupedData[tagObj.category]
@@ -78,17 +58,17 @@ const useTags = () => {
     newTag({
       variables: {
         input
-      }
-      // refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
+      },
+      refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
     }).then(({ data: { createTag } }) => onCompleted(createTag));
   };
 
-  const deleteTag = (tagToDelete, onCompleted) => {
+  const deleteTag = (tagToDelete, onCompleted = () => {}) => {
     removeTag({
       variables: {
         input: tagToDelete
-      }
-      // refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
+      },
+      refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
     }).then(({ data: { deleteTag: deletedTag } }) => onCompleted(deletedTag));
   };
 

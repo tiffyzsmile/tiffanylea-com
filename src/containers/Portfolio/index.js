@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Page from 'components/Page';
 import Filter from 'components/Filter';
-import { getAllTags } from 'helpers/portfolio';
 import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import useProjects from 'hooks/useProjects';
+import useTags from 'hooks/useTags';
 import { useStateValue } from 'containers/Admin/State';
 import { H1 } from 'components/Typography';
 import './styles.scss';
@@ -12,16 +12,56 @@ import './styles.scss';
 const Portfolio = ({ match }) => {
   const [
     {
-      filters: { search },
+      currentSearch,
+      filters: { tag },
       sort
-    }
+    },
+    dispatch
   ] = useStateValue();
   const { getProjects } = useProjects();
-  const { loading, data = [], error } = getProjects({ search, sort });
-  // need to figure out how to add filters from url back in
-  console.log('match.params.filter', match.params.filter);
-  console.log('loading, data = [], error ', loading, data, error);
-  const portfolioItems = data.map(item => {
+  const { projectsLoading, data: projects = [], projectsError } = getProjects({
+    search: currentSearch,
+    sort
+  });
+  const { getTags } = useTags();
+  const { tagsLoading, data: tags = [], tagsError } = getTags({});
+
+  useEffect(() => {
+    console.log('SearchFilter values', currentSearch);
+    console.log('match.params', match.params);
+    dispatch({
+      type: 'updateFilters',
+      newFilters: { ...match.params }
+    });
+  }, [match.params]);
+
+  console.log('using tag', tag);
+  useEffect(() => {
+    dispatch({
+      type: 'updateData',
+      data: {
+        tags: {
+          loading: tagsLoading,
+          data: tags,
+          error: tagsError
+        }
+      }
+    });
+  }, [tags]);
+  useEffect(() => {
+    dispatch({
+      type: 'updateData',
+      data: {
+        projects: {
+          loading: projectsLoading,
+          data: projects,
+          error: projectsError
+        }
+      }
+    });
+  }, [tags]);
+
+  const portfolioItems = projects.map(item => {
     return (
       <li key={item.id}>
         <Link to={`/project/${item.id}`}>
@@ -32,7 +72,7 @@ const Portfolio = ({ match }) => {
   });
   return (
     <Page title="Portfolio" description="Portfolio">
-      <Filter tags={getAllTags()} />
+      <Filter />
       <section className="fullWidth portfolio">
         <H1>Portfolio</H1>
         <ul id="portfolio-list">{portfolioItems}</ul>

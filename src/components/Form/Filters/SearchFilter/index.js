@@ -3,19 +3,22 @@ import { Field, Form } from 'react-final-form';
 import { useStateValue } from 'containers/Admin/State';
 
 const SearchFilter = () => {
-  const [{ filters }, dispatch] = useStateValue();
+  const [{ currentSearch }, dispatch] = useStateValue();
   return (
     <div>
       <Form
         onSubmit={() => {}}
-        initialValues={filters}
+        initialValues={{ search: currentSearch }}
         render={({ handleSubmit, values }) => {
           useEffect(() => {
-            console.log('SearchFilter values', values);
-            dispatch({
-              type: 'updateFilters',
-              newFilters: { ...values }
-            });
+            // check to be sure it is different
+            // so it doesn't run on initial render
+            if (values.search !== currentSearch) {
+              dispatch({
+                type: 'updateSearch',
+                search: values.search
+              });
+            }
           }, [values.search]);
           return (
             <form onSubmit={handleSubmit}>

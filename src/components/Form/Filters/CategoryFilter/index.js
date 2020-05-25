@@ -4,25 +4,41 @@ import { useStateValue } from 'containers/Admin/State';
 import categories from 'data/categories';
 
 const CategoryFilter = () => {
-  const [{ filters }, dispatch] = useStateValue();
+  const [
+    {
+      filters: { category }
+    },
+    dispatch
+  ] = useStateValue();
 
-  const options = categories.map(category => {
-    return <option key={category}>{category}</option>;
+  const options = Object.keys(categories).map(categoryKey => {
+    return (
+      <option key={categoryKey} value={categoryKey}>
+        {categories[categoryKey]}
+      </option>
+    );
   });
 
   return (
     <Form
-      onSubmit={() => {}} // Can't be empty
-      initialValues={filters}
-      render={({ values }) => {
+      onSubmit={() => {
+        console.log('submit');
+      }} // Can't be empty
+      initialValues={{ category }}
+      render={({ handleSubmit, values }) => {
         useEffect(() => {
-          dispatch({
-            type: 'updateFilters',
-            newFilters: { ...values }
-          });
+          // check to be sure it is different
+          // so it doesn't run on initial render
+          if (values.category !== category) {
+            console.log('category changed', values);
+            dispatch({
+              type: 'updateCurrentCategory',
+              category: values.category
+            });
+          }
         }, [values.category]);
         return (
-          <form>
+          <form onSubmit={handleSubmit}>
             <label htmlFor="category">
               Category
               <Field
@@ -46,3 +62,5 @@ CategoryFilter.defaultProps = {};
 CategoryFilter.propTypes = {};
 
 export default CategoryFilter;
+
+// TODO: use category field here

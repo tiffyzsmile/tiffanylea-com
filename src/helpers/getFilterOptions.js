@@ -1,14 +1,6 @@
-import { useStateValue } from 'containers/Admin/State';
-
 // TODO: make all listing pages use this
 
-const getFilterOptions = (fieldsToFilter = ['id']) => {
-  // get global state filters object
-  const [{ filters }] = useStateValue();
-
-  // get search and category from the filters obj
-  const { search, category } = filters;
-
+const getFilterOptions = ({ search, fieldsToFilter = [] }) => {
   // set default limit to 500 for all
   const queryOptions = { variables: { limit: 500 } };
 
@@ -25,12 +17,6 @@ const getFilterOptions = (fieldsToFilter = ['id']) => {
     queryOptions.variables.filter = {
       or: [...matchStatements]
     };
-  }
-
-  // If category is present add it to the filters
-  // AND in the fields to filter....
-  if (category && fieldsToFilter.includes('category')) {
-    queryOptions.variables.filter = { category: { match: category } };
   }
 
   return queryOptions;

@@ -9,7 +9,7 @@ const ProjectField = ({ name, label, multiple }) => {
     loading: loadingProjects,
     data: projects,
     error: projectsError
-  } = getProjects();
+  } = getProjects({});
 
   // may want to remove this completely and make it an autocomplete field
   const projectsOptionList = (projects || []).map(e => {
