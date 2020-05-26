@@ -5,6 +5,7 @@ export { default as ClientField } from './ClientField';
 export { default as DateField } from './DateField';
 export { default as DebugField } from './DebugField';
 export { default as DescriptionField } from './DescriptionField';
+export { default as FeaturesField } from './FeaturesField';
 export { default as EmployerField } from './EmployerField';
 export { default as IdField } from './IdField';
 export { default as LogoField } from './LogoField';

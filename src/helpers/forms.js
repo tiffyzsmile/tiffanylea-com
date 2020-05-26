@@ -9,7 +9,17 @@ export const formatDateFromAWS = date => {
   return new Date(`${date} `);
 };
 
+// checks if value is string if so return parsed obj
+// else return as is
+export const formatJsonFromAws = string => {
+  if (typeof string === 'string' || string instanceof String) {
+    return JSON.parse(string);
+  }
+  return string;
+};
+
 export default {
   formatDateForAWS,
-  formatDateFromAWS
+  formatDateFromAWS,
+  formatJsonFromAws
 };

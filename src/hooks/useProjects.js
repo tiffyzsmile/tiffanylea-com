@@ -6,7 +6,11 @@ import {
   updateProject as updateProjectMutation,
   deleteProject as deleteProjectMutation
 } from 'graphql/mutations';
-import { formatDateForAWS, formatDateFromAWS } from 'helpers/forms';
+import {
+  formatDateForAWS,
+  formatDateFromAWS,
+  formatJsonFromAws
+} from 'helpers/forms';
 
 const getFormattedInput = ({
   id,
@@ -39,6 +43,10 @@ const getFormattedInput = ({
     formattedInput.date = formatDateForAWS(date);
   }
 
+  if (features) {
+    formattedInput.features = features.map(feature => JSON.stringify(feature));
+  }
+
   return {
     name,
     description,
@@ -66,6 +74,15 @@ const useProjects = () => {
     // for react-datepicker
     if (project && project.date) {
       project.date = formatDateFromAWS(project.date);
+    }
+
+    // Need to parse awsjson
+    if (project && project.features) {
+      console.log('B project.features', project.features);
+      project.features = project.features.map(feature => {
+        return formatJsonFromAws(feature);
+      });
+      console.log('A project.features', project.features);
     }
 
     return { loading, data: project, error };

@@ -3,15 +3,31 @@ import PropTypes from 'prop-types';
 import Page from 'components/Page';
 import Filter from 'components/Filter';
 import ImageGallery from 'components/ImageGallery';
-import portfolio from 'data/portfolio';
-import employers from 'data/employers';
-import { getAllTags } from 'helpers/portfolio';
 import { H1, H2, H3 } from 'components/Typography';
+import useProjects from 'hooks/useProjects';
 
 const PortfolioItem = ({ match }) => {
-  const portfolioItem = portfolio.filter(item => {
-    return item.slug === match.params.id;
-  })[0];
+  const { getProject } = useProjects();
+
+  const {
+    data: portfolioItem = {
+      id: '',
+      name: '',
+      images: [],
+      tags: {},
+      logo: null,
+      display: true,
+      date: null,
+      url: null,
+      description: null,
+      employer: {}
+    }
+  } = getProject(match.params.id);
+
+  // const { data: portfolioItem = {} } = getProject(match.params.id);
+  // const portfolioItem = portfolio.filter(item => {
+  //   return item.slug === match.params.id;
+  // })[0];
   // console.log('portfolioItem', portfolioItem);
 
   const responsibilities = portfolioItem.responsibilities
@@ -22,12 +38,14 @@ const PortfolioItem = ({ match }) => {
 
   const features = portfolioItem.features
     ? portfolioItem.features.map(feature => {
-        const details = feature.details.map(detail => {
-          return <li key={detail}>{detail}</li>;
-        });
+        const details =
+          feature.items &&
+          feature.items.map(detail => {
+            return <li key={detail}>{detail}</li>;
+          });
         return (
-          <div key={`key-${feature.name}`}>
-            {feature.name && <H3>{feature.name}</H3>}
+          <div key={`key-${feature.heading}`}>
+            {feature.heading && <H3>{feature.heading}</H3>}
             <ul>{details}</ul>
           </div>
         );
@@ -37,20 +55,20 @@ const PortfolioItem = ({ match }) => {
   const images = portfolioItem.images
     ? portfolioItem.images.map(image => {
         return {
-          original: `/images/portfolio/${image}`,
+          original: image,
           originalAlt: portfolioItem.name,
-          thumbnail: `/images/portfolio/${image}`
+          thumbnail: image
         };
       })
     : [];
-
+  console.log('portfolioItem', portfolioItem);
   return (
     <Page title="Portfolio" description="Portfolio">
       <section className="portfolio portfolioItem">
-        <Filter tags={getAllTags()} />
+        <Filter />
         <section className="portfolioDetails">
           <H1>
-            {portfolioItem.name} ({portfolioItem.date.substring(0, 4)})
+            {portfolioItem.name} ({new Date(portfolioItem.date).getFullYear()})
           </H1>
           {portfolioItem.description && (
             <div>
@@ -95,8 +113,8 @@ const PortfolioItem = ({ match }) => {
           <p>
             <img
               style={{ maxWidth: '175px' }}
-              alt={employers[portfolioItem.employer].name}
-              src={employers[portfolioItem.employer].logo}
+              alt={portfolioItem.employer.name}
+              src={portfolioItem.employer.logo}
             />
           </p>
         </section>
