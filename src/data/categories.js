@@ -39,7 +39,7 @@ const categories = {
   software: 'Software',
   tooling: 'Tooling',
   // 'user-interface-ui': 'User Interface (UI)',
-  'user-experience-ux': 'User Experience (UX)',
-  other: 'Other'
+  'user-experience-ux': 'User Experience (UX)'
+  // other: 'Other'
 };
 export default categories;
