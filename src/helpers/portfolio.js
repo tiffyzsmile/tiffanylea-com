@@ -30,15 +30,29 @@ export const getProjectTagsByCategory = tags => {
   });
   const projectTags = tagCategories.map(category => {
     const catTags = tags
-      .filter(tag => tag.tag.category === category)
-      .map(tag => tag.tag.name);
+      .filter((tag, index, self) => {
+        // return if tag is not in current category
+        if (tag.tag.category !== category) {
+          return false;
+        }
+
+        // This is super slow but I don't have time for this right now
+        // It is limiting array of object tags to unique values based on id
+        // This won't be a problem if I ensure things are only tagged once
+        return self.map(x => x.tag.id).indexOf(tag.tag.id) === index;
+      })
+      .map(tag => {
+        return { name: tag.tag.name, id: tag.tag.id };
+      });
 
     const uCatTags = Array.from(new Set(catTags));
     return {
       category: categories[category],
+      categoryId: category,
       tags: uCatTags
     };
   });
+  console.log('projectTags', projectTags);
   return projectTags;
 };
 

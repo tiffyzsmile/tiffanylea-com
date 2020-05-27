@@ -6,6 +6,7 @@ import ImageGallery from 'components/ImageGallery';
 import { H1, H2, Strong } from 'components/Typography';
 import useProjects from 'hooks/useProjects';
 import { getProjectTagsByCategory } from 'helpers/portfolio';
+import { NavLink } from 'react-router-dom';
 import './styles.scss';
 
 const PortfolioItem = ({ match }) => {
@@ -44,9 +45,15 @@ const PortfolioItem = ({ match }) => {
 
   const tagsByCategory = getProjectTagsByCategory(portfolioItem.tags.items).map(
     category => {
-      const tagList = category.tags.map(tag => <li key={tag}>{tag}</li>);
+      const tagList = category.tags.map(tag => (
+        <li key={tag.id}>
+          <NavLink to={`/portfolio/${category.categoryId}/${tag.id}`}>
+            {tag.name}
+          </NavLink>
+        </li>
+      ));
       return (
-        <div className="projectTags">
+        <div className="projectTags" key={category.category}>
           <Strong>{category.category}</Strong>
           <ul>{tagList}</ul>
         </div>
