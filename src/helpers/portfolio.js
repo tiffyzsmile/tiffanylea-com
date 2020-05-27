@@ -52,7 +52,6 @@ export const getProjectTagsByCategory = tags => {
       tags: uCatTags
     };
   });
-  console.log('projectTags', projectTags);
   return projectTags;
 };
 
