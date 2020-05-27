@@ -1,79 +1,54 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 import useTags from 'hooks/useTags';
 import Button from 'components/Button';
-import { CategoryFilter, SearchFilter } from 'components/Form/Filters';
+import { SearchFilter } from 'components/Form/Filters';
+import TagsTable from 'containers/Admin/Tags/TagsTable';
+import { useHistory } from 'react-router-dom';
+import { useStateValue } from 'containers/Admin/State';
+import { filterTagsByCategory } from 'helpers/tags';
 
 const Tags = () => {
+  const [{ currentCategory, currentSearch }] = useStateValue();
   const history = useHistory();
   const { getTags, deleteTag } = useTags();
-  // const [{ tags: data }] = useStateValue();
-  // const { data1 } = getTags();
+  const { data = [] } = getTags({
+    subscribe: true,
+    search: currentSearch
+  });
+  const tags = filterTagsByCategory({ tags: data, category: currentCategory });
+  // const { filteredTags: tags = [] } = filterTags({
+  //   tags: data,
+  //   category: currentCategory
+  // });
+  console.log('ADMIN TAG PAGE REDERED');
+  console.log('tags', data);
+  console.log('filteredTags', tags);
   // useEffect(() => {
-  //   console.log('data', data);
-  //   console.log('data1', data1);
-  //   // getTags();
-  // }, []);
-  const { data = [] } = getTags();
-  const tagsContent = tags =>
-    tags.map(n => {
-      return (
-        <tr key={n.id}>
-          <td>{n.name}</td>
-          <td>{n.category}</td>
-          <td>
-            {n.logo && (
-              <img
-                style={{ maxWidth: '25px', maxHeight: '25px' }}
-                src={n.logo}
-                alt={`Logo of ${n.name}`}
-              />
-            )}
-          </td>
-          <td className="center">
-            <Button
-              styleAs="link"
-              onClick={() => history.push(`/admin/tag/${n.id}`)}
-            >
-              Edit
-            </Button>
-            <Button
-              styleAs="link"
-              onClick={() =>
-                deleteTag({
-                  id: n.id
-                })
-              }
-            >
-              Delete
-            </Button>
-          </td>
-        </tr>
-      );
-    });
+  //   if (!loading) {
+  //     dispatch({
+  //       type: 'updateTags',
+  //       tags: { data }
+  //     });
+  //   }
+  // }, [loading]);
 
   return (
     <div>
-      <h1>Tags ({data.length})</h1>
+      <h1>Tags ({tags.length})</h1>
       <div style={{ float: 'right' }}>
         <Button styleAs="link" onClick={() => history.push(`/admin/tag`)}>
           Add Tag
         </Button>
       </div>
       <SearchFilter />
-      <table>
-        <thead>
-          <tr>
-            <th>Tag</th>
-            <th>
-              <CategoryFilter />
-            </th>
-            <th>Logo</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>{tagsContent(data)}</tbody>
-      </table>
+      <TagsTable
+        tags={tags}
+        onDelete={tagId =>
+          deleteTag({
+            id: tagId
+          })
+        }
+      />
     </div>
   );
 };

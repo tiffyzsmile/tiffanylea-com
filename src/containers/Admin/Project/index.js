@@ -1,6 +1,7 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Form, Field } from 'react-final-form';
-import { useParams, useHistory } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import useProjects from 'hooks/useProjects';
 import Button from 'components/Button';
 import {
@@ -12,11 +13,13 @@ import {
   BooleanField,
   UrlField,
   DescriptionField,
+  FeaturesField,
   IdField,
   NameField,
   LogoField,
   DebugField
 } from 'components/Form/Fields';
+import arrayMutators from 'final-form-arrays';
 
 const styles = {
   gridWrapper: {
@@ -25,8 +28,11 @@ const styles = {
   }
 };
 
-const Project = () => {
-  const { id } = useParams();
+const Project = ({
+  match: {
+    params: { id }
+  }
+}) => {
   const history = useHistory();
   const {
     getProject,
@@ -45,9 +51,11 @@ const Project = () => {
       display: true,
       date: null,
       url: null,
-      description: null
+      description: null,
+      features: []
     }
   } = getProject(id);
+  console.log('PROJECT RERENDER');
 
   const onSubmit = formValues => {
     if (id) {
@@ -81,6 +89,9 @@ const Project = () => {
           <Form
             onSubmit={onSubmit}
             initialValues={data}
+            mutators={{
+              ...arrayMutators
+            }}
             render={({ handleSubmit, pristine, form, submitting, values }) => {
               return (
                 <form onSubmit={handleSubmit}>
@@ -94,6 +105,7 @@ const Project = () => {
                   <DateField />
                   <UrlField />
                   <DescriptionField />
+                  <FeaturesField name="features" />
                   <div>
                     <label htmlFor="images">
                       Screenshots
@@ -136,6 +148,10 @@ const Project = () => {
       </div>
     </div>
   );
+};
+
+Project.propTypes = {
+  match: PropTypes.shape({}).isRequired
 };
 
 export default Project;

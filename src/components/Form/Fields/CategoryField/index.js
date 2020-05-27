@@ -4,8 +4,12 @@ import { Field } from 'react-final-form';
 import categories from 'data/categories';
 
 const CategoryField = ({ onCatChange }) => {
-  const options = categories.map(category => {
-    return <option key={category}>{category}</option>;
+  const options = Object.keys(categories).map(categoryKey => {
+    return (
+      <option key={categoryKey} value={categoryKey}>
+        {categories[categoryKey]}
+      </option>
+    );
   });
 
   return (

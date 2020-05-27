@@ -6,7 +6,11 @@ import {
   updateProject as updateProjectMutation,
   deleteProject as deleteProjectMutation
 } from 'graphql/mutations';
-import { formatDateForAWS, formatDateFromAWS } from 'helpers/forms';
+import {
+  formatDateForAWS,
+  formatDateFromAWS,
+  formatJsonFromAws
+} from 'helpers/forms';
 
 const getFormattedInput = ({
   id,
@@ -39,6 +43,10 @@ const getFormattedInput = ({
     formattedInput.date = formatDateForAWS(date);
   }
 
+  if (features) {
+    formattedInput.features = features.map(feature => JSON.stringify(feature));
+  }
+
   return {
     name,
     description,
@@ -68,18 +76,43 @@ const useProjects = () => {
       project.date = formatDateFromAWS(project.date);
     }
 
+    // Need to parse awsjson
+    if (project && project.features) {
+      console.log('B project.features', project.features);
+      project.features = project.features.map(feature => {
+        return formatJsonFromAws(feature);
+      });
+      console.log('A project.features', project.features);
+    }
+
     return { loading, data: project, error };
   };
 
-  const getProjects = filterString => {
-    let filters = {};
-    if (filterString) {
+  const getProjects = ({ search, sort, showAll = false }) => {
+    let sortObj = {};
+    if (sort) {
+      sortObj = { sort };
+    }
+
+    // we want to show all in admin but not on website
+    const showAllFilter = () => {
+      if (showAll !== true) {
+        return {
+          filter: { display: { eq: true } }
+        };
+      }
+      return false;
+    };
+
+    let filters = { ...showAllFilter() };
+    if (search) {
       filters = {
+        ...filters,
         filter: {
           or: [
-            { id: { wildcard: `*${filterString}*` } },
-            { name: { wildcard: `*${filterString}*` } },
-            { description: { wildcard: `*${filterString}*` } }
+            { id: { wildcard: `*${search}*` } },
+            { name: { wildcard: `*${search}*` } },
+            { description: { wildcard: `*${search}*` } }
           ]
         }
       };
@@ -88,7 +121,8 @@ const useProjects = () => {
     const { loading, data, error } = useQuery(gql(searchProjects), {
       variables: {
         limit: 500,
-        ...filters
+        ...filters,
+        ...sortObj
       }
     });
     const projects = data ? data.searchProjects.items : data;

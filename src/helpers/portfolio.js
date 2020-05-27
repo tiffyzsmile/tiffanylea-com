@@ -1,49 +1,61 @@
-import portfolio from 'data/portfolio';
+import categories from 'data/categories';
 
-export const getItemTags = item => {
-  return [].concat(item.tags, item.cms);
-};
-
-export const getTagSlug = tag => {
-  return tag
-    .replace(/[\s]+/g, '-') // replace spaces with '-'
-    .replace(/[^A-Z0-9-]+/gi, '') // remove special characters with nothing
-    .toLocaleLowerCase();
-};
-
-export const getItemTagSlugs = item => {
-  return getItemTags(item).map(tag => getTagSlug(tag));
-};
-
-export const getAllTags = () => {
-  const tags = portfolio
-    .filter(item => {
-      return item.display;
-    })
-    .map(item => {
-      return getItemTags(item);
-    });
-
-  // only return each item once
-  const uniqueTags = [].concat(...tags).filter((v, i, a) => a.indexOf(v) === i);
-
-  return uniqueTags.map(tag => {
-    return { slug: getTagSlug(tag), name: tag };
+// create a better structured array of projects
+// for easier access to tags and categories
+export const getProjectsWithTagsAndCategories = projects => {
+  const projectsWithTags = projects.map(project => {
+    const projectCategories = [];
+    const tags = [];
+    if (project.tags.items.length) {
+      project.tags.items.forEach(projectTag => {
+        tags.push(projectTag.tag.id);
+        if (!projectCategories.includes(projectTag.tag.category)) {
+          projectCategories.push(projectTag.tag.category);
+        }
+      });
+    }
+    return { ...project, tags, categories: projectCategories };
   });
+  return projectsWithTags;
 };
 
-export const getPortfolioItems = filter => {
-  return portfolio
-    .filter(item => {
-      // only returns results with display set to true
-      return item.display;
-    })
-    .filter(item => {
-      if (filter) {
-        // if filter is passed then only return items that match
-        return getItemTagSlugs(item).indexOf(filter) >= 0;
-      }
-      // else return all items
-      return item;
-    });
+export const getProjectTagsByCategory = tags => {
+  // const tagsByCategory = [];
+  const tagCategories = [];
+  // get array of categories
+  tags.forEach(projectTag => {
+    if (!tagCategories.includes(projectTag.tag.category)) {
+      tagCategories.push(projectTag.tag.category);
+    }
+  });
+  const projectTags = tagCategories.map(category => {
+    const catTags = tags
+      .filter((tag, index, self) => {
+        // return if tag is not in current category
+        if (tag.tag.category !== category) {
+          return false;
+        }
+
+        // This is super slow but I don't have time for this right now
+        // It is limiting array of object tags to unique values based on id
+        // This won't be a problem if I ensure things are only tagged once
+        return self.map(x => x.tag.id).indexOf(tag.tag.id) === index;
+      })
+      .map(tag => {
+        return { name: tag.tag.name, id: tag.tag.id };
+      });
+
+    const uCatTags = Array.from(new Set(catTags));
+    return {
+      category: categories[category],
+      categoryId: category,
+      tags: uCatTags
+    };
+  });
+  return projectTags;
+};
+
+export default {
+  getProjectsWithTagsAndCategories,
+  getProjectTagsByCategory
 };

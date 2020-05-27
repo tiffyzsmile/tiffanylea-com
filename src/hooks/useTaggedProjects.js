@@ -9,6 +9,7 @@ import {
   updateTaggedProject as updateTaggedProjectMutation,
   deleteTaggedProject as deleteTaggedProjectMutation
 } from 'graphql/mutations';
+import getFilterOptions from 'helpers/getFilterOptions';
 
 const getFormattedInput = ({ id, projectId, tagId }) => {
   const formattedInput = {};
@@ -28,6 +29,8 @@ const useTaggedProjects = () => {
   const [changeTaggedProject] = useMutation(gql(updateTaggedProjectMutation));
   const [removeTaggedProject] = useMutation(gql(deleteTaggedProjectMutation));
 
+  const listingQueryOptions = getFilterOptions(['id', 'name']);
+
   const getTaggedProject = taggedProjectIdToGet => {
     const { loading, data, error } = useQuery(gql(getTaggedProjectQuery), {
       variables: { id: taggedProjectIdToGet }
@@ -38,13 +41,19 @@ const useTaggedProjects = () => {
   };
 
   const getTaggedProjects = () => {
-    const { loading, data, error } = useQuery(gql(listTaggedProjects));
+    const { loading, data, error } = useQuery(
+      gql(listTaggedProjects),
+      listingQueryOptions
+    );
     const taggedProjects = data ? data.listTaggedProjects.items : data;
     return { loading, data: taggedProjects, error };
   };
 
   const getTaggedProjectsByCategory = () => {
-    const { loading, data, error } = useQuery(gql(listTaggedProjects));
+    const { loading, data, error } = useQuery(
+      gql(listTaggedProjects),
+      listingQueryOptions
+    );
     const taggedProjects = data ? data.listTaggedProjects.items : data;
     return { loading, data: taggedProjects, error };
   };

@@ -11,7 +11,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_2019.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_2020.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
@@ -34,10 +34,9 @@ const Resume = () => {
           <H2>Summary</H2>
           <p>
             Seasoned engineer with 12+ years experience and exceptional
-            understanding of design and development. Ready to leverage decision
-            making abilities for all things front end and be heavily involved in
-            every stage of full project lifecycle from UX to
-            infrastructure/architecture.
+            understanding of design and development. Ready to leverage
+            decision-making abilities for all things front end and be heavily
+            involved in every stage of the project lifecycle.
           </p>
         </section>
         <section className="skills">
@@ -85,20 +84,20 @@ const Resume = () => {
                 forms throughout the entire home-closing process
               </li>
               <li>
-                Directed design team in adapting a more component based process
-                and mindset
+                Directed the design team in adapting a more component-based
+                process and mindset
               </li>
               <li>
                 Facilitated the creation of a universal component library to
-                support reuse between multiple applications and platforms{' '}
+                support reuse between multiple applications and platforms
               </li>
               <li>
-                Assisted in planning and implementation of first iteration of
-                website analytics
+                Assisted in the planning and implementation of the first
+                iteration of website analytics
               </li>
               <li>Performed multiple site audits focused on UX and security</li>
               <li>
-                Company wide UX lunch and learn, focused on usability and
+                Company-wide UX lunch and learn, focused on usability and
                 accessibility
               </li>
               <li>
@@ -118,7 +117,7 @@ const Resume = () => {
                 Department for all things front end
               </li>
               <li>
-                Collaborated across various departments and venders regarding
+                Collaborated across various departments and vendors regarding
                 UX, analytics and A/B testing
               </li>
               <li>
@@ -126,17 +125,17 @@ const Resume = () => {
                 solutions for multiple high traffic sites:
                 <ul>
                   <li>
-                    Consumer facing e-commerce site, extended to 5 locales and
-                    growing{' '}
+                    Consumer-facing e-commerce site, extended to 5 locales and
+                    growing
                   </li>
                   <li>
                     E-commerce admin portal to manage products, discounts, site
                     content/features, orders and customers for each individual
-                    locale{' '}
+                    locale
                   </li>
                   <li>
                     B2B solution used within companies like Starbucks and Taco
-                    Bell{' '}
+                    Bell
                   </li>
                   <li>
                     B2B admin portal to manage products, discounts, site
@@ -157,7 +156,7 @@ const Resume = () => {
                     provide enhanced analytics for multiple vendors
                   </li>
                   <li>
-                    AI Chat bot to assist shoppers in finding the perfect shoes
+                    AI chatbot to assist shoppers in finding the perfect shoes
                     based on 3 selections
                   </li>
                   <li>
@@ -181,7 +180,7 @@ const Resume = () => {
             <ul>
               <li>Develop medium and large scale web sites for clients </li>
               <li>
-                Involved in all aspects and phases of project lifecycle from
+                Involved in all aspects and phases of the project lifecycle from
                 proposals to launch
               </li>
               <li>
@@ -205,14 +204,16 @@ const Resume = () => {
                     5+ In house e-commerce solutions for large global businesses
                   </li>
                   <li>
-                    3+ Intranet solutions with mix of blogs, forums, and custom
-                    features{' '}
+                    3+ Intranet solutions with a mix of blogs, forums, and
+                    custom features
                   </li>
                   <li>
                     2+ Web services to automate content migration that on
                     average required 3-5 temporary hires for 3 months
                   </li>
-                  <li>Built and maintained internal knowledge base system</li>
+                  <li>
+                    Built and maintained an internal knowledge base system
+                  </li>
                 </ul>
               </li>
               <li>
@@ -237,18 +238,20 @@ const Resume = () => {
                 sites for clients
               </li>
               <li>
-                Majority of work involved theming, configuring and customizing
-                Drupal and Magento based websites
+                Work involved theming, configuring and customizing Drupal and
+                Magento based websites
               </li>
-              <li>Involved in all aspects and phases of project lifecycle</li>
+              <li>
+                Involved in all aspects and phases of the project lifecycle
+              </li>
               <li>
                 Projects:
                 <ul>
                   <li>
                     5+ Custom CMS integrations and site development for medium
-                    to large sized sites
+                    to large-sized sites
                   </li>
-                  <li>5+ Basic static sites for small to medium sized sites</li>
+                  <li>5+ Basic static sites for small to medium-sized sites</li>
                 </ul>
               </li>
               <li>
@@ -272,9 +275,9 @@ const Resume = () => {
                 <ul>
                   <li>
                     35+ Microsite&#39;s which included domain, DNS, website and
-                    email setup and configuration{' '}
+                    email setup and configuration
                   </li>
-                  <li>15+ Small to medium sized business sites</li>
+                  <li>15+ Small to medium-sized business sites</li>
                   <li>5+ Custom MySpace&#39;s</li>
                   <li>
                     Blackberry server management, migration to Plesk Business
@@ -300,7 +303,7 @@ const Resume = () => {
           </H3>
           <ul>
             <li>
-              Academic Achievement award for highest GPA in Web Technologies
+              Academic Achievement Award for highest GPA in Web Technologies
               Department (2007, 2008)
             </li>
           </ul>

@@ -1,0 +1,17 @@
+.projectTags {
+  ul {
+    display: inline;
+    list-style: none;
+    padding: 5px;
+    li {
+      display: inline;
+      &::after {
+        content: ', ';
+      }
+      &:last-child::after {
+        /* Don't put comma after last item */
+        content: '';
+      }
+    }
+  }
+}

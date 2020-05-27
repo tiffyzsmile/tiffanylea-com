@@ -16,6 +16,7 @@ import Tools from 'containers/Tools';
 import Route404 from 'containers/Route404';
 import RouteWithAuth from 'components/RouteWithAuth';
 
+import { StateProvider } from 'containers/Admin/State';
 import { Auth } from 'aws-amplify';
 import { createAppSyncLink } from 'aws-appsync';
 import { ApolloProvider } from '@apollo/react-hooks';
@@ -59,20 +60,22 @@ const App = () => {
   return (
     <ApolloProvider client={client}>
       <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/about" component={About} />
-          <Route exact path="/bookshelf" component={BookShelf} />
-          <Route exact path="/resume" component={Resume} />
-          <Route path="/portfolio/:filter?" component={Portfolio} />
-          <Route path="/project/:id" component={PortfolioItem} />
-          <Route exact path="/skills" component={Skills} />
-          <Route exact path="/reviews" component={Reviews} />
-          <Route exact path="/contact" component={Contact} />
-          <Route exact path="/tools" component={Tools} />
-          <RouteWithAuth exact path="/admin/:page?/:id?" component={Admin} />
-          <Route component={Route404} />
-        </Switch>
+        <StateProvider>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/bookshelf" component={BookShelf} />
+            <Route exact path="/resume" component={Resume} />
+            <Route path="/portfolio/:category?/:tag?" component={Portfolio} />
+            <Route path="/project/:id" component={PortfolioItem} />
+            <Route exact path="/skills" component={Skills} />
+            <Route exact path="/reviews" component={Reviews} />
+            <Route exact path="/contact" component={Contact} />
+            <Route exact path="/tools" component={Tools} />
+            <RouteWithAuth exact path="/admin/:page?/:id?" component={Admin} />
+            <Route component={Route404} />
+          </Switch>
+        </StateProvider>
       </BrowserRouter>
     </ApolloProvider>
   );

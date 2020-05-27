@@ -1,36 +1,74 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import useTags from 'hooks/useTags';
+import FilterItem from 'components/Filter/FilterItem';
 import './styles.css';
-import { Link, NavLink } from 'react-router-dom';
+import categories from 'data/categories';
+import { filterTagsByCategory } from 'helpers/tags';
 
-const Filter = ({ tags }) => {
-  const content = tags.map(tag => {
+const Filter = ({ category, tag }) => {
+  const { getTags } = useTags();
+  const { data: tags = [] } = getTags({});
+  const visibleTags = [];
+
+  if (category) {
+    visibleTags.push(
+      {
+        id: 'go-back',
+        link: '/portfolio',
+        name: `<--- Go Back`,
+        isCurrent: false
+      },
+      ...filterTagsByCategory({ tags, category }).map(t => {
+        const isCurrent = t.id === tag;
+        const tagLink = isCurrent
+          ? `/portfolio/${category}` // if current tag make link unselect tag
+          : `/portfolio/${category}/${t.id}`; // else have link go to tag
+        return {
+          ...t,
+          link: tagLink,
+          isCurrent
+        };
+      })
+    );
+  } else {
+    Object.keys(categories).map(categoryKey =>
+      visibleTags.push({
+        id: categoryKey,
+        link: `/portfolio/${categoryKey}`,
+        name: categories[categoryKey],
+        isCurrent: false // current category isn't currently displayed
+      })
+    );
+  }
+
+  const content = visibleTags.map(t => {
     return (
-      <li key={tag.slug}>
-        <NavLink to={`/portfolio/${tag.slug}`} activeClassName="current">
-          {tag.name}
-        </NavLink>
-      </li>
+      <FilterItem
+        key={t.id}
+        link={t.link}
+        text={t.name}
+        isCurrent={t.isCurrent}
+      />
     );
   });
+
   return (
     <section className="portfolio-filter">
       <nav>
-        <ul>
-          <li>
-            <Link to="/portfolio">All</Link>
-          </li>{' '}
-          {content}
-        </ul>
+        <ul>{content}</ul>
       </nav>
     </section>
   );
 };
+Filter.defaultProps = {
+  category: null,
+  tag: null
+};
 
 Filter.propTypes = {
-  tags: PropTypes.arrayOf(
-    PropTypes.shape({ name: PropTypes.string, id: PropTypes.string })
-  ).isRequired
+  category: PropTypes.string,
+  tag: PropTypes.string
 };
 
 export default Filter;

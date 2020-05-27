@@ -5,10 +5,12 @@
       "Type": "String",
       "Default": "authtiffanyleacom0b033fd5UserPoolId"
     },
+
     "authtiffanyleacom0b033fd5IdentityPoolId": {
       "Type": "String",
       "Default": "authtiffanyleacom0b033fd5IdentityPoolId"
     },
+
     "authtiffanyleacom0b033fd5AppClientID": {
       "Type": "String",
       "Default": "authtiffanyleacom0b033fd5AppClientID"
@@ -43,14 +45,17 @@
       "Properties": {
         "GroupName": "admin",
         "Precedence": 1,
+
         "RoleArn": {
           "Fn::GetAtt": ["adminGroupRole", "Arn"]
         },
+
         "UserPoolId": {
           "Ref": "authtiffanyleacom0b033fd5UserPoolId"
         }
       }
     },
+
     "adminGroupRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -74,7 +79,17 @@
               "Principal": {
                 "Federated": "cognito-identity.amazonaws.com"
               },
-              "Action": "sts:AssumeRoleWithWebIdentity"
+              "Action": "sts:AssumeRoleWithWebIdentity",
+              "Condition": {
+                "StringEquals": {
+                  "cognito-identity.amazonaws.com:aud": {
+                    "Ref": "authtiffanyleacom0b033fd5IdentityPoolId"
+                  }
+                },
+                "ForAnyValue:StringLike": {
+                  "cognito-identity.amazonaws.com:amr": "authenticated"
+                }
+              }
             }
           ]
         }
@@ -217,7 +232,7 @@
           }
         },
         "Handler": "index.handler",
-        "Runtime": "nodejs8.10",
+        "Runtime": "nodejs10.x",
         "Timeout": "300",
         "Role": {
           "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]
@@ -258,6 +273,7 @@
       "DependsOn": ["RoleMapFunction"]
     }
   },
+
   "Outputs": {
     "adminGroupRole": {
       "Value": {

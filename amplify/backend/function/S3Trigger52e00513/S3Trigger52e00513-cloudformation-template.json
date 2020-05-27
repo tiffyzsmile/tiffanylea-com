@@ -53,7 +53,7 @@
         "Role": {
           "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]
         },
-        "Runtime": "nodejs8.10",
+        "Runtime": "nodejs12.x",
         "Timeout": "25",
         "Code": {
           "S3Bucket": "tiffanylea-com-master-20191210135709-deployment",
