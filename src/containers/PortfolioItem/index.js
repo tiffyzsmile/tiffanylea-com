@@ -3,8 +3,10 @@ import PropTypes from 'prop-types';
 import Page from 'components/Page';
 import Filter from 'components/Filter';
 import ImageGallery from 'components/ImageGallery';
-import { H1, H2, H3 } from 'components/Typography';
+import { H1, H2, Strong } from 'components/Typography';
 import useProjects from 'hooks/useProjects';
+import { getProjectTagsByCategory } from 'helpers/portfolio';
+import './styles.scss';
 
 const PortfolioItem = ({ match }) => {
   const { getProject } = useProjects();
@@ -14,7 +16,7 @@ const PortfolioItem = ({ match }) => {
       id: '',
       name: '',
       images: [],
-      tags: {},
+      tags: { items: [] },
       logo: null,
       display: true,
       date: null,
@@ -23,18 +25,6 @@ const PortfolioItem = ({ match }) => {
       employer: {}
     }
   } = getProject(match.params.id);
-
-  // const { data: portfolioItem = {} } = getProject(match.params.id);
-  // const portfolioItem = portfolio.filter(item => {
-  //   return item.slug === match.params.id;
-  // })[0];
-  // console.log('portfolioItem', portfolioItem);
-
-  const responsibilities = portfolioItem.responsibilities
-    ? portfolioItem.responsibilities.map(responsibility => {
-        return <li key={responsibility}>{responsibility}</li>;
-      })
-    : [];
 
   const features = portfolioItem.features
     ? portfolioItem.features.map(feature => {
@@ -45,12 +35,24 @@ const PortfolioItem = ({ match }) => {
           });
         return (
           <div key={`key-${feature.heading}`}>
-            {feature.heading && <H3>{feature.heading}</H3>}
+            {feature.heading && <H2>{feature.heading}</H2>}
             <ul>{details}</ul>
           </div>
         );
       })
     : [];
+
+  const tagsByCategory = getProjectTagsByCategory(portfolioItem.tags.items).map(
+    category => {
+      const tagList = category.tags.map(tag => <li key={tag}>{tag}</li>);
+      return (
+        <div className="projectTags">
+          <Strong>{category.category}</Strong>
+          <ul>{tagList}</ul>
+        </div>
+      );
+    }
+  );
 
   const images = portfolioItem.images
     ? portfolioItem.images.map(image => {
@@ -61,55 +63,27 @@ const PortfolioItem = ({ match }) => {
         };
       })
     : [];
-  console.log('portfolioItem', portfolioItem);
+
+  const formattedDate = new Date(portfolioItem.date).getFullYear();
+
   return (
     <Page title="Portfolio" description="Portfolio">
       <section className="portfolio portfolioItem">
         <Filter />
         <section className="portfolioDetails">
           <H1>
-            {portfolioItem.name} ({new Date(portfolioItem.date).getFullYear()})
+            {portfolioItem.name} {formattedDate > 2000 && `(${formattedDate})`}
           </H1>
           {portfolioItem.description && (
             <div>
-              <H2>Description:</H2>
+              <H2>Description</H2>
               {portfolioItem.description}
             </div>
           )}
 
-          {portfolioItem.features && (
-            <div>
-              <H2>Project Features:</H2>
-              {features}
-            </div>
-          )}
+          {portfolioItem.features && features}
 
-          {portfolioItem.responsibilities &&
-            portfolioItem.responsibilities.length > 0 && (
-              <div>
-                <H2>Responsible for:</H2>
-                <ul>{responsibilities}</ul>
-              </div>
-            )}
-          {portfolioItem.url && (
-            <div>
-              <H2>Links</H2>
-              <ul>
-                {portfolioItem.url && (
-                  <li>
-                    <a
-                      href={portfolioItem.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      Visit site &raquo;
-                    </a>
-                  </li>
-                )}
-              </ul>
-            </div>
-          )}
-          <H2>While Working For:</H2>
+          <H2>While Working For</H2>
           <p>
             <img
               style={{ maxWidth: '175px' }}
@@ -117,6 +91,9 @@ const PortfolioItem = ({ match }) => {
               src={portfolioItem.employer.logo}
             />
           </p>
+
+          <H2>Tags</H2>
+          {tagsByCategory}
         </section>
         <section className="portfolioImages">
           <ImageGallery images={images} />
