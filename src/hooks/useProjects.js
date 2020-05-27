@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { getProject as getProjectQuery, searchProjects } from 'graphql/queries';
+import { getProject as getProjectQuery, listProjects } from 'graphql/queries';
 import {
   createProject as createProjectMutation,
   updateProject as updateProjectMutation,
@@ -78,11 +78,9 @@ const useProjects = () => {
 
     // Need to parse awsjson
     if (project && project.features) {
-      console.log('B project.features', project.features);
       project.features = project.features.map(feature => {
         return formatJsonFromAws(feature);
       });
-      console.log('A project.features', project.features);
     }
 
     return { loading, data: project, error };
@@ -118,14 +116,23 @@ const useProjects = () => {
       };
     }
 
-    const { loading, data, error } = useQuery(gql(searchProjects), {
+    const { loading, data, error } = useQuery(gql(listProjects), {
       variables: {
         limit: 500,
         ...filters,
         ...sortObj
       }
     });
-    const projects = data ? data.searchProjects.items : data;
+    const projects = data ? data.listProjects.items : data;
+    if (projects) {
+      // Sort projects by date
+      // Temporary for listProjects query
+      projects.sort((a, b) => {
+        const dateA = parseInt(a.date.replace(/-/g, ''), 10);
+        const dateB = parseInt(b.date.replace(/-/g, ''), 10);
+        return dateB - dateA;
+      });
+    }
     return { loading, data: projects, error };
   };
 
@@ -144,9 +151,7 @@ const useProjects = () => {
       variables: {
         input: projectToDelete
       },
-      refetchQueries: [
-        { query: gql(searchProjects), variables: { limit: 500 } }
-      ]
+      refetchQueries: [{ query: gql(listProjects), variables: { limit: 500 } }]
     });
   };
 
