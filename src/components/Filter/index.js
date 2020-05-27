@@ -6,16 +6,29 @@ import './styles.css';
 import categories from 'data/categories';
 import { filterTagsByCategory } from 'helpers/tags';
 
-const Filter = ({ category }) => {
+const Filter = ({ category, tag }) => {
   const { getTags } = useTags();
   const { data: tags = [] } = getTags({});
   const visibleTags = [];
 
   if (category) {
     visibleTags.push(
-      { id: 'go-back', link: '/portfolio', name: `<--- Go Back` },
+      {
+        id: 'go-back',
+        link: '/portfolio',
+        name: `<--- Go Back`,
+        isCurrent: false
+      },
       ...filterTagsByCategory({ tags, category }).map(t => {
-        return { ...t, link: `/portfolio/${category}/${t.id}` };
+        const isCurrent = t.id === tag;
+        const tagLink = isCurrent
+          ? `/portfolio/${category}` // if current tag make link unselect tag
+          : `/portfolio/${category}/${t.id}`; // else have link go to tag
+        return {
+          ...t,
+          link: tagLink,
+          isCurrent
+        };
       })
     );
   } else {
@@ -23,13 +36,21 @@ const Filter = ({ category }) => {
       visibleTags.push({
         id: categoryKey,
         link: `/portfolio/${categoryKey}`,
-        name: categories[categoryKey]
+        name: categories[categoryKey],
+        isCurrent: false // current category isn't currently displayed
       })
     );
   }
 
   const content = visibleTags.map(t => {
-    return <FilterItem key={t.id} link={t.link} text={t.name} />;
+    return (
+      <FilterItem
+        key={t.id}
+        link={t.link}
+        text={t.name}
+        isCurrent={t.isCurrent}
+      />
+    );
   });
 
   return (
@@ -41,11 +62,13 @@ const Filter = ({ category }) => {
   );
 };
 Filter.defaultProps = {
-  category: null
+  category: null,
+  tag: null
 };
 
 Filter.propTypes = {
-  category: PropTypes.string
+  category: PropTypes.string,
+  tag: PropTypes.string
 };
 
 export default Filter;

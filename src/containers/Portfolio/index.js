@@ -38,7 +38,7 @@ const Portfolio = ({ match }) => {
   });
   return (
     <Page title="Portfolio" description="Portfolio">
-      <Filter category={match.params.category} />
+      <Filter category={match.params.category} tag={match.params.tag} />
       <section className="fullWidth portfolio">
         <H1>Portfolio ({visibleProjects.length})</H1>
         <ul id="portfolio-list">{portfolioItems}</ul>
