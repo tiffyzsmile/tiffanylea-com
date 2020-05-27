@@ -1,6 +1,6 @@
 import { useMutation, useQuery } from '@apollo/react-hooks';
 import gql from 'graphql-tag';
-import { getTag as getTagQuery, searchTags } from 'graphql/queries';
+import { getTag as getTagQuery, listTags } from 'graphql/queries';
 import {
   createTag as createTagMutation,
   updateTag as updateTagMutation,
@@ -28,13 +28,14 @@ const useTags = () => {
 
   const getTags = ({ search }) => {
     const { loading, data, error, refetch } = useQuery(
-      gql(searchTags),
+      // gql(searchTags),
+      gql(listTags),
       getFilterOptions({ search, fieldsToFilter: ['id', 'name', 'category'] })
     );
 
     // TODO: in admin we want to subscribe to add and delete changes
 
-    const tags = data ? data.searchTags.items : data;
+    const tags = data ? data.listTags.items : data;
     return { loading, data: tags, error, refetch };
   };
 
@@ -59,7 +60,7 @@ const useTags = () => {
       variables: {
         input
       },
-      refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
+      refetchQueries: [{ query: gql(listTags), variables: { limit: 500 } }]
     }).then(({ data: { createTag } }) => onCompleted(createTag));
   };
 
@@ -68,7 +69,7 @@ const useTags = () => {
       variables: {
         input: tagToDelete
       },
-      refetchQueries: [{ query: gql(searchTags), variables: { limit: 500 } }]
+      refetchQueries: [{ query: gql(listTags), variables: { limit: 500 } }]
     }).then(({ data: { deleteTag: deletedTag } }) => onCompleted(deletedTag));
   };
 
