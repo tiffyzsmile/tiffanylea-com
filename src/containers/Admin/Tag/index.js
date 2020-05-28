@@ -51,7 +51,7 @@ const Tag = () => {
             styleAs="link"
             onClick={() =>
               deleteTag({
-                id
+                tagIdToDelete: id
               })
             }
           >

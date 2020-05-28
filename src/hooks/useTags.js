@@ -64,10 +64,10 @@ const useTags = () => {
     }).then(({ data: { createTag } }) => onCompleted(createTag));
   };
 
-  const deleteTag = (tagToDelete, onCompleted = () => {}) => {
+  const deleteTag = ({ tagIdToDelete, onCompleted = () => {} }) => {
     removeTag({
       variables: {
-        input: tagToDelete
+        input: { id: tagIdToDelete }
       },
       refetchQueries: [{ query: gql(listTags), variables: { limit: 500 } }]
     }).then(({ data: { deleteTag: deletedTag } }) => onCompleted(deletedTag));

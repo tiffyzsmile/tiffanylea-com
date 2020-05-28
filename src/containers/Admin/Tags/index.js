@@ -30,7 +30,7 @@ const Tags = () => {
         tags={tags}
         onDelete={tagId =>
           deleteTag({
-            id: tagId
+            tagIdToDelete: tagId
           })
         }
       />
