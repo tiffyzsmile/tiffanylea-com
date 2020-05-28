@@ -55,7 +55,6 @@ const Project = ({
       features: []
     }
   } = getProject(id);
-  console.log('PROJECT RERENDER');
 
   const onSubmit = formValues => {
     if (id) {

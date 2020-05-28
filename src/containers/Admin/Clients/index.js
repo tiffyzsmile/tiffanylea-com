@@ -6,10 +6,10 @@ import { SearchFilter } from 'components/Form/Filters';
 import { useStateValue } from 'containers/Admin/State';
 
 const Clients = () => {
-  const [{ search }] = useStateValue();
+  const [{ currentSearch }] = useStateValue();
   const history = useHistory();
   const { getClients } = useClients();
-  const { loading, data = [] } = getClients(search);
+  const { loading, data = [] } = getClients({ search: currentSearch });
 
   const clientsContent = clients =>
     clients.map(n => {

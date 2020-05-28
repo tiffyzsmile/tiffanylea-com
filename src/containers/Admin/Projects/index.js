@@ -6,21 +6,13 @@ import { SearchFilter } from 'components/Form/Filters';
 import { useStateValue } from 'containers/Admin/State';
 
 const Projects = () => {
-  const [{ currentSearch, sort }, dispatch] = useStateValue();
+  const [{ currentSearch }] = useStateValue();
   const history = useHistory();
   const { getProjects } = useProjects();
   const { loading, data = [], error } = getProjects({
     search: currentSearch,
-    sort,
-    showAll: true
+    showDisplayOnly: false
   });
-
-  const updateSort = newSort => {
-    dispatch({
-      type: 'updateSort',
-      newSort
-    });
-  };
 
   const projectsContent = projects =>
     projects.map(n => {
@@ -66,26 +58,8 @@ const Projects = () => {
         <table>
           <thead>
             <tr>
-              <th
-                onClick={() =>
-                  updateSort({
-                    field: 'name',
-                    direction: sort.direction === 'asc' ? 'desc' : 'asc'
-                  })
-                }
-              >
-                Project
-              </th>
-              <th
-                onClick={() =>
-                  updateSort({
-                    field: 'date',
-                    direction: sort.direction === 'asc' ? 'desc' : 'asc'
-                  })
-                }
-              >
-                Date
-              </th>
+              <th>Project</th>
+              <th>Date</th>
               <th>Logo</th>
               <th>Actions</th>
             </tr>

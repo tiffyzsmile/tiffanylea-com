@@ -8,7 +8,7 @@ const ClientField = () => {
     loading: loadingClients,
     data: clients,
     error: clientsError
-  } = getClients();
+  } = getClients({});
 
   // may want to remove this completely and make it an autocomplete field
   const clientsOptionList = (clients || []).map(e => {

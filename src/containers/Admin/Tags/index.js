@@ -16,21 +16,6 @@ const Tags = () => {
     search: currentSearch
   });
   const tags = filterTagsByCategory({ tags: data, category: currentCategory });
-  // const { filteredTags: tags = [] } = filterTags({
-  //   tags: data,
-  //   category: currentCategory
-  // });
-  console.log('ADMIN TAG PAGE REDERED');
-  console.log('tags', data);
-  console.log('filteredTags', tags);
-  // useEffect(() => {
-  //   if (!loading) {
-  //     dispatch({
-  //       type: 'updateTags',
-  //       tags: { data }
-  //     });
-  //   }
-  // }, [loading]);
 
   return (
     <div>

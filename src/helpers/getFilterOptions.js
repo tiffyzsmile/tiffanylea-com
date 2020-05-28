@@ -1,6 +1,10 @@
 // TODO: make all listing pages use this
 
-const getFilterOptions = ({ search, fieldsToFilter = [] }) => {
+const getFilterOptions = ({
+  search,
+  fieldsToFilter = [],
+  showDisplayOnly = false
+}) => {
   // set default limit to 500 for all
   const queryOptions = { variables: { limit: 500 } };
 
@@ -10,12 +14,19 @@ const getFilterOptions = ({ search, fieldsToFilter = [] }) => {
     const matchStatements = [];
     fieldsToFilter.forEach(f => {
       const match = {};
-      match[f] = { wildcard: `*${search}*` };
+      match[f] = { contains: `${search}` };
       matchStatements.push(match);
     });
 
     queryOptions.variables.filter = {
       or: [...matchStatements]
+    };
+  }
+
+  if (showDisplayOnly) {
+    queryOptions.variables.filter = {
+      ...queryOptions.variables.filter,
+      and: { display: { eq: true } }
     };
   }
 
