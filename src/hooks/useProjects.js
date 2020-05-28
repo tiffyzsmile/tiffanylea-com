@@ -11,6 +11,7 @@ import {
   formatDateFromAWS,
   formatJsonFromAws
 } from 'helpers/forms';
+import getFilterOptions from 'helpers/getFilterOptions';
 
 const getFormattedInput = ({
   id,
@@ -86,43 +87,15 @@ const useProjects = () => {
     return { loading, data: project, error };
   };
 
-  const getProjects = ({ search, sort, showAll = false }) => {
-    let sortObj = {};
-    if (sort) {
-      sortObj = { sort };
-    }
-
-    // we want to show all in admin but not on website
-    const showAllFilter = () => {
-      if (showAll !== true) {
-        return {
-          filter: { display: { eq: true } }
-        };
-      }
-      return false;
-    };
-
-    let filters = { ...showAllFilter() };
-    if (search) {
-      filters = {
-        ...filters,
-        filter: {
-          or: [
-            { id: { wildcard: `*${search}*` } },
-            { name: { wildcard: `*${search}*` } },
-            { description: { wildcard: `*${search}*` } }
-          ]
-        }
-      };
-    }
-
-    const { loading, data, error } = useQuery(gql(listProjects), {
-      variables: {
-        limit: 500,
-        ...filters,
-        ...sortObj
-      }
-    });
+  const getProjects = ({ search, showDisplayOnly = false }) => {
+    const { loading, data, error } = useQuery(
+      gql(listProjects),
+      getFilterOptions({
+        search,
+        fieldsToFilter: ['id', 'name', 'description'],
+        showDisplayOnly
+      })
+    );
     const projects = data ? data.listProjects.items : data;
     if (projects) {
       // Sort projects by date

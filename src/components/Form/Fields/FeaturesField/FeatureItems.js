@@ -9,7 +9,11 @@ const FeatureItems = ({ name }) => {
     <FieldArray name={name} key={name}>
       {({ fields }) => {
         const itemFields = fields.map((item, index) => (
-          <FeatureItem name={item} remove={() => fields.remove(index)} />
+          <FeatureItem
+            name={item}
+            key={item}
+            remove={() => fields.remove(index)}
+          />
         ));
         return (
           <div>

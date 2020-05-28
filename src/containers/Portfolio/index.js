@@ -11,7 +11,7 @@ import './styles.scss';
 const Portfolio = ({ match }) => {
   const { getProjects } = useProjects();
   const { data: projects = [] } = getProjects({
-    sort: { field: 'date', direction: 'desc' }
+    showDisplayOnly: true
   });
   const { category, tag } = match.params;
 
