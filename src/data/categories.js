@@ -25,11 +25,11 @@
 const categories = {
   analytics: 'Analytics',
   aws: 'AWS',
-  // cms: 'CMS',
+  cms: 'CMS',
   compliance: 'Compliance',
   data: 'Data',
   // devops: 'Devops',
-  'e-commerce': 'E-Commerce',
+  // 'e-commerce': 'E-Commerce',
   framework: 'Framework',
   industry: 'Industry',
   language: 'Language',
