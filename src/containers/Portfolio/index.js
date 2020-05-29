@@ -23,7 +23,7 @@ const Portfolio = ({ match }) => {
       if (!tag) {
         return project.categories.includes(category);
       }
-      return project.categories.includes(tag);
+      return project.tags.includes(tag);
     }
   );
 
