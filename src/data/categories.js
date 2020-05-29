@@ -25,7 +25,7 @@
 const categories = {
   analytics: 'Analytics',
   aws: 'AWS',
-  cms: 'CMS',
+  // cms: 'CMS',
   compliance: 'Compliance',
   data: 'Data',
   // devops: 'Devops',
@@ -34,9 +34,10 @@ const categories = {
   industry: 'Industry',
   language: 'Language',
   'project-type': 'Project Type',
+  platform: 'Platform',
   role: 'Role',
   // server: 'Server',
-  software: 'Software',
+  // software: 'Software',
   tooling: 'Tooling',
   // 'user-interface-ui': 'User Interface (UI)',
   'user-experience-ux': 'User Experience (UX)'
