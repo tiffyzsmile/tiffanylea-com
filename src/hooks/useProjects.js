@@ -38,7 +38,7 @@ const getFormattedInput = ({
   // if no client selected use null to clear selection else pass selection
   formattedInput.projectClientId = !client.id ? null : client.id;
 
-  // if no description passed use null to clear description else pass description
+  // if no description passed null to clear description else pass description
   formattedInput.description = !description ? null : description;
 
   if (date) {
