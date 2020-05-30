@@ -38,9 +38,11 @@ const categories = {
   role: 'Role',
   // server: 'Server',
   // software: 'Software',
+  sdlc: 'SDLC',
   tooling: 'Tooling',
   // 'user-interface-ui': 'User Interface (UI)',
-  'user-experience-ux': 'User Experience (UX)'
+  'user-experience-ux': 'User Experience',
+  year: 'Year'
   // other: 'Other'
 };
 export default categories;
