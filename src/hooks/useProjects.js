@@ -32,13 +32,14 @@ const getFormattedInput = ({
     formattedInput.id = id;
   }
 
-  if (employer && employer.id) {
-    formattedInput.projectEmployerId = employer.id;
-  }
+  // if no employer selected use null to clear selection else pass selection
+  formattedInput.projectEmployerId = !employer.id ? null : employer.id;
 
-  if (client && client.id) {
-    formattedInput.projectClientId = client.id;
-  }
+  // if no client selected use null to clear selection else pass selection
+  formattedInput.projectClientId = !client.id ? null : client.id;
+
+  // if no description passed use null to clear description else pass description
+  formattedInput.description = !description ? null : description;
 
   if (date) {
     formattedInput.date = formatDateForAWS(date);
@@ -50,7 +51,6 @@ const getFormattedInput = ({
 
   return {
     name,
-    description,
     features,
     display,
     url,
