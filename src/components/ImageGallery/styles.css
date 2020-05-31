@@ -249,11 +249,7 @@
 .image-gallery-slide.center {
   position: relative;
 }
-.image-gallery-slide img {
-  width: 100%;
-  max-width: 350px; /* temporary for old site portfolio items */
-  padding: 25px 0.5%; /* temporary for old site portfolio items */
-}
+
 .image-gallery-slide .image-gallery-description {
   background: rgba(0, 0, 0, 0.4);
   bottom: 70px;

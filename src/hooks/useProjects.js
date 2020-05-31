@@ -60,6 +60,22 @@ const getFormattedInput = ({
   };
 };
 
+const formatProjectsJson = (projects = []) => {
+  return projects.map(project => {
+    // Need to parse awsjson for each project
+    const features = project.features
+      ? project.features.map(featureSet => {
+          return formatJsonFromAws(featureSet);
+        })
+      : [];
+
+    return {
+      ...project,
+      features
+    };
+  });
+};
+
 const useProjects = () => {
   const [newProject] = useMutation(gql(createProjectMutation));
   const [changeProject] = useMutation(gql(updateProjectMutation));
@@ -106,7 +122,8 @@ const useProjects = () => {
         return dateB - dateA;
       });
     }
-    return { loading, data: projects, error };
+
+    return { loading, data: formatProjectsJson(projects), error };
   };
 
   const addProject = (projectToAdd, onCompleted) => {
