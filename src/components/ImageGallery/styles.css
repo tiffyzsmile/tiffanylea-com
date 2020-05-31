@@ -62,8 +62,8 @@
   z-index: 5;
 }
 .image-gallery.fullscreen-modal .image-gallery-content {
-  top: 50%;
-  transform: translateY(-50%);
+  /*top: 50%;*/
+  /*transform: translateY(-50%);*/
 }
 
 .image-gallery-content {

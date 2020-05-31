@@ -91,6 +91,19 @@
     top: 150px;
     transform: unset;
   }
+
+  // when in full screen mode move it all back
+  .image-gallery.fullscreen-modal {
+    .image-gallery-left-nav,
+    .image-gallery-right-nav {
+      padding: 0 5px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    .image-gallery-slide img {
+      max-height: 100vh;
+    }
+  }
 }
 
 @media screen and (min-width: 655px) {
