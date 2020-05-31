@@ -3,24 +3,29 @@ import ReactImageGallery from 'react-image-gallery';
 import './styles.css';
 import PropTypes from 'prop-types';
 
-const ImageGallery = ({ images }) => {
-  if (images.length === 1) {
-    return <img alt={images[0].originalAlt} src={images[0].original} />;
-  }
+const ImageGallery = ({ images, showFullscreenButton, showThumbnails }) => {
   return (
     <ReactImageGallery
       items={images}
       thumbnailPosition="top"
       showPlayButton={false}
-      showFullscreenButton={false}
+      showThumbnails={showThumbnails}
+      showFullscreenButton={showFullscreenButton}
     />
   );
+};
+
+ImageGallery.defaultProps = {
+  showFullscreenButton: false,
+  showThumbnails: true
 };
 
 ImageGallery.propTypes = {
   images: PropTypes.arrayOf(
     PropTypes.shape({ thumbnail: PropTypes.string, original: PropTypes.string })
-  ).isRequired
+  ).isRequired,
+  showFullscreenButton: PropTypes.bool,
+  showThumbnails: PropTypes.bool
 };
 
 export default ImageGallery;
