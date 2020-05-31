@@ -11,6 +11,7 @@ const ImageGallery = ({ images, showFullscreenButton, showThumbnails }) => {
       showPlayButton={false}
       showThumbnails={showThumbnails}
       showFullscreenButton={showFullscreenButton}
+      useBrowserFullscreen={false}
     />
   );
 };
