@@ -386,18 +386,6 @@ ol {
   overflow: hidden;
   text-align: center;
 }
-.portfolioImages {
-  width: 45%;
-  float: left;
-  max-width: 650px;
-  padding: 15px 0;
-}
-.portfolioDetails {
-  font-family: 'Lato', sans-serif; /* remove after all typography components exist */
-  width: 50%;
-  float: right;
-  padding: 25px 0 0 0;
-}
 /********GRID COLUMNS******/
 .gridWrap {
   padding: 0;
@@ -481,15 +469,6 @@ ol {
   }
 }
 
-@media screen and (max-width: 655px) {
-  .portfolioImages,
-  .portfolioDetails {
-    width: 96%;
-    margin: 0 auto;
-    padding: 0;
-    max-width: inherit;
-  }
-}
 @media screen and (max-width: 550px) {
   aside.rightCol,
   section.leftCol {
