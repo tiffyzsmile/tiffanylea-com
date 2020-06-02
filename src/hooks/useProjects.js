@@ -108,7 +108,7 @@ const useProjects = () => {
       gql(listProjects),
       getFilterOptions({
         search,
-        fieldsToFilter: ['id', 'name', 'description'],
+        fieldsToFilter: ['id', 'name', 'description', 'features'],
         showDisplayOnly
       })
     );
