@@ -26,11 +26,15 @@ const useTags = () => {
     return { loading, data: tag, error };
   };
 
-  const getTags = ({ search }) => {
+  const getTags = ({ search, showDisplayOnly = false }) => {
     const { loading, data, error, refetch } = useQuery(
       // gql(searchTags),
       gql(listTags),
-      getFilterOptions({ search, fieldsToFilter: ['id', 'name', 'category'] })
+      getFilterOptions({
+        search,
+        fieldsToFilter: ['id', 'name', 'category'],
+        showDisplayOnly
+      })
     );
 
     // TODO: in admin we want to subscribe to add and delete changes

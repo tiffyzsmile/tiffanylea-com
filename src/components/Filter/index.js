@@ -8,7 +8,7 @@ import { filterTagsByCategory } from 'helpers/tags';
 
 const Filter = ({ category, tag }) => {
   const { getTags } = useTags();
-  const { data: tags = [] } = getTags({});
+  const { data: tags = [] } = getTags({ showDisplayOnly: true });
   const visibleTags = [];
 
   if (category) {
