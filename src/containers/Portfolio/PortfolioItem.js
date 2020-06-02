@@ -58,6 +58,9 @@ const PortfolioItem = ({ project, closeLink }) => {
 
         {project.features && features}
       </section>
+      <Link className="seeMore" to={`/project/${project.id}`}>
+        See Project
+      </Link>
     </section>
   );
 };
