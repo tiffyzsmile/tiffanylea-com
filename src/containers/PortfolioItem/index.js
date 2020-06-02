@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Page from 'components/Page';
-import Filter from 'components/Filter';
 import ImageGallery from 'components/ImageGallery';
 import { H1, H2, Strong } from 'components/Typography';
 import useProjects from 'hooks/useProjects';
@@ -45,13 +44,18 @@ const PortfolioItem = ({ match }) => {
 
   const tagsByCategory = getProjectTagsByCategory(portfolioItem.tags.items).map(
     category => {
-      const tagList = category.tags.map(tag => (
-        <li key={tag.id}>
-          <NavLink to={`/portfolio/${category.categoryId}/${tag.id}`}>
-            {tag.name}
-          </NavLink>
-        </li>
-      ));
+      const tagList = category.tags.map(tag => {
+        if (tag.display) {
+          return (
+            <li key={tag.id}>
+              <NavLink to={`/portfolio/${category.categoryId}/${tag.id}`}>
+                {tag.name}
+              </NavLink>
+            </li>
+          );
+        }
+        return <li key={tag.id}>{tag.name}</li>;
+      });
       return (
         <div className="projectTags" key={category.category}>
           <Strong>{category.category}</Strong>
@@ -76,7 +80,13 @@ const PortfolioItem = ({ match }) => {
   return (
     <Page title="Portfolio" description="Portfolio">
       <section className="portfolio portfolioItem">
-        <Filter />
+        <section className="portfolioImages">
+          <ImageGallery
+            showFullscreenButton
+            images={images}
+            showThumbnails={false}
+          />
+        </section>
         <section className="portfolioDetails">
           <H1>
             {portfolioItem.name} {formattedDate > 2000 && `(${formattedDate})`}
@@ -101,9 +111,6 @@ const PortfolioItem = ({ match }) => {
 
           <H2>Tags</H2>
           {tagsByCategory}
-        </section>
-        <section className="portfolioImages">
-          <ImageGallery images={images} />
         </section>
       </section>
     </Page>

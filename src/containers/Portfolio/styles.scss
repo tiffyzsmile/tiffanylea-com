@@ -54,27 +54,49 @@
 
 // Portfolio Details
 .portfolioItem {
-  padding: 10px;
+  padding-top: 15px;
+  display: grid;
+  grid-gap: 15px;
+
+  @media screen and (min-width: 980px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media screen and (min-width: 655px) {
+    //grid-template-columns: minmax(50%, 450px) 1fr;
+  }
   .close {
     display: none;
     float: right;
   }
-}
-.portfolioDetails {
-  font-family: 'Lato', sans-serif; /* remove after all typography components exist */
-  width: 100%;
+
+  .seeMore {
+    grid-column: 1/-1;
+    text-align: right;
+    &:after {
+      content: '\0027a4';
+      padding: 0 5px;
+    }
+  }
+  .portfolioImages {
+    padding: 15px;
+  }
+  .portfolioDetails {
+    padding: 15px;
+  }
 }
 
 .portfolioImages {
+  margin: 0 auto;
   max-height: 450px;
+  max-width: 600px;
   overflow: hidden;
   & > img {
     align-self: center;
   }
 
   @media screen and (min-width: 650px) {
-    min-height: 400px;
-    display: flex;
+    //min-height: 400px;
+    //display: flex;
   }
 
   .image-gallery-fullscreen-button {
@@ -105,20 +127,3 @@
     }
   }
 }
-
-@media screen and (min-width: 655px) {
-  .portfolioImages,
-  .portfolioDetails {
-    width: 50%;
-  }
-  .portfolioImages {
-    width: 45%;
-    float: left;
-    max-width: 650px;
-  }
-  .portfolioDetails {
-    float: right;
-  }
-}
-
-// TODO: clean up this css...

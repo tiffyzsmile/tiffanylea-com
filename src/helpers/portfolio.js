@@ -42,7 +42,7 @@ export const getProjectTagsByCategory = tags => {
         return self.map(x => x.tag.id).indexOf(tag.tag.id) === index;
       })
       .map(tag => {
-        return { name: tag.tag.name, id: tag.tag.id };
+        return { name: tag.tag.name, id: tag.tag.id, display: tag.tag.display };
       });
 
     const uCatTags = Array.from(new Set(catTags));
