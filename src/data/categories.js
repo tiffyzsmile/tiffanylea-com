@@ -26,7 +26,7 @@ const categories = {
   analytics: 'Analytics',
   aws: 'AWS',
   cms: 'CMS',
-  compliance: 'Compliance',
+  // compliance: 'Compliance',
   data: 'Data',
   // devops: 'Devops',
   'e-commerce': 'E-Commerce',
