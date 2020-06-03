@@ -79,6 +79,11 @@
   }
   .portfolioImages {
     padding: 15px;
+    // This fixes glitch on image load
+    .image-gallery {
+      min-width: 450px;
+      min-height: 450px;
+    }
   }
   .portfolioDetails {
     padding: 15px;
