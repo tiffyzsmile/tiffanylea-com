@@ -9,17 +9,19 @@ const TagField = ({ name, label, category, multiple }) => {
   const { data } = getGroupedTags({});
 
   const tagsSubOptionList = tags =>
-    tags.map(e => {
-      if (category === 'all' || category === e.category) {
-        return (
-          <option key={e.id} value={e.id}>
-            {e.name}
-          </option>
-        );
-      }
-      return false;
-    });
-
+    tags
+      // Sort list alphabetically by name
+      .sort((a, b) => (a.name < b.name ? -1 : Number(a.name > b.name)))
+      .map(e => {
+        if (category === 'all' || category === e.category) {
+          return (
+            <option key={e.id} value={e.id}>
+              {e.name}
+            </option>
+          );
+        }
+        return false;
+      });
   const tagsOptionList = Object.keys(data).map(group => {
     const categoryTags = tagsSubOptionList(data[group] || []);
     return (
