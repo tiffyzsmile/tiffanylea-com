@@ -8,6 +8,7 @@ export { default as DescriptionField } from './DescriptionField';
 export { default as FeaturesField } from './FeaturesField';
 export { default as EmployerField } from './EmployerField';
 export { default as IdField } from './IdField';
+export { default as InternalField } from './InternalField';
 export { default as LogoField } from './LogoField';
 export { default as NameField } from './NameField';
 export { default as ProjectField } from './ProjectField';

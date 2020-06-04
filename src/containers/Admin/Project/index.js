@@ -13,6 +13,7 @@ import {
   BooleanField,
   UrlField,
   DescriptionField,
+  InternalField,
   FeaturesField,
   IdField,
   NameField,
@@ -103,6 +104,7 @@ const Project = ({
                   <ClientField />
                   <DateField />
                   <UrlField />
+                  <InternalField />
                   <DescriptionField />
                   <FeaturesField name="features" />
                   <div>
