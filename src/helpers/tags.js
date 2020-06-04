@@ -8,7 +8,8 @@ export const filterTagsByCategory = ({ tags = [], category }) => {
     }
     return tag;
   });
-
+  // Sort list alphabetically by name
+  filteredTags.sort((a, b) => (a.name < b.name ? -1 : Number(a.name > b.name)));
   return filteredTags;
 };
 
