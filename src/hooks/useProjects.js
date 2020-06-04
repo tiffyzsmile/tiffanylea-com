@@ -32,11 +32,14 @@ const getFormattedInput = ({
     formattedInput.id = id;
   }
 
-  // if no employer selected use null to clear selection else pass selection
-  formattedInput.projectEmployerId = !employer.id ? null : employer.id;
+  // not sure how to clear the values out
+  if (employer && employer.id) {
+    formattedInput.projectEmployerId = employer.id;
+  }
 
-  // if no client selected use null to clear selection else pass selection
-  formattedInput.projectClientId = !client.id ? null : client.id;
+  if (client && client.id) {
+    formattedInput.projectClientId = client.id;
+  }
 
   // if no description passed null to clear description else pass description
   formattedInput.description = !description ? null : description;

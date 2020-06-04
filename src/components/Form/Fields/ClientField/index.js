@@ -11,13 +11,16 @@ const ClientField = () => {
   } = getClients({});
 
   // may want to remove this completely and make it an autocomplete field
-  const clientsOptionList = (clients || []).map(e => {
-    return (
-      <option key={e.id} value={e.id}>
-        {e.name}
-      </option>
-    );
-  });
+  const clientsOptionList = (clients || [])
+    // Sort list alphabetically by name
+    .sort((a, b) => (a.name < b.name ? -1 : Number(a.name > b.name)))
+    .map(e => {
+      return (
+        <option key={e.id} value={e.id}>
+          {e.name}
+        </option>
+      );
+    });
 
   return (
     <div>
