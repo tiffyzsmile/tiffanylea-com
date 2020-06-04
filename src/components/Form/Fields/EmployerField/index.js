@@ -11,13 +11,16 @@ const EmployerField = () => {
   } = getEmployers();
 
   // may want to remove this completely and make it an autocomplete field
-  const employersOptionList = (employers || []).map(e => {
-    return (
-      <option key={e.id} value={e.id}>
-        {e.name}
-      </option>
-    );
-  });
+  const employersOptionList = (employers || [])
+    // Sort list alphabetically by name
+    .sort((a, b) => (a.name < b.name ? -1 : Number(a.name > b.name)))
+    .map(e => {
+      return (
+        <option key={e.id} value={e.id}>
+          {e.name}
+        </option>
+      );
+    });
 
   return (
     <label htmlFor="employer">
