@@ -32,7 +32,7 @@ import './styles.scss';
 // TODO: go back and look at auth method choices closer
 // Do I need cognito?  Should I just stick with IAM?
 
-const authType = window.location.pathname.includes('admin')
+const authType = window.location.pathname.includes('/admin')
   ? awsconfig.aws_appsync_authenticationType
   : 'AWS_IAM';
 
