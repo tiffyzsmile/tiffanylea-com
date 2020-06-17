@@ -51,7 +51,7 @@
   -webkit-tap-highlight-color: transparent;
 }
 .image-gallery.fullscreen-modal {
-  background: #000;
+  background: #fff;
   bottom: 0;
   height: 100%;
   left: 0;
@@ -59,7 +59,7 @@
   right: 0;
   top: 0;
   width: 100%;
-  z-index: 5;
+  z-index: 500;
 }
 .image-gallery.fullscreen-modal .image-gallery-content {
   /*top: 50%;*/
@@ -72,10 +72,10 @@
   top: 0;
 }
 .image-gallery-content.fullscreen {
-  background: #000;
+  background: #fff;
 }
 .image-gallery-content.fullscreen .image-gallery-slide {
-  background: #000;
+  background: #fff;
 }
 
 .image-gallery-slide-wrapper {

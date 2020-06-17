@@ -18,6 +18,7 @@ const getFormattedInput = ({
   name,
   date,
   description,
+  internal,
   features,
   display,
   url,
@@ -43,6 +44,9 @@ const getFormattedInput = ({
 
   // if no description passed null to clear description else pass description
   formattedInput.description = !description ? null : description;
+
+  // if no internal passed null to clear internal else pass internal
+  formattedInput.internal = !internal ? null : internal;
 
   if (date) {
     formattedInput.date = formatDateForAWS(date);
@@ -130,6 +134,7 @@ const useProjects = () => {
   };
 
   const addProject = (projectToAdd, onCompleted) => {
+    console.log('projectToAdd', projectToAdd);
     const input = getFormattedInput(projectToAdd);
 
     newProject({
