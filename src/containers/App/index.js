@@ -7,6 +7,7 @@ import About from 'containers/About';
 import Admin from 'containers/Admin';
 import BookShelf from 'containers/BookShelf';
 import Resume from 'containers/Resume';
+import Privacy from 'containers/Privacy';
 import Portfolio from 'containers/Portfolio';
 import PortfolioItem from 'containers/PortfolioItem';
 import Skills from 'containers/Skills';
@@ -72,6 +73,8 @@ const App = () => {
             <Route exact path="/reviews" component={Reviews} />
             <Route exact path="/contact" component={Contact} />
             <Route exact path="/tools" component={Tools} />
+            {/* Privacy policy used for MBOL */}
+            <Route path="/privacy" component={Privacy} />
             <RouteWithAuth exact path="/admin/:page?/:id?" component={Admin} />
             <Route component={Route404} />
           </Switch>
