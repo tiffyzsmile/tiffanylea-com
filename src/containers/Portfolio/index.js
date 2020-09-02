@@ -51,11 +51,22 @@ const Portfolio = ({ match, location }) => {
       );
     }
     const link = isCurrent ? '/portfolio' : `/portfolio/${item.id}`;
+    // This updates link to use cloudfront distribution url
+    // See: https://github.com/aws-amplify/amplify-console/issues/330
+    const getCdnImage = url => {
+      return url.replace(
+        'tiffanylea-com-content20191210135709-master.s3.us-west-2.amazonaws.com', // eslint-disable-line
+        'd3oyz6uk1t3qpy.cloudfront.net'
+      );
+    };
+
+    const imageUrl = getCdnImage(item.logo);
+
     return (
       <React.Fragment key={item.id}>
         <li className={isCurrent ? 'current' : ''} id={item.id}>
           <Link to={link + location.search}>
-            <img alt={item.name} src={item.logo} />
+            <img alt={item.name} src={getCdnImage(imageUrl)} />
           </Link>
         </li>
         {projectDetail}
