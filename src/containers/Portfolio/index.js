@@ -66,7 +66,12 @@ const Portfolio = ({ match, location }) => {
       <React.Fragment key={item.id}>
         <li className={isCurrent ? 'current' : ''} id={item.id}>
           <Link to={link + location.search}>
-            <img alt={item.name} src={getCdnImage(imageUrl)} />
+            <img
+              alt={item.name}
+              src={getCdnImage(imageUrl)}
+              height="200"
+              width="200"
+            />
           </Link>
         </li>
         {projectDetail}
