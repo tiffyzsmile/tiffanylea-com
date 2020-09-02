@@ -1,25 +1,611 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const onCreateProject = `subscription OnCreateProject {
-  onCreateProject {
-    id
-    name
-    date
-    description
-    features
-    url
-    images
-    display
-    logo
-    internal
-    employer {
+export const onCreateProject = /* GraphQL */ `
+  subscription OnCreateProject {
+    onCreateProject {
+      id
+      name
+      date
+      description
+      features
+      url
+      images
+      display
+      logo
+      internal
+      createdAt
+      updatedAt
+      employer {
+        id
+        name
+        startdate
+        enddate
+        url
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+          nextToken
+        }
+      }
+      client {
+        id
+        name
+        description
+        logo
+        url
+        feedback
+        display
+        createdAt
+        updatedAt
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          createdAt
+          updatedAt
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+            createdAt
+            updatedAt
+            projects {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+          }
+          tags {
+            items {
+              id
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          createdAt
+          updatedAt
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+          tag {
+            id
+            name
+            category
+            display
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onUpdateProject = /* GraphQL */ `
+  subscription OnUpdateProject {
+    onUpdateProject {
+      id
+      name
+      date
+      description
+      features
+      url
+      images
+      display
+      logo
+      internal
+      createdAt
+      updatedAt
+      employer {
+        id
+        name
+        startdate
+        enddate
+        url
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+          nextToken
+        }
+      }
+      client {
+        id
+        name
+        description
+        logo
+        url
+        feedback
+        display
+        createdAt
+        updatedAt
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          createdAt
+          updatedAt
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+            createdAt
+            updatedAt
+            projects {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+          }
+          tags {
+            items {
+              id
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          createdAt
+          updatedAt
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+          tag {
+            id
+            name
+            category
+            display
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onDeleteProject = /* GraphQL */ `
+  subscription OnDeleteProject {
+    onDeleteProject {
+      id
+      name
+      date
+      description
+      features
+      url
+      images
+      display
+      logo
+      internal
+      createdAt
+      updatedAt
+      employer {
+        id
+        name
+        startdate
+        enddate
+        url
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+          nextToken
+        }
+      }
+      client {
+        id
+        name
+        description
+        logo
+        url
+        feedback
+        display
+        createdAt
+        updatedAt
+        projects {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          createdAt
+          updatedAt
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+            createdAt
+            updatedAt
+            projects {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+          }
+          tags {
+            items {
+              id
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+      }
+      tags {
+        items {
+          id
+          createdAt
+          updatedAt
+          project {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+          tag {
+            id
+            name
+            category
+            display
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onCreateEmployer = /* GraphQL */ `
+  subscription OnCreateEmployer {
+    onCreateEmployer {
       id
       name
       startdate
       enddate
       url
       logo
+      createdAt
+      updatedAt
       projects {
         items {
           id
@@ -32,6 +618,8 @@ export const onCreateProject = `subscription OnCreateProject {
           display
           logo
           internal
+          createdAt
+          updatedAt
           employer {
             id
             name
@@ -39,6 +627,11 @@ export const onCreateProject = `subscription OnCreateProject {
             enddate
             url
             logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
           }
           client {
             id
@@ -48,15 +641,194 @@ export const onCreateProject = `subscription OnCreateProject {
             url
             feedback
             display
+            createdAt
+            updatedAt
+            projects {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
           }
           tags {
+            items {
+              id
+              createdAt
+              updatedAt
+            }
             nextToken
           }
         }
         nextToken
       }
     }
-    client {
+  }
+`;
+export const onUpdateEmployer = /* GraphQL */ `
+  subscription OnUpdateEmployer {
+    onUpdateEmployer {
+      id
+      name
+      startdate
+      enddate
+      url
+      logo
+      createdAt
+      updatedAt
+      projects {
+        items {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          createdAt
+          updatedAt
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+            createdAt
+            updatedAt
+            projects {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+          }
+          tags {
+            items {
+              id
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onDeleteEmployer = /* GraphQL */ `
+  subscription OnDeleteEmployer {
+    onDeleteEmployer {
+      id
+      name
+      startdate
+      enddate
+      url
+      logo
+      createdAt
+      updatedAt
+      projects {
+        items {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          createdAt
+          updatedAt
+          employer {
+            id
+            name
+            startdate
+            enddate
+            url
+            logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+            createdAt
+            updatedAt
+            projects {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+          }
+          tags {
+            items {
+              id
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+        nextToken
+      }
+    }
+  }
+`;
+export const onCreateClient = /* GraphQL */ `
+  subscription OnCreateClient {
+    onCreateClient {
       id
       name
       description
@@ -64,6 +836,8 @@ export const onCreateProject = `subscription OnCreateProject {
       url
       feedback
       display
+      createdAt
+      updatedAt
       projects {
         id
         name
@@ -75,6 +849,8 @@ export const onCreateProject = `subscription OnCreateProject {
         display
         logo
         internal
+        createdAt
+        updatedAt
         employer {
           id
           name
@@ -82,7 +858,23 @@ export const onCreateProject = `subscription OnCreateProject {
           enddate
           url
           logo
+          createdAt
+          updatedAt
           projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
             nextToken
           }
         }
@@ -94,6 +886,8 @@ export const onCreateProject = `subscription OnCreateProject {
           url
           feedback
           display
+          createdAt
+          updatedAt
           projects {
             id
             name
@@ -105,123 +899,72 @@ export const onCreateProject = `subscription OnCreateProject {
             display
             logo
             internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
           }
         }
         tags {
           items {
             id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
           }
           nextToken
         }
       }
     }
-    tags {
-      items {
-        id
-        project {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        tag {
-          id
-          name
-          category
-          display
-          logo
-          projects {
-            nextToken
-          }
-        }
-      }
-      nextToken
-    }
   }
-}
 `;
-export const onUpdateProject = `subscription OnUpdateProject {
-  onUpdateProject {
-    id
-    name
-    date
-    description
-    features
-    url
-    images
-    display
-    logo
-    internal
-    employer {
-      id
-      name
-      startdate
-      enddate
-      url
-      logo
-      projects {
-        items {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        nextToken
-      }
-    }
-    client {
+export const onUpdateClient = /* GraphQL */ `
+  subscription OnUpdateClient {
+    onUpdateClient {
       id
       name
       description
@@ -229,6 +972,8 @@ export const onUpdateProject = `subscription OnUpdateProject {
       url
       feedback
       display
+      createdAt
+      updatedAt
       projects {
         id
         name
@@ -240,6 +985,8 @@ export const onUpdateProject = `subscription OnUpdateProject {
         display
         logo
         internal
+        createdAt
+        updatedAt
         employer {
           id
           name
@@ -247,7 +994,23 @@ export const onUpdateProject = `subscription OnUpdateProject {
           enddate
           url
           logo
+          createdAt
+          updatedAt
           projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
             nextToken
           }
         }
@@ -259,6 +1022,8 @@ export const onUpdateProject = `subscription OnUpdateProject {
           url
           feedback
           display
+          createdAt
+          updatedAt
           projects {
             id
             name
@@ -270,123 +1035,72 @@ export const onUpdateProject = `subscription OnUpdateProject {
             display
             logo
             internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
           }
         }
         tags {
           items {
             id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
           }
           nextToken
         }
       }
     }
-    tags {
-      items {
-        id
-        project {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        tag {
-          id
-          name
-          category
-          display
-          logo
-          projects {
-            nextToken
-          }
-        }
-      }
-      nextToken
-    }
   }
-}
 `;
-export const onDeleteProject = `subscription OnDeleteProject {
-  onDeleteProject {
-    id
-    name
-    date
-    description
-    features
-    url
-    images
-    display
-    logo
-    internal
-    employer {
-      id
-      name
-      startdate
-      enddate
-      url
-      logo
-      projects {
-        items {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        nextToken
-      }
-    }
-    client {
+export const onDeleteClient = /* GraphQL */ `
+  subscription OnDeleteClient {
+    onDeleteClient {
       id
       name
       description
@@ -394,6 +1108,8 @@ export const onDeleteProject = `subscription OnDeleteProject {
       url
       feedback
       display
+      createdAt
+      updatedAt
       projects {
         id
         name
@@ -405,6 +1121,8 @@ export const onDeleteProject = `subscription OnDeleteProject {
         display
         logo
         internal
+        createdAt
+        updatedAt
         employer {
           id
           name
@@ -412,7 +1130,23 @@ export const onDeleteProject = `subscription OnDeleteProject {
           enddate
           url
           logo
+          createdAt
+          updatedAt
           projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
             nextToken
           }
         }
@@ -424,6 +1158,8 @@ export const onDeleteProject = `subscription OnDeleteProject {
           url
           feedback
           display
+          createdAt
+          updatedAt
           projects {
             id
             name
@@ -435,885 +1171,84 @@ export const onDeleteProject = `subscription OnDeleteProject {
             display
             logo
             internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
           }
         }
         tags {
           items {
             id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
           }
           nextToken
         }
       }
     }
-    tags {
-      items {
-        id
-        project {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        tag {
-          id
-          name
-          category
-          display
-          logo
-          projects {
-            nextToken
-          }
-        }
-      }
-      nextToken
-    }
   }
-}
 `;
-export const onCreateEmployer = `subscription OnCreateEmployer {
-  onCreateEmployer {
-    id
-    name
-    startdate
-    enddate
-    url
-    logo
-    projects {
-      items {
-        id
-        name
-        date
-        description
-        features
-        url
-        images
-        display
-        logo
-        internal
-        employer {
-          id
-          name
-          startdate
-          enddate
-          url
-          logo
-          projects {
-            nextToken
-          }
-        }
-        client {
-          id
-          name
-          description
-          logo
-          url
-          feedback
-          display
-          projects {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-        }
-        tags {
-          items {
-            id
-          }
-          nextToken
-        }
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onUpdateEmployer = `subscription OnUpdateEmployer {
-  onUpdateEmployer {
-    id
-    name
-    startdate
-    enddate
-    url
-    logo
-    projects {
-      items {
-        id
-        name
-        date
-        description
-        features
-        url
-        images
-        display
-        logo
-        internal
-        employer {
-          id
-          name
-          startdate
-          enddate
-          url
-          logo
-          projects {
-            nextToken
-          }
-        }
-        client {
-          id
-          name
-          description
-          logo
-          url
-          feedback
-          display
-          projects {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-        }
-        tags {
-          items {
-            id
-          }
-          nextToken
-        }
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onDeleteEmployer = `subscription OnDeleteEmployer {
-  onDeleteEmployer {
-    id
-    name
-    startdate
-    enddate
-    url
-    logo
-    projects {
-      items {
-        id
-        name
-        date
-        description
-        features
-        url
-        images
-        display
-        logo
-        internal
-        employer {
-          id
-          name
-          startdate
-          enddate
-          url
-          logo
-          projects {
-            nextToken
-          }
-        }
-        client {
-          id
-          name
-          description
-          logo
-          url
-          feedback
-          display
-          projects {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-        }
-        tags {
-          items {
-            id
-          }
-          nextToken
-        }
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onCreateClient = `subscription OnCreateClient {
-  onCreateClient {
-    id
-    name
-    description
-    logo
-    url
-    feedback
-    display
-    projects {
-      id
-      name
-      date
-      description
-      features
-      url
-      images
-      display
-      logo
-      internal
-      employer {
-        id
-        name
-        startdate
-        enddate
-        url
-        logo
-        projects {
-          items {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          nextToken
-        }
-      }
-      client {
-        id
-        name
-        description
-        logo
-        url
-        feedback
-        display
-        projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-      }
-      tags {
-        items {
-          id
-          project {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          tag {
-            id
-            name
-            category
-            display
-            logo
-          }
-        }
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const onUpdateClient = `subscription OnUpdateClient {
-  onUpdateClient {
-    id
-    name
-    description
-    logo
-    url
-    feedback
-    display
-    projects {
-      id
-      name
-      date
-      description
-      features
-      url
-      images
-      display
-      logo
-      internal
-      employer {
-        id
-        name
-        startdate
-        enddate
-        url
-        logo
-        projects {
-          items {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          nextToken
-        }
-      }
-      client {
-        id
-        name
-        description
-        logo
-        url
-        feedback
-        display
-        projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-      }
-      tags {
-        items {
-          id
-          project {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          tag {
-            id
-            name
-            category
-            display
-            logo
-          }
-        }
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const onDeleteClient = `subscription OnDeleteClient {
-  onDeleteClient {
-    id
-    name
-    description
-    logo
-    url
-    feedback
-    display
-    projects {
-      id
-      name
-      date
-      description
-      features
-      url
-      images
-      display
-      logo
-      internal
-      employer {
-        id
-        name
-        startdate
-        enddate
-        url
-        logo
-        projects {
-          items {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          nextToken
-        }
-      }
-      client {
-        id
-        name
-        description
-        logo
-        url
-        feedback
-        display
-        projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-      }
-      tags {
-        items {
-          id
-          project {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          tag {
-            id
-            name
-            category
-            display
-            logo
-          }
-        }
-        nextToken
-      }
-    }
-  }
-}
-`;
-export const onCreateTag = `subscription OnCreateTag {
-  onCreateTag {
-    id
-    name
-    category
-    display
-    logo
-    projects {
-      items {
-        id
-        project {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        tag {
-          id
-          name
-          category
-          display
-          logo
-          projects {
-            nextToken
-          }
-        }
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onUpdateTag = `subscription OnUpdateTag {
-  onUpdateTag {
-    id
-    name
-    category
-    display
-    logo
-    projects {
-      items {
-        id
-        project {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        tag {
-          id
-          name
-          category
-          display
-          logo
-          projects {
-            nextToken
-          }
-        }
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onDeleteTag = `subscription OnDeleteTag {
-  onDeleteTag {
-    id
-    name
-    category
-    display
-    logo
-    projects {
-      items {
-        id
-        project {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-        tag {
-          id
-          name
-          category
-          display
-          logo
-          projects {
-            nextToken
-          }
-        }
-      }
-      nextToken
-    }
-  }
-}
-`;
-export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
-  onCreateTaggedProject {
-    id
-    project {
-      id
-      name
-      date
-      description
-      features
-      url
-      images
-      display
-      logo
-      internal
-      employer {
-        id
-        name
-        startdate
-        enddate
-        url
-        logo
-        projects {
-          items {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          nextToken
-        }
-      }
-      client {
-        id
-        name
-        description
-        logo
-        url
-        feedback
-        display
-        projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-      }
-      tags {
-        items {
-          id
-          project {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          tag {
-            id
-            name
-            category
-            display
-            logo
-          }
-        }
-        nextToken
-      }
-    }
-    tag {
+export const onCreateTag = /* GraphQL */ `
+  subscription OnCreateTag {
+    onCreateTag {
       id
       name
       category
       display
       logo
+      createdAt
+      updatedAt
       projects {
         items {
           id
+          createdAt
+          updatedAt
           project {
             id
             name
@@ -1325,6 +1260,32 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             display
             logo
             internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
           }
           tag {
             id
@@ -1332,127 +1293,33 @@ export const onCreateTaggedProject = `subscription OnCreateTaggedProject {
             category
             display
             logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
           }
         }
         nextToken
       }
     }
   }
-}
 `;
-export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
-  onUpdateTaggedProject {
-    id
-    project {
-      id
-      name
-      date
-      description
-      features
-      url
-      images
-      display
-      logo
-      internal
-      employer {
-        id
-        name
-        startdate
-        enddate
-        url
-        logo
-        projects {
-          items {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          nextToken
-        }
-      }
-      client {
-        id
-        name
-        description
-        logo
-        url
-        feedback
-        display
-        projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-      }
-      tags {
-        items {
-          id
-          project {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          tag {
-            id
-            name
-            category
-            display
-            logo
-          }
-        }
-        nextToken
-      }
-    }
-    tag {
+export const onUpdateTag = /* GraphQL */ `
+  subscription OnUpdateTag {
+    onUpdateTag {
       id
       name
       category
       display
       logo
+      createdAt
+      updatedAt
       projects {
         items {
           id
+          createdAt
+          updatedAt
           project {
             id
             name
@@ -1464,6 +1331,32 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             display
             logo
             internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
           }
           tag {
             id
@@ -1471,127 +1364,33 @@ export const onUpdateTaggedProject = `subscription OnUpdateTaggedProject {
             category
             display
             logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
           }
         }
         nextToken
       }
     }
   }
-}
 `;
-export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
-  onDeleteTaggedProject {
-    id
-    project {
-      id
-      name
-      date
-      description
-      features
-      url
-      images
-      display
-      logo
-      internal
-      employer {
-        id
-        name
-        startdate
-        enddate
-        url
-        logo
-        projects {
-          items {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          nextToken
-        }
-      }
-      client {
-        id
-        name
-        description
-        logo
-        url
-        feedback
-        display
-        projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          employer {
-            id
-            name
-            startdate
-            enddate
-            url
-            logo
-          }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-          }
-          tags {
-            nextToken
-          }
-        }
-      }
-      tags {
-        items {
-          id
-          project {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-          }
-          tag {
-            id
-            name
-            category
-            display
-            logo
-          }
-        }
-        nextToken
-      }
-    }
-    tag {
+export const onDeleteTag = /* GraphQL */ `
+  subscription OnDeleteTag {
+    onDeleteTag {
       id
       name
       category
       display
       logo
+      createdAt
+      updatedAt
       projects {
         items {
           id
+          createdAt
+          updatedAt
           project {
             id
             name
@@ -1603,6 +1402,32 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             display
             logo
             internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
           }
           tag {
             id
@@ -1610,11 +1435,525 @@ export const onDeleteTaggedProject = `subscription OnDeleteTaggedProject {
             category
             display
             logo
+            createdAt
+            updatedAt
+            projects {
+              nextToken
+            }
           }
         }
         nextToken
       }
     }
   }
-}
+`;
+export const onCreateTaggedProject = /* GraphQL */ `
+  subscription OnCreateTaggedProject {
+    onCreateTaggedProject {
+      id
+      createdAt
+      updatedAt
+      project {
+        id
+        name
+        date
+        description
+        features
+        url
+        images
+        display
+        logo
+        internal
+        createdAt
+        updatedAt
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          createdAt
+          updatedAt
+          projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          display
+          createdAt
+          updatedAt
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+        }
+        tags {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+      tag {
+        id
+        name
+        category
+        display
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onUpdateTaggedProject = /* GraphQL */ `
+  subscription OnUpdateTaggedProject {
+    onUpdateTaggedProject {
+      id
+      createdAt
+      updatedAt
+      project {
+        id
+        name
+        date
+        description
+        features
+        url
+        images
+        display
+        logo
+        internal
+        createdAt
+        updatedAt
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          createdAt
+          updatedAt
+          projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          display
+          createdAt
+          updatedAt
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+        }
+        tags {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+      tag {
+        id
+        name
+        category
+        display
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+    }
+  }
+`;
+export const onDeleteTaggedProject = /* GraphQL */ `
+  subscription OnDeleteTaggedProject {
+    onDeleteTaggedProject {
+      id
+      createdAt
+      updatedAt
+      project {
+        id
+        name
+        date
+        description
+        features
+        url
+        images
+        display
+        logo
+        internal
+        createdAt
+        updatedAt
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          createdAt
+          updatedAt
+          projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          display
+          createdAt
+          updatedAt
+          projects {
+            id
+            name
+            date
+            description
+            features
+            url
+            images
+            display
+            logo
+            internal
+            createdAt
+            updatedAt
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
+              nextToken
+            }
+          }
+        }
+        tags {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+      tag {
+        id
+        name
+        category
+        display
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+    }
+  }
 `;
