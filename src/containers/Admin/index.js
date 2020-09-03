@@ -1,6 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import Page from 'components/Page';
+import BuildJson from 'BuildJson';
 import Projects from 'Projects';
 import Project from 'Project';
 import Employers from 'Employers';
@@ -19,6 +20,7 @@ const Admin = () => {
     <Page isAdmin title="Admin" description="Admin Area">
       <StateProvider>
         <Switch>
+          <Route path="/admin/build" component={BuildJson} />
           <Route path="/admin/projects" component={Projects} />
           <Route path="/admin/project/:id?" component={Project} />
           <Route path="/admin/employers" component={Employers} />
