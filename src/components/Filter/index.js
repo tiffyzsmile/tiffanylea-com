@@ -1,16 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import useTags from 'hooks/useTags';
 import FilterItem from 'components/Filter/FilterItem';
 import './styles.css';
-import categories from 'data/categories';
-import { filterTagsByCategory } from 'helpers/tags';
+import tagsByCategory from 'data/tags';
 
 const Filter = ({ category, tag }) => {
-  const { getTags } = useTags();
-  const { data: tags = [] } = getTags({ showDisplayOnly: true });
   const visibleTags = [];
-
   if (category) {
     visibleTags.push(
       {
@@ -19,7 +14,7 @@ const Filter = ({ category, tag }) => {
         name: `<--- Go Back`,
         isCurrent: false
       },
-      ...filterTagsByCategory({ tags, category }).map(t => {
+      ...tagsByCategory[category].tags.map(t => {
         const isCurrent = t.id === tag;
         const tagLink = isCurrent
           ? `?category=${category}` // if current tag make link unselect tag
@@ -32,14 +27,14 @@ const Filter = ({ category, tag }) => {
       })
     );
   } else {
-    Object.keys(categories).map(categoryKey =>
+    Object.keys(tagsByCategory).forEach(key => {
       visibleTags.push({
-        id: categoryKey,
-        link: `?category=${categoryKey}`,
-        name: categories[categoryKey],
+        id: key,
+        link: `?category=${key}`,
+        name: tagsByCategory[key].name,
         isCurrent: false // current category isn't currently displayed
-      })
-    );
+      });
+    });
   }
 
   const content = visibleTags.map(t => {

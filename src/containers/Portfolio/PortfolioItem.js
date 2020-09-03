@@ -21,18 +21,6 @@ const PortfolioItem = ({ project, closeLink }) => {
       })
     : [];
 
-  const images = project.images
-    ? project.images.map(image => {
-        return {
-          original: image,
-          originalAlt: project.name,
-          thumbnail: image
-        };
-      })
-    : [];
-
-  const formattedDate = new Date(project.date).getFullYear();
-
   return (
     <section className="portfolioItem">
       <Link to={closeLink} className="close">
@@ -41,14 +29,12 @@ const PortfolioItem = ({ project, closeLink }) => {
       <section className="portfolioImages">
         <ImageGallery
           showFullscreenButton
-          images={images}
+          images={project.images}
           showThumbnails={false}
         />
       </section>
       <section className="portfolioDetails">
-        <H1>
-          {project.name} {formattedDate > 2000 && `(${formattedDate})`}
-        </H1>
+        <H1>{project.displayName}</H1>
         {project.description && (
           <div>
             <H2>Description</H2>
