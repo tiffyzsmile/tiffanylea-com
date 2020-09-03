@@ -11,7 +11,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_2020.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_07_2020.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
@@ -33,15 +33,23 @@ const Resume = () => {
         <section className="summary">
           <H2>Summary</H2>
           <p>
-            Seasoned engineer with 12+ years experience and exceptional
-            understanding of design and development. Ready to leverage
-            decision-making abilities for all things front end and be heavily
-            involved in every stage of the project lifecycle.
+            Engineering leader with 12+ years of experience. Ready to leverage
+            decision-making abilities for all things engineering and be heavily
+            involved in all aspects of product development.
           </p>
         </section>
         <section className="skills">
           <H2>Skills Profile</H2>
           <ul>
+            <li>
+              Trained in the legalities of hiring and managing by a multi
+              billion dollar company
+            </li>
+            <li>
+              Modular mindset and a passion for automation in streamlining
+              multi-platform applications across mobile devices and web
+              efficiently
+            </li>
             <li>
               Extensive background in data structure architecture and
               management, user experience, best practice, web standards, full
@@ -57,7 +65,7 @@ const Resume = () => {
         <section className="employment">
           <H2>Employment History</H2>
           <article>
-            <p className="date">3/18 — Current</p>
+            <p className="date">7/19 — Current</p>
             <H3>Founder, Director of Front End Engineering, Tiffany Lea LLC</H3>
             <p className="location">West Hollywood, CA</p>
             <ul>
