@@ -11,8 +11,8 @@ const Clients = () => {
   const { getClients } = useClients();
   const { loading, data = [] } = getClients({ search: currentSearch });
 
-  const clientsContent = clients =>
-    clients.map(n => {
+  const clientsContent = (clients) =>
+    clients.map((n) => {
       return (
         <tr key={n.id}>
           <td>

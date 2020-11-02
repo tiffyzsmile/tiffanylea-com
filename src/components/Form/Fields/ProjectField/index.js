@@ -15,7 +15,7 @@ const ProjectField = ({ name, label, multiple }) => {
   const projectsOptionList = (projects || [])
     // Sort list alphabetically by name
     .sort((a, b) => (a.name < b.name ? -1 : Number(a.name > b.name)))
-    .map(e => {
+    .map((e) => {
       return (
         <option key={e.id} value={e.id}>
           {e.name}

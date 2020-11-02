@@ -30,11 +30,11 @@ const Tag = () => {
     data = { id: '', name: '', images: [], projects: {}, display: true }
   } = getTag(id);
 
-  const onSubmit = formValues => {
+  const onSubmit = (formValues) => {
     if (id) {
       updateTag(formValues);
     } else {
-      addTag(formValues, onCompleteData => {
+      addTag(formValues, (onCompleteData) => {
         // bulk edit will just be one tag after another
         if (!bulkEdit) {
           history.push(`/admin/tag/${onCompleteData.id}`);
@@ -67,7 +67,7 @@ const Tag = () => {
           type="checkbox"
           value={bulkEdit}
           checked={bulkEdit}
-          onChange={e => {
+          onChange={(e) => {
             setBulkEdit(e.target.checked);
           }}
         />

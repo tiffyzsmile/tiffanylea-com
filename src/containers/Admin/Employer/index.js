@@ -15,7 +15,7 @@ const Employer = () => {
   } = useEmployers();
   const { loading, data = { id: '', name: '' } } = getEmployer(id);
 
-  const onSubmit = formValues => {
+  const onSubmit = (formValues) => {
     if (id) {
       updateEmployer(formValues);
     } else {

@@ -31,7 +31,7 @@ const useTaggedProjects = () => {
 
   const listingQueryOptions = getFilterOptions(['id', 'name']);
 
-  const getTaggedProject = taggedProjectIdToGet => {
+  const getTaggedProject = (taggedProjectIdToGet) => {
     const { loading, data, error } = useQuery(gql(getTaggedProjectQuery), {
       variables: { id: taggedProjectIdToGet }
     });
@@ -58,7 +58,7 @@ const useTaggedProjects = () => {
     return { loading, data: taggedProjects, error };
   };
 
-  const addTaggedProject = taggedProjectToAdd => {
+  const addTaggedProject = (taggedProjectToAdd) => {
     const input = getFormattedInput(taggedProjectToAdd);
 
     newTaggedProject({
@@ -70,7 +70,7 @@ const useTaggedProjects = () => {
     });
   };
 
-  const deleteTaggedProject = taggedProjectToDelete => {
+  const deleteTaggedProject = (taggedProjectToDelete) => {
     removeTaggedProject({
       variables: {
         input: taggedProjectToDelete
@@ -80,7 +80,7 @@ const useTaggedProjects = () => {
     });
   };
 
-  const updateTaggedProject = taggedProjectToUpdate => {
+  const updateTaggedProject = (taggedProjectToUpdate) => {
     const input = getFormattedInput(taggedProjectToUpdate);
 
     const { loading, data, error } = changeTaggedProject({
