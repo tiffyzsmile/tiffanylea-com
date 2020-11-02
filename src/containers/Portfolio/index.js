@@ -19,7 +19,7 @@ const Portfolio = ({ match, location }) => {
     }
   }, [projects]);
 
-  const visibleProjects = projects.filter(project => {
+  const visibleProjects = projects.filter((project) => {
     if (!category) {
       return project;
     }
@@ -29,7 +29,7 @@ const Portfolio = ({ match, location }) => {
     return project.tags.includes(tag);
   });
 
-  const portfolioItems = visibleProjects.map(item => {
+  const portfolioItems = visibleProjects.map((item) => {
     const projectDetail = [];
     let isCurrent = false;
     if (projectId === item.id) {

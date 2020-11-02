@@ -2,13 +2,13 @@ import categories from 'data/categories';
 
 const uniq = require('lodash/uniq');
 
-const getTagsByCategory = tags => {
+const getTagsByCategory = (tags) => {
   const tagsByCategory = {};
   // Sort list alphabetically by name
   const sortedTags = tags.sort((a, b) =>
     a.name < b.name ? -1 : Number(a.name > b.name)
   );
-  uniq(sortedTags, 'name').forEach(tag => {
+  uniq(sortedTags, 'name').forEach((tag) => {
     const tagOutput = {
       id: tag.id,
       name: tag.name,
@@ -28,10 +28,10 @@ const getTagsByCategory = tags => {
   return tagsByCategory;
 };
 
-export const getProjectsJsonOutput = projects => {
+export const getProjectsJsonOutput = (projects) => {
   // This updates link to use cloudfront distribution url
   // See: https://github.com/aws-amplify/amplify-console/issues/330
-  const getCdnImage = url => {
+  const getCdnImage = (url) => {
     if (url) {
       return url.replace(
         'tiffanylea-com-content20191210135709-master.s3.us-west-2.amazonaws.com', // eslint-disable-line
@@ -41,13 +41,13 @@ export const getProjectsJsonOutput = projects => {
     return url;
   };
 
-  const projectsWithTags = [...projects].map(project => {
+  const projectsWithTags = [...projects].map((project) => {
     const projectCategories = [];
     const tags = [];
     const employer = {};
     const client = {};
     if (project.tags.items.length) {
-      project.tags.items.forEach(projectTag => {
+      project.tags.items.forEach((projectTag) => {
         tags.push(projectTag.tag.id);
         if (!projectCategories.includes(projectTag.tag.category)) {
           projectCategories.push(projectTag.tag.category);
@@ -55,7 +55,7 @@ export const getProjectsJsonOutput = projects => {
       });
     }
 
-    const images = project.images.map(image => {
+    const images = project.images.map((image) => {
       return {
         original: getCdnImage(image),
         originalAlt: project.name,
@@ -92,7 +92,7 @@ export const getProjectsJsonOutput = projects => {
       tags,
       categories: projectCategories,
       tagsByCategory: getTagsByCategory(
-        project.tags.items.map(projectTag => projectTag.tag)
+        project.tags.items.map((projectTag) => projectTag.tag)
       ),
       images,
       employer,
@@ -104,17 +104,17 @@ export const getProjectsJsonOutput = projects => {
   return projectsWithTags;
 };
 
-export const getTagsJsonOutput = tags => {
+export const getTagsJsonOutput = (tags) => {
   const tagsByCategory = {};
   // loop over categories and save out category specific tags
-  Object.keys(categories).forEach(key => {
+  Object.keys(categories).forEach((key) => {
     const categoryTags = [...tags]
-      .filter(tag => {
+      .filter((tag) => {
         return tag.category === key;
       })
       // Sort list alphabetically by name
       .sort((a, b) => (a.name < b.name ? -1 : Number(a.name > b.name)))
-      .map(tag => {
+      .map((tag) => {
         return {
           id: tag.id,
           name: tag.name,

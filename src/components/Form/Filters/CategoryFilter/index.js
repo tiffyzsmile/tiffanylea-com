@@ -6,7 +6,7 @@ import categories from 'data/categories';
 const CategoryFilter = () => {
   const [{ currentCategory }, dispatch] = useStateValue();
 
-  const options = Object.keys(categories).map(categoryKey => {
+  const options = Object.keys(categories).map((categoryKey) => {
     return (
       <option key={categoryKey} value={categoryKey}>
         {categories[categoryKey]}

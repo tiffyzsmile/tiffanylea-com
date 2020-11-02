@@ -14,7 +14,7 @@ const Filter = ({ category, tag }) => {
         name: `<--- Go Back`,
         isCurrent: false
       },
-      ...tagsByCategory[category].tags.map(t => {
+      ...tagsByCategory[category].tags.map((t) => {
         const isCurrent = t.id === tag;
         const tagLink = isCurrent
           ? `?category=${category}` // if current tag make link unselect tag
@@ -27,7 +27,7 @@ const Filter = ({ category, tag }) => {
       })
     );
   } else {
-    Object.keys(tagsByCategory).forEach(key => {
+    Object.keys(tagsByCategory).forEach((key) => {
       visibleTags.push({
         id: key,
         link: `?category=${key}`,
@@ -37,7 +37,7 @@ const Filter = ({ category, tag }) => {
     });
   }
 
-  const content = visibleTags.map(t => {
+  const content = visibleTags.map((t) => {
     return (
       <FilterItem
         key={t.id}

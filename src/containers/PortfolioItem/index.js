@@ -9,14 +9,14 @@ import './styles.scss';
 
 const PortfolioItem = ({ match }) => {
   const portfolioItem = projects.filter(
-    project => project.id === match.params.id
+    (project) => project.id === match.params.id
   )[0];
 
   const features = portfolioItem.features
-    ? portfolioItem.features.map(feature => {
+    ? portfolioItem.features.map((feature) => {
         const details =
           feature.items &&
-          feature.items.map(detail => {
+          feature.items.map((detail) => {
             return <li key={detail}>{detail}</li>;
           });
         return (
