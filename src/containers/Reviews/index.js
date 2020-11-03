@@ -14,9 +14,7 @@ const Reviews = () => {
             src="/images/people/emmanuel-mwangi.jpeg"
           />
           <header>
-            <H2>
-              Principal at Hi5 Consulting (Formerly Cloudbring Consulting)
-            </H2>
+            <H2>Lead Back-End Engineer at Endpoint</H2>
             <H3>
               <a
                 href="http://www.linkedin.com/in/emmanuelm"
@@ -137,7 +135,7 @@ const Reviews = () => {
         <article>
           <img alt="Binh Nguyen" src="/images/people/binh-nguyen.jpg" />
           <header>
-            <H2>Software Engineer at SKECHERS</H2>
+            <H2>Software Engineer at Endpoint</H2>
             <H3>
               <a
                 href="http://www.linkedin.com/in/binhxnguyen"
