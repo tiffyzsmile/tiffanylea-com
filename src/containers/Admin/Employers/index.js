@@ -8,8 +8,8 @@ const Employers = () => {
   const { getEmployers } = useEmployers();
   const { loading, data = [], error } = getEmployers();
 
-  const employersContent = employers =>
-    employers.map(n => {
+  const employersContent = (employers) =>
+    employers.map((n) => {
       return (
         <tr key={n.id}>
           <td>

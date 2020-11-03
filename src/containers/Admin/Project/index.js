@@ -57,11 +57,11 @@ const Project = ({
     }
   } = getProject(id);
 
-  const onSubmit = formValues => {
+  const onSubmit = (formValues) => {
     if (id) {
       updateProject(formValues);
     } else {
-      addProject(formValues, onCompleteData => {
+      addProject(formValues, (onCompleteData) => {
         history.push(`/admin/project/${onCompleteData.id}`);
       });
     }

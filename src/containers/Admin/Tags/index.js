@@ -28,7 +28,7 @@ const Tags = () => {
       <SearchFilter />
       <TagsTable
         tags={tags}
-        onDelete={tagId =>
+        onDelete={(tagId) =>
           deleteTag({
             tagIdToDelete: tagId
           })

@@ -6,10 +6,10 @@ import { Link } from 'react-router-dom';
 
 const PortfolioItem = ({ project, closeLink }) => {
   const features = project.features
-    ? project.features.map(feature => {
+    ? project.features.map((feature) => {
         const details =
           feature.items &&
-          feature.items.map(detail => {
+          feature.items.map((detail) => {
             return <li key={detail}>{detail}</li>;
           });
         return (

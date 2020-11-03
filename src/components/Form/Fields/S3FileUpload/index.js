@@ -32,11 +32,11 @@ const S3FileUpload = ({
   // for type of multiple
   const values = [];
 
-  const deleteItem = imageUrl => {
+  const deleteItem = (imageUrl) => {
     const imageKey = imageUrl.split('public/')[1];
     Storage.remove(imageKey).then(() => {
       if (multiple) {
-        const filteredValues = value.filter(v => {
+        const filteredValues = value.filter((v) => {
           return v !== imageUrl;
         });
         onChange([...filteredValues]);
@@ -56,16 +56,16 @@ const S3FileUpload = ({
     </div>
   ];
 
-  const onInputChange = e => {
+  const onInputChange = (e) => {
     const filesArray = Array.from(e.target.files);
-    filesArray.forEach(file => {
+    filesArray.forEach((file) => {
       Storage.put(`${filePath}/${file.name}`, file, {
         contentType: file.type
       })
         .then(({ key: itemKey }) => {
           // Go and get the URL of the image we just uploaded
           Storage.get(itemKey)
-            .then(itemUrl => {
+            .then((itemUrl) => {
               const justUrl = itemUrl.split('?')[0];
               if (multiple) {
                 values.push(justUrl);
@@ -79,10 +79,10 @@ const S3FileUpload = ({
               }
             })
             // eslint-disable-next-line
-            .catch(err => console.error('get url error', err));
+            .catch((err) => console.error('get url error', err));
         })
         // eslint-disable-next-line
-        .catch(err => console.error('put image error', err));
+        .catch((err) => console.error('put image error', err));
     });
   };
   const onSortEnd = ({ oldIndex, newIndex }) =>
@@ -110,7 +110,7 @@ const S3FileUpload = ({
         type="file"
         accept={contentType}
         multiple={multiple}
-        onChange={e => onInputChange(e)}
+        onChange={(e) => onInputChange(e)}
       />
       {value && (
         <div>

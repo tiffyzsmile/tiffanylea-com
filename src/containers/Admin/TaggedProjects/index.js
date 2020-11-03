@@ -19,8 +19,8 @@ const TaggedProject = () => {
     setIdToEdit(0);
   };
 
-  const taggedProjectsContent = taggedProjects =>
-    taggedProjects.map(n => {
+  const taggedProjectsContent = (taggedProjects) =>
+    taggedProjects.map((n) => {
       if (idToEdit === n.id) {
         return (
           <tr key={n.id}>
@@ -80,7 +80,7 @@ const TaggedProject = () => {
       {data && (
         <Form
           onSubmit={onSubmit}
-          initialValues={data.filter(d => d.id === idToEdit)[0]}
+          initialValues={data.filter((d) => d.id === idToEdit)[0]}
           render={({ handleSubmit, form, values }) => {
             setTaggedProjectValues(values);
             return (

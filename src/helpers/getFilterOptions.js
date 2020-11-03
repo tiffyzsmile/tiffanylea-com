@@ -12,7 +12,7 @@ const getFilterOptions = ({
     // If search string passed in loop through fields to
     // output the appropriate match pattern obj for each
     const matchStatements = [];
-    fieldsToFilter.forEach(f => {
+    fieldsToFilter.forEach((f) => {
       const match = {};
       match[f] = { contains: `${search}` };
       matchStatements.push(match);

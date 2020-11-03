@@ -10,6 +10,98 @@ const Reviews = () => {
         <H1>Reviews</H1>
         <article>
           <img
+            alt="Emmanuel Mwangi"
+            src="/images/people/emmanuel-mwangi.jpeg"
+          />
+          <header>
+            <H2>
+              Principal at Hi5 Consulting (Formerly Cloudbring Consulting)
+            </H2>
+            <H3>
+              <a
+                href="http://www.linkedin.com/in/emmanuelm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Emmanuel Mwangi
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              Tiffany is one of those rare people who are both talented
+              engineers and have a deep understanding of people. I worked
+              directly with Tiffany at Endpoint where she was the Lead of
+              Front-End Engineering and I was her counterpart Lead of Back-End
+              Engineering.
+            </p>
+            <p>
+              She can see a problem from a high-level business-value to the
+              gritty technical details in the UI and uses this insight to give
+              clear actionable feedback. She cuts right through to the heart of
+              any issue and with her in meetings; they went faster, were clearer
+              to everyone in the room, and were more likely to have actions to
+              resolve issues rather than more meetings.
+            </p>
+            <p>
+              Her grasp of both her team’s technical and emotional status
+              impressed me and is a sign of a great team leader. She always knew
+              exactly where they were and what they could do. She knew what
+              various team members were interested in, what their goals were,
+              and could map new projects to various team members well.
+            </p>
+            <p>
+              Tiffany was great to work with and a powerful asset to any team
+              she a part of, even more so when she’s leading.
+            </p>
+          </Quote>
+        </article>
+        <article>
+          <img alt="Wendy Honeycutt" src="/images/people/wendy-honeycutt.jpg" />
+          <header>
+            <H2>UX/UI Interaction Designer at Skechers</H2>
+            <H3>
+              <a
+                href="http://www.linkedin.com/in/wendyhoneycutt"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Wendy Honeycutt
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              I feel fortunate to have worked with Tiffany for nearly four
+              years. She possesses an amazing ability as a Front End Manager &
+              Lead JavaScript Engineer. She learns new technologies very
+              quickly, works very fast, yet never compromises the quality of her
+              work. She has keen problem-solving skills and demonstrates
+              exceptional leadership.
+            </p>
+
+            <p>
+              Tiffany is a perfectionist and is mindful of maintaining the
+              integrity of a design throughout the entire development process.
+              She understands and follows UX best practices and usability
+              standards. She is a fervent believer in Web Standards and
+              implementing Standards Compliant code. She keeps an eye on the
+              latest changes in the industry to ensure her skillset is fresh and
+              current.
+            </p>
+            <p>
+              {' '}
+              Tiffany works with integrity, sets the bar high for herself and
+              inspires her teammates to do the same. She will take on
+              challenges, find a way to make the impossible work, and make it
+              work very well. She is an excellent team player who always brings
+              great ideas to the table and knows how to get things done
+              efficiently. Tiffany Is a wonderful asset to any team!
+            </p>
+          </Quote>
+        </article>
+        <article>
+          <img
             alt="Panayiotes (PK) Kakleas"
             src="/images/people/panayiotes-pk-kakleas.jpg"
           />
@@ -27,17 +119,17 @@ const Reviews = () => {
           </header>
           <Quote>
             <p>
-              {`Tiffany was my manager at Skechers when I first joined. She 
-              really impressed me with her vast knowledge of the Skechers 
-              architecture and how quickly she was able to prototype large 
-              front end systems. As a leader, Tiffany demonstrated time and 
-              again how she can take charge of situations and break down 
-              complex problems for her team to solve. She understood the 
-              nuances of each team member and was able to delegate 
-              responsibilities that played to their strengths. Every person I 
-              work with speaks admirably of all that she did at Skechers and I 
-              would happily recommend Tiffany to be a part of any software 
-              development team. Her natural energy, curiosity, and passion for 
+              {`Tiffany was my manager at Skechers when I first joined. She
+              really impressed me with her vast knowledge of the Skechers
+              architecture and how quickly she was able to prototype large
+              front end systems. As a leader, Tiffany demonstrated time and
+              again how she can take charge of situations and break down
+              complex problems for her team to solve. She understood the
+              nuances of each team member and was able to delegate
+              responsibilities that played to their strengths. Every person I
+              work with speaks admirably of all that she did at Skechers and I
+              would happily recommend Tiffany to be a part of any software
+              development team. Her natural energy, curiosity, and passion for
               coding can help push any project forward.`}
             </p>
           </Quote>
@@ -59,14 +151,14 @@ const Reviews = () => {
           <Quote>
             <p>
               {`In my entire engineering career, Tiffany was the best person to
-               work with, especially as a tech lead. She's one of those people 
+               work with, especially as a tech lead. She's one of those people
                you can count on to show up curious, driven, and excited to push
-               for the best results. She has an innate ability to scope out 
-               projects and identify edge cases for features and bugs that can 
-               cause multiple round trips. Of all of her skills, she has the 
-               ability to get work done no matter the difficulty of the 
+               for the best results. She has an innate ability to scope out
+               projects and identify edge cases for features and bugs that can
+               cause multiple round trips. Of all of her skills, she has the
+               ability to get work done no matter the difficulty of the
                project. I'm glad to call her my manager, mentor, and especially
-               a good friend. She will definitely fit well with any team she's 
+               a good friend. She will definitely fit well with any team she's
                brought on with.`}
             </p>
           </Quote>
@@ -87,21 +179,21 @@ const Reviews = () => {
           </header>
           <Quote>
             <p>
-              {`When Tiffany joined Skechers, she was already a really 
-              accomplished client-side engineer. She has consistently shown 
-              that there is no code that she can't immediately pick up, and 
-              the rate at which she learns and absorbs information is just a 
-              little bit frightening. When the web department grew to such a 
-              size that we needed to divide up into teams, Tiffany was the 
-              natural fit to lead the client-side engineering team, and time 
+              {`When Tiffany joined Skechers, she was already a really
+              accomplished client-side engineer. She has consistently shown
+              that there is no code that she can't immediately pick up, and
+              the rate at which she learns and absorbs information is just a
+              little bit frightening. When the web department grew to such a
+              size that we needed to divide up into teams, Tiffany was the
+              natural fit to lead the client-side engineering team, and time
               after time she will rise to any challenge put in front of her.`}
             </p>
             <p>
-              {`Whether it's discussing future client-side architecture, 
-              encouraging and working with her engineering team, or just 
-              looking back at old code and doing the old "what was I thinking" 
-              jokes that all the best engineers seem to make, Tiffany is an 
-              incredible manager, an incredible engineer, and an incredible 
+              {`Whether it's discussing future client-side architecture,
+              encouraging and working with her engineering team, or just
+              looking back at old code and doing the old "what was I thinking"
+              jokes that all the best engineers seem to make, Tiffany is an
+              incredible manager, an incredible engineer, and an incredible
               person. She is one of those rare people who makes everyone around
               her better, and I couldn't be happier that she joined the team.`}
             </p>
@@ -150,16 +242,16 @@ const Reviews = () => {
           </header>
           <Quote>
             <p>
-              {`It was a real pleasure working with Tiffany at Skechers. She 
-              was a great teammate to have and worked well with everyone. I 
+              {`It was a real pleasure working with Tiffany at Skechers. She
+              was a great teammate to have and worked well with everyone. I
               loved that she is an open minded developer and her passion for
               learning and following best practices. Every couple weeks I'd see
               a new book on her desk as she was keeping up to date in this fast
-              paced industry. Tiffany will always get the job done regardless 
-              of what roadblocks are in front of the task at hand. She is a 
-              dedicated employee and will spend the extra time outside of work 
-              to ensure things are done correctly. She can hop into an 
-              existing, unfamiliar codebase and ramp up quickly even if there 
+              paced industry. Tiffany will always get the job done regardless
+              of what roadblocks are in front of the task at hand. She is a
+              dedicated employee and will spend the extra time outside of work
+              to ensure things are done correctly. She can hop into an
+              existing, unfamiliar codebase and ramp up quickly even if there
               are technologies she has never worked with before. Overall she is
               just a great person to be around and work with, and I hope I get
               to work with her again in the future.`}
@@ -197,7 +289,7 @@ const Reviews = () => {
               to it.
             </p>
             <p>
-              {`Her work on projects has been exemplary. We can give her any 
+              {`Her work on projects has been exemplary. We can give her any
               task, and we know it will be done and done right, whether it's
               responsive design, HTML5, CSS3, jQuery, XML, XSLT, Velocity, or
               Wordpress, to name a few. She can size up a request or problem and
@@ -236,40 +328,6 @@ const Reviews = () => {
               consistency and version control on some of our larger sites. She
               also frequently reviews code for quality assurance and provides
               invaluable feedback for the team.
-            </p>
-          </Quote>
-        </article>
-        <article>
-          <img alt="Wendy Honeycutt" src="/images/people/wendy-honeycutt.jpg" />
-          <header>
-            <H2>Graphic Design, Web Centered UX Design + Development </H2>
-            <H3>
-              <a
-                href="http://www.linkedin.com/in/wendyhoneycutt"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Wendy Honeycutt
-              </a>
-            </H3>
-          </header>
-          <Quote>
-            <p>
-              I was fortunate to work with Tiffany for more than two years while
-              at Beacon Technologies. She has an amazing ability as a web
-              developer and learns new technologies blazingly fast. She works
-              very quickly, but never compromises the quality of her work.
-              Tiffany is a perfectionist and is mindful of maintaining the
-              integrity of a design throughout the entire development process.
-              She is a fervent believer in web standards and utilizes standards
-              compliant and adaptive coding techniques. Tiffany sets high
-              standards for herself and inspires her teammates to do so as well.
-              She never backs down from a challenge; she will figure out a way
-              to make the impossible work, and make it work very well. She keeps
-              an eye on changes in the industry to ensure her skillset is fresh
-              and up-to-date. Tiffany is an excellent team player who always
-              brings great ideas to the table; she is a wonderful asset to have
-              on any team!
             </p>
           </Quote>
         </article>

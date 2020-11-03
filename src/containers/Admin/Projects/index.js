@@ -14,8 +14,8 @@ const Projects = () => {
     showDisplayOnly: false
   });
 
-  const projectsContent = projects =>
-    projects.map(n => {
+  const projectsContent = (projects) =>
+    projects.map((n) => {
       return (
         <tr key={n.id}>
           <td>

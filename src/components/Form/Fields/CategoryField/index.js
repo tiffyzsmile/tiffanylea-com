@@ -4,7 +4,7 @@ import { Field } from 'react-final-form';
 import categories from 'data/categories';
 
 const CategoryField = ({ onCatChange }) => {
-  const options = Object.keys(categories).map(categoryKey => {
+  const options = Object.keys(categories).map((categoryKey) => {
     return (
       <option key={categoryKey} value={categoryKey}>
         {categories[categoryKey]}
@@ -24,7 +24,7 @@ const CategoryField = ({ onCatChange }) => {
               id="category"
               name="category"
               {...input}
-              onChange={e => {
+              onChange={(e) => {
                 input.onChange(e.target.value);
                 onCatChange(e.target.value);
               }}

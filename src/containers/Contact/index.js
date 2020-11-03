@@ -18,7 +18,7 @@ const Contact = () => {
         method: 'post',
         body: JSON.stringify({ name, email, content })
       }
-    ).then(response => {
+    ).then((response) => {
       // if response is not an error set status to submitted
       if (response.ok) {
         return setStatus('submitted');
@@ -28,7 +28,7 @@ const Contact = () => {
     });
   };
 
-  const getError = id => {
+  const getError = (id) => {
     return errors[id] && errors[id].type;
   };
 

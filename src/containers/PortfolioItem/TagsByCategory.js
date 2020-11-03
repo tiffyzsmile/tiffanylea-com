@@ -5,9 +5,9 @@ import { NavLink } from 'react-router-dom';
 
 const TagsByCategory = ({ tagsByCategory }) => {
   const tagsByCategoryContent = [];
-  Object.keys(tagsByCategory).forEach(categoryKey => {
+  Object.keys(tagsByCategory).forEach((categoryKey) => {
     const category = tagsByCategory[categoryKey];
-    const tagList = category.tags.map(tag => {
+    const tagList = category.tags.map((tag) => {
       // if tag is set to display link to listing page
       if (tag.display) {
         return (

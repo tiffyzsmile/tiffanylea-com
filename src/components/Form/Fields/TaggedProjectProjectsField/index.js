@@ -9,12 +9,12 @@ const TaggedProjectProjectsField = ({ tagId, selected }) => {
   const { addTaggedProject, deleteTaggedProject } = useTaggedProjects();
 
   const onSubmit = ({ projects }) => {
-    projects.forEach(projectId => {
+    projects.forEach((projectId) => {
       addTaggedProject({ tagId, projectId });
     });
   };
 
-  const existingProjects = selected.map(project => {
+  const existingProjects = selected.map((project) => {
     return (
       <Button
         key={project.id}

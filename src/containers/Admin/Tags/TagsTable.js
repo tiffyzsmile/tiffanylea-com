@@ -7,8 +7,8 @@ import categories from 'data/categories';
 
 const TagsTable = ({ tags = [], onDelete }) => {
   const history = useHistory();
-  const tagsContent = tagsArray =>
-    tagsArray.map(n => {
+  const tagsContent = (tagsArray) =>
+    tagsArray.map((n) => {
       return (
         <tr key={n.id}>
           <td>{n.name}</td>

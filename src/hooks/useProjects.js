@@ -53,7 +53,9 @@ const getFormattedInput = ({
   }
 
   if (features) {
-    formattedInput.features = features.map(feature => JSON.stringify(feature));
+    formattedInput.features = features.map((feature) =>
+      JSON.stringify(feature)
+    );
   }
 
   return {
@@ -68,10 +70,10 @@ const getFormattedInput = ({
 };
 
 const formatProjectsJson = (projects = []) => {
-  return projects.map(project => {
+  return projects.map((project) => {
     // Need to parse awsjson for each project
     const features = project.features
-      ? project.features.map(featureSet => {
+      ? project.features.map((featureSet) => {
           return formatJsonFromAws(featureSet);
         })
       : [];
@@ -88,7 +90,7 @@ const useProjects = () => {
   const [changeProject] = useMutation(gql(updateProjectMutation));
   const [removeProject] = useMutation(gql(deleteProjectMutation));
 
-  const getProject = projectIdToGet => {
+  const getProject = (projectIdToGet) => {
     const { loading, data, error } = useQuery(gql(getProjectQuery), {
       variables: { id: projectIdToGet }
     });
@@ -102,7 +104,7 @@ const useProjects = () => {
 
     // Need to parse awsjson
     if (project && project.features) {
-      project.features = project.features.map(feature => {
+      project.features = project.features.map((feature) => {
         return formatJsonFromAws(feature);
       });
     }
@@ -144,7 +146,7 @@ const useProjects = () => {
     }).then(({ data: { createProject } }) => onCompleted(createProject));
   };
 
-  const deleteProject = projectToDelete => {
+  const deleteProject = (projectToDelete) => {
     removeProject({
       variables: {
         input: projectToDelete
@@ -153,7 +155,7 @@ const useProjects = () => {
     });
   };
 
-  const updateProject = projectToUpdate => {
+  const updateProject = (projectToUpdate) => {
     const input = getFormattedInput(projectToUpdate);
 
     const { loading, data, error } = changeProject({

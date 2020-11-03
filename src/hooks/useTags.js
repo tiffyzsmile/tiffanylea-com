@@ -17,7 +17,7 @@ const useTags = () => {
   const [changeTag] = useMutation(gql(updateTagMutation));
   const [removeTag] = useMutation(gql(deleteTagMutation));
 
-  const getTag = tagIdToGet => {
+  const getTag = (tagIdToGet) => {
     const { loading, data, error } = useQuery(gql(getTagQuery), {
       variables: { id: tagIdToGet, limit: 500 }
     });
@@ -46,7 +46,7 @@ const useTags = () => {
   const getGroupedTags = () => {
     const { data = [] } = getTags({});
     const groupedData = {};
-    data.map(tagObj => {
+    data.map((tagObj) => {
       const currentValues = groupedData[tagObj.category]
         ? groupedData[tagObj.category]
         : [];
@@ -77,7 +77,7 @@ const useTags = () => {
     }).then(({ data: { deleteTag: deletedTag } }) => onCompleted(deletedTag));
   };
 
-  const updateTag = tagToUpdate => {
+  const updateTag = (tagToUpdate) => {
     const input = getFormattedInput(tagToUpdate);
 
     const { loading, data, error } = changeTag({

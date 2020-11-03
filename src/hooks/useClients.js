@@ -31,7 +31,7 @@ const useClients = () => {
   const [changeClient] = useMutation(gql(updateClientMutation));
   const [removeClient] = useMutation(gql(deleteClientMutation));
 
-  const getClient = clientIdToGet => {
+  const getClient = (clientIdToGet) => {
     const { loading, data, error } = useQuery(gql(getClientQuery), {
       variables: { id: clientIdToGet }
     });
@@ -63,7 +63,7 @@ const useClients = () => {
     }).then(({ data: { createClient } }) => onCompleted(createClient));
   };
 
-  const deleteClient = clientToDelete => {
+  const deleteClient = (clientToDelete) => {
     removeClient({
       variables: {
         input: clientToDelete
@@ -72,7 +72,7 @@ const useClients = () => {
     });
   };
 
-  const updateClient = clientToUpdate => {
+  const updateClient = (clientToUpdate) => {
     const input = getFormattedInput(clientToUpdate);
 
     const { loading, data, error } = changeClient({

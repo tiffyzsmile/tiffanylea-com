@@ -30,7 +30,7 @@ const Button = ({
   return (
     <button
       style={styles[styleAs]}
-      onClick={e => onClick(e)}
+      onClick={(e) => onClick(e)}
       className={className}
       type="button"
       disabled={disabled}

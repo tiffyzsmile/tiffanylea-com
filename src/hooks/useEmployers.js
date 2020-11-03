@@ -34,7 +34,7 @@ const useEmployers = () => {
   const [changeEmployer] = useMutation(gql(updateEmployerMutation));
   const [removeEmployer] = useMutation(gql(deleteEmployerMutation));
 
-  const getEmployer = employerIdToGet => {
+  const getEmployer = (employerIdToGet) => {
     const { loading, data, error } = useQuery(gql(getEmployerQuery), {
       variables: { id: employerIdToGet }
     });
@@ -57,7 +57,7 @@ const useEmployers = () => {
     return { loading, data: employers, error };
   };
 
-  const addEmployer = employerToAdd => {
+  const addEmployer = (employerToAdd) => {
     const input = getFormattedInput(employerToAdd);
 
     newEmployer({
@@ -69,7 +69,7 @@ const useEmployers = () => {
     });
   };
 
-  const deleteEmployer = employerToDelete => {
+  const deleteEmployer = (employerToDelete) => {
     removeEmployer({
       variables: {
         input: employerToDelete
@@ -79,7 +79,7 @@ const useEmployers = () => {
     });
   };
 
-  const updateEmployer = employerToUpdate => {
+  const updateEmployer = (employerToUpdate) => {
     const input = getFormattedInput(employerToUpdate);
 
     const { loading, data, error } = changeEmployer({

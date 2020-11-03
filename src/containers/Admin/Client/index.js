@@ -19,11 +19,11 @@ const Client = () => {
   const { getClient, updateClient, addClient, deleteClient } = useClients();
   const { loading, data = { id: '', name: '', display: true } } = getClient(id);
 
-  const onSubmit = formValues => {
+  const onSubmit = (formValues) => {
     if (id) {
       updateClient(formValues);
     } else {
-      addClient(formValues, onCompleteData => {
+      addClient(formValues, (onCompleteData) => {
         history.push(`/admin/client/${onCompleteData.id}`);
       });
     }
