@@ -11,7 +11,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_07_2020.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_11_2020.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
@@ -42,10 +42,6 @@ const Resume = () => {
           <H2>Skills Profile</H2>
           <ul>
             <li>
-              Trained in the legalities of hiring and managing by a multi
-              billion dollar company
-            </li>
-            <li>
               Modular mindset and a passion for automation in streamlining
               multi-platform applications across mobile devices and web
               efficiently
@@ -59,6 +55,10 @@ const Resume = () => {
             <li>
               Ability to plan, design and build elegantly simple solutions
               regardless of problem complexity, tech stack or industry
+            </li>
+            <li>
+              Natural leader, thinker and engineer with a user focused drive and
+              a high bar for quality solutions
             </li>
           </ul>
         </section>
