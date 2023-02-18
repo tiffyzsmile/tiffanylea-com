@@ -9,6 +9,40 @@ const Reviews = () => {
       <section className="quotes">
         <H1>Reviews</H1>
         <article>
+          <img alt="Emmanuel Mwangi" src="/images/people/david-weiss.jpeg" />
+          <header>
+            <H2>Engineering Manager at Sprout Social, Inc.</H2>
+            <H3>
+              <a
+                href="http://www.linkedin.com/in/dfwct"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                David Weiss
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              {`Tiffany is one of the most detailed and user-centric Software
+              Engineers I've ever worked with. We worked on the same team at
+              Quantum Metric. We both share a love for UX and her extensive
+              knowledge in building and maintaining component libraries has been
+              a real asset to Quantum. Tiffany consistently goes above and
+              beyond what's asked of her. She is thoughtful in her approach,
+              builds features the right way, and takes the time to document her
+              work and share it with other engineers. Her knowledge in UX,
+              design patterns, and accessibility allows her to architect and own
+              entire parts of a codebase all while creating first-class user
+              experiences. What sets Tiffany apart from other engineers is the
+              quality of her work, her thirst for learning, and her strong
+              collaboration skills. She makes teams better and her skill set can
+              really drive an Engineering Department forward. I highly recommend
+              Tiffany and can't wait to see what she builds next!`}
+            </p>
+          </Quote>
+        </article>
+        <article>
           <img
             alt="Emmanuel Mwangi"
             src="/images/people/emmanuel-mwangi.jpeg"
@@ -88,7 +122,6 @@ const Reviews = () => {
               current.
             </p>
             <p>
-              {' '}
               Tiffany works with integrity, sets the bar high for herself and
               inspires her teammates to do the same. She will take on
               challenges, find a way to make the impossible work, and make it

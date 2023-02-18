@@ -58,7 +58,7 @@ function generateEmailParams(body) {
   };
 }
 
-module.exports.send = async event => {
+module.exports.send = async (event) => {
   try {
     const emailParams = generateEmailParams(event.body);
     const data = await ses.sendEmail(emailParams).promise();

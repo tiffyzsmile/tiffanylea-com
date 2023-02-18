@@ -28,7 +28,7 @@ function addtoDiv(id, className, text) {
   wft.appendChild(newDiv);
 }
 
-window.onload = function() {
+window.onload = function () {
   var body = document.getElementsByTagName('body')[0];
   body.innerHTML = '';
   newDiv = document.createElement('div');
