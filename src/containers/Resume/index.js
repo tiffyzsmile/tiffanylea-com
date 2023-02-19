@@ -11,7 +11,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_2022.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_2023.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
@@ -33,10 +33,9 @@ const Resume = () => {
         <section className="summary">
           <H2>Summary</H2>
           <p>
-            Engineering leader with 15+ years of experience in development,
-            leadership, and management. Ready to leverage decision-making
-            abilities for all things engineering and be heavily involved in all
-            aspects of product development.
+            Engineering leader with 15+ years of experience. Ready to leverage
+            decision-making abilities for all things engineering and be heavily
+            involved in all aspects of product development.
           </p>
         </section>
         <section className="skills">
