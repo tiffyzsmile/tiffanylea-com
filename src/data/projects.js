@@ -1,6 +1,296 @@
 /* eslint-disable */
 const projects = [
   {
+    id: 'margarita',
+    name: 'Margarita',
+    date: '2023-02-15',
+    description: 'Coming Soon...',
+    features: [],
+    url: null,
+    images: [],
+    logo:
+      'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/quantum-metric_margarita_logo.svg',
+    employer: {
+      id: 'quantum-metric',
+      name: 'Quantum Metric',
+      logo:
+        'https://d3oyz6uk1t3qpy.cloudfront.net/public/employer-logos/QM%20Horizontal%20Lockup%20Pink.svg'
+    },
+    client: {
+      id: 'quantum-metric',
+      name: 'Quantum Metric',
+      logo:
+        'https://d3oyz6uk1t3qpy.cloudfront.net/public/client-logos/QM%20Horizontal%20Lockup%20Pink.svg'
+    },
+    tags: [
+      'cross-browser-compatibility',
+      'ux-ux-audit',
+      '2022',
+      'front-end',
+      'json',
+      'ux-information-architecture',
+      'type-startup',
+      'typescript',
+      'design-system',
+      'framework-react',
+      '2023',
+      'accessibility-508',
+      'tooling-eslint',
+      'css',
+      'tooling-babel',
+      'html',
+      'ux-usability',
+      'library-lodash',
+      'ux-accessibility',
+      'javascript',
+      'tooling-rollup',
+      'tooling-prettier'
+    ],
+    categories: [
+      'user-experience-ux',
+      'year',
+      'role',
+      'language',
+      'project-type',
+      'framework',
+      'tooling'
+    ],
+    tagsByCategory: {
+      year: {
+        id: 'year',
+        name: 'Year',
+        tags: [
+          { id: '2022', name: '2022', display: true },
+          { id: '2023', name: '2023', display: true }
+        ]
+      },
+      'user-experience-ux': {
+        id: 'user-experience-ux',
+        name: 'User Experience',
+        tags: [
+          { id: 'accessibility-508', name: '508 Compliant', display: true },
+          { id: 'ux-accessibility', name: 'Accessibility', display: true },
+          {
+            id: 'cross-browser-compatibility',
+            name: 'Cross Browser Compatibility',
+            display: true
+          },
+          {
+            id: 'ux-information-architecture',
+            name: 'Information architecture',
+            display: true
+          },
+          { id: 'ux-ux-audit', name: 'UX Audit', display: true },
+          { id: 'ux-usability', name: 'Usability', display: true }
+        ]
+      },
+      tooling: {
+        id: 'tooling',
+        name: 'Tooling',
+        tags: [
+          { id: 'tooling-babel', name: 'Babel', display: true },
+          { id: 'tooling-eslint', name: 'ESLint', display: true },
+          { id: 'library-lodash', name: 'Lo-Dash', display: true },
+          { id: 'tooling-prettier', name: 'Prettier', display: true },
+          { id: 'tooling-rollup', name: 'Rollup', display: true }
+        ]
+      },
+      language: {
+        id: 'language',
+        name: 'Language',
+        tags: [
+          { id: 'css', name: 'CSS', display: false },
+          { id: 'html', name: 'HTML', display: true },
+          { id: 'json', name: 'JSON', display: true },
+          { id: 'javascript', name: 'JavaScript', display: true },
+          { id: 'typescript', name: 'TypeScript', display: true }
+        ]
+      },
+      'project-type': {
+        id: 'project-type',
+        name: 'Project Type',
+        tags: [
+          { id: 'design-system', name: 'Design System', display: true },
+          { id: 'type-startup', name: 'Startup', display: true }
+        ]
+      },
+      role: {
+        id: 'role',
+        name: 'Role',
+        tags: [{ id: 'front-end', name: 'Front End', display: true }]
+      },
+      framework: {
+        id: 'framework',
+        name: 'Framework',
+        tags: [{ id: 'framework-react', name: 'React', display: true }]
+      }
+    },
+    displayName: 'Margarita (2023)'
+  },
+  {
+    id: 'quantum-app',
+    name: 'Quantum Metric',
+    date: '2023-02-14',
+    description:
+      'Quantum Metric automatically quantifies opportunities in your digital applications, helping you prioritize with more speed and confidence.',
+    features: [
+      {
+        heading: 'Worked On',
+        items: [
+          'Session Replay',
+          'Live Replay',
+          'Dashboards V3',
+          'Sandbox',
+          'Atlas'
+        ]
+      }
+    ],
+    url: 'https://www.quantummetric.com',
+    images: [
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/session-replay_x3.png',
+        originalAlt: 'Quantum Metric',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/session-replay_x3.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/sandbox_x3.png',
+        originalAlt: 'Quantum Metric',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/sandbox_x3.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/sandbox-funnels_x3.png',
+        originalAlt: 'Quantum Metric',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/sandbox-funnels_x3.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/dashboard_x3.png',
+        originalAlt: 'Quantum Metric',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/dashboard_x3.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/live-replay_x3.png',
+        originalAlt: 'Quantum Metric',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/live-replay_x3.png'
+      }
+    ],
+    logo:
+      'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/quantum-app/QM%20Horizontal%20Lockup%20Pink.svg',
+    employer: {
+      id: 'quantum-metric',
+      name: 'Quantum Metric',
+      logo:
+        'https://d3oyz6uk1t3qpy.cloudfront.net/public/employer-logos/QM%20Horizontal%20Lockup%20Pink.svg'
+    },
+    client: {
+      id: 'quantum-metric',
+      name: 'Quantum Metric',
+      logo:
+        'https://d3oyz6uk1t3qpy.cloudfront.net/public/client-logos/QM%20Horizontal%20Lockup%20Pink.svg'
+    },
+    tags: [
+      'tooling-webpack',
+      'css',
+      'html',
+      '2022',
+      'type-b2b',
+      'type-startup',
+      '2023',
+      '2021',
+      'library-lodash',
+      'typescript',
+      'customer-experience-analytics',
+      'front-end',
+      'javascript',
+      'tooling-babel',
+      'tooling-eslint',
+      'framework-react',
+      'json',
+      'tooling-prettier'
+    ],
+    categories: [
+      'tooling',
+      'language',
+      'year',
+      'project-type',
+      'industry',
+      'role',
+      'framework'
+    ],
+    tagsByCategory: {
+      year: {
+        id: 'year',
+        name: 'Year',
+        tags: [
+          { id: '2021', name: '2021', display: true },
+          { id: '2022', name: '2022', display: true },
+          { id: '2023', name: '2023', display: true }
+        ]
+      },
+      tooling: {
+        id: 'tooling',
+        name: 'Tooling',
+        tags: [
+          { id: 'tooling-babel', name: 'Babel', display: true },
+          { id: 'tooling-eslint', name: 'ESLint', display: true },
+          { id: 'library-lodash', name: 'Lo-Dash', display: true },
+          { id: 'tooling-prettier', name: 'Prettier', display: true },
+          { id: 'tooling-webpack', name: 'Webpack', display: true }
+        ]
+      },
+      'project-type': {
+        id: 'project-type',
+        name: 'Project Type',
+        tags: [
+          { id: 'type-b2b', name: 'Business to Business (B2B)', display: true },
+          { id: 'type-startup', name: 'Startup', display: true }
+        ]
+      },
+      language: {
+        id: 'language',
+        name: 'Language',
+        tags: [
+          { id: 'css', name: 'CSS', display: false },
+          { id: 'html', name: 'HTML', display: true },
+          { id: 'json', name: 'JSON', display: true },
+          { id: 'javascript', name: 'JavaScript', display: true },
+          { id: 'typescript', name: 'TypeScript', display: true }
+        ]
+      },
+      industry: {
+        id: 'industry',
+        name: 'Industry',
+        tags: [
+          {
+            id: 'customer-experience-analytics',
+            name: 'CX analytics',
+            display: true
+          }
+        ]
+      },
+      role: {
+        id: 'role',
+        name: 'Role',
+        tags: [{ id: 'front-end', name: 'Front End', display: true }]
+      },
+      framework: {
+        id: 'framework',
+        name: 'Framework',
+        tags: [{ id: 'framework-react', name: 'React', display: true }]
+      }
+    },
+    displayName: 'Quantum Metric (2023)'
+  },
+  {
     id: 'tiffanylea-web',
     name: 'Tiffany Lea',
     date: '2020-06-01',
@@ -13415,5 +13705,4 @@ const projects = [
     displayName: 'Inter-Tech Communications (2007)'
   }
 ];
-
 export default projects;

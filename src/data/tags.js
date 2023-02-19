@@ -103,6 +103,11 @@ const tagsByCategory = {
         category: 'industry'
       },
       { id: 'automotive', name: 'Automotive', category: 'industry' },
+      {
+        id: 'customer-experience-analytics',
+        name: 'CX analytics',
+        category: 'industry'
+      },
       { id: 'e-commerce', name: 'E-Commerce', category: 'industry' },
       { id: 'financial', name: 'Financial', category: 'industry' },
       { id: 'global', name: 'Global', category: 'industry' },
@@ -143,6 +148,7 @@ const tagsByCategory = {
         name: 'Business to Business (B2B)',
         category: 'project-type'
       },
+      { id: 'design-system', name: 'Design System', category: 'project-type' },
       { id: 'type-e-commerce', name: 'E-Commerce', category: 'project-type' },
       { id: 'type-fundraising', name: 'Fundraising', category: 'project-type' },
       {
@@ -255,7 +261,10 @@ const tagsByCategory = {
       { id: '2017', name: '2017', category: 'year' },
       { id: '2018', name: '2018', category: 'year' },
       { id: '2019', name: '2019', category: 'year' },
-      { id: '2020', name: '2020', category: 'year' }
+      { id: '2020', name: '2020', category: 'year' },
+      { id: '2021', name: '2021', category: 'year' },
+      { id: '2022', name: '2022', category: 'year' },
+      { id: '2023', name: '2023', category: 'year' }
     ]
   }
 };
