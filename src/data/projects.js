@@ -1,15 +1,15 @@
 /* eslint-disable */
 const projects = [
   {
-    id: 'margarita-docs',
-    name: 'Margarita Docs',
-    date: '2023-02-01',
-    description: 'Margarita (Quantum Metrics Design System) Docs Site',
+    id: 'margarita',
+    name: 'Margarita',
+    date: '2023-02-15',
+    description: 'Coming Soon...',
     features: [],
     url: null,
     images: [],
     logo:
-      'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita-docs/marg-logo.svg',
+      'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/quantum-metric_margarita_logo.svg',
     employer: {
       id: 'quantum-metric',
       name: 'Quantum Metric',
@@ -22,15 +22,115 @@ const projects = [
       logo:
         'https://d3oyz6uk1t3qpy.cloudfront.net/public/client-logos/QM%20Horizontal%20Lockup%20Pink.svg'
     },
-    tags: [],
-    categories: [],
-    tagsByCategory: {},
-    displayName: 'Margarita Docs (2023)'
+    tags: [
+      'cross-browser-compatibility',
+      'ux-ux-audit',
+      '2022',
+      'front-end',
+      'json',
+      'ux-information-architecture',
+      'type-startup',
+      'typescript',
+      'design-system',
+      'framework-react',
+      '2023',
+      'accessibility-508',
+      'tooling-eslint',
+      'css',
+      'tooling-babel',
+      'html',
+      'ux-usability',
+      'library-lodash',
+      'ux-accessibility',
+      'javascript',
+      'tooling-rollup',
+      'tooling-prettier'
+    ],
+    categories: [
+      'user-experience-ux',
+      'year',
+      'role',
+      'language',
+      'project-type',
+      'framework',
+      'tooling'
+    ],
+    tagsByCategory: {
+      year: {
+        id: 'year',
+        name: 'Year',
+        tags: [
+          { id: '2022', name: '2022', display: true },
+          { id: '2023', name: '2023', display: true }
+        ]
+      },
+      'user-experience-ux': {
+        id: 'user-experience-ux',
+        name: 'User Experience',
+        tags: [
+          { id: 'accessibility-508', name: '508 Compliant', display: true },
+          { id: 'ux-accessibility', name: 'Accessibility', display: true },
+          {
+            id: 'cross-browser-compatibility',
+            name: 'Cross Browser Compatibility',
+            display: true
+          },
+          {
+            id: 'ux-information-architecture',
+            name: 'Information architecture',
+            display: true
+          },
+          { id: 'ux-ux-audit', name: 'UX Audit', display: true },
+          { id: 'ux-usability', name: 'Usability', display: true }
+        ]
+      },
+      tooling: {
+        id: 'tooling',
+        name: 'Tooling',
+        tags: [
+          { id: 'tooling-babel', name: 'Babel', display: true },
+          { id: 'tooling-eslint', name: 'ESLint', display: true },
+          { id: 'library-lodash', name: 'Lo-Dash', display: true },
+          { id: 'tooling-prettier', name: 'Prettier', display: true },
+          { id: 'tooling-rollup', name: 'Rollup', display: true }
+        ]
+      },
+      language: {
+        id: 'language',
+        name: 'Language',
+        tags: [
+          { id: 'css', name: 'CSS', display: false },
+          { id: 'html', name: 'HTML', display: true },
+          { id: 'json', name: 'JSON', display: true },
+          { id: 'javascript', name: 'JavaScript', display: true },
+          { id: 'typescript', name: 'TypeScript', display: true }
+        ]
+      },
+      'project-type': {
+        id: 'project-type',
+        name: 'Project Type',
+        tags: [
+          { id: 'design-system', name: 'Design System', display: true },
+          { id: 'type-startup', name: 'Startup', display: true }
+        ]
+      },
+      role: {
+        id: 'role',
+        name: 'Role',
+        tags: [{ id: 'front-end', name: 'Front End', display: true }]
+      },
+      framework: {
+        id: 'framework',
+        name: 'Framework',
+        tags: [{ id: 'framework-react', name: 'React', display: true }]
+      }
+    },
+    displayName: 'Margarita (2023)'
   },
   {
     id: 'quantum-app',
     name: 'Quantum Metric',
-    date: '2023-02-11',
+    date: '2023-02-14',
     description:
       'Quantum Metric automatically quantifies opportunities in your digital applications, helping you prioritize with more speed and confidence.',
     features: [

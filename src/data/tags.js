@@ -148,6 +148,7 @@ const tagsByCategory = {
         name: 'Business to Business (B2B)',
         category: 'project-type'
       },
+      { id: 'design-system', name: 'Design System', category: 'project-type' },
       { id: 'type-e-commerce', name: 'E-Commerce', category: 'project-type' },
       { id: 'type-fundraising', name: 'Fundraising', category: 'project-type' },
       {
