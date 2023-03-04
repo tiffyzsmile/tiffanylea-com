@@ -11,7 +11,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_2023.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_2023_03.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>

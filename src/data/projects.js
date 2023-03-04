@@ -4,10 +4,113 @@ const projects = [
     id: 'margarita',
     name: 'Margarita',
     date: '2023-02-15',
-    description: 'Coming Soon...',
-    features: [],
+    description:
+      'Margarita (Quantum Metrics Design System)\n\nWorked across teams and departments to create the foundations for Margarita Design System.',
+    features: [
+      {
+        heading: 'Responsible For',
+        items: [
+          'Worked with User Experience Research team to survey engineers about the current ecosystem and pain points  ',
+          'Planned and executed solutions for process, documentation, communication, component explorer, design guidelines, component library, Figma integration, automation, developer experience and more...  ',
+          'Build accessible, extensible, testable, and reusable components for use by Engineers',
+          'Share progress with the engineering department via multiple channels and mediums  '
+        ]
+      }
+    ],
     url: null,
-    images: [],
+    images: [
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-2023-03-04-12_44_39.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-2023-03-04-12_44_39.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-about-team-2023-03-04-12_45_10.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-about-team-2023-03-04-12_45_10.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-principles-2023-03-04-12_45_20.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-principles-2023-03-04-12_45_20.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-checkbox-2023-03-04-12_46_30.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-checkbox-2023-03-04-12_46_30.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-foundations-typography-2023-03-04-12_47_29.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-foundations-typography-2023-03-04-12_47_29.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-foundations-color-2023-03-04-12_45_30.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-foundations-color-2023-03-04-12_45_30.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-toggle-2023-03-04-12_47_03.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-toggle-2023-03-04-12_47_03.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-button-2023-03-04-12_46_04.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-button-2023-03-04-12_46_04.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-components-button-2023-03-04-12_45_40.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-design-components-button-2023-03-04-12_45_40.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-foundations-color-2023-03-04-12_45_53.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-foundations-color-2023-03-04-12_45_53.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-foundations-typography-2023-03-04-12_47_15.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-foundations-typography-2023-03-04-12_47_15.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-checkbox-group-2023-03-04-12_46_40.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-checkbox-group-2023-03-04-12_46_40.png'
+      },
+      {
+        original:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-radio-2023-03-04-12_46_49.png',
+        originalAlt: 'Margarita',
+        thumbnail:
+          'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/screencapture-margarita-docs-qm-thejsgal-develop-components-radio-2023-03-04-12_46_49.png'
+      }
+    ],
     logo:
       'https://d3oyz6uk1t3qpy.cloudfront.net/public/projects/margarita/quantum-metric_margarita_logo.svg',
     employer: {
@@ -29,6 +132,7 @@ const projects = [
       'front-end',
       'json',
       'ux-information-architecture',
+      'lead',
       'type-startup',
       'typescript',
       'design-system',
@@ -41,6 +145,7 @@ const projects = [
       'html',
       'ux-usability',
       'library-lodash',
+      'full-stack',
       'ux-accessibility',
       'javascript',
       'tooling-rollup',
@@ -117,7 +222,11 @@ const projects = [
       role: {
         id: 'role',
         name: 'Role',
-        tags: [{ id: 'front-end', name: 'Front End', display: true }]
+        tags: [
+          { id: 'front-end', name: 'Front End', display: true },
+          { id: 'full-stack', name: 'Full Stack', display: true },
+          { id: 'lead', name: 'Lead', display: true }
+        ]
       },
       framework: {
         id: 'framework',
