@@ -72,24 +72,22 @@ const Resume = () => {
               </p>
               <ul>
                 <li>
-                  Worked with the UXR team to survey engineers about the current
-                  ecosystem and pain points
+                  Worked with User Experience Research team to survey engineers
+                  about the current ecosystem and pain points
                 </li>
                 <li>
-                  Planned and executed solutions for docs, component explorer,
-                  guidelines, UI library, Figma integration, and more...
+                  Planned and executed solutions for process, documentation,
+                  communication, component explorer, design guidelines,
+                  component library, Figma integration, automation, developer
+                  experience and more...
                 </li>
                 <li>
-                  Building in automation and better developer experience
-                  wherever possible
+                  Built accessible, extensible, testable, and reusable
+                  components for use by engineers
                 </li>
                 <li>
-                  Involved in interface inventories, pattern discovery,
-                  guideline creation, personas, user journeys, etc
-                </li>
-                <li>
-                  Share progress with the engineering department via multiple
-                  channels
+                  Shared progress and maintained feedback loop with engineering
+                  department
                 </li>
               </ul>
             </div>
@@ -98,13 +96,12 @@ const Resume = () => {
               <H4>Senior Software Engineer</H4>
               <ul>
                 <li>
-                  Creation and ongoing maintenance of Storybook including
-                  documentation to help align vocabulary, architecture, and
-                  thought process
+                  Created and maintained Storybook including documentation to
+                  help align vocabulary, architecture, and thought process
                 </li>
                 <li>
-                  Working across engineering, product, and design to define a
-                  Design System road map
+                  Worked across engineering, product, and design to define a
+                  design system road map
                 </li>
                 <li>
                   Contributed to many teams/features including replay, live
@@ -118,7 +115,8 @@ const Resume = () => {
             </div>
             <p className="small">
               Typescript, React, MobX, D3, Storybook, Figma, GraphQL, SCSS,
-              Docker
+              Docker, Docusaurus, GitLab, CI/CD, NPM, Figma API, Jest, Rollup.,
+              Testing Library, accessibility, automation
             </p>
           </article>
           <article>

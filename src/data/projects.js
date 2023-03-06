@@ -12,8 +12,8 @@ const projects = [
         items: [
           'Worked with User Experience Research team to survey engineers about the current ecosystem and pain points  ',
           'Planned and executed solutions for process, documentation, communication, component explorer, design guidelines, component library, Figma integration, automation, developer experience and more...  ',
-          'Build accessible, extensible, testable, and reusable components for use by Engineers',
-          'Share progress with the engineering department via multiple channels and mediums  '
+          'Built accessible, extensible, testable, and reusable components for use by engineers',
+          'Shared progress and maintained feedback loop with engineering department'
         ]
       }
     ],
@@ -132,6 +132,7 @@ const projects = [
       'front-end',
       'json',
       'ux-information-architecture',
+      'tooling-prettier',
       'lead',
       'type-startup',
       'typescript',
@@ -149,16 +150,17 @@ const projects = [
       'ux-accessibility',
       'javascript',
       'tooling-rollup',
-      'tooling-prettier'
+      'tooling-prettier',
+      'tooling-babel'
     ],
     categories: [
       'user-experience-ux',
       'year',
       'role',
       'language',
+      'tooling',
       'project-type',
-      'framework',
-      'tooling'
+      'framework'
     ],
     tagsByCategory: {
       year: {
