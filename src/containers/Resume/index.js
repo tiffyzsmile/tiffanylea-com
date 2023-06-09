@@ -11,7 +11,7 @@ const Resume = () => {
           <a
             target="_blank"
             className="adobe"
-            href="/pdfs/TiffanyLeaMay_resume_2023_03.pdf"
+            href="/pdfs/TiffanyLeaMay_resume_2023_04.pdf"
           >
             <img src="/images/icons/adobe.png" alt="Adobe PDF" /> Adobe PDF
           </a>
@@ -60,7 +60,7 @@ const Resume = () => {
         <section className="employment">
           <H2>Employment History</H2>
           <article>
-            <p className="date">2/21 — Current</p>
+            <p className="date">2/21 — 3/23 (2 years 1 month)</p>
             <H3>Quantum Metric</H3>
             <p className="location">Colorado Springs, CO (Remote)</p>
             <div className="role">
