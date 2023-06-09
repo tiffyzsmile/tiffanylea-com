@@ -9,7 +9,174 @@ const Reviews = () => {
       <section className="quotes">
         <H1>Reviews</H1>
         <article>
-          <img alt="Emmanuel Mwangi" src="/images/people/david-weiss.jpeg" />
+          <img alt="Alexa Jaime" src="/images/people/alexa-jaime.jpeg" />
+          <header>
+            <H2>Staff Product Designer at Celonis</H2>
+            <H3>
+              <a
+                href="https://www.linkedin.com/in/alexa-jaime"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Alexa Jaime
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              {`Tiffany was tremendous at balancing both the strategic and
+              tactical elements necessary to bring Quantum Metric's Design
+              System to fruition. She never shies away from complex challenges
+              and is incredibly gifted with her systems approach to development.
+              Tiffany was able to bring a strong engineering voice to the table
+              but was also always willing to collaborate with the design team to
+              come up with an approach/solution that would work for both.`}
+            </p>
+            <p>
+              I am so thankful I had the opportunity to collaborate and learn
+              from Tiffany during our time working together and I hope our paths
+              will cross again.
+            </p>
+          </Quote>
+        </article>
+        <article>
+          <img alt="Jessica Helm" src="/images/people/jessica-helm.jpeg" />
+          <header>
+            <H2>Senior Product Designer at Quantum Metric</H2>
+            <H3>
+              <a
+                href="https://www.linkedin.com/in/jessica-c-helm"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Jessica Helm
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              Tiffany is one of the most hardworking and talented engineers with
+              whom I’ve had the privilege to work with. Her flawless execution
+              illustrates her expertise, exceptional technical skills, and work
+              ethic. She continuously seeks to improve her craft to make things
+              better, more efficient, and more effective.
+            </p>
+            <p>
+              Tiffany’s problem-solving skills are one of her greatest strengths
+              as she is always going the extra mile to make sure our customers
+              have the best experience possible. As a product designer, her
+              customer-centric engineering approach and design eye make Tiffany
+              a dream to collaborate with. Her attention to detail is
+              unparalleled and I was fortunate to experience it firsthand with
+              her design system work.
+            </p>
+            <p>
+              She is a true team player, always dropping her priorities to lend
+              helping hands where needed and doing so with a smile. Tiffany
+              would be a valuable addition to any team/company and I only pray
+              our paths will cross again in the future!
+            </p>
+          </Quote>
+        </article>
+        <article>
+          <img alt="Emily Gerrity" src="/images/people/emily-gerrity.jpeg" />
+          <header>
+            <H2>
+              <span role="img" aria-label="crystal ball">
+                🔮
+              </span>
+              User Advocate • Figma expert • Design System Enthusiast
+              <span role="img" aria-label="crystal ball">
+                🔮
+              </span>
+            </H2>
+            <H3>
+              <a
+                href="https://www.linkedin.com/in/emily-gerrity-060035121"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Emily Gerrity
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              Tiffany and I (as the dedicated designer on the system) worked
+              together on the Margarita Design System at Quantum Metric. We
+              worked together to set solid foundations for building a scalable
+              system which included road mapping and strategy, system
+              evangelization, designing system structure, designing a doc site,
+              and publishing/maintaining styles and components.
+            </p>
+            <p>
+              Without Tiffany’s well-informed technical expertise on the
+              subject, her thoughtful, methodical, and system-oriented way of
+              working, and dedication to “doing things the right the first
+              time,” our system would not be in the amazing position it is
+              today.
+            </p>
+            <p>
+              Tight-knit engineering/design relationships are so important to
+              system work, and luckily Tiffany is a delight to work with! She’s
+              kind, understanding, easy to communicate with, and has an
+              infectiously positive outlook on what is possible for the future
+              of whatever she is working on.
+            </p>
+            <p>
+              Even though she is an (awesome) engineer, that doesn’t stop her
+              from caring deeply about the designers experience using the
+              system, and her aptitude for strategy development were a
+              game-changer for our systems team.
+            </p>
+            <p>
+              She has an understanding of IA and design that makes the
+              collaborative work required much more efficient, and is always
+              happy to provide designer-friendly explanations of relevant
+              technical issues. She provided all the context a designer might
+              not have in a way that not only allowed me to design our system
+              more thoughtfully, but was instrumental in helping me develop
+              better strategies for my system design work overall.
+            </p>
+            <p>
+              All in all, any Design Systems team (or any team for that matter)
+              would be leveled up with Tiffany on board. Hopefully we will work
+              together in the future, and any team that picks her up will be
+              making a smart decision!
+              <span role="img" aria-label="tada">
+                🎉
+              </span>
+            </p>
+          </Quote>
+        </article>
+        <article>
+          <img alt="Richard Ta" src="/images/people/richard-ta.jpeg" />
+          <header>
+            <H2> Senior Software Engineer at Quantum Metric</H2>
+            <H3>
+              <a
+                href="https://www.linkedin.com/in/richard-ta"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Richard Ta
+              </a>
+            </H3>
+          </header>
+          <Quote>
+            <p>
+              Tiffany is a dedicated and outstanding individual contributor. She
+              goes above and beyond to make sure company goals and initiatives
+              are met. It is always nice to be working on new projects with her
+              because she is extremely dependable. Tiffany made significant
+              changes to the company and have created new processes that other
+              engineers will continue to follow for years to come. I highly
+              recommend working with her!
+            </p>
+          </Quote>
+        </article>
+        <article>
+          <img alt="David Weiss" src="/images/people/david-weiss.jpeg" />
           <header>
             <H2>Engineering Manager at Sprout Social, Inc.</H2>
             <H3>
