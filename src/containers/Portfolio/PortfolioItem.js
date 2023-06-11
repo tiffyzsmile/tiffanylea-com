@@ -52,7 +52,13 @@ const PortfolioItem = ({ project, closeLink }) => {
 };
 
 PortfolioItem.propTypes = {
-  project: PropTypes.shape({}).isRequired,
+  project: PropTypes.shape({
+    features: PropTypes.array,
+    images: PropTypes.array,
+    displayName: PropTypes.string,
+    description: PropTypes.string,
+    id: PropTypes.string
+  }).isRequired,
   closeLink: PropTypes.string.isRequired
 };
 

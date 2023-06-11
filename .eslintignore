@@ -1,2 +1,4 @@
 # Ignore built AWS files
 src/aws-exports.js
+
+amplify-codegen-temp/models

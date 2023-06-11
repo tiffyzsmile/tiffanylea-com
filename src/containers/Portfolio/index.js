@@ -3,7 +3,7 @@ import queryString from 'query-string';
 import Page from 'components/Page';
 import Filter from 'components/Filter';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
+import PropTypes, { string } from 'prop-types';
 import { H1 } from 'components/Typography';
 import projects from 'data/projects';
 import PortfolioItem from './PortfolioItem';
@@ -68,8 +68,14 @@ const Portfolio = ({ match, location }) => {
 };
 
 Portfolio.propTypes = {
-  match: PropTypes.shape({}).isRequired,
-  location: PropTypes.shape({}).isRequired
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      projectId: PropTypes.number.isRequired
+    }).isRequired
+  }).isRequired,
+  location: PropTypes.shape({
+    search: string
+  }).isRequired
 };
 
 export default Portfolio;

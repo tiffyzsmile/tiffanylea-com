@@ -1,60 +1,12 @@
 {
-  "auth": {
-    "tiffanyleacom0b033fd5": {
-      "service": "Cognito",
+  "analytics": {
+    "tiffanyleacom": {
       "providerPlugin": "awscloudformation",
-      "dependsOn": []
-    },
-    "userPoolGroups": {
-      "service": "Cognito-UserPool-Groups",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "tiffanyleacom0b033fd5",
-          "attributes": [
-            "UserPoolId",
-            "AppClientIDWeb",
-            "AppClientID",
-            "IdentityPoolId"
-          ]
-        }
-      ]
-    }
-  },
-  "hosting": {
-    "S3AndCloudFront": {
-      "service": "S3AndCloudFront",
-      "providerPlugin": "awscloudformation"
-    }
-  },
-  "storage": {
-    "tiffanyleacomcontent": {
-      "service": "S3",
-      "providerPlugin": "awscloudformation",
-      "dependsOn": [
-        {
-          "category": "auth",
-          "resourceName": "tiffanyleacom0b033fd5",
-          "attributes": ["UserPoolId"]
-        },
-        {
-          "category": "auth",
-          "resourceName": "userPoolGroups",
-          "attributes": ["adminGroupRole"]
-        },
-        {
-          "category": "function",
-          "resourceName": "S3Trigger52e00513",
-          "attributes": ["Name", "Arn", "LambdaExecutionRole"]
-        }
-      ]
+      "service": "Pinpoint"
     }
   },
   "api": {
     "tiffanyleacom": {
-      "service": "AppSync",
-      "providerPlugin": "awscloudformation",
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
@@ -69,20 +21,86 @@
             }
           }
         }
-      }
+      },
+      "providerPlugin": "awscloudformation",
+      "service": "AppSync"
+    }
+  },
+  "auth": {
+    "tiffanyleacom0b033fd5": {
+      "dependsOn": [],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito"
+    },
+    "userPoolGroups": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId",
+            "AppClientIDWeb",
+            "AppClientID",
+            "IdentityPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "tiffanyleacom0b033fd5"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "Cognito-UserPool-Groups"
     }
   },
   "function": {
     "S3Trigger52e00513": {
-      "service": "Lambda",
+      "build": true,
       "providerPlugin": "awscloudformation",
-      "build": true
+      "service": "Lambda"
     }
   },
-  "analytics": {
-    "tiffanyleacom": {
-      "service": "Pinpoint",
-      "providerPlugin": "awscloudformation"
+  "hosting": {
+    "S3AndCloudFront": {
+      "providerPlugin": "awscloudformation",
+      "service": "S3AndCloudFront"
+    }
+  },
+  "parameters": {
+    "AMPLIFY_function_S3Trigger52e00513_deploymentBucketName": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger52e00513"
+        }
+      ]
+    },
+    "AMPLIFY_function_S3Trigger52e00513_s3Key": {
+      "usedBy": [
+        {
+          "category": "function",
+          "resourceName": "S3Trigger52e00513"
+        }
+      ]
+    }
+  },
+  "storage": {
+    "tiffanyleacomcontent": {
+      "dependsOn": [
+        {
+          "attributes": ["UserPoolId"],
+          "category": "auth",
+          "resourceName": "tiffanyleacom0b033fd5"
+        },
+        {
+          "attributes": ["adminGroupRole"],
+          "category": "auth",
+          "resourceName": "userPoolGroups"
+        },
+        {
+          "attributes": ["Name", "Arn", "LambdaExecutionRole"],
+          "category": "function",
+          "resourceName": "S3Trigger52e00513"
+        }
+      ],
+      "providerPlugin": "awscloudformation",
+      "service": "S3"
     }
   }
 }

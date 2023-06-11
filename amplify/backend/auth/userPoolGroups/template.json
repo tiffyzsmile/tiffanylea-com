@@ -5,12 +5,10 @@
       "Type": "String",
       "Default": "authtiffanyleacom0b033fd5UserPoolId"
     },
-
     "authtiffanyleacom0b033fd5IdentityPoolId": {
       "Type": "String",
       "Default": "authtiffanyleacom0b033fd5IdentityPoolId"
     },
-
     "authtiffanyleacom0b033fd5AppClientID": {
       "Type": "String",
       "Default": "authtiffanyleacom0b033fd5AppClientID"
@@ -45,17 +43,14 @@
       "Properties": {
         "GroupName": "admin",
         "Precedence": 1,
-
         "RoleArn": {
           "Fn::GetAtt": ["adminGroupRole", "Arn"]
         },
-
         "UserPoolId": {
           "Ref": "authtiffanyleacom0b033fd5UserPoolId"
         }
       }
     },
-
     "adminGroupRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -95,7 +90,6 @@
         }
       }
     },
-
     "LambdaExecutionRole": {
       "Type": "AWS::IAM::Role",
       "Properties": {
@@ -222,7 +216,6 @@
                 "    cognitoidentity.setIdentityPoolRoles(params).promise();",
                 "    response.send(event, context, response.SUCCESS, {message: 'Successfully updated identity pool.'})",
                 "    } catch(err) {",
-
                 "        response.send(event, context, response.FAILED, {message: 'Error updating identity pool'});",
                 "    }",
                 "   };",
@@ -232,7 +225,7 @@
           }
         },
         "Handler": "index.handler",
-        "Runtime": "nodejs10.x",
+        "Runtime": "nodejs16.x",
         "Timeout": "300",
         "Role": {
           "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]
@@ -273,7 +266,6 @@
       "DependsOn": ["RoleMapFunction"]
     }
   },
-
   "Outputs": {
     "adminGroupRole": {
       "Value": {

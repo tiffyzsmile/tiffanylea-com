@@ -1,138 +1,6 @@
 /* eslint-disable */
 // this is an auto generated file. This will be overwritten
 
-export const listProjects = /* GraphQL */ `
-  query ListProjects(
-    $filter: ModelProjectFilterInput
-    $limit: Int
-    $nextToken: String
-  ) {
-    listProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
-      items {
-        id
-        name
-        date
-        description
-        features
-        url
-        images
-        display
-        logo
-        internal
-        createdAt
-        updatedAt
-        employer {
-          id
-          name
-          startdate
-          enddate
-          url
-          logo
-          createdAt
-          updatedAt
-          projects {
-            items {
-              id
-              name
-              date
-              description
-              features
-              url
-              images
-              display
-              logo
-              internal
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
-        }
-        client {
-          id
-          name
-          description
-          logo
-          url
-          feedback
-          display
-          createdAt
-          updatedAt
-          projects {
-            id
-            name
-            date
-            description
-            features
-            url
-            images
-            display
-            logo
-            internal
-            createdAt
-            updatedAt
-            employer {
-              id
-              name
-              startdate
-              enddate
-              url
-              logo
-              createdAt
-              updatedAt
-            }
-            client {
-              id
-              name
-              description
-              logo
-              url
-              feedback
-              display
-              createdAt
-              updatedAt
-            }
-            tags {
-              nextToken
-            }
-          }
-        }
-        tags {
-          items {
-            id
-            createdAt
-            updatedAt
-            project {
-              id
-              name
-              date
-              description
-              features
-              url
-              images
-              display
-              logo
-              internal
-              createdAt
-              updatedAt
-            }
-            tag {
-              id
-              name
-              category
-              display
-              logo
-              createdAt
-              updatedAt
-            }
-          }
-          nextToken
-        }
-      }
-      nextToken
-    }
-  }
-`;
 export const getProject = /* GraphQL */ `
   query GetProject($id: ID!) {
     getProject(id: $id) {
@@ -331,24 +199,64 @@ export const getProject = /* GraphQL */ `
     }
   }
 `;
-export const listEmployers = /* GraphQL */ `
-  query ListEmployers(
-    $filter: ModelEmployerFilterInput
+export const listProjects = /* GraphQL */ `
+  query ListProjects(
+    $filter: ModelProjectFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listEmployers(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listProjects(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
-        startdate
-        enddate
+        date
+        description
+        features
         url
+        images
+        display
         logo
+        internal
         createdAt
         updatedAt
-        projects {
-          items {
+        employer {
+          id
+          name
+          startdate
+          enddate
+          url
+          logo
+          createdAt
+          updatedAt
+          projects {
+            items {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            nextToken
+          }
+        }
+        client {
+          id
+          name
+          description
+          logo
+          url
+          feedback
+          display
+          createdAt
+          updatedAt
+          projects {
             id
             name
             date
@@ -384,6 +292,36 @@ export const listEmployers = /* GraphQL */ `
             }
             tags {
               nextToken
+            }
+          }
+        }
+        tags {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
             }
           }
           nextToken
@@ -470,82 +408,62 @@ export const getEmployer = /* GraphQL */ `
     }
   }
 `;
-export const listClients = /* GraphQL */ `
-  query ListClients(
-    $filter: ModelClientFilterInput
+export const listEmployers = /* GraphQL */ `
+  query ListEmployers(
+    $filter: ModelEmployerFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listClients(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listEmployers(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
-        description
-        logo
+        startdate
+        enddate
         url
-        feedback
-        display
+        logo
         createdAt
         updatedAt
         projects {
-          id
-          name
-          date
-          description
-          features
-          url
-          images
-          display
-          logo
-          internal
-          createdAt
-          updatedAt
-          employer {
+          items {
             id
             name
-            startdate
-            enddate
+            date
+            description
+            features
             url
+            images
+            display
             logo
+            internal
             createdAt
             updatedAt
-            projects {
+            employer {
+              id
+              name
+              startdate
+              enddate
+              url
+              logo
+              createdAt
+              updatedAt
+            }
+            client {
+              id
+              name
+              description
+              logo
+              url
+              feedback
+              display
+              createdAt
+              updatedAt
+            }
+            tags {
               nextToken
             }
           }
-          client {
-            id
-            name
-            description
-            logo
-            url
-            feedback
-            display
-            createdAt
-            updatedAt
-            projects {
-              id
-              name
-              date
-              description
-              features
-              url
-              images
-              display
-              logo
-              internal
-              createdAt
-              updatedAt
-            }
-          }
-          tags {
-            items {
-              id
-              createdAt
-              updatedAt
-            }
-            nextToken
-          }
+          nextToken
         }
       }
       nextToken
@@ -688,27 +606,60 @@ export const getClient = /* GraphQL */ `
     }
   }
 `;
-export const listTags = /* GraphQL */ `
-  query ListTags(
-    $filter: ModelTagFilterInput
+export const listClients = /* GraphQL */ `
+  query ListClients(
+    $filter: ModelClientFilterInput
     $limit: Int
     $nextToken: String
   ) {
-    listTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
+    listClients(filter: $filter, limit: $limit, nextToken: $nextToken) {
       items {
         id
         name
-        category
-        display
+        description
         logo
+        url
+        feedback
+        display
         createdAt
         updatedAt
         projects {
-          items {
+          id
+          name
+          date
+          description
+          features
+          url
+          images
+          display
+          logo
+          internal
+          createdAt
+          updatedAt
+          employer {
             id
+            name
+            startdate
+            enddate
+            url
+            logo
             createdAt
             updatedAt
-            project {
+            projects {
+              nextToken
+            }
+          }
+          client {
+            id
+            name
+            description
+            logo
+            url
+            feedback
+            display
+            createdAt
+            updatedAt
+            projects {
               id
               name
               date
@@ -722,17 +673,15 @@ export const listTags = /* GraphQL */ `
               createdAt
               updatedAt
             }
-            tag {
+          }
+          tags {
+            items {
               id
-              name
-              category
-              display
-              logo
               createdAt
               updatedAt
             }
+            nextToken
           }
-          nextToken
         }
       }
       nextToken
@@ -807,6 +756,57 @@ export const getTag = /* GraphQL */ `
         }
         nextToken
       }
+    }
+  }
+`;
+export const listTags = /* GraphQL */ `
+  query ListTags(
+    $filter: ModelTagFilterInput
+    $limit: Int
+    $nextToken: String
+  ) {
+    listTags(filter: $filter, limit: $limit, nextToken: $nextToken) {
+      items {
+        id
+        name
+        category
+        display
+        logo
+        createdAt
+        updatedAt
+        projects {
+          items {
+            id
+            createdAt
+            updatedAt
+            project {
+              id
+              name
+              date
+              description
+              features
+              url
+              images
+              display
+              logo
+              internal
+              createdAt
+              updatedAt
+            }
+            tag {
+              id
+              name
+              category
+              display
+              logo
+              createdAt
+              updatedAt
+            }
+          }
+          nextToken
+        }
+      }
+      nextToken
     }
   }
 `;

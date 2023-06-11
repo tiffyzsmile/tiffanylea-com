@@ -13,7 +13,7 @@ type Project
   features: [AWSJSON]
   url: AWSURL
   employer: Employer @connection(name: "EmployerProjects")
-  client: Client @connection(name: "ClientProjects")
+  client: Client! @connection(name: "ClientProjects")
   images: [String]
   tags: [TaggedProject] @connection(name: "TagsForProject")
   display: Boolean

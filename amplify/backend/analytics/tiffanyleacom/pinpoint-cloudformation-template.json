@@ -190,7 +190,7 @@
           }
         },
         "Handler": "index.handler",
-        "Runtime": "nodejs12.x",
+        "Runtime": "nodejs16.x",
         "Timeout": "300",
         "Role": {
           "Fn::GetAtt": ["LambdaExecutionRole", "Arn"]
@@ -256,8 +256,7 @@
               "Effect": "Allow",
               "Action": [
                 "mobiletargeting:PutEvents",
-                "mobiletargeting:UpdateEndpoint",
-                "mobiletargeting:GetUserEndpoints"
+                "mobiletargeting:UpdateEndpoint"
               ],
               "Resource": [
                 {
@@ -342,8 +341,7 @@
               "Effect": "Allow",
               "Action": [
                 "mobiletargeting:PutEvents",
-                "mobiletargeting:UpdateEndpoint",
-                "mobiletargeting:GetUserEndpoints"
+                "mobiletargeting:UpdateEndpoint"
               ],
               "Resource": [
                 {

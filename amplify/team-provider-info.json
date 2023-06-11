@@ -18,7 +18,22 @@
       },
       "function": {
         "AdminQueriese282e554": {},
-        "S3Trigger52e00513": {}
+        "S3Trigger52e00513": {
+          "deploymentBucketName": "tiffanylea-com-master-20191210135709-deployment",
+          "s3Key": "amplify-builds/S3Trigger52e00513-325a35312f4930393347-build.zip"
+        }
+      },
+      "analytics": {
+        "tiffanyleacom": {}
+      },
+      "api": {
+        "tiffanyleacom": {}
+      },
+      "hosting": {
+        "S3AndCloudFront": {}
+      },
+      "storage": {
+        "tiffanyleacomcontent": {}
       }
     }
   }
