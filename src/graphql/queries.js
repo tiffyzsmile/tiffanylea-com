@@ -48,6 +48,7 @@ export const getProject = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -59,13 +60,18 @@ export const getProject = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
       client {
         id
@@ -101,7 +107,9 @@ export const getProject = /* GraphQL */ `
             updatedAt
             projects {
               nextToken
+              __typename
             }
+            __typename
           }
           client {
             id
@@ -126,17 +134,23 @@ export const getProject = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           tags {
             items {
               id
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
+        __typename
       }
       tags {
         items {
@@ -165,6 +179,7 @@ export const getProject = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -176,10 +191,13 @@ export const getProject = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
           tag {
             id
@@ -191,11 +209,16 @@ export const getProject = /* GraphQL */ `
             updatedAt
             projects {
               nextToken
+              __typename
             }
+            __typename
           }
+          __typename
         }
         nextToken
+        __typename
       }
+      __typename
     }
   }
 `;
@@ -242,9 +265,12 @@ export const listProjects = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
         client {
           id
@@ -278,6 +304,7 @@ export const listProjects = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -289,11 +316,15 @@ export const listProjects = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
+          __typename
         }
         tags {
           items {
@@ -313,6 +344,7 @@ export const listProjects = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             tag {
               id
@@ -322,12 +354,17 @@ export const listProjects = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -367,7 +404,9 @@ export const getEmployer = /* GraphQL */ `
             updatedAt
             projects {
               nextToken
+              __typename
             }
+            __typename
           }
           client {
             id
@@ -392,19 +431,26 @@ export const getEmployer = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           tags {
             items {
               id
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
         nextToken
+        __typename
       }
+      __typename
     }
   }
 `;
@@ -447,6 +493,7 @@ export const listEmployers = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -458,15 +505,21 @@ export const listEmployers = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -518,9 +571,12 @@ export const getClient = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
         client {
           id
@@ -554,6 +610,7 @@ export const getClient = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -565,11 +622,15 @@ export const getClient = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
+          __typename
         }
         tags {
           items {
@@ -589,6 +650,7 @@ export const getClient = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             tag {
               id
@@ -598,11 +660,16 @@ export const getClient = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
+      __typename
     }
   }
 `;
@@ -647,7 +714,9 @@ export const listClients = /* GraphQL */ `
             updatedAt
             projects {
               nextToken
+              __typename
             }
+            __typename
           }
           client {
             id
@@ -672,19 +741,26 @@ export const listClients = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           tags {
             items {
               id
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -725,6 +801,7 @@ export const getTag = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -736,10 +813,13 @@ export const getTag = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
           tag {
             id
@@ -751,11 +831,16 @@ export const getTag = /* GraphQL */ `
             updatedAt
             projects {
               nextToken
+              __typename
             }
+            __typename
           }
+          __typename
         }
         nextToken
+        __typename
       }
+      __typename
     }
   }
 `;
@@ -792,6 +877,7 @@ export const listTags = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             tag {
               id
@@ -801,12 +887,17 @@ export const listTags = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;
@@ -852,9 +943,12 @@ export const getTaggedProject = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
         client {
           id
@@ -888,6 +982,7 @@ export const getTaggedProject = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
             client {
               id
@@ -899,11 +994,15 @@ export const getTaggedProject = /* GraphQL */ `
               display
               createdAt
               updatedAt
+              __typename
             }
             tags {
               nextToken
+              __typename
             }
+            __typename
           }
+          __typename
         }
         tags {
           items {
@@ -923,6 +1022,7 @@ export const getTaggedProject = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             tag {
               id
@@ -932,10 +1032,14 @@ export const getTaggedProject = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
       tag {
         id
@@ -963,6 +1067,7 @@ export const getTaggedProject = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
             tag {
               id
@@ -972,11 +1077,16 @@ export const getTaggedProject = /* GraphQL */ `
               logo
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           nextToken
+          __typename
         }
+        __typename
       }
+      __typename
     }
   }
 `;
@@ -1015,7 +1125,9 @@ export const listTaggedProjects = /* GraphQL */ `
             updatedAt
             projects {
               nextToken
+              __typename
             }
+            __typename
           }
           client {
             id
@@ -1040,16 +1152,21 @@ export const listTaggedProjects = /* GraphQL */ `
               internal
               createdAt
               updatedAt
+              __typename
             }
+            __typename
           }
           tags {
             items {
               id
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
         tag {
           id
@@ -1064,12 +1181,17 @@ export const listTaggedProjects = /* GraphQL */ `
               id
               createdAt
               updatedAt
+              __typename
             }
             nextToken
+            __typename
           }
+          __typename
         }
+        __typename
       }
       nextToken
+      __typename
     }
   }
 `;

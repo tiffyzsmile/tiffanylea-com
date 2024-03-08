@@ -84,17 +84,25 @@
     "tiffanyleacomcontent": {
       "dependsOn": [
         {
-          "attributes": ["UserPoolId"],
+          "attributes": [
+            "UserPoolId"
+          ],
           "category": "auth",
           "resourceName": "tiffanyleacom0b033fd5"
         },
         {
-          "attributes": ["adminGroupRole"],
+          "attributes": [
+            "adminGroupRole"
+          ],
           "category": "auth",
           "resourceName": "userPoolGroups"
         },
         {
-          "attributes": ["Name", "Arn", "LambdaExecutionRole"],
+          "attributes": [
+            "Name",
+            "Arn",
+            "LambdaExecutionRole"
+          ],
           "category": "function",
           "resourceName": "S3Trigger52e00513"
         }
