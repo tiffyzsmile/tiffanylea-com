@@ -7,11 +7,28 @@
   },
   "api": {
     "tiffanyleacom": {
+      "dependsOn": [
+        {
+          "attributes": [
+            "UserPoolId"
+          ],
+          "category": "auth",
+          "resourceName": "tiffanyleacom0b033fd5"
+        }
+      ],
       "output": {
         "authConfig": {
           "additionalAuthenticationProviders": [
             {
               "authenticationType": "AWS_IAM"
+            },
+            {
+              "apiKeyConfig": {
+                "apiKeyExpirationDate": "2025-03-09T18:31:32.671Z",
+                "apiKeyExpirationDays": 365,
+                "description": "tiffanylea-com-master"
+              },
+              "authenticationType": "API_KEY"
             }
           ],
           "defaultAuthentication": {
