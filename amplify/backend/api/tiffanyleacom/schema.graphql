@@ -1,87 +1,86 @@
 type Project
-@model
-@auth(
+  @model
+  @auth(
     rules: [
-        { allow: public, provider: iam, operations: [read] }
-        { allow: groups, groups: ["admin"] }
+      { allow: public, provider: iam, operations: [read] }
+      { allow: groups, groups: ["admin"] }
     ]
-) {
-    id: ID!
-    name: String!
-    date: AWSDate
-    description: String
-    features: [AWSJSON]
-    url: AWSURL
-    employer: Employer @connection(name: "EmployerProjects")
-    client: Client! @connection(name: "ClientProjects")
-    images: [String]
-    tags: [TaggedProject] @connection(name: "TagsForProject")
-    display: Boolean
-    logo: String
-    internal: String
+  ) {
+  id: ID!
+  name: String!
+  date: AWSDate
+  description: String
+  features: [AWSJSON]
+  url: AWSURL
+  employer: Employer @connection(name: "EmployerProjects")
+  client: Client! @connection(name: "ClientProjects")
+  images: [String]
+  tags: [TaggedProject] @connection(name: "TagsForProject")
+  display: Boolean
+  logo: String
+  internal: String
 }
 
 type Employer
-@model
-@auth(
+  @model
+  @auth(
     rules: [
-        { allow: public, provider: iam, operations: [read] }
-        { allow: groups, groups: ["admin"] }
+      { allow: public, provider: iam, operations: [read] }
+      { allow: groups, groups: ["admin"] }
     ]
-) {
-    id: ID!
-    name: String!
-    startdate: AWSDate
-    enddate: AWSDate
-    url: AWSURL
-    logo: String
-    projects: [Project] @connection(name: "EmployerProjects")
+  ) {
+  id: ID!
+  name: String!
+  startdate: AWSDate
+  enddate: AWSDate
+  url: AWSURL
+  logo: String
+  projects: [Project] @connection(name: "EmployerProjects")
 }
 
 type Client
-@model
-@auth(
+  @model
+  @auth(
     rules: [
-        { allow: public, provider: iam, operations: [read] }
-        { allow: groups, groups: ["admin"] }
+      { allow: public, provider: iam, operations: [read] }
+      { allow: groups, groups: ["admin"] }
     ]
-) {
-    id: ID!
-    name: String!
-    description: String
-    logo: String
-    url: AWSURL
-    feedback: String
-    display: Boolean
-    projects: Project @connection(name: "ClientProjects")
-    ignoreme: String
+  ) {
+  id: ID!
+  name: String!
+  description: String
+  logo: String
+  url: AWSURL
+  feedback: String
+  display: Boolean
+  projects: Project @connection(name: "ClientProjects")
 }
 
 type Tag
-@model
-@auth(
+  @model
+  @auth(
     rules: [
-        { allow: public, provider: iam, operations: [read] }
-        { allow: groups, groups: ["admin"] }
+      { allow: public, provider: iam, operations: [read] }
+      { allow: groups, groups: ["admin"] }
     ]
-) {
-    id: ID!
-    name: String
-    category: String
-    display: Boolean
-    logo: String
-    projects: [TaggedProject] @connection(name: "ProjectsWithTag")
+  ) {
+  id: ID!
+  name: String
+  category: String
+  display: Boolean
+  logo: String
+  projects: [TaggedProject] @connection(name: "ProjectsWithTag")
 }
 
 type TaggedProject
-@model
-@auth(
+  @model
+  @auth(
     rules: [
-        { allow: public, provider: iam, operations: [read] }
-        { allow: groups, groups: ["admin"] }
+      { allow: public, provider: iam, operations: [read] }
+      { allow: groups, groups: ["admin"] }
     ]
-) {
-    id: ID!
-    tag: Tag! @connection(name: "ProjectsWithTag")
-    project: Project! @connection(name: "TagsForProject")
+  ) {
+  id: ID!
+  tag: Tag! @connection(name: "ProjectsWithTag")
+  project: Project! @connection(name: "TagsForProject")
 }

@@ -20,7 +20,7 @@
         "AdminQueriese282e554": {},
         "S3Trigger52e00513": {
           "deploymentBucketName": "tiffanylea-com-master-20191210135709-deployment",
-          "s3Key": "amplify-builds/S3Trigger52e00513-325a35312f4930393347-build.zip"
+          "s3Key": "amplify-builds/S3Trigger52e00513-305a7a677a417a6b6a62-build.zip"
         }
       },
       "analytics": {
