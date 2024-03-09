@@ -58,6 +58,7 @@ export const getProject = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -81,6 +82,7 @@ export const getProject = /* GraphQL */ `
         url
         feedback
         display
+        ignoreme
         createdAt
         updatedAt
         projects {
@@ -119,6 +121,7 @@ export const getProject = /* GraphQL */ `
             url
             feedback
             display
+            ignoreme
             createdAt
             updatedAt
             projects {
@@ -189,6 +192,7 @@ export const getProject = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -280,6 +284,7 @@ export const listProjects = /* GraphQL */ `
           url
           feedback
           display
+          ignoreme
           createdAt
           updatedAt
           projects {
@@ -314,6 +319,7 @@ export const listProjects = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -416,6 +422,7 @@ export const getEmployer = /* GraphQL */ `
             url
             feedback
             display
+            ignoreme
             createdAt
             updatedAt
             projects {
@@ -503,6 +510,7 @@ export const listEmployers = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -533,6 +541,7 @@ export const getClient = /* GraphQL */ `
       url
       feedback
       display
+      ignoreme
       createdAt
       updatedAt
       projects {
@@ -586,6 +595,7 @@ export const getClient = /* GraphQL */ `
           url
           feedback
           display
+          ignoreme
           createdAt
           updatedAt
           projects {
@@ -620,6 +630,7 @@ export const getClient = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -688,6 +699,7 @@ export const listClients = /* GraphQL */ `
         url
         feedback
         display
+        ignoreme
         createdAt
         updatedAt
         projects {
@@ -726,6 +738,7 @@ export const listClients = /* GraphQL */ `
             url
             feedback
             display
+            ignoreme
             createdAt
             updatedAt
             projects {
@@ -811,6 +824,7 @@ export const getTag = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -958,6 +972,7 @@ export const getTaggedProject = /* GraphQL */ `
           url
           feedback
           display
+          ignoreme
           createdAt
           updatedAt
           projects {
@@ -992,6 +1007,7 @@ export const getTaggedProject = /* GraphQL */ `
               url
               feedback
               display
+              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1137,6 +1153,7 @@ export const listTaggedProjects = /* GraphQL */ `
             url
             feedback
             display
+            ignoreme
             createdAt
             updatedAt
             projects {

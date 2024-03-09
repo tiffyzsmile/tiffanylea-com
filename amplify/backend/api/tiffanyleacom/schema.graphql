@@ -54,6 +54,7 @@ type Client
     feedback: String
     display: Boolean
     projects: Project @connection(name: "ClientProjects")
+    ignoreme: String
 }
 
 type Tag
