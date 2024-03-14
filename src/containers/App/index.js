@@ -34,7 +34,7 @@ import './styles.scss';
 // Do I need cognito?  Should I just stick with IAM?
 
 const authType = window.location.pathname.includes('/admin')
-  ? awsconfig.aws_appsync_authenticationType
+  ? 'AMAZON_COGNITO_USER_POOLS'
   : 'AWS_IAM';
 
 const httpLink = createHttpLink({
