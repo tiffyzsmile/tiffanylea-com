@@ -58,7 +58,6 @@ export const onCreateProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -82,7 +81,6 @@ export const onCreateProject = /* GraphQL */ `
         url
         feedback
         display
-        ignoreme
         createdAt
         updatedAt
         projects {
@@ -121,7 +119,6 @@ export const onCreateProject = /* GraphQL */ `
             url
             feedback
             display
-            ignoreme
             createdAt
             updatedAt
             projects {
@@ -192,7 +189,6 @@ export const onCreateProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -283,7 +279,6 @@ export const onUpdateProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -307,7 +302,6 @@ export const onUpdateProject = /* GraphQL */ `
         url
         feedback
         display
-        ignoreme
         createdAt
         updatedAt
         projects {
@@ -346,7 +340,6 @@ export const onUpdateProject = /* GraphQL */ `
             url
             feedback
             display
-            ignoreme
             createdAt
             updatedAt
             projects {
@@ -417,7 +410,6 @@ export const onUpdateProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -508,7 +500,6 @@ export const onDeleteProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -532,7 +523,6 @@ export const onDeleteProject = /* GraphQL */ `
         url
         feedback
         display
-        ignoreme
         createdAt
         updatedAt
         projects {
@@ -571,7 +561,6 @@ export const onDeleteProject = /* GraphQL */ `
             url
             feedback
             display
-            ignoreme
             createdAt
             updatedAt
             projects {
@@ -642,7 +631,6 @@ export const onDeleteProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -724,7 +712,6 @@ export const onCreateEmployer = /* GraphQL */ `
             url
             feedback
             display
-            ignoreme
             createdAt
             updatedAt
             projects {
@@ -811,7 +798,6 @@ export const onUpdateEmployer = /* GraphQL */ `
             url
             feedback
             display
-            ignoreme
             createdAt
             updatedAt
             projects {
@@ -898,7 +884,6 @@ export const onDeleteEmployer = /* GraphQL */ `
             url
             feedback
             display
-            ignoreme
             createdAt
             updatedAt
             projects {
@@ -947,7 +932,6 @@ export const onCreateClient = /* GraphQL */ `
       url
       feedback
       display
-      ignoreme
       createdAt
       updatedAt
       projects {
@@ -1001,7 +985,6 @@ export const onCreateClient = /* GraphQL */ `
           url
           feedback
           display
-          ignoreme
           createdAt
           updatedAt
           projects {
@@ -1036,7 +1019,6 @@ export const onCreateClient = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1100,7 +1082,6 @@ export const onUpdateClient = /* GraphQL */ `
       url
       feedback
       display
-      ignoreme
       createdAt
       updatedAt
       projects {
@@ -1154,7 +1135,6 @@ export const onUpdateClient = /* GraphQL */ `
           url
           feedback
           display
-          ignoreme
           createdAt
           updatedAt
           projects {
@@ -1189,7 +1169,6 @@ export const onUpdateClient = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1253,7 +1232,6 @@ export const onDeleteClient = /* GraphQL */ `
       url
       feedback
       display
-      ignoreme
       createdAt
       updatedAt
       projects {
@@ -1307,7 +1285,6 @@ export const onDeleteClient = /* GraphQL */ `
           url
           feedback
           display
-          ignoreme
           createdAt
           updatedAt
           projects {
@@ -1342,7 +1319,6 @@ export const onDeleteClient = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1443,7 +1419,6 @@ export const onCreateTag = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1524,7 +1499,6 @@ export const onUpdateTag = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1605,7 +1579,6 @@ export const onDeleteTag = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1696,7 +1669,6 @@ export const onCreateTaggedProject = /* GraphQL */ `
           url
           feedback
           display
-          ignoreme
           createdAt
           updatedAt
           projects {
@@ -1731,7 +1703,6 @@ export const onCreateTaggedProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -1887,7 +1858,6 @@ export const onUpdateTaggedProject = /* GraphQL */ `
           url
           feedback
           display
-          ignoreme
           createdAt
           updatedAt
           projects {
@@ -1922,7 +1892,6 @@ export const onUpdateTaggedProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
@@ -2078,7 +2047,6 @@ export const onDeleteTaggedProject = /* GraphQL */ `
           url
           feedback
           display
-          ignoreme
           createdAt
           updatedAt
           projects {
@@ -2113,7 +2081,6 @@ export const onDeleteTaggedProject = /* GraphQL */ `
               url
               feedback
               display
-              ignoreme
               createdAt
               updatedAt
               __typename
